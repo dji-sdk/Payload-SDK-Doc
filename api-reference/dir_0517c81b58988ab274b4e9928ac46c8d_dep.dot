@@ -1,0 +1,10 @@
+digraph "psdk_arch" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0517c81b58988ab274b4e9928ac46c8d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0517c81b58988ab274b4e9928ac46c8d.html"];
+    dir_0517c81b58988ab274b4e9928ac46c8d [shape=plaintext label="psdk_arch"];
+    dir_7a667e17d0adc2ed1511ef9d2c26fa6a [shape=box label="arch_template" color="black" fillcolor="white" style="filled" URL="dir_7a667e17d0adc2ed1511ef9d2c26fa6a.html"];
+  }
+}

@@ -1,0 +1,424 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.6"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <title>DJI Payload SDK: psdk_upper/inc/psdk_app_func.h File Reference</title>
+        <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+        <link href="doxygen.css" rel="stylesheet" type="text/css" />
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+    <body>
+        <nav id="site-header" class="site-header navbar">
+            <div class="container">
+                <div class="navbar-header"><a href="" class="logo"><img src="dji-logo@2x.png">Developer</a></div>
+                <div id="header-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="hovedown"><a href="javascript:void(0);" class="hovedown-toggle">SDK<span class="caret"></span></a>
+                            <ul class="hovedown-menu">
+                                <li><a href="/mobile-sdk">Mobile SDK</a></li>
+                                <li><a href="/onboard-sdk">Onboard SDK</a></li>
+                                <li><a href="/guidance-sdk">Guidance SDK</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/showcase">Showcase</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="http://forum.dev.dji.com/en" target="_blank">Forum</a></li>
+                        <li class="hovedown"><a href="javascript:void(0);" class="hovedown-toggle">GitHub<span class="caret"></span></a>
+                            <ul class="hovedown-menu">
+                                <li><a href="https://github.com/dji-sdk/Mobile-SDK-iOS" target="_blank">iOS SDK</a></li>
+                                <li><a href="https://github.com/dji-sdk/Mobile-SDK-Android" target="_blank">Android SDK</a></li>
+                                <li><a href="https://github.com/dji-sdk/Onboard-SDK" target="_blank">Onboard SDK</a></li>
+                                <li><a href="https://github.com/dji-sdk/Guidance-SDK" target="_blank">Guidance SDK</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/challenge2016" target="_blank">Challenge</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div data-offset-top="60" data-spy="affix" class="sub-nav">
+            <div class="container">
+                <h1 class="logo">Payload SDK</h1>
+                <nav><a href="/onboard-sdk">Overview</a><a href="/onboard-sdk/documentation">Documentation</a><a href="/onboard-api-reference/index.html" class="active">API Reference</a><a href="/onboard-sdk/downloads">Downloads</a>
+                </nav>
+            </div>
+        </div>
+        <!--<nav class="navbar navbar-default" role="navigation">-->
+            <!--<div class="container">-->
+                <!--<div class="navbar-header">-->
+                    <!--<a href="#" class="navbar-left"><img src="dji_logo_gray_small.png" alt="DJI OSDK API Documentation" width="32px"/></a>-->
+                    <!--<a class="navbar-brand" href="index.html">PAYLOAD SDK 1.0</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</nav>-->
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+            <div class="content" id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 panel " style="padding-bottom: 15px; padding-top: 52px;">
+                            <div style="margin-bottom: 15px;">
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a47c3be8b8ef172a6964664124228eb8.html">psdk_upper</a></li><li class="navelem"><a class="el" href="dir_ef5885ffc3b724c2b47313c12d9ea2f4.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">psdk_app_func.h File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file define app function interface.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="psdk__upper_8h_source.html">psdk_upper.h</a>&gt;</code><br/>
+<code>#include &quot;<a class="el" href="psdk__cmdset_8h_source.html">psdk_cmdset.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for psdk_app_func.h:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+</div>
+<p><a href="psdk__app__func_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a19f66ee855b44099ff8792c5db7a97bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>APPFUNC_DEF_BUTTON_WIDGET</b>(index, nameStr)</td></tr>
+<tr class="separator:a19f66ee855b44099ff8792c5db7a97bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa589243cccd4033f3c8d50f09973b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>APPFUNC_DEF_SWITCH_WIDGET</b>(index, nameStr)</td></tr>
+<tr class="separator:a9aa589243cccd4033f3c8d50f09973b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca32a3b6258abc6374b552602205828"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>APPFUNC_DEF_SCALE_WIDGET</b>(index, nameStr)</td></tr>
+<tr class="separator:a4ca32a3b6258abc6374b552602205828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7162f5b69a7ad95488265056887a498"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>APPFUNC_DEF_LIST_WIDGET</b>(index, nameStr, chooseCount, choose1Str,...)</td></tr>
+<tr class="separator:ab7162f5b69a7ad95488265056887a498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a80ee4ad7edb5b5280a62571137ace"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>APPFUNC_DEF_INT_INPUT_BOX_WIDGET</b>(index, nameStr, promtStr)</td></tr>
+<tr class="separator:ae9a80ee4ad7edb5b5280a62571137ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac65eae0b84d28d06f08d1821e14b00b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac65eae0b84d28d06f08d1821e14b00b7"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>ReceiveFromAppFunc</b> )(const uint8_t *pData, uint16_t dataLen)</td></tr>
+<tr class="separator:ac65eae0b84d28d06f08d1821e14b00b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb1668cb4046e4f971719e6233c5043"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bb1668cb4046e4f971719e6233c5043"></a>
+typedef E_PsdkStat(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetWidgetValueFunc</b> )(E_PsdkAppFuncWidgetType widgetType, uint8_t widgetIndex, U_AppFuncWidgetValue *pWidgetValue)</td></tr>
+<tr class="separator:a8bb1668cb4046e4f971719e6233c5043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb055f730ac6a6b70308a5903a17afd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb055f730ac6a6b70308a5903a17afd1"></a>
+typedef E_PsdkStat(*&#160;</td><td class="memItemRight" valign="bottom"><b>SetWidgetValueFunc</b> )(E_PsdkAppFuncWidgetType widgetType, uint8_t widgetIndex, const U_AppFuncWidgetValue *pWidgetValue)</td></tr>
+<tr class="separator:afb055f730ac6a6b70308a5903a17afd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8b335b0fbb878d44d3e07687a578fece"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b335b0fbb878d44d3e07687a578fece"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_Init</b> (T_PsdkUpper *psdkUpper)</td></tr>
+<tr class="separator:a8b335b0fbb878d44d3e07687a578fece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5384eddc6dfa42568d27f0eb0dadbfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5384eddc6dfa42568d27f0eb0dadbfd"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_TransferToApp</b> (T_PsdkUpper *psdkUpper, const uint8_t *pSendData, uint16_t needSendLen, uint16_t *pRealSendLen)</td></tr>
+<tr class="separator:ad5384eddc6dfa42568d27f0eb0dadbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154d4b4236a8ce6143fe4b9970f5455b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a154d4b4236a8ce6143fe4b9970f5455b"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_SetReceiveFromAppCallback</b> (T_PsdkUpper *psdkUpper, ReceiveFromAppFunc func)</td></tr>
+<tr class="separator:a154d4b4236a8ce6143fe4b9970f5455b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5c231726712020f985901afcfdcb1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade5c231726712020f985901afcfdcb1e"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_PushMsgToFloatingWindow</b> (T_PsdkUpper *psdkUpper, const char *msg)</td></tr>
+<tr class="separator:ade5c231726712020f985901afcfdcb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa8573ac3d58b8b1ee4257275f85fbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fa8573ac3d58b8b1ee4257275f85fbf"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_SetWidgetList</b> (T_PsdkUpper *psdkUpper, const T_PsdkAppFuncWidgetListItem *widgetList, uint8_t widgetItemCount)</td></tr>
+<tr class="separator:a1fa8573ac3d58b8b1ee4257275f85fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47c92d5bb4461de04b113dc441f3bd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae47c92d5bb4461de04b113dc441f3bd7"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_RegGetWidgetValueCallback</b> (T_PsdkUpper *psdkUpper, GetWidgetValueFunc getWidgetValueFunc)</td></tr>
+<tr class="separator:ae47c92d5bb4461de04b113dc441f3bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b6b25eef2f9ae9f381af2577de7084"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7b6b25eef2f9ae9f381af2577de7084"></a>
+E_PsdkStat&#160;</td><td class="memItemRight" valign="bottom"><b>PsdkAppFunc_RegSetWidgetValueCallback</b> (T_PsdkUpper *psdkUpper, SetWidgetValueFunc setWidgetValueFunc)</td></tr>
+<tr class="separator:af7b6b25eef2f9ae9f381af2577de7084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file define app function interface. </p>
+<dl class="section version"><dt>Version</dt><dd>V0.0.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10-August-2017 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2017 DJI. All right reserved. </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a19f66ee855b44099ff8792c5db7a97bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPFUNC_DEF_BUTTON_WIDGET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nameStr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">    .widgetType = PSDK_APPFUNC_WIDGET_TYPE_BUTTON, \</div>
+<div class="line">    .widgetIndex = index, \</div>
+<div class="line">    .widgetName = nameStr, \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae9a80ee4ad7edb5b5280a62571137ace"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPFUNC_DEF_INT_INPUT_BOX_WIDGET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nameStr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">promtStr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">    .widgetType = PSDK_APPFUNC_WIDGET_TYPE_INT_INPUT_BOX, \</div>
+<div class="line">    .widgetIndex = index, \</div>
+<div class="line">    .widgetName = nameStr, \</div>
+<div class="line">    .intInputBoxAttribute.promptStr = promtStr, \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab7162f5b69a7ad95488265056887a498"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPFUNC_DEF_LIST_WIDGET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nameStr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">chooseCount, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">choose1Str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">    .widgetType = PSDK_APPFUNC_WIDGET_TYPE_LIST, \</div>
+<div class="line">    .widgetIndex = index, \</div>
+<div class="line">    .widgetName = nameStr, \</div>
+<div class="line">    .listAttribute.listItemNum = chooseCount, \</div>
+<div class="line">    .listAttribute.listItemName = {choose1Str,##__VA_ARGS__}, \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4ca32a3b6258abc6374b552602205828"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPFUNC_DEF_SCALE_WIDGET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nameStr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">    .widgetType = PSDK_APPFUNC_WIDGET_TYPE_SCALE, \</div>
+<div class="line">    .widgetIndex = index, \</div>
+<div class="line">    .widgetName = nameStr, \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9aa589243cccd4033f3c8d50f09973b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPFUNC_DEF_SWITCH_WIDGET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nameStr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div>
+<div class="line">    .widgetType = PSDK_APPFUNC_WIDGET_TYPE_SWITCH, \</div>
+<div class="line">    .widgetIndex = index, \</div>
+<div class="line">    .widgetName = nameStr, \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>
+  <footer id="site-footer" class="site-footer">
+    <div class="container">
+      <div class="foot-nav row">
+        <nav class="link-list col-xs-2"><span class="title">SDK</span><a href="/mobile-sdk">Mobile SDK</a><a href="/onboard-sdk">Onboard SDK</a><a href="/guidance-sdk">Guidance SDK</a></nav>
+        <nav class="link-list col-xs-2"><span class="title">Info</span><a href="/products">Products</a><a href="/showcase">Showcase</a><a href="/news">News</a></nav>
+        <nav class="link-list col-xs-2"><span class="title">Community</span><a href="http://forum.dev.dji.com/en" target="_blank">Forum</a><a href="https://github.com/dji-sdk" target="_blank"> GitHub</a><a href="http://stackoverflow.com/questions/tagged/dji-sdk" target="_blank"> Stack Overflow</a></nav>
+        <nav class="link-list col-xs-2"><span class="title">Contact Us</span><a href="mailto:dev@dji.com"> dev@dji.com</a></nav>
+        <nav class="link-list col-xs-3"><span class="title">Business Cooperation</span><a href="mailto:dev.bd@dji.com"> dev.bd@dji.com</a></nav>
+      </div>
+      <div class="foot-copyright row">
+        <div class="col-xs-3 foot-logo"><img src="dji-logo-foot.png"></div>
+        <div class="copyright col-xs-7"><span>Copyright © 2018 DJI All Rights Reserved</span><a href="/policies/privacy">Privacy</a><a href="/policies/terms">Terms</a></div>
+        <div class="col-xs-2">
+          <div class="lang-selector">
+            <select dir="rtl" v-model="lang">
+              <option value="en">English</option>
+              <option value="cn">中文</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</small></address>
+</body>
+</html>

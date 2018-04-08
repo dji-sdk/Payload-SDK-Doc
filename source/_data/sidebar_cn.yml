@@ -1,0 +1,57 @@
+-
+  title: "INTRODUCTION"
+  list:
+    -
+      title: "Documentation Home"
+      path: "/cn/introduction/index.html"
+    -
+      title: "Hardware Introduction"
+      path: "/cn/introduction/hardware_introduction.html"
+-
+  title: "Features"
+  list:
+    -
+      title: "Features Introduction"
+      path: "/cn/features/psdk_introduction.html"
+    -
+      title: "Data Transmission"
+      path: "/cn/features/data-transmission.html"
+    -
+      title: "Aircraft State Push Data"
+      path: "/cn/features/aircraft-state-push-data.html"
+    -
+      title: "Camera & Gimbal Features"
+      path: "/cn/features/camera-gimbal-features.html"
+    -
+      title: "Integration with DJI SDKs & Apps"
+      path: "/cn/features/integrate-other-dji-sdk-apps.html"
+-
+  title: "GET STARTED IMMEDIATELY"
+  list:
+    -
+      title: "Run Sample Application"
+      path: "/cn/quick-start/index.html"
+-
+  title: "Development Workflow"
+  list:
+    -
+      title: "Integrate SDK into Application"
+      path: "/cn/development-workflow/integrate_sdk.html"
+    -
+      title: "Build Application"
+      path: "/cn/development-workflow/build-application.html"
+-
+  title: "GUIDES"
+  list:
+    -
+      title: "Network Port"
+      path: "/cn/guide/network_port.html"
+    -
+      title: "SKYPORT Installation"
+      path: "/cn/guide/adapter_install.html"
+-
+  title: "SUPPORT"
+  list:
+    -
+      title: "FAQ For Application Process"
+      path: "/cn/faq/index.html"

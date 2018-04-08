@@ -1,0 +1,31 @@
+digraph "psdk_upper/inc/psdk_app_func.h"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="psdk_upper/inc/psdk\l_app_func.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="psdk_upper.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__upper_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="psdk_core.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="psdk_cmdset.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset_8h.html",tooltip="This file define cmd-set. "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="psdk_cmdset_define\l/psdk_cmdset_payload\l_state.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset__payload__state_8h_source.html"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="psdk_typedef.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="psdk_cmdset_define\l/psdk_cmdset_app_func.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset__app__func_8h.html",tooltip="This file define payload sdk app func cmd set. "];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="psdk_cmdset_define\l/psdk_cmdset_msg_push.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset__msg__push_8h_source.html"];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="psdk_cmdset_define\l/psdk_cmdset_camera.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset__camera_8h.html",tooltip="This file define payload sdk camera cmd set. "];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="psdk_cmdset_define\l/psdk_cmdset_gimbal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$psdk__cmdset__gimbal_8h_source.html"];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

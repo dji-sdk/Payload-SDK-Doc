@@ -1,0 +1,9 @@
+digraph "doc/doxygen-resources" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_08d5440f290d6478c504c96367481f67 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="doc" fontname="Helvetica", fontsize="10", URL="dir_08d5440f290d6478c504c96367481f67.html"]
+  dir_d5045e43ab16e385cc6b7b55496d7d31 [shape=box, label="doxygen-resources", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d5045e43ab16e385cc6b7b55496d7d31.html"];
+  }
+}

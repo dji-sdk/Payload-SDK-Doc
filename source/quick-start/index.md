@@ -4,6 +4,9 @@ date: 2018-03-28
 keywords: [quick start, register, generate app key, app key, run sample code, run sample application, bind, sample]
 ---
 
+To have a better experience of learning how to get started with the DJI Payload SDK, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-how-to-use-payload-sdk-and-run-a-sample-application" class="fancybox fancybox.iframe">Getting Started Video</a>.
+
+
 ## Registration and App creation
 
 The first step for getting started is to create your PSDK enterprise user account and apply for a PSDK application. Follow the steps [here](https://developer.dji.com/payload-sdk/apply) to do this.

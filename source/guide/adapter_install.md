@@ -4,6 +4,8 @@ date: 2018-03-28
 keywords: [Installation]
 ---
 
+To have a better experience of learning how to mount a payload device, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-mounting-a-payload-device-89abebc6-6f7f-48dd-b855-fba7f6288a96" class="fancybox fancybox.iframe">Mounting a Payload Device Video</a>.
+
 ## Assembly Guide
 
 ### 1.  Mount the metal ring (pressure piece), while making sure that the rubber ring remains in its original place without being misaligned; press the the metal ring downward to make sure that the device is mounted in the place. 

@@ -50,7 +50,7 @@ In short, anything you feel relevant, but we’ve provided a few key points for 
 
 Yes, once your application is approved you will need to pay a license fee equal to $10,000 USD/year for developing one product line. Any additional product lines will cost an additional, discounted licensing fee of $5,000 USD per year for each additional product line.
 
-Early-Bird discount: Any applications that are approved before Octorber 31st, 2018 will be offered a discounted price of $5,000 for the Payload SDK Developer license and the first developed product.
+Early-Bird discount: Any applications that are approved before November 9th, 2018 will be offered a discounted price of $5,000 for the Payload SDK Developer license and the first developed product.
 
 ### What resources are provided to Payload SDK Developers?
 

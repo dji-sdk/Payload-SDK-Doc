@@ -74,7 +74,93 @@ The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payl
 </table>
 
 #### Definition of Interfaces Pin
-![](../images/introduction/hardware_introduction/pin_define.png)
+
+<table id="t03">
+  <thead>
+    <tr>
+      <th>Pin</th>
+      <th>Signal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 - 15</td>
+      <td>VCC</td>     
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>VCC</td>     
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>CANH</td>     
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>CANL</td>     
+    </tr>
+    <tr>
+      <td>21 - 22</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>LAN_TXP</td>     
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>LAN_TXN</td>     
+    </tr>
+    <tr>
+      <td>26 - 28</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>LAN_RXP</td>     
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>LAN_RXN</td>     
+    </tr>
+    <tr>
+      <td>32 - 36</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>Drone_Uart_TX</td>     
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>GND</td>     
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>Drone_Uart_RX</td>     
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>GND</td>     
+    </tr>
+  </tbody>
+</table>
 
 ## Payload SDK Development Board
 The Payload SDK development board helps you explore the Payload SDK features to quickly familiarize yourself with the Payload SDK usage and prototype your application during the preliminary R&D phase. You can port the Payload SDK to your own payload platform later. The Payload SDK development board uses the MCU STM32F407IGT6.

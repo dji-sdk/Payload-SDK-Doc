@@ -6,24 +6,6 @@ keywords: [Installation]
 
 To have a better experience of learning how to mount a payload device, please check this <a href="https://www.skypixel.com/videos/dji-payload-sdk" target="_blank">Mounting a Payload Device Video</a>.
 
-## Assembly Guide
-
-### 1.  Mount the metal ring (pressure piece), while making sure that the rubber ring remains in its original place without being misaligned; press the the metal ring downward to make sure that the device is mounted in the place. 
-![](../images/guide/adapter_install/install_7.png)
-
-### 2. Mount the PCBA metal ring (Note that:  the pin in the left figure needs ro be aligned with the pin hole in the right figure).
-![](../images/guide/adapter_install/install_8.png)
-
-### 3.  Screw the four screws tightly, as shown in the figure below.
-![](../images/guide/adapter_install/install_9.png)
-
-### 4. Mount the two silicone pads, as shown in the figure below.
-![](../images/guide/adapter_install/install_10.png)
-
-### 5. Mount the cap flashing, and screw the screws tightly.
-![](../images/guide/adapter_install/install_11.png)
-
-
 ## Disassembly Guide
 
 ### 1. The following figure shows the DJI SkyPort.
@@ -43,3 +25,20 @@ To have a better experience of learning how to mount a payload device, please ch
 
 ### 6. The four screws shown in the following figure are used to mount your own payload devices. Your payload should have M2.5 screwed holes with the minimum depth of 3.5 mm.
 ![](../images/guide/adapter_install/install_6.png)
+
+## Assembly Guide
+
+### 1.  Mount the metal ring (pressure piece), while making sure that the rubber ring remains in its original place without being misaligned; press the the metal ring downward to make sure that the device is mounted in the place. 
+![](../images/guide/adapter_install/install_7.png)
+
+### 2. Mount the PCBA metal ring (Note that:  the pin in the left figure needs ro be aligned with the pin hole in the right figure).
+![](../images/guide/adapter_install/install_8.png)
+
+### 3.  Screw the four screws tightly, as shown in the figure below.
+![](../images/guide/adapter_install/install_9.png)
+
+### 4. Mount the two silicone pads, as shown in the figure below.
+![](../images/guide/adapter_install/install_10.png)
+
+### 5. Mount the cap flashing, and screw the screws tightly.
+![](../images/guide/adapter_install/install_11.png)

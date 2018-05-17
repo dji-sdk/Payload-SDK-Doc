@@ -1,6 +1,6 @@
 ---
 title: Hardware Introduction
-date: 2018-04-03
+date: 2018-05-17
 keywords: [hardware]
 ---
 
@@ -163,7 +163,7 @@ The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payl
 </table>
 
 ## Payload SDK Development Board
-The Payload SDK development board helps you explore the Payload SDK features to quickly familiarize yourself with the Payload SDK usage and prototype your application during the preliminary R&D phase. You can port the Payload SDK to your own payload platform later. The Payload SDK development board uses the MCU STM32F407IGT6.
+The Payload SDK development board helps you explore the Payload SDK features to quickly familiarize yourself with the Payload SDK usage and prototype your application during the preliminary R&D phase. You can port the Payload SDK to your own payload platform later. The Payload SDK development board uses the MCU STM32F407IGH6.
 
 ### Hardware description
 ![](../images/introduction/hardware_introduction/psdk_demo_board_print.png)

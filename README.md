@@ -31,8 +31,9 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | b
 ##### 2. Install stable node
 
 ```
-nvm install 4.4.4
-nvm use 4.4.4
+
+nvm install 6.9.0
+nvm use 6.9.0(not 4.4.4)
 ```
 
 ##### 3. Install hexo

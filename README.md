@@ -33,7 +33,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | b
 ```
 
 nvm install 6.9.0
-nvm use 6.9.0(not 4.4.4)
+nvm use 6.9.0
 ```
 
 ##### 3. Install hexo

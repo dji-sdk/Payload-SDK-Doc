@@ -43,6 +43,10 @@ Currently, the following push data is supported:
       <td>1Hz</td>        
     </tr>
     <tr>
+      <td>GPS raw data</th>
+      <td>1Hz</td>        
+    </tr>
+    <tr>
       <td>Flight status</th>
       <td>1Hz</td>        
     </tr>

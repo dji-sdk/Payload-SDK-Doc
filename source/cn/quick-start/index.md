@@ -4,7 +4,8 @@ date: 2018-03-28
 keywords: [quick start, register, generate app key, app key, run sample code, run sample application, bind, sample]
 ---
 
-To have a better experience of learning how to get started with the DJI Payload SDK, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-payload-sdk" target="_blank">Getting Started Video</a>.
+To have a better experience of learning how to get started with the DJI Payload SDK, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-how-to-use-payload-sdk-and-run-a-sample-application" target="_blank">Getting Started Video</a>.
+
 
 ## Registration and App creation
 
@@ -34,17 +35,12 @@ For the first use only, the SKYPORT adapter needs to be bound with your Payload 
 
 ## Run Payload SDK Application
 
-### Mobile SDK Communication Sample
-
-- Payload SDK functionality is enabled after completing the binding process. 
-- You can test PSDK functions with the Mobile SDK-based PSDK sample application. 
-- Please download and install the sample application from the Payload SDK download page in USER Center (Mobile SDK for Payload SDK), install it into a mobile device, and then connect to the remote controller with a USB cable.  
-- Run Mobile SDK Sample app . On first use, your mobile device needs an internet connection to finish registration and needs login your DJI account. 
-- After registration is done, you can see the development board’s sensor data displayed in the program. This means the communication is successful!
-![](../images/quick-start/psdk_demo.png)
-
 ### DJI Pilot Integration Sample
 
-You can use DJI Pilot on Android to see the same Payload SDK functionality. You need to get a newest version of DJI Pilot [here](http://dl.djicdn.com/djipilot-official.apk).
+- Payload SDK functionality is enabled after completing the binding process. 
+- You can test PSDK functions with the DJI Pilot on Android. 
+- You need to get a newest version of DJI Pilot [here](http://dl.djicdn.com/djipilot-official.apk), install it into a mobile device, and then connect to the remote controller with a USB cable.  
+- Run DJI Pilot . On first use, your mobile device needs an internet connection to finish registration and needs login your DJI account. 
+- After registration is done, you can see the development board’s sensor data displayed in the program. This means the communication is successful!
 
 ![](../images/introduction/psdk_introduction/pilot_main.png)

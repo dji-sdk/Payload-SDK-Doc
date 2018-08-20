@@ -26,7 +26,6 @@ Next, you can build and flash your application from a host computer to your Payl
 For the first use only, the SKYPORT adapter needs to be bound with your Payload SDK application. Please follow the steps below to bind it.
 
 1. Connect the SKYPORT adapter to the Payload SDK development board with the coaxial cable, and then connect the adapter to the M200 series aircraft. Use USB cable to connect the M200 to a PC.
-![](../images/quick-start/blind_connection.png)
 
 2. Open DJI Assistant 2, then log into your Payload SDK enterprise account.
 

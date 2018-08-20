@@ -8,9 +8,9 @@ keywords: [integrate, port]
 ![](../images/guide/integrate_sdk/psdk_architecture.png)
 
 - User Application Layer : The user's application.
-- PSDK_Upper Layer : PSDK function layer. A user can call this layer interface to use PSDK functionalities.
-- PSDK_Core Layer : PSDK low layer functions to deal with protocol parse, protocol package and debugging.
-- PSDK_Arch Layer : PSDK platform wrapper layer to port payload SDK to different platforms.
+- PSDK Upper Layer : PSDK function layer. A user can call this layer interface to use PSDK functionalities.
+- PSDK Core Layer : PSDK low layer functions to deal with protocol parse, protocol package and debugging.
+- PSDK Arch Layer : PSDK platform wrapper layer to port payload SDK to different platforms.
 
 ## Run Payload SDK
 The initialization functions of the Payload SDK are provided in the file "Payload_SDK/psdk_upper/inc/psdk_upper.h file" of the SDK. You can refer to the function interface description to incorporate and establish the Payload SDK running environment for your application.

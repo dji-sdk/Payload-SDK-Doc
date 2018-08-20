@@ -19,7 +19,7 @@ The DJI Payload SDK adds to the growing developer ecosystem that includes the [M
 ![](../images/introduction/psdk_introduction/pilot_widget.png)
 
 ## Mobile SDK Support
-Mobile SDK provides interfaces for interacting with PSDK data. The samples of Android and iOS applications are also available as part of the PSDK package. 
+Mobile SDK provides interfaces for interacting with PSDK data. 
 
 Mobile SDK supports the following functions related to PSDK:
 

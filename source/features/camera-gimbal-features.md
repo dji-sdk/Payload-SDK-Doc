@@ -72,6 +72,10 @@ Payload SDK provides support for camera and gimbal payloads that will allow your
     </tr>
     <tr>
       <td>Gimbal mode settings</th>
+      <td>Support free mode,FPV mode and follow mode.</td>        
+    </tr>
+    <tr>
+      <td>Gimbal attitude acquisition</th>
       <td>Obtain the current gimbal attitude and rotate limit.</td>        
     </tr>
   </tbody>

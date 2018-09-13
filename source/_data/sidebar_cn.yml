@@ -1,57 +1,57 @@
 -
-  title: "INTRODUCTION"
+  title: "介绍"
   list:
     -
-      title: "Documentation Home"
+      title: "文档主页"
       path: "/cn/introduction/index.html"
     -
-      title: "Hardware Introduction"
+      title: "硬件介绍"
       path: "/cn/introduction/hardware_introduction.html"
 -
-  title: "Features"
+  title: "功能"
   list:
     -
-      title: "Features Introduction"
+      title: "功能概述"
       path: "/cn/features/psdk_introduction.html"
     -
-      title: "Data Transmission"
+      title: "数据传输"
       path: "/cn/features/data-transmission.html"
     -
-      title: "Aircraft State Push Data"
+      title: "飞机状态数据推送"
       path: "/cn/features/aircraft-state-push-data.html"
     -
-      title: "Camera & Gimbal Features"
+      title: "相机和云台功能"
       path: "/cn/features/camera-gimbal-features.html"
     -
-      title: "Integration with DJI SDKs & Apps"
+      title: "配套软件支持"
       path: "/cn/features/integrate-other-dji-sdk-apps.html"
 -
-  title: "GET STARTED IMMEDIATELY"
+  title: "快速开始"
   list:
     -
-      title: "Run Sample Application"
+      title: "运行示例应用程序"
       path: "/cn/quick-start/index.html"
 -
-  title: "Development Workflow"
+  title: "开发工作流程"
   list:
     -
-      title: "Integrate SDK into Application"
+      title: "与PSDK集成"
       path: "/cn/development-workflow/integrate_sdk.html"
     -
-      title: "Build Application"
+      title: "构建应用程序"
       path: "/cn/development-workflow/build-application.html"
 -
-  title: "GUIDES"
+  title: "指南"
   list:
     -
-      title: "Network Port"
+      title: "网络端口"
       path: "/cn/guide/network_port.html"
     -
-      title: "SKYPORT Installation"
+      title: "SKYPORT 安装"
       path: "/cn/guide/adapter_install.html"
 -
-  title: "SUPPORT"
+  title: "支持"
   list:
     -
-      title: "FAQ For Application Process"
+      title: "关于PSDK申请流程的常见问题解答"
       path: "/cn/faq/index.html"

@@ -12,7 +12,7 @@ Currently for the build and flash process, we only support the Keil MDK with the
 
 1. Connect the system, as shown in the following setup diagram:
 ![](../images/quick-start/payload_hardware.png)
-Connect the SKYPORT adapter to M200. Use the coaxial cable to connect the adapter to the Payload SDK development board. The firmware of the Payload SDK development board uses UART1(RX1 TX1 GND) port to communicate with the computer. 
+Connect the SKYPORT adapter to M200. Use the coaxial cable to connect the adapter to the Payload SDK development board. The firmware of the Payload SDK development board uses Micro USB port to communicate with the computer. 
 
 2. Power on the M200, and make sure the SKYPORT Adapter is firmly connected to the aircraft. (The red dots on the adapter and the aircraft should line up). If the connection is set up correctly, a blue LED on Payload SDK development board will turn on. 
 

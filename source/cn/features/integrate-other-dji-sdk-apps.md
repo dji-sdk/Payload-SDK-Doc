@@ -1,39 +1,39 @@
 ---
-title: Payload SDK Features - DJI SDKs and Apps Integration
-date: 2018-03-28
-keywords: [introduction, overview, Payload SDK]
+title: Payload SDK 功能 - DJI SDK and Apps 集成
+date: 2018-09-13
+keywords: [介绍, 功能, Payload SDK]
 ---
 
-## DJI Developer Ecosystem
+## DJI开发者生态系统
 
-The DJI Payload SDK adds to the growing developer ecosystem that includes the [Mobile SDK](https://developer.dji.com/mobile-sdk/documentation/introduction/index.html), [Onboard SDK](https://developer.dji.com/onboard-sdk/documentation/introduction/homepage.html) and various applications/tools including [DJI Pilot](http://dl.djicdn.com/djipilot-official.apk) and [DJI Assistant 2](https://www.dji.com/matrice-200-series/info#downloads).
+DJI Payload SDK 增加了不断增长的开发者生态系统，包括 [Mobile SDK](https://developer.dji.com/mobile-sdk/documentation/introduction/index.html), [Onboard SDK](https://developer.dji.com/onboard-sdk/documentation/introduction/homepage.html) 和各种应用程序/工具，包括 [DJI Pilot](http://dl.djicdn.com/djipilot-official.apk) 和 [DJI Assistant 2](https://www.dji.com/matrice-200-series/info#downloads)。
 
-- The Payload SDK is your SDK of choice when you want to add sensing to the aircraft.
-- The PSDK integrates with the Mobile SDK tightly to provide a native experience for users of Mobile SDK applications.
-- Onboard SDK integration with the PSDK is coming soon!
+- 当您想要将负载添加到飞机上时，Payload SDK是您的首选。
+- PSDK与Mobile SDK紧密集成，为Mobile SDK应用程序的用户提供原生体验。
+- Onboard SDK与PSDK的集成即将推出！
 
-## DJI Pilot Support
+## DJI Pilot 支持
 
 ![](../images/introduction/psdk_introduction/pilot_main.png)
 
 ![](../images/introduction/psdk_introduction/pilot_widget.png)
 
-## Mobile SDK Support
-Mobile SDK provides interfaces for interacting with PSDK data. 
+## Mobile SDK 支持
+Mobile SDK提供了与PSDK数据交互的接口。
 
-Mobile SDK supports the following functions related to PSDK:
+Mobile SDK支持以下与PSDK相关的功能：
 
-- Direct data transmission interface.
-- Network port downlink data transmission interface.
-- Network port transmission of the fixed format H264 code stream analysis.
-- Payload SDK camera and gimbal interface support. 
+- 数据透传接口。
+- 网络端口下行数据传输接口。
+- 网络端口传输的固定格式 H264 视频解码。
+- Payload SDK相机和云台接口支持。
 
-## DJI Assistant Support
-DJI Assistant provides SKYPORT adapter configuration features as below:
+## DJI Assistant 2 支持
+DJI Assistant 2 提供 SKYPORT转接环配置功能如下：
 
-- Set to bind or unbind the adapter with the application
-- Set the SKYPORT adapter channel and channel baud rate
-- Set the SKYPORT adapter push data frequency
-- SKYPORT Adapter firmware update can also be done through the Assistant software
+- 转接环的绑定和解绑
+- 设置 SKYPORT 转接环通道和通道波特率
+- 设置 SKYPORT 转接环数据推送数据频率
+- 更新 SKYPORT 转接环固件
 
-Enterprise users can use their Payload SDK account to login the DJI Assistant and configure the SKYPORT Adapter on the Payload SDK’s configuration page.
+企业用户可以使用 Payload SDK 帐户登录 DJI Assistant 2 并在 SKYPORT 的配置页面配置 SKYPORT 转接环。

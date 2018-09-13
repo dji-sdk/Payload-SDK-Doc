@@ -1,24 +1,24 @@
 ---
-title: Network Port Guide
-date: 2018-03-28
-keywords: [introduction]
+title: 网络端口指南
+date: 2018-09-13
+keywords: [介绍]
 ---
 
-## Network Port Configuration
-Configure the network port network properties as below when using the network port to transmit code stream and data:
+## 网络端口配置
+使用网络端口传输码流和数据时，配置网络端口网络属性如下：
 
-- IP address: 192.168.5.3
-- Subnet mask: 255.255.255.0
-- Default gateway: 192.168.5.1
+- IP 地址: 192.168.5.3
+- 子网掩码: 255.255.255.0
+- 默认网关: 192.168.5.1
 
-## Downlink Data Transmission
-The network port sends downlink data (i.e. from PSDK to MSDK) to the IP 192.168.5.10 and port 23002 by using the UDP protocol
+## 下行链路数据传输
+网络端口通过使用 UDP 协议将下行链路数据（即从 PSDK 到 MSDK ）往 IP 192.168.5.10 ，端口 23002 发送。
 
-## Video Transmission
-The network port sends video stream to the IP 192.168.5.10 and port 23003 by using the UDP protocol.
-The requirement of the video stream are as below:
+## 视频传输
+网络端口使用 UDP 协议将视频流往 IP 192.168.5.10，端口 23003 发送。
+视频流的要求如下：
 
-- h264 stream, GOP encoding, I frame interval of 30 with the rest of P frame
-- Up to 8KB for sending a single package when using UDP
+- h264 码流, GOP 编码, I 帧间隔为 30，无P帧
+- 使用 UDP 时，最多可以发送 8KB 的数据包
 
-Developers can refer to the video stream transmission routines (Payload_SDK/sample/network_port).
+开发者可以参考视频流传输例程（Payload_SDK / sample / network_port）。

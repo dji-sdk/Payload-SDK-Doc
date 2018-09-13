@@ -36,4 +36,4 @@ DJI Assistant provides SKYPORT adapter configuration features as below:
 - Set the SKYPORT adapter push data frequency
 - SKYPORT Adapter firmware update can also be done through the Assistant software
 
-Enterprise users can use their Payload SDK account to login the DJI Assistant and configure the SKYPORT Adapter on the Payload SDK’s configuration page.
+Enterprise users can use their Payload SDK account to login the DJI Assistant and configure the SKYPORT Adapter on the SKYPORT’s configuration page.

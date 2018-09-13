@@ -1,62 +1,59 @@
 ---
-title: Payload SDK Features - Aircraft State Push Data
-date: 2018-03-28
-keywords: [introduction, overview, Payload SDK]
+title: Payload SDK 功能 - 飞机状态数据推送
+date: 2018-09-13
+keywords: [介绍, 功能, Payload SDK]
 ---
 
-### Push Data Description
+### 推送数据描述
 
-The Payload SDK provides access to some real-time information about the aircraft's state. Here are some examples of how this information can be used by your payload:
+Payload SDK 提供有关飞机状态的一些实时信息。以下是您的负载如何使用此信息的一些示例：
 
-- For camera payloads, you can record the GPS position of the aircraft at the time a picture was taken and store it as metadata
-- For camera/gimbal payloads, you can record the attitude of the aircraft and use it to rotate the picture in use cases which demand absolute position and orientation
-- You can monitor the battery levels and turn off some functionality of the payload when the aircraft battery drops below a certain level
+- 对于相机类，您可以拍摄照片时记录飞机的GPS位置并将其作为元数据存储
+- 对于相机/云台类负载，您可以记录飞机的姿态，并在需要绝对位置和方向的用例中用它来旋转图片
+- 当飞机电池电量低于一定水平时，您可以监控电池电量并关闭负载的某些功能
 
 
-### Push Data Details
-Payload SDK provides access to aircraft state, referring to the Payload SDK API manual for details. 
+### 推送数据详情
+Payload SDK提供对飞机状态的访问，参考Payload SDK API手册了解详情。
 
-Currently, the following push data is supported:
+目前，支持以下推送数据：
 
 <table id="t01">
   <thead>
     <tr>
-      <th>Status</th>
-      <th>Maximum push frequency</th>
+      <th>状态</th>
+      <th>最大推送频率</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> Data Communication status (including video transmission bandwidth)</th>
+      <td> 数据通讯状态 (包括视频传输带宽)</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>Flight attitude</th>
+      <td>飞行姿态</th>
       <td>50Hz</td>        
     </tr>
     <tr>
-      <td>Battery status</th>
+      <td>电池状态</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>GPS data</th>
+      <td>GPS 数据</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>GPS raw data</th>
+      <td>GPS 原始数据</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>Altitude data</th>
+      <td>海拔高度</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>Flight status</th>
+      <td>飞行状态</th>
       <td>1Hz</td>        
     </tr>
     <tr>
-      <td>App time and date push</th>
+      <td>App 时间日期推送</th>
       <td>1Hz</td>        
-    </tr>
-  </tbody>
-</table>

@@ -1,45 +1,45 @@
 ---
-title: Documentation Home
-date: 2018-03-28
-keywords: [introduction]
+title: 文档主页
+date: 2018-09-13
+keywords: [介绍]
 ---
 
-## What is the DJI Payload SDK?
+## DJI Payload SDK 是什么?
 
-The DJI Payload SDK (PSDK) is a transformational SDK that enables third-party manufacturers to develop application-specific payloads that can be integrated seamlessly with DJI flight platforms. With the PSDK, your payload gets access to power supply, wireless communication link, aircraft state/status information (GPS, attitude, time and date) and various APIs tightly integrating with Mobile SDK (MSDK), DJI Pilot and Onboard SDK (OSDK).
+DJI Payload SDK ( PSDK ) 是一款转换型 SDK，主要用于让第三方厂家基于 DJI 飞行平台进行负载设备开发。第三方厂家可以使用飞行平台的资源，如电源、通讯链路、状态信息（ GPS 信息、姿态信息、时间日期 ）等。同时，Payload SDK 还提供配套的软件支持，如 Onboard SDK，Mobile SDK，DJI Pilot，DJI Assistant 等。
 
-This documentation helps developers get started with the PSDK and understand its nuances. The structure of this website is summarized below.
+本文档可帮助开发人员开始使用PSDK并了解其细微差别。本网站的结构总结如下。
 
-## Hardware Kit
+## 硬件套件
 
-The PSDK hardware kit consists of a DJI SKYPORT adapter, a development board and a coaxial cable to connect the two components. 
+PSDK 硬件套件包括 DJI SKYPORT转接环，开发板和连接两个组件的同轴线。
 
-Details on this hardware kit can be found on the [Hardware Introduction](hardware_introduction.html) page.
+有关此硬件套件的详细信息，请参见 [硬件介绍](hardware_introduction.html) 页面.
 
-## Features
+## 功能
 
-- [Feature Overview](../features/psdk_introduction.html)
-- [Data Transmission](../features/data-transmission.html)
-- [Camera & Gimbal Features](../features/camera-gimbal-features.html)
-- [Aircraft State Push Data](../features/aircraft-state-push-data.html)
-- [Integration with DJI SDKs & Apps](../features/integrate-other-dji-sdk-apps.html)
+- [功能概述](../features/psdk_introduction.html)
+- [数据传输](../features/data-transmission.html)
+- [相机和云台功能](../features/camera-gimbal-features.html)
+- [飞机状态数据推送](../features/aircraft-state-push-data.html)
+- [配套软件支持](../features/integrate-other-dji-sdk-apps.html)
 
-## Get Started Immediately
+## 快速开始
 
-Developers can [Run Sample Application](../quick-start/index.html) to immediately run code and explore how the Payload SDK can be used to add functionalities (or services, anything else) on top of it. 
+开发者可以 [运行示例应用程序](../quick-start/index.html) 运行示例代码，并探索如何使用 Payload SDK 在上面添加功能。 
 
-## Guides
+## 指南
 
-The PSDK introduces new paradigms for creating a payload and companion applications. This section helps explain:
+提供 PSDK 组件和接口调试的操作指引。本节有助于解释：
 
-- [Network Port](../guide/network_port.html)
-- [SKYPORT Installation](../guide/adapter_install.html)
+- [网络端口](../guide/network_port.html)
+- [SKYPORT 安装](../guide/adapter_install.html)
 
-## Development Workflow
+## 开发工作流程
 
-- [Integrating with the PSDK](../development-workflow/integrate_sdk.html)
-- [Building Your Application](../development-workflow/build-application.html)
+- [与 PSDK 集成](../development-workflow/integrate_sdk.html)
+- [构建应用程序](../development-workflow/build-application.html)
 
 ## FAQs
 
-All the answers to the most frequently asked questions (FAQs) submitted by developers can be found [here](../faq/index.html).
+可以在 [这里](../faq/index.html) 找到开发人员提交的最常见问题（FAQ）的所有答案。

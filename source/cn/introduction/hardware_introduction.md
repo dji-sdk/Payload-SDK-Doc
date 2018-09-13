@@ -1,85 +1,85 @@
 ---
-title: Hardware Introduction
-date: 2018-04-03
-keywords: [hardware]
+title: 硬件介绍
+date: 2018-09-13
+keywords: [硬件]
 ---
 
-This document introduces the hardware involved in the development of an application payload with Payload SDK.
+本文档介绍了使用 Payload SDK 开发负载应用所涉及的硬件。
 
-## Payload Weight Requirements
+## 负载重量要求
 <table id="t01">
   <thead>
     <tr>
-      <th>Flight platform</th>
-      <th>Weight</th>
+      <th>飞行平台</th>
+      <th>重量</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>M200 series</td>
-      <td>Less than 600g</td>     
+      <td>M200 系列</td>
+      <td>小于 600g</td>     
     </tr>
   </tbody>
 </table>
 
-## Payload SDK Development Kit
-You can get the Payload SDK development kit after becoming a Payload SDK enterprise user. The Payload SDK development kit allows you to explore the Payload SDK features and facilitates quick development. 
+## Payload SDK 开发工具包
+成为 Payload SD K企业用户后，您可以获得 Payload SDK 开发工具包。Payload SDK 开发工具包可让您探索 Payload SDK 功能并促进快速开发。 
 
-The Payload SDK development kit contains the following components：
+Payload SDK 开发工具包包含以下组件：
 
-- DJI SKYPORT Adapter  x1
-- Payload SDK Development Board  x1
-- Round Ribbon Cable 250mm  x1
-- Flat Ribbon Cable 30mm  x1
-- Ribbon Cable Connector  x3
+- DJI SKYPORT 转接环  x1
+- Payload SDK 开发板  x1
+- 圆形同轴线 250mm  x1
+- 扁状同轴线 30mm  x1
+- 同轴线端座  x3
 
-## DJI SKYPORT Adapter
-### Introduction
+## DJI SKYPORT 转接环
+### 介绍
 ![](../images/introduction/hardware_introduction/psdk_adapter.png)
-The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payloads and UAVs. For the connection of the SkyPort and the payload, see [SKYPORT installation](../guide/adapter_install.html).
+SKYPORT 转接环可以连接到 M200 系列的云台端口，用于连接用户负载和无人机。有关 SKYPORT 和负载的连接，请参阅 [SKYPORT 安装](../guide/adapter_install.html).
 
-### Dimensions
+### 外形尺寸
 ![](../images/introduction/hardware_introduction/psdk_adapter_size.png)
 
-### Interfaces
+### 接口
 
 ![](../images/introduction/hardware_introduction/psdk_adapter_back.png)
 
-#### Interfaces Parameters
+#### 接口参数
 <table id="t01">
   <thead>
     <tr>
-      <th>Interface type</th>
-      <th>Parameter</th>
-      <th>Description</th>
+      <th>接口类型</th>
+      <th>参数</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Power supply</th>
+      <td>电源</th>
       <td>12.7V / 4A</td>
-      <td>Peak operating current is 4A</td>        
+      <td>峰值工作电流是 4A</td>        
     </tr>
     <tr>
-      <td>Command communication</th>
+      <td>通讯方式</th>
       <td>UART(TTL 3.3V), CAN</td>
-      <td>Command communications with SKYPORT</td>        
+      <td>用于与转接环通讯</td>        
     </tr>
     <tr>
-      <td>High speed bulk data communication</th>
-      <td>MDI network port</td>
-      <td>Transmit video stream and user-defined data</td>        
+      <td>大数据传输通道</th>
+      <td>MDI 网络端口</td>
+      <td>用于传输视频流和用户定义的数据</td>        
     </tr>
   </tbody>
 </table>
 
-#### Definition of Interfaces Pin
+#### 接口引脚定义
 
 <table id="t03">
   <thead>
     <tr>
-      <th>Pin</th>
-      <th>Signal</th>
+      <th>引脚</th>
+      <th>定义</th>
     </tr>
   </thead>
   <tbody>
@@ -162,45 +162,45 @@ The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payl
   </tbody>
 </table>
 
-## Payload SDK Development Board
-The Payload SDK development board helps you explore the Payload SDK features to quickly familiarize yourself with the Payload SDK usage and prototype your application during the preliminary R&D phase. You can port the Payload SDK to your own payload platform later. The Payload SDK development board uses the MCU STM32F407IGH6.
+## Payload SDK 开发板
+开发板可帮助您探索 Payload SDK 功能，以便在初步研发阶段快速熟悉 Payload SDK 的使用情况并为您的应用程序构建原型。稍后您可以将Payload SDK移植到您自己的负载平台上。Payload SDK开发板使用的MCU为 STM32F407IGH6。
 
-### Hardware description
+### 硬件描述
 ![](../images/introduction/hardware_introduction/psdk_demo_board_print.png)
 
 <table id="t02">
   <thead>
     <tr>
-      <th>Interface Number</th>
-      <th>Interface Name</th>
-      <th>Interface Description</th>
+      <th>接口编号</th>
+      <th>接口名称</th>
+      <th>接口说明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>J5</th>
-      <td>SKYPORT connector</td>
-      <td>Connect to the SKYPORT adapter using the Round Ribbon Cable 250mm.</td>        
+      <td>同轴线端座</td>
+      <td>使用同轴线连接到 SKYPORT 转接环。</td>        
     </tr>
     <tr>
       <td>J7</th>
-      <td>External Test Port</td>
-      <td>Transfers the UART/CAN signal from the SKYPORT adapter into a pinned connector to facilitate connection to other platforms.</td>        
+      <td>外部测试端口</td>
+      <td>将SKYPORT转接环的 UART/CAN 信号转换成杜邦线接口，以方便连接其他平台。</td>        
     </tr>
     <tr>
       <td>J10</th>
-      <td>Ethernet Port</td>
-      <td>Transmit video stream and user-defined data</td>        
+      <td>以太网端口</td>
+      <td>传输视频流和用户定义的数据。</td>        
     </tr>
     <tr>
       <td>J11</th>
-      <td>MCU Debug Port</td>
-      <td>SWD interface for debugging the device using a SWD debugger/prober and downloading MCU programs; UART interface for logging data</td>        
+      <td>MCU 调试端口</td>
+      <td>SWD 接口，用于使用 SWD 调试器下载和调试MCU程序; 用于记录数据的 UART 接口</td>        
     </tr>
     <tr>
       <td>J12</th>
-      <td>USB Debug Port</td>
-      <td>Print log fles and update frmware using a PC connected to this port.</td>        
+      <td>USB 调试端口</td>
+      <td>用于连接到电脑打印Log和更新固件</td>        
     </tr>
   </tbody>
 </table>

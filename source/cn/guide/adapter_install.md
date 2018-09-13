@@ -1,44 +1,44 @@
 ---
-title: SKYPORT Installation
-date: 2018-03-28
-keywords: [Installation]
+title: SKYPORT 安装
+date: 2018-09-13
+keywords: [安装]
 ---
 
-To have a better experience of learning how to mount a payload device, please check this <a href="https://www.skypixel.com/videos/dji-payload-sdk" target="_blank">Mounting a Payload Device Video</a>.
+想要更好的学习如何安装负载设备，请查看 <a href="https://www.skypixel.com/videos/dji-payload-sdk" target="_blank">安装负载设备视频</a>.
 
-## Disassembly Guide
+## 拆卸指南
 
-### 1. The following figure shows the DJI SkyPort.
+### 1. 下图是一个新的 DJI SKYPORT.
 ![](../images/guide/adapter_install/install_1.png)
 
-### 2. Unscrew the two screws in the following figure, and remove the cap flashing.
+### 2. 拧下下图中的两颗螺丝，然后取下金属盖片。
 ![](../images/guide/adapter_install/install_2.png)
 
-### 3. Remove the silicone pad.
+### 3. 取下硅胶垫。
 ![](../images/guide/adapter_install/install_3.png)
 
-### 4. Unscrew the four screws in the the following figure (do not unscrew the four PCBA-locking screws) and remove the metal ring fixed on the PCBA.
+### 4. 拧下下图中的四颗螺钉（不要拧下四颗 PCBA 锁定螺丝），并取下固定 PCBA 的金属环。
 ![](../images/guide/adapter_install/install_4.png)
 
-### 5. Remove the pressure ring in the center of the following figure, and do not remove the rubber ring.
+### 5. 拆下下图中央的压力环，不要取下橡胶圈。
 ![](../images/guide/adapter_install/install_5.png)
 
-### 6. The four screws shown in the following figure are used to mount your own payload devices. Your payload should have M2.5 screwed holes with the minimum depth of 3.5 mm.
+### 6. 下图中显示的四个螺钉用于安装您自己的负载设备。你的负载应该预留 M2.5 螺纹孔，最小深度为 3.5mm。
 ![](../images/guide/adapter_install/install_6.png)
 
-## Assembly Guide
+## 组装指南
 
-### 1.  Mount the metal ring (pressure piece), while making sure that the rubber ring remains in its original place without being misaligned; press the the metal ring downward to make sure that the device is mounted in the place. 
+### 1.  安装金属环（压力片），同时确保橡胶圈保持原位而不变形; 向下按压金属环以确保设备已安装到位。
 ![](../images/guide/adapter_install/install_7.png)
 
-### 2. Mount the PCBA metal ring (Note that:  the pin in the left figure needs ro be aligned with the pin hole in the right figure).
+### 2. 安装 PCBA 金属环（注意：左图中的引脚需要与右图中的引脚孔对齐）。
 ![](../images/guide/adapter_install/install_8.png)
 
-### 3.  Screw the four screws tightly, as shown in the figure below.
+### 3.  如下图所示，拧紧四颗螺丝。
 ![](../images/guide/adapter_install/install_9.png)
 
-### 4. Mount the two silicone pads, as shown in the figure below.
+### 4. 安装两个硅胶垫，如下图所示。
 ![](../images/guide/adapter_install/install_10.png)
 
-### 5. Mount the cap flashing, and screw the screws tightly.
+### 5. 安装金属盖片，然后拧紧螺钉。
 ![](../images/guide/adapter_install/install_11.png)

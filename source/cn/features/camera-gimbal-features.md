@@ -1,78 +1,82 @@
 ---
-title: Payload SDK Features - Camera/Gimbal Interfaces
-date: 2018-03-28
-keywords: [introduction, overview, Payload SDK]
+title: Payload SDK 功能 - 相机和云台接口
+date: 2018-09-13
+keywords: [功能, 介绍, Payload SDK]
 ---
 
-## Camera and Gimbal Payload Interface Support
-Payload SDK provides support for camera and gimbal payloads that will allow your payload to function seamlessly with DJI Mobile SDK and DJI Pilot.  DJI Pilot provides UI for camera and gimble payloads, and Mobile SDK provides the corresponding interface for camera and gimbal payloads. This support is intended to be used in the following manner:
+## 相机和云台支持接口
+Payload SDK 支持相机和云台类负载，使您的负载能够与 DJI Mobile SDK 和 DJI Pilot 无缝对接。DJI Pilot 为相机和云台负载提供 UI，Mobile SDK 为相机和云台负载提供相应的接口。此支持旨在以下列方式使用：
 
-- Payload SDK provides interfaces that are interpreted by the aircraft/MSDK in the same manner as native DJI payloads.
-- It is the developer's responsibility to implement these features as defined by the interface.
-- For example, the PSDK provides a Zoom API. This means that this function will be called when a MSDK application calls the Zoom API on the mobile side or zoom button press on DJI Pilot. It is up to you, as a developer, to implement the zoom functionality for your own payload such that when the zoom function is invoked, your payload physically executes the zoom.
+- Payload SDK 提供的接口由飞机/ MSDK以与原生DJI 云台相同的方式进行解释。
+- 开发人员有责任根据界面的定义来实现这些功能。
+- 例如，PSDK 提供了缩放 API。这意味着当 MSDK 应用程序调用移动端的缩放 API 或 DJI Pilot 上的缩放按钮时，将调用此功能。作为开发人员，您需要为自己的负载实现缩放功能，以便在调用缩放功能时，您的负载通过物理方式执行缩放。
 
-### Camera Interface Support
+### 相机接口功能支持
 
 <table id="t01">
   <thead>
     <tr>
-      <th>Interface features</th>
-      <th>Description</th>
+      <th>接口功能</th>
+      <th>说明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Camera working modes</th>
-      <td>Capture mode and recording mode.</td>        
+      <td>相机工作模式</th>
+      <td>拍照模式和录像模式。</td>        
     </tr>
     <tr>
-      <td>Capture modes</th>
-      <td>Single capture, continuous capture, and interval capture.</td>        
+      <td>拍照模式</th>
+      <td>单拍、连拍、定时拍照。</td>        
     </tr>
     <tr>
-      <td>Recording modes</th>
-      <td>Start recording and stop recording.</td>        
+      <td>录像模式</th>
+      <td>开始录像和停止录像。</td>        
     </tr>
     <tr>
-      <td>SD function</th>
-      <td>Obtain SD card status and format SD card.</td>        
+      <td>SD 卡功能</th>
+      <td>获取 SD 卡状态和格式化 SD 卡。</td>        
     </tr>
     <tr>
-      <td>Metering function</th>
-      <td>Metering modes: center-weighted metering, average metering, spot metering. The spot metering supports set spot metering areas.</td>        
+      <td>测光功能</th>
+      <td>测光模式：中央测光、平均测光、点测光。点测光之城设置点测光区域。</td>        
     </tr>
     <tr>
-      <td>Focus function</th>
-      <td>Support to set the autofocus focus area.</td>        
+      <td>对焦功能</th>
+      <td>支持设置自动对焦的对焦区域。</td>        
     </tr>
     <tr>
-      <td>Zoom function</th>
-      <td>Support for fixed speed zoom and position zoom.</td>        
+      <td>变焦功能</th>
+      <td>支持定速变焦和位置变焦。</td>        
     </tr>
   </tbody>
 </table>
 
-### Gimbal Interface Support
+### 云台接口功能支持
 
 <table id="t01">
   <thead>
     <tr>
-      <th>Interface features</th>
-      <th>Description</th>
+      <th>接口功能</th>
+      <th>说明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Gimbal speed control</th>
-      <td>Set the gimbal's angular velocity.</td>        
+      <td>云台角速度控制</th>
+      <td>设置云台角速度。</td>        
     </tr>
     <tr>
-      <td>Gimbal return to center</th>
-      <td>Gimbal return to center to keep the same direction with the aircraft nose.</td>        
+      <td>云台回中</th>
+      <td>云台回到与机头方向一致。</td>        
     </tr>
     <tr>
-      <td>Gimbal mode settings</th>
-      <td>Obtain the current gimbal attitude and rotate limit.</td>        
+      <td>云台模式设置</th>
+      <td>支持自由模式、FPV模式、跟随模式。</td> 
+    </tr>
+    <tr>
+      <td>云台姿态获取</th>
+      <td>获取当前的云台姿态以及是否达到限位。</td>   
     </tr>
   </tbody>
 </table>

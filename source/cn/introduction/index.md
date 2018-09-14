@@ -26,7 +26,7 @@ PSDK 硬件套件包括 DJI SKYPORT转接环，开发板和连接两个组件的
 
 ## 快速开始
 
-开发者可以 [运行示例应用程序](../quick-start/index.html) 运行示例代码，并探索如何使用 Payload SDK 在上面添加功能。 
+开发者可以 [运行示例应用程序](../quick-start/index.html) 来运行示例代码，并探索如何使用 Payload SDK 在上面添加功能。 
 
 ## 指南
 

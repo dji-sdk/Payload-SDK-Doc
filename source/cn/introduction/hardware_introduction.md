@@ -36,7 +36,7 @@ Payload SDK 开发工具包包含以下组件：
 ## DJI SKYPORT 转接环
 ### 介绍
 ![](../images/introduction/hardware_introduction/psdk_adapter.png)
-SKYPORT 转接环可以连接到 M200 系列的云台端口，用于连接用户负载和无人机。有关 SKYPORT 和负载的连接，请参阅 [SKYPORT 安装](../guide/adapter_install.html).
+SKYPORT 转接环可以安装到 M200 系列的云台端口，用于连接用户负载和无人机。有关 SKYPORT 和负载的连接，请参阅 [SKYPORT 安装](../guide/adapter_install.html)。
 
 ### 外形尺寸
 ![](../images/introduction/hardware_introduction/psdk_adapter_size.png)
@@ -163,7 +163,7 @@ SKYPORT 转接环可以连接到 M200 系列的云台端口，用于连接用户
 </table>
 
 ## Payload SDK 开发板
-开发板可帮助您探索 Payload SDK 功能，以便在初步研发阶段快速熟悉 Payload SDK 的使用情况并为您的应用程序构建原型。稍后您可以将Payload SDK移植到您自己的负载平台上。Payload SDK开发板使用的MCU为 STM32F407IGH6。
+开发板可帮助您探索 Payload SDK 功能，以便在初步研发阶段快速熟悉 Payload SDK 的使用情况并为您的应用程序构建原型。稍后您可以将 Payload SDK 移植到您自己的负载平台上。Payload SDK 开发板使用的 MCU 为 STM32F407IGH6。
 
 ### 硬件描述
 ![](../images/introduction/hardware_introduction/psdk_demo_board_print.png)
@@ -195,12 +195,12 @@ SKYPORT 转接环可以连接到 M200 系列的云台端口，用于连接用户
     <tr>
       <td>J11</th>
       <td>MCU 调试端口</td>
-      <td>SWD 接口，用于使用 SWD 调试器下载和调试MCU程序; 用于记录数据的 UART 接口</td>        
+      <td>SWD 接口，用于使用 SWD 调试器下载和调试MCU程序; 用于记录数据的 UART 接口。</td>        
     </tr>
     <tr>
       <td>J12</th>
       <td>USB 调试端口</td>
-      <td>用于连接到电脑打印Log和更新固件</td>        
+      <td>用于连接到电脑打印 Log 和更新固件。</td>        
     </tr>
   </tbody>
 </table>

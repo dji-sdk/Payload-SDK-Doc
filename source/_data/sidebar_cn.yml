@@ -11,7 +11,7 @@
   title: "功能"
   list:
     -
-      title: "功能概述"
+      title: "功能介绍"
       path: "/cn/features/psdk_introduction.html"
     -
       title: "数据传输"
@@ -20,7 +20,7 @@
       title: "飞机状态数据推送"
       path: "/cn/features/aircraft-state-push-data.html"
     -
-      title: "相机和云台功能"
+      title: "相机和云台接口"
       path: "/cn/features/camera-gimbal-features.html"
     -
       title: "配套软件支持"

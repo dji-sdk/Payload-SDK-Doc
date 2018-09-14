@@ -6,7 +6,7 @@ keywords: [FAQ, Application process]
 
 * [Payload SDK 支持哪些飞行平台？](#2)
 * [Payload SDK 开发者有什么资质要求？](#3)
-* [如何成为Payload SDK 开发者？](#4)
+* [如何成为 Payload SDK 开发者？](#4)
 * [负载提案应该提交哪些内容？](#5)
 * [Payload SDK 开发许可是否收费？](#6)
 * [Payload SDK 开发者能获得什么资源？](#7)
@@ -14,14 +14,14 @@ keywords: [FAQ, Application process]
 * [商业许可费用如何计算？](#9)
 * [我能够开发什么样的负载？](#10)
 
-如果您有其他问题, 请邮件至[psdk@dji.com]()
+如果您有其他问题, 请邮件至 [psdk@dji.com]()
 
 点击[链接](https://developer.dji.com/payload-sdk/apply)申请
 
 ## 关于PSDK申请流程的常见问题解答
 
 <h3 id="2">Payload SDK 支持哪些飞行平台？</h3>
-Payload SDK 和 DJI SKYPORT 目前仅支持经纬 M200 系列，也就是经纬 M200、经纬 M210和经纬 M210 RTK。
+Payload SDK 和 DJI SKYPORT 目前仅支持经纬 M200 系列，也就是经纬 M200、经纬 M210 和经纬 M210 RTK。
 
 <h3 id="3">Payload SDK 开发者有什么资质要求？</h3>
 公司、政府部门、教育机构和其他注册组织均可申请 Payload SDK 开发许可，目前不开放个人申请。

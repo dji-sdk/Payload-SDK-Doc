@@ -7,7 +7,7 @@ keywords: [功能, 介绍, Payload SDK]
 ## 相机和云台支持接口
 Payload SDK 支持相机和云台类负载，使您的负载能够与 DJI Mobile SDK 和 DJI Pilot 无缝对接。DJI Pilot 为相机和云台负载提供 UI，Mobile SDK 为相机和云台负载提供相应的接口。此支持旨在以下列方式使用：
 
-- Payload SDK 提供的接口由飞机/ MSDK以与原生DJI 云台相同的方式进行解释。
+- Payload SDK 提供的接口由飞机/ MSDK 以与原生 DJI 云台相同的方式进行解释。
 - 开发人员有责任根据界面的定义来实现这些功能。
 - 例如，PSDK 提供了缩放 API。这意味着当 MSDK 应用程序调用移动端的缩放 API 或 DJI Pilot 上的缩放按钮时，将调用此功能。作为开发人员，您需要为自己的负载实现缩放功能，以便在调用缩放功能时，您的负载通过物理方式执行缩放。
 
@@ -72,7 +72,7 @@ Payload SDK 支持相机和云台类负载，使您的负载能够与 DJI Mobile
     </tr>
     <tr>
       <td>云台模式设置</th>
-      <td>支持自由模式、FPV模式、跟随模式。</td> 
+      <td>支持自由模式、FPV 模式、跟随模式。</td> 
     </tr>
     <tr>
       <td>云台姿态获取</th>

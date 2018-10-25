@@ -1,6 +1,6 @@
 ---
 title: FAQ For PSDK Application Process
-date: 2018-04-03
+date: 2018-10-25
 keywords: [FAQ, Application process]
 ---
 

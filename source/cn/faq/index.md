@@ -1,6 +1,6 @@
 ---
 title: 关于PSDK申请流程的常见问题解答
-date: 2018-04-03
+date: 2018-10-25
 keywords: [FAQ, Application process]
 ---
 

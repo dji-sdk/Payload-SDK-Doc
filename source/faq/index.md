@@ -42,16 +42,16 @@ Registered companies, government entities, educational institutions and other or
 In short, anything you feel relevant, but we’ve provided a few key points for you to include that will streamline the review process.
 
 - Target industries the proposed payload will be relevant to
-- Target use cases/applications the proposed payload will have in said industries
-- Key features of the proposed payload
-- Any additional information your team has, such as draft spec sheets, drawings, pictures of existing prototype
+- Target use cases/applications the proposed payload will have in said industries;
+- Key features of the proposed payload;
+- Any additional information your team has, such as draft spec sheets, drawings, pictures of existing prototype.
 
 ### Do I have to pay for the development of Payload SDK? What will be included?
 
 Yes.You need to pay for the PSDK development kit, 5000 dollars for each APP.
-The development kit includes:
-3 PSDK kits (every kit has one development board and one DJI SKYPORT inside)
-Payload SDK resource package for developers
+The PSDK development kit includes:
+3 PSDK development board kits (every kit has one development board and one DJI SKYPORT inside)
+Payload SDK resource package for developers.
 
 ### What is the workflow of the PSDK development & mass production?
 

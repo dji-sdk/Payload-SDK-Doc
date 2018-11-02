@@ -50,8 +50,8 @@ In short, anything you feel relevant, but we’ve provided a few key points for 
 
 Yes.You need to pay for the PSDK development kit, 5000 dollars for each APP.
 The PSDK development kit includes:
-3 PSDK development board kits (every kit has one development board and one DJI SKYPORT inside)
-Payload SDK resource package for developers.
+- 3 PSDK development board kits (every kit has one development board and one DJI SKYPORT inside)
+- Payload SDK resource package for developers.
 
 ### What is the workflow of the PSDK development & mass production?
 

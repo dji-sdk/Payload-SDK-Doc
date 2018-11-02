@@ -44,8 +44,8 @@ Payload SDK 和 DJI SKYPORT 目前仅支持经纬 M200 系列，也就是经纬 
 <h3 id="6">Payload SDK 开发是否收费？包含哪些内容？</h3>
 您需要交纳PSDK开发包的费用，费用为每个负载5000美元。
 PSDK开发包包括:
--      3套payload SDK开发版套装（开发板+DJI SKYPORT转接环）
--      payload SDK开发者资料包
+- 3套payload SDK开发版套装（开发板+DJI SKYPORT转接环）
+- payload SDK开发者资料包
 
 <h3 id="7">Payload开发及量产流程是什么？</h3>
 - 开发者注册成功并购买PSDK开发包;

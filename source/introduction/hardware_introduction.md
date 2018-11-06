@@ -1,6 +1,6 @@
 ---
 title: Hardware Introduction
-date: 2018-05-17
+date: 2018-11-06
 keywords: [hardware]
 ---
 

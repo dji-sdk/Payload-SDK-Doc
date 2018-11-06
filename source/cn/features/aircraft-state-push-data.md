@@ -57,3 +57,8 @@ Payload SDK 提供对飞机状态的访问，参考 Payload SDK API 手册了解
     <tr>
       <td>App 时间日期推送</th>
       <td>1Hz</td>        
+    </tr>
+    <tr>
+      <td>RTK 原始数据</th>
+      <td>1HZ</td>        
+   

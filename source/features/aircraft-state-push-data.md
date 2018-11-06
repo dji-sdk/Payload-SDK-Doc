@@ -58,5 +58,9 @@ Currently, the following push data is supported:
       <td>App time and date push</th>
       <td>1Hz</td>        
     </tr>
+    <tr> 
+      <td>RTK raw data</th>
+      <td>1HZ</td>        
+    </tr>
   </tbody>
 </table>

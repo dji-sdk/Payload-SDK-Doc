@@ -60,5 +60,5 @@ Payload SDK 提供对飞机状态的访问，参考 Payload SDK API 手册了解
     </tr>
     <tr>
       <td>RTK 原始数据</th>
-      <td>1HZ</td>        
+      <td>1Hz</td>        
    

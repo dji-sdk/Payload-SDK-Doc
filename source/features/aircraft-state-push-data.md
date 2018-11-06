@@ -60,7 +60,7 @@ Currently, the following push data is supported:
     </tr>
     <tr> 
       <td>RTK raw data</th>
-      <td>1HZ</td>        
+      <td>1Hz</td>        
     </tr>
   </tbody>
 </table>

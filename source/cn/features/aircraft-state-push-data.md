@@ -1,6 +1,6 @@
 ---
 title: Payload SDK 功能 - 飞机状态数据推送
-date: 2018-09-13
+date: 2018-11-06
 keywords: [介绍, 功能, Payload SDK]
 ---
 

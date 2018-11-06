@@ -1,6 +1,6 @@
 ---
 title: Payload SDK Features - Aircraft State Push Data
-date: 2018-03-28
+date: 2018-11-06
 keywords: [introduction, overview, Payload SDK]
 ---
 

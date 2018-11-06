@@ -101,7 +101,7 @@ SKYPORT 转接环可以安装到 M200 系列的云台端口，用于连接用户
     </tr>
     <tr>
       <td>19</td>
-      <td>GND</td>     
+      <td>RTK_PPS</td>     
     </tr>
     <tr>
       <td>20</td>

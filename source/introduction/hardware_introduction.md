@@ -101,7 +101,7 @@ The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payl
     </tr>
     <tr>
       <td>19</td>
-      <td>GND</td>     
+      <td>RTK_PPS</td>     
     </tr>
     <tr>
       <td>20</td>

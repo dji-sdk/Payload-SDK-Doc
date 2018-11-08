@@ -4,7 +4,7 @@ date: 2018-09-13
 keywords: [快速开始, 注册, 生成 app key, app key, 运行示例代码, 运行示例程序, 绑定, 示例]
 ---
 
-为了更好地学习如何开始使用 DJI Payload SDK，请查看本  <a href="https://www.skypixel.com/videos/payload-sdk-payload-sdk" target="_blank">入门视频</a>。
+为了更好地学习如何开始使用 DJI Payload SDK，请查看本  <a href="https://www.djivideos.com/video_play/25c96b11-66fb-48bc-b754-4633b8f85c74?autoplay=1" target="_blank">入门视频</a>。
 
 ## 注册和创建应用程序
 

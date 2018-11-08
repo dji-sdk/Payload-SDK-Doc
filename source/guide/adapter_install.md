@@ -4,7 +4,7 @@ date: 2018-03-28
 keywords: [Installation]
 ---
 
-To have a better experience of learning how to mount a payload device, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-mounting-a-payload-device-89abebc6-6f7f-48dd-b855-fba7f6288a96" target="_blank">Mounting a Payload Device Video</a>.
+To have a better experience of learning how to mount a payload device, please check this  <a href="https://www.djivideos.com/video_play/3aaec9ad-bc2d-4a7d-be07-e4da23fee327?autoplay=1" target="_blank">Mounting a Payload Device Video</a>.
 
 ## Disassembly Guide
 

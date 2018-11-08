@@ -4,7 +4,7 @@ date: 2018-09-13
 keywords: [安装]
 ---
 
-想要更好的学习如何安装负载设备，请查看 <a href="https://www.skypixel.com/videos/dji-payload-sdk" target="_blank">安装负载设备视频</a>.
+想要更好的学习如何安装负载设备，请查看 <a href="https://www.djivideos.com/video_play/ae4059a0-ef3d-4f1c-9f29-ca44b0c97500?autoplay=1" target="_blank">安装负载设备视频</a>.
 
 ## 拆卸指南
 

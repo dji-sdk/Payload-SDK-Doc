@@ -4,7 +4,7 @@ date: 2018-03-28
 keywords: [quick start, register, generate app key, app key, run sample code, run sample application, bind, sample]
 ---
 
-To have a better experience of learning how to get started with the DJI Payload SDK, please check this  <a href="https://www.skypixel.com/videos/dji-payload-sdk-how-to-use-payload-sdk-and-run-a-sample-application" target="_blank">Getting Started Video</a>.
+To have a better experience of learning how to get started with the DJI Payload SDK, please check this  <a href="https://www.djivideos.com/video_play/bf600c12-cd79-48f1-8958-27794f405c43?autoplay=1" target="_blank">Getting Started Video</a>.
 
 
 ## Registration and App creation

@@ -15,7 +15,7 @@ keywords: [FAQ, Application process]
 * [Am I allowed to buy the PSDK development kit only once and develop multiple payloads?](am-i-allowed-to-buy-the-psdk-development-kit-only-once-and-develop-multiple-payloads)
 * [What type of payloads can I develop?](#what-type-of-payloads-can-i-develop)
 
-If you have any questions that are not addressed in the FAQs, please contact [psdk@dji.com]() for more information.
+If you have any questions that are not addressed in the FAQs, please contact [dev@dji.com]() for more information.
 
 Ready to apply? Click [here](https://developer.dji.com/payload-sdk/apply)
 

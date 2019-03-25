@@ -15,7 +15,7 @@ keywords: [FAQ, Application process]
 * [我可以只购买一次PSDK开发包，开发多个负载吗？](#10)
 * [我能够开发什么样的负载？](#11)
 
-如果您有其他问题, 请邮件至 [psdk@dji.com]()
+如果您有其他问题, 请邮件至 [dev@dji.com]()
 
 点击[链接](https://developer.dji.com/payload-sdk/apply)申请
 

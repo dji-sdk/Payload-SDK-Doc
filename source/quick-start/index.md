@@ -18,7 +18,7 @@ Use DJI Assistant 2 to upgrade the firmware of your M200 series aircrafts to a P
 
 ## Get Payload SDK Software
 
-After becoming a Payload SDK enterprise user, you can go to [USER CNETER](https://developer.dji.com/user/apps/#all) to get your Payload SDK Package and the related software.
+After becoming a Payload SDK enterprise user, you can go to [USER CENTER](https://developer.dji.com/user/apps/#all) to get your Payload SDK Package and the related software.
 
 ## Build Payload SDK Application
 

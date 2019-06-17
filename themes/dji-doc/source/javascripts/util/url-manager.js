@@ -7,7 +7,7 @@
     logout: 'user/logout',
     profile: 'user/profile',
     userStatus: 'user/status',
-    acvivationMail: 'user/activate_email',
+    activationMail: 'user/activate_email',
     resetPasswordMail: 'user/reset_password_email',
     resetPassword: 'user/reset_password',
     applyDeveloper: 'developers',

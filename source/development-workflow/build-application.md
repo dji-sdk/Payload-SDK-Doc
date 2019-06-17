@@ -6,7 +6,7 @@ keywords: [integrate, port]
 
 This page shows how to build and flash the Payload SDK Demo Application firmware to the PSDK development board.
 
-For your own application, the steps will be very similar: follow the same outline as this document descripts, but replace the path to the demo project with your own project path.
+For your own application, the steps will be very similar: follow the same outline as this document describes, but replace the path to the demo project with your own project path.
 
 Currently for the build and flash process, we only support the Keil MDK with the armcc compiler. 
 
@@ -38,4 +38,4 @@ Connect the SKYPORT adapter to M200. Use the coaxial cable to connect the adapte
 10. Send `sample/psdk_development_board/Projects/mdk/psdk_demo.bin` file using Ymodem. 
 ![](../images/quick-start/securecrt_sendymodem.png)
 
-11. After successfufly flashing the image to your Payload SDK development board, press 3 in SecureCRT to execute the application. Then, the green led (LED1) on the PSDK board will start blinking.
+11. After successfully flashing the image to your Payload SDK development board, press 3 in SecureCRT to execute the application. Then, the green led (LED1) on the PSDK board will start blinking.

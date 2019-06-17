@@ -73,7 +73,7 @@
       return this.put(UrlManager.get('updateDeveloper'), data);
     },
     sendActivationMail: function(){
-      return this.get(UrlManager.get('acvivationMail'), true);
+      return this.get(UrlManager.get('activationMail'), true);
     },
     getUserStatus: function(reload){
       return this.get(UrlManager.get('userStatus'), reload).done(function(data){

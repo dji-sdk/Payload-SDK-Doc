@@ -18,7 +18,12 @@ keywords: [介绍]
 网络端口使用 UDP 协议将视频流往 IP 192.168.5.10，端口 23003 发送。
 视频流的要求如下：
 
-- h264 码流, GOP 编码, I 帧间隔为 30，无B帧
+- H.264 码流，推荐I帧间隔为1s，无 B 帧
+- 建议帧率不超过30fps
+- 非GDR编码策略
+- Baseline/ Main / High Profiles
+- Level Number小于5.1
+- 其他格式要求请参考所使用的APP与移动设备相关说明文档
 - 使用 UDP 时，最多可以发送 8KB 的数据包
 
 开发者可以参考视频流传输例程（Payload_SDK / sample / network_port）。

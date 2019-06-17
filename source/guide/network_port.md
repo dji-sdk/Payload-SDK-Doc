@@ -16,9 +16,14 @@ The network port sends downlink data (i.e. from PSDK to MSDK) to the IP 192.168.
 
 ## Video Transmission
 The network port sends video stream to the IP 192.168.5.10 and port 23003 by using the UDP protocol.
-The requirement of the video stream are as below:
+The requirements of the video stream are as below:
 
-- h264 stream, GOP encoding, I frame interval of 30 with the rest of P frame
+- H.264 stream, recommended interval of I frame of 1 second, without B frame
+- Recommended frame rate not exceeding 30 fps
+- Non-GDR coding strategy
+- Baseline/ Main / High Profiles
+- Level Number of less than 5.1
+- For other format requirements, please refer to the documentation for the APP and mobile device used
 - Up to 8KB for sending a single package when using UDP
 
 Developers can refer to the video stream transmission routines (Payload_SDK/sample/network_port).

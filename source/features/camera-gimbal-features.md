@@ -1,11 +1,11 @@
 ---
 title: Payload SDK Features - Camera/Gimbal Interfaces
-date: 2018-03-28
+date: 2019-06-17
 keywords: [introduction, overview, Payload SDK]
 ---
 
 ## Camera and Gimbal Payload Interface Support
-Payload SDK provides support for camera and gimbal payloads that will allow your payload to function seamlessly with DJI Mobile SDK and DJI Pilot.  DJI Pilot provides UI for camera and gimble payloads, and Mobile SDK provides the corresponding interface for camera and gimbal payloads. This support is intended to be used in the following manner:
+Payload SDK provides support for camera and gimbal payloads that will allow your payload to function seamlessly with DJI Mobile SDK and DJI Pilot.  DJI Pilot provides UI for camera and gimbal payloads, and Mobile SDK provides the corresponding interface for camera and gimbal payloads. This support is intended to be used in the following manner:
 
 - Payload SDK provides interfaces that are interpreted by the aircraft/MSDK in the same manner as native DJI payloads.
 - It is the developer's responsibility to implement these features as defined by the interface.
@@ -63,8 +63,8 @@ Payload SDK provides support for camera and gimbal payloads that will allow your
   </thead>
   <tbody>
     <tr>
-      <td>Gimbal speed control</th>
-      <td>Set the gimbal's angular velocity.</td>        
+      <td>Gimbal control</th>
+      <td>Set the gimbal's angular velocity, angle and joint angle.</td>        
     </tr>
     <tr>
       <td>Gimbal return to center</th>
@@ -73,6 +73,10 @@ Payload SDK provides support for camera and gimbal payloads that will allow your
     <tr>
       <td>Gimbal mode settings</th>
       <td>Support free mode,FPV mode and follow mode.</td>        
+    </tr>
+    <tr>
+      <td>Gimnal calibration</th>
+      <td>Trigger gimbal calibration and get the progress and results of gimbal calibration.</td>
     </tr>
     <tr>
       <td>Gimbal attitude acquisition</th>

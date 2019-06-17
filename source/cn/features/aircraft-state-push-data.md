@@ -1,6 +1,6 @@
 ---
 title: Payload SDK 功能 - 飞机状态数据推送
-date: 2018-11-06
+date: 2019-06-17
 keywords: [介绍, 功能, Payload SDK]
 ---
 
@@ -40,15 +40,15 @@ Payload SDK 提供对飞机状态的访问，参考 Payload SDK API 手册了解
     </tr>
     <tr>
       <td>GPS 数据</th>
-      <td>1Hz</td>        
+      <td>1Hz（M200系列），10Hz（M200系列V2）</td>        
     </tr>
     <tr>
       <td>GPS 原始数据</th>
-      <td>1Hz</td>        
+      <td>5Hz</td>        
     </tr>
     <tr>
       <td>海拔高度</th>
-      <td>1Hz</td>        
+      <td>50Hz</td>        
     </tr>
     <tr>
       <td>飞行状态</th>
@@ -60,5 +60,5 @@ Payload SDK 提供对飞机状态的访问，参考 Payload SDK API 手册了解
     </tr>
     <tr>
       <td>RTK 原始数据</th>
-      <td>1Hz</td>        
+      <td>20Hz</td>        
    

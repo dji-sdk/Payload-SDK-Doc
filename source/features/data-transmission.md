@@ -1,6 +1,6 @@
 ---
 title: Payload SDK Features - Data Transmission
-date: 2018-03-28
+date: 2019-06-17
 keywords: [introduction, overview, Payload SDK]
 ---
 
@@ -27,11 +27,11 @@ Transmit data directly between Mobile SDK and SKYPORT via UART/CAN port within t
   <tbody>
     <tr>
       <td>Uplink (form Mobile SDK to Payload)</th>
-      <td>Approx. 500B/s on M200</td>        
+      <td>Approx. 500B/s </td>        
     </tr>
     <tr>
       <td>Downlink (from Payload to Mobile SDK)</th>
-      <td>Approx. 3KB/s on M200</td>        
+      <td>Approx. 4KB/s </td>        
     </tr>
   </tbody>
 </table>

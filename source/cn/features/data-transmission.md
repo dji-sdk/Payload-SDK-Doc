@@ -1,6 +1,6 @@
 ---
 title: Payload SDK 功能 - 数据传输
-date: 2018-09-13
+date: 2019-06-17
 keywords: [introduction, overview, Payload SDK]
 ---
 
@@ -31,7 +31,7 @@ keywords: [introduction, overview, Payload SDK]
     </tr>
     <tr>
       <td>下行链路 (从 Payload 到 Mobile SDK)</th>
-      <td>约 3KB/s </td>        
+      <td>约 4KB/s </td>        
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 ---
 title: Payload SDK 功能 - 相机和云台接口
-date: 2018-09-13
+date: 2019-06-17
 keywords: [功能, 介绍, Payload SDK]
 ---
 
@@ -63,8 +63,8 @@ Payload SDK 支持相机和云台类负载，使您的负载能够与 DJI Mobile
   </thead>
   <tbody>
     <tr>
-      <td>云台角速度控制</th>
-      <td>设置云台角速度。</td>        
+      <td>云台控制</th>
+      <td>设置云台角速度/角度/关节角角度。</td>        
     </tr>
     <tr>
       <td>云台回中</th>
@@ -73,6 +73,10 @@ Payload SDK 支持相机和云台类负载，使您的负载能够与 DJI Mobile
     <tr>
       <td>云台模式设置</th>
       <td>支持自由模式、FPV 模式、跟随模式。</td> 
+    </tr>
+    <tr>
+      <td>云台校准</th>
+      <td>触发云台校准以及获取云台校准进度与结果。</td>
     </tr>
     <tr>
       <td>云台姿态获取</th>

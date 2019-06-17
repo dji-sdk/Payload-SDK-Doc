@@ -1,6 +1,6 @@
 ---
 title: Payload SDK Features - Aircraft State Push Data
-date: 2018-11-06
+date: 2019-06-17
 keywords: [introduction, overview, Payload SDK]
 ---
 
@@ -40,15 +40,15 @@ Currently, the following push data is supported:
     </tr>
     <tr>
       <td>GPS data</th>
-      <td>1Hz</td>        
+      <td>1Hz (M200 Series), 10Hz (M200 Series V2)</td>        
     </tr>
     <tr>
       <td>GPS raw data</th>
-      <td>1Hz</td>        
+      <td>5Hz</td>        
     </tr>
     <tr>
       <td>Altitude data</th>
-      <td>1Hz</td>        
+      <td>50Hz</td>        
     </tr>
     <tr>
       <td>Flight status</th>
@@ -60,7 +60,7 @@ Currently, the following push data is supported:
     </tr>
     <tr> 
       <td>RTK raw data</th>
-      <td>1Hz</td>        
+      <td>20Hz</td>        
     </tr>
   </tbody>
 </table>

@@ -8,11 +8,11 @@ keywords: [FAQ, Application process]
 * [Who can develop on the Payload SDK? ](#who-can-develop-on-the-payload-sdk)
 * [How can I become a Payload SDK Developer?](#how-can-i-become-a-payload-sdk-developer)
 * [What should I include in my payload proposal?](#what-should-i-include-in-my-payload-proposal)
-* [Do I have to pay for the development of Payload SDK? What will be included?](#do-i-have-to-pay-for-the-developemnt-of-payload-sdk#what-will-be-included)
+* [Do I have to pay for the development of Payload SDK? What will be included?](#do-i-have-to-pay-for-the-development-of-payload-sdk-what-will-be-included)
 * [What is development mode? What is production mode? How to switch from development mode to production mode? ](#what-is-development-mode-what-is-production-mode-how-to-switch-from-development-mode-to-production-mode)
-* [What is the workflow of the PSDK development & mass production?](#what-is-the-workflow-of-the-psdk-development-&-mass-production)
-* [Is it required to buy the sdk development kit for Payload SDK developerment?](#is-it-required-to-buy-the-sdk-development-kit-for-Payload-SDK-development)
-* [Do I get the certification from DJI when I start my mass production?](do-i-get-the-certification-from-DJI-when-i-start-my-mass-production)
+* [What is the workflow of the PSDK development & mass production?](#what-is-the-workflow-of-the-psdk-development-mass-production)
+* [Is it required to buy the sdk development kit for Payload SDK developerment?](#is-it-required-to-buy-the-sdk-development-kit-for-payload-sdk-developerment)
+* [Do I get the certification from DJI when I start my mass production?](#do-i-get-the-certification-from-dji-when-i-start-my-mass-production)
 * [What type of payloads can I develop?](#what-type-of-payloads-can-i-develop)
 
 If you have any questions that are not addressed in the FAQs, please contact [dev@dji.com]() for more information.

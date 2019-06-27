@@ -1,6 +1,6 @@
 ---
 title: FAQ For PSDK Application Process
-date: 2018-10-25
+date: 2019-06-27
 keywords: [FAQ, Application process]
 ---
 
@@ -9,10 +9,10 @@ keywords: [FAQ, Application process]
 * [How can I become a Payload SDK Developer?](#how-can-i-become-a-payload-sdk-developer)
 * [What should I include in my payload proposal?](#what-should-i-include-in-my-payload-proposal)
 * [Do I have to pay for the development of Payload SDK? What will be included?](#do-i-have-to-pay-for-the-developemnt-of-payload-sdk#what-will-be-included)
+* [What is development mode? What is production mode? How to switch from development mode to production mode? ](#what-is-development-mode-what-is-production-mode-how-to-switch-from-development-mode-to-production-mode)
 * [What is the workflow of the PSDK development & mass production?](#what-is-the-workflow-of-the-psdk-development-&-mass-production)
-* [Is it allowed to buy DJI SKYPORTs and directly start to develop without buying SDK development kit?](#is-it-allowed-to-buy-DJI-SKYPORTs-and-directly-start-to-develop-without-buying-sdk-development-kit)
+* [Is it required to buy the sdk development kit for Payload SDK developerment?](#is-it-required-to-buy-the-sdk-development-kit-for-Payload-SDK-development)
 * [Do I get the certification from DJI when I start my mass production?](do-i-get-the-certification-from-DJI-when-i-start-my-mass-production)
-* [Am I allowed to buy the PSDK development kit only once and develop multiple payloads?](am-i-allowed-to-buy-the-psdk-development-kit-only-once-and-develop-multiple-payloads)
 * [What type of payloads can I develop?](#what-type-of-payloads-can-i-develop)
 
 If you have any questions that are not addressed in the FAQs, please contact [dev@dji.com]() for more information.
@@ -33,9 +33,8 @@ Registered companies, government entities, educational institutions and other or
 
 - Click https://account.dji.com/login , follow the instruction and register as a developer;
 - Once your application is approved, DJI will send you an email with the payment link of PSDK development kit;
-- A PSDK development package and the authorization will be given by DJI after your payment is confirmed. You can access the app in the ‘user center’ of developer and download related documentation;
-- Start your development!
-
+- After the proposal is reviewed, DJI will contact you by email and grant the PSDK development mode permission; You can check your Payload SDK apps and download the development documentation in the developer center;
+- After purchasing the Payload SDK development kit, you can now start to develop your applications!
 
 ### What should I include in my payload proposal?
 
@@ -48,30 +47,33 @@ In short, anything you feel relevant, but we’ve provided a few key points for 
 
 ### Do I have to pay for the development of Payload SDK? What will be included?
 
-Yes.You need to pay for the PSDK development kit, 5000 dollars for each APP.
-The PSDK development kit includes:
-- 3 PSDK development board kits (every kit has one development board and one DJI SKYPORT inside)
-- Payload SDK resource package for developers.
+- Development mode doesn't require PSDK development kit licensing fee.
+- When you swith your payloads from development mode to production mode, you need to pay for the PSDK development kit licensing fee, which is 5000 USD (32000 RMB). This fee only contains the licensing cost of the PSDK development kit.
+
+### What is development mode? What is production mode? How to switch from development mode to production mode? 
+- Development Mode: Number of binding skyports < 10;
+
+  Once you become a PSDK developer, you are under development mode;
+
+- Production Mode: Number of binding skyports >= 10;
+
+  Switching from development mode to production mode, PSDK development kit authorization is required; You need to email the scanned copy of your company's business license and project information to dev@dji.com to apply for it. After paying the PSDK authorization fee, you will switch from development mode to production mode.
 
 ### What is the workflow of the PSDK development & mass production?
 
 - Developers register successfully and buy PSDK kit;
 - Finish the development;
-- Contact DJI by email and let DJI know the payload information. DJI will keep it for the future use;
-- Developers can buy DJI SKYPORT in DJI online store for mass production and sale;
-- DJI will contact excellent developers for commercial negotiations about the brand authorization and business expansion. 
+- Developer emails to inform DJI that the development has been completed and will be switching from development mode to production mode, synchronizing the final production information of the payload. DJI will help to backup the information.
+- Developer can purchase the DJi Skyport from DJI Store and start the payload mass production and sales;
+- DJI will take the initiative to contact excellent developers to discuss DJI brand licensing and channel promotion cooperation matters.
 
-### Is it allowed to buy DJI SKYPORTs and directly start to develop without buying SDK development kit?
+### Is it required to buy the sdk development kit for Payload SDK developerment?
 
-No. You have to buy the SDK kit first. The development board kit and the resource package must be obtained before you start your development. After the development is finished, you can buy DJI SKYPORTs in our online shop for the mass production. 
+  Yes, although the PSDK software kit license can be activated after the successful registration of the PSDK project, the PSDK development process is related to hardware and requires the purchase of the software development kit for development;
 
 ### Do I get the certification from DJI when I start my mass production?
 
 No. DJI is not responsible for your payload even though it is developed based on DJI Payload SDK. DJI will only contact those developers who owns good feedback from the market and excellent development capability for the brand authorization certification issues as the commercial promotion. 
-
-### Am I allowed to buy the PSDK development kit only once and develop multiple payloads?
-
-No. The payload has be bound to the PSDK kit. You have to buy another SDK kits.
 
 ### What type of payloads can I develop?
 

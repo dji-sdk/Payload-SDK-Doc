@@ -59,7 +59,7 @@ Payload SDK 和 DJI SKYPORT 目前仅支持经纬 M200 系列，也就是经纬 
 - DJI会主动与优秀的开发者联系，洽谈DJI品牌授权及渠道推广合作事宜; 
 
 <h3 id="9">是否一定要购买开发套件才能进行PSDK项目开发？</h3>
-是的，虽然注册PSDK项目成功后，即可开通PSDK软件包授权，但是PSDK开发硬件相关，需要自行购买开发套件进行开发；
+是的，虽然注册PSDK项目成功后，即可开通PSDK软件包授权，但是PSDK开发硬件相关，需要自行购买开发套件进行开发；PSDK开发套件购买链接：<https://store.dji.com/cn/product/psdk-development-kit>。
 
 <h3 id="10">我的负载量产了，是否就等于得到DJI的认证了？</h3>
 不是。基于DJI Payload SDK开发的负载属于您自主研发的设备，与DJI无关。DJI仅会与量产后市场反馈良好，综合能力优秀的开发者联系讨论品牌授权及认证事宜。

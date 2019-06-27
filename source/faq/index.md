@@ -69,7 +69,7 @@ In short, anything you feel relevant, but we’ve provided a few key points for 
 
 ### Is it required to buy the sdk development kit for Payload SDK developerment?
 
-  Yes, although the PSDK software kit license can be activated after the successful registration of the PSDK project, the PSDK development process is related to hardware and requires the purchase of the software development kit for development; PSDK developer kit purchase link: <https://store.dji.com/cn/product/psdk-development-kit>.
+  Yes, although the PSDK software kit license can be activated after the successful registration of the PSDK project, the PSDK development process is related to hardware and requires the purchase of the software development kit for development; PSDK developer kit purchase link: <https://store.dji.com/product/psdk-development-kit>.
 
 ### Do I get the certification from DJI when I start my mass production?
 

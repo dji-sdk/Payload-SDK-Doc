@@ -8,9 +8,9 @@ keywords: [介绍, 功能, Payload SDK]
 
 DJI Payload SDK 丰富了不断增长的开发者生态系统，包括 [Mobile SDK](https://developer.dji.com/mobile-sdk/documentation/introduction/index.html), [Onboard SDK](https://developer.dji.com/onboard-sdk/documentation/introduction/homepage.html) 和各种应用程序/工具，包括 [DJI Pilot](http://dl.djicdn.com/djipilot-official.apk) 和 [DJI Assistant 2](https://www.dji.com/matrice-200-series/info#downloads)。
 
-- 当您想要将负载添加到飞机上时，Payload SDK 是您的首选。
-- PSDK 与 Mobile SDK 紧密集成，为 Mobile SDK 应用程序的用户提供原生体验。
-- Onboard SDK 与 PSDK 的集成即将推出！
+- 当您想要将负载添加到无人机上时，Payload SDK 是您的首选。
+- Payload SDK 与 Mobile SDK 紧密集成，为 Mobile SDK 应用程序的用户提供原生体验。
+- Onboard SDK 与 Payload SDK 的集成即将推出！
 
 ## DJI Pilot 支持
 
@@ -31,9 +31,9 @@ Mobile SDK 支持以下与 PSDK 相关的功能：
 ## DJI Assistant 2 支持
 DJI Assistant 2 提供 SKYPORT 转接环配置功能如下：
 
-- 转接环的绑定和解绑
-- 设置 SKYPORT 转接环通道和通道波特率
-- 设置 SKYPORT 转接环数据推送数据频率
-- 更新 SKYPORT 转接环固件
+- 转接环的绑定和解绑。
+- 设置 SKYPORT 转接环通道和通道波特率。
+- 设置 SKYPORT 转接环数据推送数据频率。
+- 更新 SKYPORT 转接环固件。
 
 企业用户可以使用 Payload SDK 帐户登录 DJI Assistant 2 并在 SKYPORT 的配置页面配置 SKYPORT 转接环。

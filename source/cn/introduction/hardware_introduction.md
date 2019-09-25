@@ -1,44 +1,30 @@
 ---
-title: 硬件介绍
-date: 2018-11-06
+title: SKYPORYT
+date: 2019-09-24
 keywords: [硬件]
 ---
 
-本文档介绍了使用 Payload SDK 开发负载应用所涉及的硬件。
+本文档介绍如何使用 SKYPORT 开发负载设备。
 
-## 负载重量要求
-<table id="t01">
-  <thead>
-    <tr>
-      <th>飞行平台</th>
-      <th>重量</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>M200 系列</td>
-      <td>小于 600g</td>     
-    </tr>
-  </tbody>
-</table>
+>**注意**：搭载在**M200** 和 **M200 V2** 系列产品上的负载设备，重量应小于**600g**。
 
-## Payload SDK 开发工具包
-成为 Payload SD K企业用户后，您可以获得 Payload SDK 开发工具包。Payload SDK 开发工具包可让您探索 Payload SDK 功能并促进快速开发。 
-
-Payload SDK 开发工具包包含以下组件：
+## 简介
+DJI SKYPORT 开发工具包含以下组件：
 
 - DJI SKYPORT 转接环  x1
 - Payload SDK 开发板  x1
 - 圆形同轴线 250mm  x1
 - 扁状同轴线 30mm  x1
-- 同轴线端座  x3
+- 同轴线端座  x3  
 
-## DJI SKYPORT 转接环
-### 介绍
-![](../images/introduction/hardware_introduction/psdk_adapter.png)
-SKYPORT 转接环可以安装到 M200 系列的云台端口，用于连接用户负载和无人机。有关 SKYPORT 和负载的连接，请参阅 [SKYPORT 安装](../guide/adapter_install.html)。
+### DJI SKYPORT 转接环
+
+![](../images/introduction/hardware_introduction/psdk_adapter.png)    
+
+SKYPORT 转接环可以安装到无人机的云台端口，用于连接用户负载和无人机。有关 SKYPORT 和负载的连接，请参阅 [SKYPORT 安装](../guide/adapter_install.html)。
 
 ### 外形尺寸
+
 ![](../images/introduction/hardware_introduction/psdk_adapter_size.png)
 
 ### 接口
@@ -163,9 +149,11 @@ SKYPORT 转接环可以安装到 M200 系列的云台端口，用于连接用户
 </table>
 
 ## Payload SDK 开发板
+
 开发板可帮助您探索 Payload SDK 功能，以便在初步研发阶段快速熟悉 Payload SDK 的使用情况并为您的应用程序构建原型。稍后您可以将 Payload SDK 移植到您自己的负载平台上。Payload SDK 开发板使用的 MCU 为 STM32F407IGH6。
 
 ### 硬件描述
+
 ![](../images/introduction/hardware_introduction/psdk_demo_board_print.png)
 
 <table id="t02">

@@ -1,6 +1,6 @@
 ---
 title: Run Sample Application
-date: 2018-12-10
+date: 2019-07-31
 keywords: [quick start, register, generate app key, app key, run sample code, run sample application, bind, sample]
 ---
 
@@ -12,9 +12,9 @@ To have a better experience of learning how to get started with the DJI Payload 
 The first step for getting started is to create your PSDK enterprise user account and apply for a PSDK application. Follow the steps [here](https://developer.dji.com/payload-sdk/apply) to do this.
 
 
-## Upgrade Matrice 200
+## Upgrade Aircrafts
 
-Use DJI Assistant 2 to upgrade the firmware of your M200 series aircrafts to a PSDK-enabled version (M200 Firmware Version V01.01.0800 or above). 
+Use DJI Assistant 2 to upgrade the firmware of your aircrafts to a PSDK-enabled version. 
 
 ## Get Payload SDK Software
 
@@ -28,7 +28,7 @@ Next, you can build and flash your application from a host computer to your Payl
 
 The SKYPORT adapter needs to be bound with your Payload SDK application only for the first use. Please follow the steps below to bind it.
 
-1. Connect the SKYPORT adapter to the Payload SDK development board with the coaxial cable, and then connect the adapter to the M200 series aircraft. Use a USB cable to connect the M200 to a PC.
+1. Connect the SKYPORT adapter to the Payload SDK development board with the coaxial cable, and then connect the adapter to aircraft. Use a USB cable to connect the M200 to a PC.
 
 2. Open DJI Assistant 2 and log into your Payload SDK enterprise account.
 
@@ -41,7 +41,7 @@ The SKYPORT adapter needs to be bound with your Payload SDK application only for
 
 - Payload SDK functionality is enabled after completing the binding process. 
 - You can test PSDK functions through DJI Pilot on Android devices. 
-- Get the latest version of [DJI Pilot App](https://www.dji.com/matrice-200-series/info#downloads), install it on DJI Crystalsky or other Android devices. Then connect the remote controller and the mobile device using a USB cable.  
+- Get the latest version of [DJI Pilot App](https://www.dji.com/matrice-200-series/info#downloads), install it on DJI CrystalSky or other Android devices. Then connect the remote controller and the mobile device using a USB cable.  
 - Run DJI Pilot app. For the first use, your mobile device needs an internet connection to finish registration with your login DJI account. 
 - After the registration, the sensor data of the development board will be displayed in the DJI Pilot app, which means the communication establishment is successful!
 

@@ -1,21 +1,22 @@
 ---
 title: Payload SDK Features - Data Transmission
-date: 2019-06-17
+date: 2019-07-31
 keywords: [introduction, overview, Payload SDK]
 ---
 
 ## Direct Data Transmission (UART/CAN)
 
 
-The direct data transmission feature allows you to send custom data streams between your payload and the Mobile SDK. 
+The direct data transmission feature allows you to send custom data streams between your payload and the Mobile SDK or Onboard SDK. 
 
-- This channel accepts data on UART/CAN from the payload
-- The channel does not enforce any protocols on the data; it will transparently transmit bytes between the PSDK and the MSDK.
-- It allows the developer to develop protocols for interpreting this data on the MSDK.
+- This channel accepts data on UART/CAN from the payload.
+- The channel does not enforce any protocols on the data; it will transparently transmit bytes between the PSDK and the MSDK or OSDK.
+- It allows the developer to develop protocols for interpreting this data on the MSDK or OSDK.
 - This feature is analogous to the [Data Transparent Transmission](https://developer.dji.com/onboard-sdk/documentation/guides/component-guide-mobile-communication.html) feature of the Onboard SDK.
- 
+
 #### Data Bandwidth Considerations
-Transmit data directly between Mobile SDK and SKYPORT via UART/CAN port within the following bandwidth:
+
+Transmit data directly between Mobile SDK or Onboard SDK and Payload SDK via UART/CAN port within the following bandwidth:
 
 <table id="t01">
   <thead>
@@ -26,12 +27,20 @@ Transmit data directly between Mobile SDK and SKYPORT via UART/CAN port within t
   </thead>
   <tbody>
     <tr>
-      <td>Uplink (form Mobile SDK to Payload)</th>
-      <td>Approx. 500B/s </td>        
+      <td>from Mobile SDK to Payload</th>
+      <td>Approx. 500B/s</td>        
     </tr>
     <tr>
-      <td>Downlink (from Payload to Mobile SDK)</th>
-      <td>Approx. 4KB/s </td>        
+      <td>from Payload to Mobile SDK</th>
+      <td>Approx. 4KB/s</td>        
+    </tr>
+    <tr>
+      <td>from Onboard SDK to Payload</th>
+      <td>Approx. 4KB/s</td>        
+    </tr>
+    <tr>
+      <td>from Payload to Onboard SDK</th>
+      <td>Approx. 4KB/s</td>        
     </tr>
   </tbody>
 </table>
@@ -51,7 +60,8 @@ The network stream transmission feature allows the payload to publish high speed
 - If you are interested in transmitting high speed bulk data that isn't video, the PSDK also gives you that option.
 - Your payload can send any data over UDP to a different network port than the video network port, and you need to implement decoding on the Mobile SDK app to parse this data.
 
-#### Network Port Bandwidth Considerations
+#### Data Bandwidth Considerations
+
 The bandwidth information of network port data transmission is provided as follows:
 
 <table id="t01">
@@ -63,12 +73,12 @@ The bandwidth information of network port data transmission is provided as follo
   </thead>
   <tbody>
     <tr>
-      <td>M200 series aircraft with the third-party payload only.</th>
-      <td>The maximum theoretical bandwidth is 8Mbps.</td>        
+      <td>Aircraft with the third-party payload only</th>
+      <td>The maximum theoretical bandwidth 8Mbps</td>        
     </tr>
     <tr>
-      <td>M210 or M210 RTK, with both DJI camera and the third-party payload.</th>
-      <td>The maximum theoretical bandwidth is 4Mbps.</td>        
+      <td>Aircraft with both DJI camera and the third-party payload.</th>
+      <td>The maximum theoretical bandwidth 4Mbps</td>        
     </tr>
   </tbody>
 </table>

@@ -4,8 +4,9 @@ date: 2019-06-17
 keywords: [introduction, overview, Payload SDK]
 ---
 
-## Camera and Gimbal Payload Interface Support
-Payload SDK provides support for camera and gimbal payloads that will allow your payload to function seamlessly with DJI Mobile SDK and DJI Pilot.  DJI Pilot provides UI for camera and gimbal payloads, and Mobile SDK provides the corresponding interface for camera and gimbal payloads. This support is intended to be used in the following manner:
+## Camera and Gimbal Interface
+
+Payload SDK provides support for camera and gimbal payloads that will allow your payload to function seamlessly with DJI Mobile SDK and DJI Pilot. DJI Pilot provides UI for camera and gimbal payloads, and Mobile SDK provides the corresponding interface for camera and gimbal payloads. This support is intended to be used in the following manner:
 
 - Payload SDK provides interfaces that are interpreted by the aircraft/MSDK in the same manner as native DJI payloads.
 - It is the developer's responsibility to implement these features as defined by the interface.
@@ -16,38 +17,38 @@ Payload SDK provides support for camera and gimbal payloads that will allow your
 <table id="t01">
   <thead>
     <tr>
-      <th>Interface features</th>
+      <th>Interface</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Camera working modes</th>
-      <td>Capture mode and recording mode.</td>        
+      <td>Capture mode and recording mode</td>        
     </tr>
     <tr>
       <td>Capture modes</th>
-      <td>Single capture, continuous capture, and interval capture.</td>        
+      <td>Single capture, continuous capture, and interval capture</td>        
     </tr>
     <tr>
       <td>Recording modes</th>
-      <td>Start recording and stop recording.</td>        
+      <td>Start recording and stop recording</td>        
     </tr>
     <tr>
       <td>SD function</th>
-      <td>Obtain SD card status and format SD card.</td>        
+      <td>Obtain SD card status and format SD card</td>        
     </tr>
     <tr>
       <td>Metering function</th>
-      <td>Metering modes: center-weighted metering, average metering, spot metering. The spot metering supports set spot metering areas.</td>        
+      <td>Set metering modes (center-weighted metering, average metering, spot metering) and set spot metering areas</td>        
     </tr>
     <tr>
       <td>Focus function</th>
-      <td>Support to set the autofocus focus area.</td>        
+      <td>Set the autofocus focus area</td>        
     </tr>
     <tr>
       <td>Zoom function</th>
-      <td>Support for fixed speed zoom and position zoom.</td>        
+      <td>Fixed speed zoom and position zoom</td>        
     </tr>
   </tbody>
 </table>
@@ -57,30 +58,30 @@ Payload SDK provides support for camera and gimbal payloads that will allow your
 <table id="t01">
   <thead>
     <tr>
-      <th>Interface features</th>
+      <th>Interface</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Gimbal control</th>
-      <td>Set the gimbal's angular velocity, angle and joint angle.</td>        
+      <td>Set the gimbal's angular velocity, angle and joint angle</td>        
     </tr>
     <tr>
       <td>Gimbal return to center</th>
-      <td>Gimbal return to center to keep the same direction with the aircraft nose.</td>        
+      <td>Gimbal return to center to keep the same direction with the aircraft nose</td>        
     </tr>
     <tr>
       <td>Gimbal mode settings</th>
-      <td>Support free mode,FPV mode and follow mode.</td>        
+      <td>Support free mode,FPV mode and follow mode</td>        
     </tr>
     <tr>
       <td>Gimnal calibration</th>
-      <td>Trigger gimbal calibration and get the progress and results of gimbal calibration.</td>
+      <td>Trigger gimbal calibration and get the progress and results of gimbal calibration</td>
     </tr>
     <tr>
       <td>Gimbal attitude acquisition</th>
-      <td>Obtain the current gimbal attitude and rotate limit.</td>        
+      <td>Obtain the current gimbal attitude and rotate limit</td>        
     </tr>
   </tbody>
 </table>

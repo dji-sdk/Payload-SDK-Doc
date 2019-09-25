@@ -1,6 +1,6 @@
 ---
 title: 构建 PSDK 应用程序
-date: 2018-09-13
+date: 2019-07-31
 keywords: [集成, 接口]
 ---
 
@@ -14,19 +14,19 @@ keywords: [集成, 接口]
 ![](../images/quick-start/payload_hardware.png)
 将 SKYPORT 转接环安装到飞行器。使用开发套件自带的同轴线连接转接环以及 Payload SDK 开发板。使用 Micro USB 数据线连接开发板上的 Micro USB 至电脑 USB 口。
 
-2. 打开飞行器电源，确保 SKYPORT 转接环已经安装好。（适配器和飞机上的红点应该对齐）。如果连接设置正确，则 Payload SDK 开发板上的蓝色 LED 常亮。 
+2. 打开飞行器电源，确保 SKYPORT 转接环已经安装好。（适配器和飞行器上的红点应该对齐）。如果连接设置正确，则 Payload SDK 开发板上的蓝色 LED 常亮。 
 
 3. 从 [用户中心](https://developer.dji.com/user/apps/#all) 下载 Payload SDK 开发包。
 
 4. 配置 Payload SDK 开发环境。您需要下载 [Keil MDK](http://www2.keil.com/mdk5/) >5.22 并购买许可进行激活。然后使用 Keil's `Pack Installer` 安装最新的 STM32F4xx_DFP.2.x.x pack 包, 如下图所示. (或者, 您可以从 <a href="http://www.keil.com/dd2/Pack/" target="_blank">http://www.keil.com/dd2/Pack/</a> 手动下载并从 Pack Installer 中导入下载的文件。)
 ![](../images/quick-start/STM32_Keil_PackInstall.png)
 
-5. 在 Keil uVision IDE 中打开位于 `sample/psdk_development_board/Projects/mdk/psdk_demo.uvprojx` 的工程项目。
+5. 在 Keil uVision IDE 中打开位于 `sample/psdk_development_board/Projects-FreeRTOS/mdk/psdk_demo.uvprojx` 的工程项目。
 
 6. 编译代码前, 需要在 `sample/psdk_development_board/Application/app_infor.h` 文件中输入您的 Payload SDK App name, App ID, App Key 和 Payload SDK 企业账号。
 ![](../images/quick-start/psdkinfo_mdk.png)
 
-7. 进行 Payload SDK 固件编译。编译完成后, 你可以在 `sample/psdk_development_board/Projects/mdk` 文件夹中看到一个 bin 文件 (`psdk_demo.bin`) 。
+7. 进行 Payload SDK 固件编译。编译完成后, 你可以在 `sample/psdk_development_board/Projects-FreeRTOS/mdk` 文件夹中看到一个 bin 文件 (`psdk_demo.bin`) 。
 ![](../images/quick-start/download.png)
 
 8. 长按 Payload SDK 开发板上的 KEY1 按钮并重启飞行器。直至 Payload SDK 开发板上的 LED2 红灯常亮即可松手。

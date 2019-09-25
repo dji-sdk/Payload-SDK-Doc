@@ -1,21 +1,20 @@
 ---
 title: Payload SDK 功能 - 数据传输
-date: 2019-06-17
+date: 2019-09-23
 keywords: [introduction, overview, Payload SDK]
 ---
 
 ## 数据透传 (UART/CAN)
 
-
-数据透传功能允许您在 Payload sdk 和 Mobile SDK 之间发送自定义数据流。
+数据透传功能允许您在 Payload sdk 和 Mobile SDK 或者 Onboard SDK 之间发送自定义数据流。
 
 - 该通道从负载接收 UART / CAN 上的数据。
-- 该通道不会对数据执行任何加密; 它会透明地在 PSDK 和 MSDK 之间传输数据。
-- 它允许开发人员开发在 MSDK 上解释这些数据的协议。
+- 该通道不会对数据执行任何加密; 它会透明地在 PSDK 和 MSDK 或者 OSDK 之间传输数据。
+- 它允许开发者开发在 MSDK 或者 OSDK 上解释这些数据的协议。
 - 此功能类似于 Onboard SDK 的[数据透明传输](https://developer.dji.com/onboard-sdk/documentation/guides/component-guide-mobile-communication.html) 功能。
- 
+
 #### 数据带宽指标
-在以下带宽内通过 UART / CAN 端口直接在 Mobile SDK 和 SKYPORT 之间传输数据：
+在以下带宽内通过 UART / CAN 端口直接在 Mobile SDK 或者 Onboard SDK 和 Payload SDK 之间传输数据：
 
 <table id="t01">
   <thead>
@@ -26,11 +25,19 @@ keywords: [introduction, overview, Payload SDK]
   </thead>
   <tbody>
     <tr>
-      <td>上行链路 (从 Mobile SDK 到 Payload)</th>
+      <td>Mobile SDK 到 Payload SDK</th>
       <td>约 500B/s </td>        
     </tr>
     <tr>
-      <td>下行链路 (从 Payload 到 Mobile SDK)</th>
+      <td>Payload SDK 到 Mobile SDK</th>
+      <td>约 4KB/s </td>        
+    </tr>
+    <tr>
+      <td>Onboard SDK 到 Payload SDK</th>
+      <td>约 4KB/s </td>        
+    </tr>
+    <tr>
+      <td>Payload SDK 到 Onboard SDK</th>
       <td>约 4KB/s </td>        
     </tr>
   </tbody>
@@ -51,7 +58,7 @@ keywords: [introduction, overview, Payload SDK]
 - 如果您有需要传输大量非视频流数据，PSDK 也会为您提供该选项。
 - 您的负载可以通过 UDP 协议将任何数据发送到与视频网络端口不同的网络端口，并且您需要在 Mobile SDK 应用上实施解码来解析此数据。
 
-#### 网络端口带宽指标
+#### 数据带宽指标
 网口数据传输的带宽信息提供如下：
 
 <table id="t01">
@@ -63,12 +70,12 @@ keywords: [introduction, overview, Payload SDK]
   </thead>
   <tbody>
     <tr>
-      <td>M200 系列仅使用第三方负载。</th>
-      <td>最大理论带宽 8Mbps。</td>        
+      <td>第三方负载单独挂载</th>
+      <td>最大理论带宽 8Mbps</td>        
     </tr>
     <tr>
-      <td>M210 及 M210 RTK 双云台版本, 挂载 DJI 云台和第三方负载。</th>
-      <td>最大理论带宽 4Mbps。</td>        
+      <td>DJI 负载和第三方负载同时挂载</th>
+      <td>最大理论带宽 4Mbps</td>        
     </tr>
   </tbody>
 </table>

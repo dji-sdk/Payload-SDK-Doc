@@ -1,10 +1,11 @@
 ---
 title: Network Port Guide
-date: 2019-01-25
+date: 2019-06-17
 keywords: [introduction]
 ---
 
 ## Network Port Configuration
+
 Configure the network port network properties as below when using the network port to transmit code stream and data:
 
 - IP address: 192.168.5.3
@@ -12,9 +13,11 @@ Configure the network port network properties as below when using the network po
 - Default gateway: 192.168.5.1
 
 ## Downlink Data Transmission
+
 The network port sends downlink data (i.e. from PSDK to MSDK) to the IP 192.168.5.10 and port 23002 by using the UDP protocol
 
 ## Video Transmission
+
 The network port sends video stream to the IP 192.168.5.10 and port 23003 by using the UDP protocol.
 The requirements of the video stream are as below:
 

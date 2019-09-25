@@ -1,6 +1,6 @@
 ---
 title: Documentation Home
-date: 2018-03-28
+date: 2019-09-24
 keywords: [introduction]
 ---
 
@@ -10,11 +10,10 @@ The DJI Payload SDK (PSDK) is a transformational SDK that enables third-party ma
 
 This documentation helps developers get started with the PSDK and understand its nuances. The structure of this website is summarized below.
 
-## Hardware Kit
+## Hardware
 
-The PSDK hardware kit consists of a DJI SKYPORT adapter, a development board and a coaxial cable to connect the two components. 
-
-Details on this hardware kit can be found on the [Hardware Introduction](hardware_introduction.html) page.
+* [DJI SKYPORT](hardware_introduction.html), includes an adapter, a development board, and a cable. 
+* DJI X-PORT Standard Gimbal
 
 ## Features
 
@@ -34,6 +33,9 @@ The PSDK introduces new paradigms for creating a payload and companion applicati
 
 - [Network Port](../guide/network_port.html)
 - [SKYPORT Installation](../guide/adapter_install.html)
+- [Custom Widget](../guide/custom_widget_guide.html)
+- [Multi-Payload Collaboration](../guide/multi_payload_collaboration.html)
+- [Positioning Features](../guide/positioning_guide.html)
 
 ## Development Workflow
 

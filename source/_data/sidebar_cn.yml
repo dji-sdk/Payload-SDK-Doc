@@ -17,7 +17,7 @@
       title: "数据传输"
       path: "/cn/features/data-transmission.html"
     -
-      title: "飞机状态数据推送"
+      title: "无人机状态数据推送"
       path: "/cn/features/aircraft-state-push-data.html"
     -
       title: "相机和云台接口"
@@ -49,6 +49,15 @@
     -
       title: "SKYPORT 安装"
       path: "/cn/guide/adapter_install.html"
+    -
+      title: "自定义控件"
+      path: "/cn/guide/custom_widget_guide.html"
+    -
+      title: "多负载协同"
+      path: "/cn/guide/multi_payload_collaboration.html"
+    -
+      title: "定位功能"
+      path: "/cn/guide/positioning_guide.html"
 -
   title: "支持"
   list:

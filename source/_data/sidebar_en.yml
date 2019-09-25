@@ -49,6 +49,15 @@
     -
       title: "SKYPORT Installation"
       path: "/guide/adapter_install.html"
+    -
+      title: "Custom Widget"
+      path: "/guide/custom_widget_guide.html"
+    -
+      title: "Multi-Payload Collaboration"
+      path: "/guide/multi_payload_collaboration.html"
+    -
+      title: "Positioning Features"
+      path: "/guide/positioning_guide.html"
 -
   title: "SUPPORT"
   list:

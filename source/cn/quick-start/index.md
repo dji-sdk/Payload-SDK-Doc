@@ -12,7 +12,7 @@ keywords: [快速开始, 注册, 生成 app key, app key, 运行示例代码, �
 
 
 ## 升级飞行器
-使用 DJI Assistant 2 将飞行器固件升级为支持 PSDK 的固件（固件版本为 V01.01.0900 或更高版本）。
+使用 DJI Assistant 2 将飞行器固件升级为支持 PSDK 的固件。
 
 ## 获取 Payload SDK 软件
 成为 Payload SDK 企业用户后，您可以前往 [用户中心](https://developer.dji.com/user/apps/#all) 获取 Payload SDK 软件包和相关软件。
@@ -24,7 +24,7 @@ keywords: [快速开始, 注册, 生成 app key, app key, 运行示例代码, �
 ## 绑定 Payload SDK 应用程序
 仅限第一次使用时，SKYPORT 转接环需要与 Payload SDK 应用程序绑定。请按照以下步骤进行绑定。
 
-1. 使用同轴线将 SKYPORT 转接环连接到 Payload SDK 开发板，然后将转接环安装到飞行器。使用 USB 线将 M200 连接到 PC。
+1. 使用同轴线将 SKYPORT 转接环连接到 Payload SDK 开发板，然后将转接环安装到飞行器。使用 USB 线将无人机连接到 PC。
 
 2. 打开 DJI Assistant 2，然后登录到您的 Payload SDK 企业帐户。
 
@@ -37,7 +37,7 @@ keywords: [快速开始, 注册, 生成 app key, app key, 运行示例代码, �
 
 - Payload SDK 的功能在完成绑定过程后才能启用。 
 - 您可以在 Android 设备上使用 DJI Pilot 测试 PSDK 的功能。 
-- 您可以在 [这里](https://www.dji.com/cn/matrice-200-series/info#downloads), 下载最新版本的 DJI Pilot App。安装在DJI Crystalsky 或者其他安卓平板上, 然后使用USB线连接到遥控器。 
+- 您可以在 [这里](https://www.dji.com/cn/matrice-200-series/info#downloads), 下载最新版本的 DJI Pilot App。安装在DJI CrystalSky 或者其他 Android 设备上, 然后使用USB线连接到遥控器。
 - 运行 DJI Pilot App。在首次使用时，您的移动设备需要互联网连接才能完成注册，并需要登录您的 DJI 账户。
 - 注册完成后，您可以看到开发板的传感器数据显示在 APP 中。这意味着通讯是成功的！
 

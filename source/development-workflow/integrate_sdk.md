@@ -1,6 +1,6 @@
 ---
 title: Integrate SDK into Application
-date: 2018-03-28
+date: 2019-07-31
 keywords: [integrate, port]
 ---
 
@@ -18,7 +18,7 @@ The initialization functions of the Payload SDK are provided in the file "Payloa
 ## Use Payload SDK features
 The major interface header files for various features in the folder "Payload_SDK/psdk_upper/inc" of the SDK are listed as follows:
 
-•	psdk_app_func.h: provides the functions related to mobile SDK communications and DJI Pilot custom control features.
+•	psdk_app_func.h: provides the functions related to mobile SDK communications and DJI Pilot custom widget features.
  
 •	psdk_msg_subcribe.h: provides the message subscription feature for users to subscribe to GPS, time, UAV location and pose and other UAV system information. 
 
@@ -26,5 +26,9 @@ The major interface header files for various features in the folder "Payload_SDK
 
 •	psdk_payload_gimbal.h: provides the gimbal development interfaces. DJI Pilot supports gimbal interfaces and the mobile SDK provides interfaces for the gimbal.
 
+•	psdk_osdk_func.h: provides the functions related to onboard SDK communications.
+
+•	psdk_positioning.h: provides the positioning development interfaces, can be used to survey & mapping functions.
+
 ## Payload SDK Port
-The examples for porting the Payload SDK to the MCU STM32F407IG FreeRTOS and a Linux system are available. Payload SDK is provided in source code. You can try to port the Payload SDK example to your own payload platform.  See "Payload_SDK/psdk_arch/arch_template/psdk_arch_sys.h" and "Payload_SDK/psdk_arch/arch_template/psdk_arch_sys.c" to learn how to port the Payload SDK.
+The examples for porting the Payload SDK to the MCU STM32F407IG FreeRTOS, Linux operation system and bare metal system are available. Payload SDK is provided in source code. You can try to port the Payload SDK example to your own payload platform.  See "Payload_SDK/psdk_arch/arch_template/psdk_arch_sys.h" and "Payload_SDK/psdk_arch/arch_template/psdk_arch_sys.c" to learn how to port the Payload SDK.

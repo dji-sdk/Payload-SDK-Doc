@@ -1,31 +1,15 @@
 ---
-title: Hardware Introduction
-date: 2018-11-06
+title: SKYPORYT
+date: 2019-09-24
 keywords: [hardware]
 ---
 
-This document introduces the hardware involved in the development of an application payload with Payload SDK.
+This document introduces how to use the SKYPORT in the development of a payload with Payload SDK.
+>**NOTE** :The payload,which on the **M200** and **M200 V2** series should be lighter than **600g**.
 
-## Payload Weight Requirements
-<table id="t01">
-  <thead>
-    <tr>
-      <th>Flight platform</th>
-      <th>Weight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>M200 series</td>
-      <td>Less than 600g</td>     
-    </tr>
-  </tbody>
-</table>
+## Overview
 
-## Payload SDK Development Kit
-You can get the Payload SDK development kit after becoming a Payload SDK enterprise user. The Payload SDK development kit allows you to explore the Payload SDK features and facilitates quick development. 
-
-The Payload SDK development kit contains the following components：
+The DJI SKYPORT development kit contains the following components：
 
 - DJI SKYPORT Adapter  x1
 - Payload SDK Development Board  x1
@@ -33,12 +17,14 @@ The Payload SDK development kit contains the following components：
 - Flat Ribbon Cable 30mm  x1
 - Ribbon Cable Connector  x3
 
-## DJI SKYPORT Adapter
-### Introduction
-![](../images/introduction/hardware_introduction/psdk_adapter.png)
-The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payloads and UAVs. For the connection of the SkyPort and the payload, see [SKYPORT installation](../guide/adapter_install.html).
+### DJI SKYPORT Adapter
+
+![](../images/introduction/hardware_introduction/psdk_adapter.png)  
+
+The SKYPORT adapter is docked to a aircraft's gimbal port to connect user payloads and UAVs. For the connection of the SkyPort and the payload, see [SKYPORT installation](../guide/adapter_install.html).
 
 ### Dimensions
+
 ![](../images/introduction/hardware_introduction/psdk_adapter_size.png)
 
 ### Interfaces
@@ -163,9 +149,11 @@ The SKYPORT adapter is docked to a M200 series' gimbal port to connect user payl
 </table>
 
 ## Payload SDK Development Board
+
 The Payload SDK development board helps you explore the Payload SDK features to quickly familiarize yourself with the Payload SDK usage and prototype your application during the preliminary R&D phase. You can port the Payload SDK to your own payload platform later. The Payload SDK development board uses the MCU STM32F407IGH6.
 
 ### Hardware description
+
 ![](../images/introduction/hardware_introduction/psdk_demo_board_print.png)
 
 <table id="t02">

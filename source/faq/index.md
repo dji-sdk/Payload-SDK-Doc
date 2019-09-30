@@ -12,9 +12,9 @@ keywords: [FAQ, Application process]
 * [What is development mode? What is production mode? How to switch from development mode to production mode? ](#what-is-development-mode-what-is-production-mode-how-to-switch-from-development-mode-to-production-mode)
 * [Is it required to buy the sdk development kit for Payload SDK developerment?](#is-it-required-to-buy-the-sdk-development-kit-for-payload-sdk-developerment)
 * [Do I get the certification from DJI when I start my mass production?](#do-i-get-the-certification-from-dji-when-i-start-my-mass-production)
-* [What is the workflow of the PSDK development & mass production?](#what-is-the-workflow-of-the-psdk-development-&-mass-production)
+* [What is the workflow of the PSDK development & mass production?](#what-is-the-workflow-of-the-psdk-development-mass-production)
 * [Is it allowed to buy DJI SKYPORTs and directly start to develop without buying SDK development kit?](#is-it-allowed-to-buy-DJI-SKYPORTs-and-directly-start-to-develop-without-buying-sdk-development-kit)
-* [Am I allowed to buy the PSDK development kit only once and develop multiple payloads?](am-i-allowed-to-buy-the-psdk-development-kit-only-once-and-develop-multiple-payloads)
+* [Am I allowed to buy the PSDK development kit only once and develop multiple payloads?](#am-i-allowed-to-buy-the-psdk-development-kit-only-once-and-develop-multiple-payloads)
 * [What type of payloads can I develop?](#what-type-of-payloads-can-i-develop)
 
 If you have any questions that are not addressed in the FAQs, please contact [dev@dji.com]() for more information.
@@ -76,7 +76,6 @@ The PSDK development kit includes:
 - Developers can buy DJI SKYPORT in DJI online store for mass production and sale;
 - DJI will contact excellent developers for commercial negotiations about the brand authorization and business expansion. 
 
-### Is it required to buy the sdk development kit for Payload SDK developerment?
 ### Is it allowed to buy DJI SKYPORTs and directly start to develop without buying SDK development kit?
 
   Yes, although the PSDK software kit license can be activated after the successful registration of the PSDK project, the PSDK development process is related to hardware and requires the purchase of the software development kit for development; PSDK developer kit purchase link: <https://store.dji.com/product/psdk-development-kit>.

@@ -1,6 +1,6 @@
 ---
 title: 关于PSDK申请流程的常见问题解答
-date: 2019-09-24
+date: 2020-01-17
 keywords: [FAQ, Application process]
 ---
 
@@ -50,7 +50,6 @@ Payload SDK 和 DJI SKYPORT 目前仅支持M200 系列与M200 V2系列。
 - 您研发的负载从开发模式往量产模式切换时，您需要交纳PSDK开发包的授权费用，费用为5000美元（3.2万元人民币）。该费用只包含PSDK开发包的授权费用；
 您需要交纳PSDK开发包的费用，费用为每个负载5000美元。
 PSDK开发包包括:
-- 3套payload SDK开发版套装（开发板+DJI SKYPORT转接环）
 - payload SDK开发者资料包
 
 <h3 id="7">什么是开发模式？什么是量产模式？如何从开发模式往量产模式切换? </h3>

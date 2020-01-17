@@ -2,62 +2,101 @@
   title: "介绍"
   list:
     -
-      title: "文档主页"
+      title: "什么是PSDK ?"
       path: "/cn/introduction/index.html"
     -
-      title: "硬件介绍"
-      path: "/cn/introduction/hardware_introduction.html"
+      title: "如何使用PSDK ?"
+      path: "/cn/introduction/how-to-use-PSDK.html"
+    -
+      title: "PSDK 功能概览"
+      path: "/cn/introduction/feature-list.html"
 -
-  title: "功能"
+  title: "选型指南"
   list:
     -
-      title: "功能介绍"
-      path: "/cn/features/psdk_introduction.html"
+      title: "负载开发标准"
+      path: "/cn/guide/payload-criterion.html"
+    -
+      title: "选购硬件平台"
+      path: "/cn/guide/hardware.html"
+    -
+      title: "选择开发平台"
+      path: "/cn/guide/platform.html"
+-
+  title: "开发引导"
+  list:
+    -
+      title: "开发须知"
+      path: "/cn/workflow/attention.html"
+    -
+      title: "设备连接"
+      path: "/cn/workflow/device-connection.html"
+    -
+      title: "配置开发环境"
+      path: "/cn/workflow/development-environment.html"
+    -
+      title: "运行示例程序"
+      path: "/cn/workflow/run-the-sample.html"
+-
+  title: "实践教程"
+  list:
+    -
+      title: "PSDK 初始化"
+      path: "/cn/tutorial/initial.html"
+    -
+      title: "跨平台移植"
+      path: "/cn/tutorial/transplant.html"
+    -
+      title: "信息管理"
+      path: "/cn/tutorial/information-manage.html"
+    -
+      title: "时间同步"
+      path: "/cn/tutorial/time-synchronization.html"
     -
       title: "数据传输"
-      path: "/cn/features/data-transmission.html"
+      path: "/cn/tutorial/data-transmission.html"
     -
-      title: "无人机状态数据推送"
-      path: "/cn/features/aircraft-state-push-data.html"
+      title: "电源管理"
+      path: "/cn/tutorial/power-manage.html"
     -
-      title: "相机和云台接口"
-      path: "/cn/features/camera-gimbal-features.html"
+      title: "日志管理"
+      path: "/cn/tutorial/log-manage.html"
     -
-      title: "配套软件支持"
-      path: "/cn/features/integrate-other-dji-sdk-apps.html"
--
-  title: "快速开始"
-  list:
+      title: "负载协同"
+      path: "/cn/tutorial/payload-collaboration.html"
     -
-      title: "运行示例应用程序"
-      path: "/cn/quick-start/index.html"
--
-  title: "开发工作流程"
-  list:
-    -
-      title: "与PSDK集成"
-      path: "/cn/development-workflow/integrate_sdk.html"
-    -
-      title: "构建应用程序"
-      path: "/cn/development-workflow/build-application.html"
--
-  title: "指南"
-  list:
-    -
-      title: "网络端口"
-      path: "/cn/guide/network_port.html"
-    -
-      title: "SKYPORT 安装"
-      path: "/cn/guide/adapter_install.html"
+      title: "精准定位"
+      path: "/cn/tutorial/positioning.html"
     -
       title: "自定义控件"
-      path: "/cn/guide/custom_widget_guide.html"
+      path: "/cn/tutorial/custom-widget.html"
     -
-      title: "多负载协同"
-      path: "/cn/guide/multi_payload_collaboration.html"
+      title: "云台控制"
+      path: "/cn/tutorial/gimbal-control.html"
     -
-      title: "定位功能"
-      path: "/cn/guide/positioning_guide.html"
+      title: "使用X-Port"
+      path: "/cn/tutorial/X-Port.html"
+-
+  title: "相机功能"
+  list:
+    -
+      title: "相机类基础功能"
+      path: "/cn/camera/camera-basic-functions.html"
+    -
+      title: "对焦控制功能"
+      path: "/cn/camera/camera-focus.html"
+    -
+      title: "测光控制功能"
+      path: "/cn/camera/camera-metering.html"
+    -
+      title: "变焦控制功能"
+      path: "/cn/camera/camera-zoom.html"
+    -
+      title: "视频流传输"
+      path: "/cn/camera/video-stream-transmission.html"
+    -
+      title: "回放下载"
+      path: "/cn/camera/playback-download.html"
 -
   title: "支持"
   list:

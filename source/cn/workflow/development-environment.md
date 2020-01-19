@@ -24,7 +24,7 @@ keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
 <div style="text-align: center"><p>图1.安装Pack 包</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/stm32_pack_install.png" width="600" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/v2/stm32_pack_install.png" width="600" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 

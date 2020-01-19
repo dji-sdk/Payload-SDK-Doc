@@ -89,7 +89,7 @@ PsdkLogger_UserLogDebug("camera hybrid zoom focal length, focalLength: %d.", no1
 <div style="text-align: center"><p> 图1. 获取相机类负载设备的参数信息 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/payload_collaboration_camera_info_push.png" width="500" alt/></span></p>
+      <img src="../../images/v2/payload_collaboration_camera_info_push.png" width="500" alt/></span></p>
 </div></div>
 
 ## 适配产品

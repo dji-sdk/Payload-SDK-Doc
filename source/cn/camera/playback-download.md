@@ -433,7 +433,7 @@ static T_PsdkReturnCode DestroyMediaFileScreenNail(const char *filePath)
 <div style="text-align: center"><p>图1.查看截屏图  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_media_file_list.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_media_file_list.gif" width="500" alt/></span></p>
 </div></div>
   
 
@@ -460,7 +460,7 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
 <div style="text-align: center"><p>  图2.删除媒体文件 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_media_file_delete.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_media_file_delete.gif" width="500" alt/></span></p>
 </div></div>
 
 ### 实现媒体文件回放功能
@@ -581,13 +581,13 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
 <div style="text-align: center"><p> 图3.播放视频文件 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_media_file_playback.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_media_file_playback.gif" width="500" alt/></span></p>
 </div></div>
 <div>
 <div style="text-align: center"><p>图4.媒体文件下载 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_media_file_download.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_media_file_download.gif" width="500" alt/></span></p>
 </div></div>
 
 > **说明：** 媒体文件的下载速度约为 300KB/s，受飞机工作环境影响实际下载速度可能会有差异。  

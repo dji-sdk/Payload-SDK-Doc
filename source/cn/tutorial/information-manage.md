@@ -24,7 +24,7 @@ PSDK 的信息管理功能包含信息获取和消息订阅功能，基于PSDK �
 <div style="text-align: center"><p>图1.消息订阅  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/data-subscription.png" width="200" alt/></span></p>
+      <img src="../../images/v2/data-subscription.png" width="200" alt/></span></p>
 </div></div>
 
 #### 订阅项
@@ -182,7 +182,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图2. 订阅结果（1）</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/data_subscription_result_callback.png" width="500" alt/></span></p>
+      <img src="../../images/v2/data_subscription_result_callback.png" width="500" alt/></span></p>
 </div></div>
 
 #### 在线程函数中获取无人机上的信息
@@ -218,7 +218,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图3. 订阅结果（2）  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/data_subscription_result_get_value.png" width="500" alt/></span></p>
+      <img src="../../images/v2/data_subscription_result_get_value.png" width="500" alt/></span></p>
 </div></div>
 
 

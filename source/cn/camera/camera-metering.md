@@ -14,7 +14,7 @@ keywords: [相机, 测光, 平均测光, 中央重点测光]
 <div style="text-align: center"><p>图1.点测光区域  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/Metering-area.png" width="500" alt/></span></p>
+      <img src="../../images/v2/Metering-area.png" width="500" alt/></span></p>
 </div></div>
 
 图像传感器被分为12列8行定义的96个点区域。行索引范围是[0,7]，其中值在图像上从上到下递增；列索引范围是[0，11]，其中值从左到右增加。
@@ -89,21 +89,21 @@ keywords: [相机, 测光, 平均测光, 中央重点测光]
 <div style="text-align: center"><p>图2.测光功能  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_metering_button.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_metering_button.gif" width="500" alt/></span></p>
 </div></div>
 
 <div>
 <div style="text-align: center"><p>图3. 中央重点测光</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_center_metering.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_center_metering.gif" width="500" alt/></span></p>
 </div></div> 
 
 <div>
 <div style="text-align: center"><p>图4. 指点测光 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_spot_metering.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_spot_metering.gif" width="500" alt/></span></p>
 </div></div>
 
 

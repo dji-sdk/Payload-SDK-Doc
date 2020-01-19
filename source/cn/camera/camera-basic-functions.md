@@ -143,7 +143,7 @@ keywords: [相机, 相机基础功能, 相机模式, 拍照, 录像]
 <div style="text-align: center"><p>图1. SD 卡管理功能  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_format_sdcard.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_format_sdcard.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用模式设置功能
@@ -175,7 +175,7 @@ keywords: [相机, 相机基础功能, 相机模式, 拍照, 录像]
 <div style="text-align: center"><p>图2. 设置相机类负载设备的模式 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_work_mode.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_work_mode.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用拍照功能
@@ -368,7 +368,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图3.拍照 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_rc_control.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_rc_control.gif" width="500" alt/></span></p>
 </div></div>
 
 在单拍模式下，可执行拍照动作，如 图4.单拍 所示。   
@@ -376,7 +376,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图4.单拍  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_single_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_single_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 在连拍模式下，设置相机类负载设备的连拍张数后，相机类负载设备即可执行连拍动作，如 图5.连拍 所示。  
@@ -384,7 +384,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图5.连拍  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_burst_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_burst_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 在定时拍照模式下，设置相机类负载设备拍照的间隔时间，相机类负载设备可执行定时拍照动作，如 图6.定时拍照 所示。  
@@ -392,7 +392,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图6.定时拍照 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_interval_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_interval_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用录像功能
@@ -456,5 +456,5 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图7.相机录像 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_take_video.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_take_video.gif" width="500" alt/></span></p>
 </div></div>

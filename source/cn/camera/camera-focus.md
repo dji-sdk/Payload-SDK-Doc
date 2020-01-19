@@ -21,7 +21,7 @@ keywords: [相机, 拍照, 对焦, 相机对焦, 对焦模式, 对焦区域, 对
 <div style="text-align: center"><p>图1.对焦点 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/focus-point.png" width="500" alt/></span></p>
+      <img src="../../images/v2/focus-point.png" width="500" alt/></span></p>
 </div></div>
 
 #### 对焦环
@@ -162,12 +162,12 @@ keywords: [相机, 拍照, 对焦, 相机对焦, 对焦模式, 对焦区域, 对
 <div style="text-align: center"><p>图2.自动对焦 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_focus_target.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_focus_target.gif" width="500" alt/></span></p>
 </div></div>
 
 <div>
 <div style="text-align: center"><p>图3.手动对焦 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_focus_mannual.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_focus_mannual.gif" width="500" alt/></span></p>
 </div></div>

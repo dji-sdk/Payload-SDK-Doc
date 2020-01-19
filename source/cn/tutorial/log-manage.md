@@ -108,7 +108,7 @@ PsdkLogger_UserLogDebug("psdk log console test.");
 <div style="text-align: center"><p>图1.日志信息 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/log.png" width="500" alt/></span></p>
+      <img src="../../images/v2/log.png" width="500" alt/></span></p>
 </div></div>
 
 >**说明：** 日志的等级为Info，因此负载设备中类型为Info、Warn 及Error 的日志将被输出在终端上，类型为Debug 的日志将不会被打印出来。

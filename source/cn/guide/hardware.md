@@ -15,7 +15,7 @@ keywords: [开发套件, SkyPort, Skyport V2, Skyport , X-Port, 负载, 拓展�
 Skyport V2 包含如下配件：    
 <div>
 <div><p><span>
-      <img src="../images/V2.png" width="800" alt/></span></p>
+      <img src="../../images/v2/V2.png" width="800" alt/></span></p>
 </div></div>
 
 > **说明：** 当负载设备进入量产阶段后，请购买 <a href="https://store.dji.com/cn/product/dji-skyport-adapter-set-v2">Skyport V2 转接环套装</a>。
@@ -25,7 +25,7 @@ Skyport V2 包含如下配件：
 Skyport 包含如下配件：  
 <div>
 <div><p><span>
-      <img src="../images/V1.png" width="700" alt/></span></p>
+      <img src="../../images/v2/V1.png" width="700" alt/></span></p>
 </div></div>
 
 > **说明：** 当负载设备进入量产阶段后，请购买<a href="https://store.dji.com/cn/product/psdk-ribbon-cable-set">同轴线套装</a>和 <a href="https://store.dji.com/cn/product/dji-skyport-adapter-set">Skyport 转接环套装</a>。
@@ -44,20 +44,20 @@ Skyport 包含如下配件：
     <tr style="text-align:center">
       <td style="border-right: none;text-align:left;border-left: none;"> </td>
       <td style="border-right: none;border-left: none;"><div><p><span>
-      <img src="../images/X-Port.png" height="220" width="220" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/X-Port.png" height="220" width="220" style="vertical-align:middle" alt/></span></p></div></td>
       <td style="border-right: none;"><div><p><span>
-      <img src="../images/SkyPort2.png" height="190" width="150" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/SkyPort2.png" height="190" width="150" style="vertical-align:middle" alt/></span></p></div></td>
       <td style="border-right: none;"><div><p><span>
-      <img src="../images/SkyPort1.png" height="190" width="150" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/SkyPort1.png" height="190" width="150" style="vertical-align:middle" alt/></span></p></div></td>
     </tr>
     <tr style="text-align:center">
       <td style="border-right: none;text-align:left;border-left: none;"><b>硬件尺寸</b></td>
       <td style="border-right: none;border-left: none;"><div><p><span>
-      <img src="../images/XPort-size.png" height="190" width="240" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/XPort-size.png" height="190" width="240" style="vertical-align:middle" alt/></span></p></div></td>
       <td style="border-right: none;"><div><p><span>
-      <img src="../images/SkyPort2-size.png" height="190" width="220" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/SkyPort2-size.png" height="190" width="220" style="vertical-align:middle" alt/></span></p></div></td>
       <td style="border-right: none;"><div><p><span>
-      <img src="../images/SkyPort1-size.png" height="190" width="200" style="vertical-align:middle" alt/></span></p></div></td>
+      <img src="../../images/v2/SkyPort1-size.png" height="190" width="200" style="vertical-align:middle" alt/></span></p></div></td>
     </tr>
     <tr style="text-align:center">
       <td style="border-left: none;text-align:left;border-right: none;"><b>重量</b></td>
@@ -139,7 +139,7 @@ X-Port 标准云台的结构如 图1. X-Port 标准云台 所示：
 <div style="text-align: center"><p>图1. X-Port 标准云台（单位：mm）</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/XPort-structure.png" width="450" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/v2/XPort-structure.png" width="450" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 #### 负载设备设计约束

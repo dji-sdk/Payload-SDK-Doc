@@ -18,7 +18,7 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 <div style="text-align: center"><p>图1.云台关节 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/joint-angle.png" width="220" alt/></span></p>
+      <img src="../../images/v2/joint-angle.png" width="220" alt/></span></p>
 </div></div>
   
 #### 云台姿态与云台姿态角
@@ -28,7 +28,7 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 <div style="text-align: center"><p>图2.云台姿态  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/gimble_up.png" width="600" alt/></span></p>
+      <img src="../../images/v2/gimble_up.png" width="600" alt/></span></p>
 </div></div>
    
 
@@ -385,7 +385,7 @@ if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
 <div style="text-align: center"><p>图3.云台控制  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/gimbal_speed_control.png" width="500" alt/></span></p>
+      <img src="../../images/v2/gimbal_speed_control.png" width="500" alt/></span></p>
 </div></div>
 
 ### 调整云台处于不同模式时的参数
@@ -497,12 +497,12 @@ calibration:
 <div style="text-align: center"><p>图4.云台校准（1） </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/gimbal_start_calibration.png" width="500" alt/></span></p>
+      <img src="../../images/v2/gimbal_start_calibration.png" width="500" alt/></span></p>
 </div></div>
 
 <div>
 <div style="text-align: center"><p>图5.云台校准（2） </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/gimbal_calibration_result.png" width="500" alt/></span></p>
+      <img src="../../images/v2/gimbal_calibration_result.png" width="500" alt/></span></p>
 </div></div>

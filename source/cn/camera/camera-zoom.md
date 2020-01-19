@@ -214,7 +214,7 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图1.连续变焦 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/camera_zoom_continous.gif" width="500" alt/></span></p>
+      <img src="../../images/v2/camera_zoom_continous.gif" width="500" alt/></span></p>
 </div></div>
 
 #### 5. 实现指点变焦功能

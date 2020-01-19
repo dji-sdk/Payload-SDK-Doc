@@ -3,10 +3,13 @@ title: 什么是PSDK ？
 date: 2020-01-17
 keywords: [PSDK, 快速开发, 标准化, 应用场景, 开发引导]
 ---
+
+> **说明：** 本系列文档介绍PSDK V2.0.0 的功能，以及使用PSDK V2.0.0 开发负载设备的步骤和方法，若您仍使用PSDK V 1.5.0 开发负载设备，请下载[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档。
+
 DJI 为支持开发者开发出可挂载在DJI 无人机上的负载设备，提供了Payload SDK（即PSDK）、[X-Port 标准云台](../guide/hardware.html)和[SkyPort 转接环](../guide/hardware.html)，方便开发者利用DJI 无人机上如电源、通讯链路及状态信息等**资源**，开发出可挂载在DJI 无人机上的负载设备。
 
 <div style="text-align: center"><p><span>
-      <img src="../images/PSDK-features.png" width="500" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/v2/PSDK-features.png" width="500" style="vertical-align:middle" alt/></span></p>
 </div>
 
 ## 主要优势
@@ -210,5 +213,3 @@ PSDK 不仅提供了用于开发DJI 无人机负载设备的功能接口和硬�
 ## 使用MSDK 和OSDK
 * MSDK：使用MSDK 开发的移动端APP 能够控制负载设备执行指定的动作和任务。
 * OSDK：使用OSDK 开发的无人机自动控制程序，借助机载计算机（如Manifold 2-C）的强大算力，不仅能够实现对无人机以及无人机负载设备的自动化控制，还能实现图像识别、物体追踪及深度感知等高级应用。
-
-> **说明：** 本系列文档介绍PSDK V2.0.0 的功能，以及使用PSDK V2.0.0 开发负载设备的步骤和方法，若您仍使用PSDK V 1.5.0 开发负载设备，请下载[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档。

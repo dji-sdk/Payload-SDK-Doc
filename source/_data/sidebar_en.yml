@@ -1,65 +1,104 @@
 -
-  title: "INTRODUCTION"
+  title: "Introduction"
   list:
     -
-      title: "Documentation Home"
+      title: "What is PSDK ?"
       path: "/introduction/index.html"
     -
-      title: "Hardware Introduction"
-      path: "/introduction/hardware_introduction.html"
+      title: "How to use PSDK ?"
+      path: "/introduction/how-to-use-PSDK.html"
+    -
+      title: "Feature List"
+      path: "/introduction/feature-list.html"
 -
-  title: "Features"
+  title: "Develope Guide"
   list:
     -
-      title: "Features Introduction"
-      path: "/features/psdk_introduction.html"
+      title: "Payload Criterion"
+      path: "/guide/payload-criterion.html"
+    -
+      title: "Hardware Platform"
+      path: "/guide/hardware.html"
+    -
+      title: "Develope Platform"
+      path: "/guide/platform.html"
+-
+  title: "Workflow"
+  list:
+    -
+      title: "Attention"
+      path: "/workflow/attention.html"
+    -
+      title: "Device Connection"
+      path: "/workflow/device-connection.html"
+    -
+      title: "Development Environment"
+      path: "/workflow/development-environment.html"
+    -
+      title: "Run The Sample"
+      path: "/workflow/run-the-sample.html"
+-
+  title: "Tutorial"
+  list:
+    -
+      title: "PSDK Initialization"
+      path: "/tutorial/initial.html"
+    -
+      title: "Transplant"
+      path: "/tutorial/transplant.html"
+    -
+      title: "Information Management"
+      path: "/tutorial/information-manage.html"
+    -
+      title: "Time Synchronization"
+      path: "/tutorial/time-synchronization.html"
     -
       title: "Data Transmission"
-      path: "/features/data-transmission.html"
+      path: "/tutorial/data-transmission.html"
     -
-      title: "Aircraft State Push Data"
-      path: "/features/aircraft-state-push-data.html"
+      title: "Power Management"
+      path: "/tutorial/power-manage.html"
     -
-      title: "Camera & Gimbal Features"
-      path: "/features/camera-gimbal-features.html"
+      title: "Log Management"
+      path: "/tutorial/log-manage.html"
     -
-      title: "Integration with DJI SDKs & Apps"
-      path: "/features/integrate-other-dji-sdk-apps.html"
--
-  title: "GET STARTED IMMEDIATELY"
-  list:
+      title: "Payload Coordination"
+      path: "/tutorial/payload-collaboration.html"
     -
-      title: "Run Sample Application"
-      path: "/quick-start/index.html"
--
-  title: "Development Workflow"
-  list:
-    -
-      title: "Integrate SDK into Application"
-      path: "/development-workflow/integrate_sdk.html"
-    -
-      title: "Build Application"
-      path: "/development-workflow/build-application.html"
--
-  title: "GUIDES"
-  list:
-    -
-      title: "Network Port"
-      path: "/guide/network_port.html"
-    -
-      title: "SKYPORT Installation"
-      path: "/guide/adapter_install.html"
+      title: "Positioning"
+      path: "/tutorial/positioning.html"
     -
       title: "Custom Widget"
-      path: "/guide/custom_widget_guide.html"
+      path: "/tutorial/custom-widget.html"
     -
-      title: "Multi-Payload Collaboration"
-      path: "/guide/multi_payload_collaboration.html"
+      title: "Gimbal Control"
+      path: "/tutorial/gimbal-control.html"
     -
-      title: "Positioning Features"
-      path: "/guide/positioning_guide.html"
+      title: "X-Port Control"
+      path: "/tutorial/X-Port.html"
 -
-  title: "SUPPORT"
+  title: "Camera"
+  list:
+    -
+      title: "Basic Function"
+      path: "/camera/camera-basic-functions.html"
+    -
+      title: "Focus Control"
+      path: "/camera/camera-focus.html"
+    -
+      title: "Metering Control"
+      path: "/camera/camera-metering.html"
+    -
+      title: "Zoom Control "
+      path: "/camera/camera-zoom.html"
+    -
+      title: "Video Stream Transmission"
+      path: "/camera/video-stream-transmission.html"
+    -
+      title: "Playback and Download"
+      path: "/camera/playback-download.html"
+-
+  title: "Support"
   list:
     -
       title: "FAQ For Application Process"

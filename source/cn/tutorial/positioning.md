@@ -8,7 +8,7 @@ keywords: [精准定位, RTK ,时间同步, PPS]
 <div style="text-align: center"><p>图1. RTK信号状态 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/positioning_prerequisites.png" width="500" alt/></span></p>
+      <img src="../../images/positioning_prerequisites.png" width="500" alt/></span></p>
 </div></div>
  
 ## 概述
@@ -34,7 +34,7 @@ keywords: [精准定位, RTK ,时间同步, PPS]
 <div style="text-align: center"><p>图2.获取精准定位 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/positioning_function_principle.png" width="500" alt/></span></p>
+      <img src="../../images/positioning_function_principle.png" width="500" alt/></span></p>
 </div></div>
  
 获取目标点的位置后，根据目标点的位置，使用目标点与无人机RTK 主天线位置的偏移量、无人机的姿态、负载设备的结构等信息，能够计算兴趣点的位置。  
@@ -129,7 +129,7 @@ s_eventIndex++;
 <div style="text-align: center"><p>图3. 定位详情 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/positioning_result.png" width="500" alt/></span></p>
+      <img src="../../images/positioning_result.png" width="500" alt/></span></p>
 </div></div>
 
 ### 查询定位记录

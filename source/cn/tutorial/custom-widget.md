@@ -15,7 +15,7 @@ keywords: [控件, 自定义, 自定义控件]
 <div style="text-align: center"><p>图1. 主界面 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/custom_widget_interface_main.png" width="500" alt/></span></p>
+      <img src="../../images/custom_widget_interface_main.png" width="500" alt/></span></p>
 </div></div>
 
 #### 配置界面的控件  
@@ -25,7 +25,7 @@ keywords: [控件, 自定义, 自定义控件]
 <div style="text-align: center"><p>图2. 配置界面 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/custom_widget_interface_config.png" width="500" alt/></span></p>
+      <img src="../../images/custom_widget_interface_config.png" width="500" alt/></span></p>
 </div></div>
 
 > **说明** 
@@ -188,7 +188,7 @@ keywords: [控件, 自定义, 自定义控件]
 <div style="text-align: center"><p>图3. 控件颜色  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/custom_widget_icon_color.png" width="500" alt/></span></p>
+      <img src="../../images/custom_widget_icon_color.png" width="500" alt/></span></p>
 </div></div>
    
 * 图标格式：PNG
@@ -197,7 +197,7 @@ keywords: [控件, 自定义, 自定义控件]
 <div style="text-align: center"><p>   图4. 视觉修正 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/custom_widget_icon_fomat.png" width="500" alt/></span></p>
+      <img src="../../images/custom_widget_icon_fomat.png" width="500" alt/></span></p>
 </div></div>
     
 
@@ -359,7 +359,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p> 图5. 按键映射 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/custom_widget_map_rc.png" width="500" alt/></span></p>
+      <img src="../../images/custom_widget_map_rc.png" width="500" alt/></span></p>
 </div></div>
 
 >**提示：** DJI Pilot 支持创建多个映射表适配不同的负载设备。

@@ -1,158 +1,168 @@
 ---
-title: 云台控制
+title: Gimbal Control
 date: 2020-01-17
-keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云台模式, 限位, 最大速度百分比, 角度控制, 速度控制]
+keywords: [Gimbal Control]
 ---
->**说明：** 仅使用SkyPort 开发的负载设备支持使用PSDK 的云台功能。
-## 概述
-使用PSDK 的“云台控制”功能，开发者需要先设计负载设备的云台并开发出控制云台的程序，将云台的控制函数注册到PSDK 指定的接口后，用户通过使用DJI Pilot、基于MSDK 开发的移动端APP 及遥控器即可控制基于PSDK 开发的具有云台功能的负载设备，同时获得负载设备的相关信息，如姿态等。
+>**NOTE** 
+> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * The payload only developed by SkyPort support to use the gimbal control.
 
-## 基础概念
-### 云台状态信息
-使用PSDK 开发的云台类负载设备需要按照指定的要求上报云台的状态、当前姿态和校准状态等信息，方便用户移动端APP 或机载计算机根据云台的状态，实现精准控制。有关获取云台状态的方法和相关详情请参见**PSDK API 文档**。
+## Overview 
+Using the "Gimbal Control" function of the PSDK, developers need to design the gimbal of the payload and develop the program to control the gimbal. After registering the gimbal control function to the interface specified by PSDK, the user can use the Mobile APP which developed by MSDK and controller could control the payload with gimbal function based on PSDK, and obtain relevant information such as attitude.
 
-### 关节角与姿态角
-#### 云台关节与云台关节角  
-云台的关节如图1.云台关节 所示，云台关节是云台上带动负载设备转动的结构件：云台电机，云台关节角即云台电机转动的角度。本教程使用机体坐标系描述云台的关节角。    
+
+## The state of the gimbal
+The payload developed based on PSDK needs to report the status of the gimbal, attitude, and calibration information, which is convenient for the user's Mobile APP or onboard computer control the payload precisely.
+
+## Joint angle and attitude angle
+#### Joint and joint angle  
+Figure 1 shows the joints of the gimbal. The joint of the gimbal is the motor to drive the payload. This tutorial uses the body coordinate system to describe the joint angle of the gimbal.  
 <div>
-<div style="text-align: center"><p>图1.云台关节 </p>
+<div style="text-align: center"><p>Figure 1 Joint angle </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/joint-angle.png" width="220" alt/></span></p>
+      <img src="../images/joint-angle-en.png" width="220" alt/></span></p>
 </div></div>
   
-#### 云台姿态与云台姿态角
-云台的姿态如 图2.云台姿态 所示，根据用户的控制指令，云台能够调整姿态；云台姿态角即使用大地坐标系（NED，北东地坐标系）描述云台上**负载设备**的角度，该角度也称为欧拉角。
+#### Attitude and attitude angle
+Figure 2 shows the attitude of the payload, according to the control command, the gimbal could spin the payload to a different position. This tutorial uses the geodetic coordinate system (NED, North East Coordinate System) to describe the attitude angle of the payload, this angle is also called Euler-angle.
 
 <div>
-<div style="text-align: center"><p>图2.云台姿态  </p>
+<div style="text-align: center"><p>Figure 2 Attitude angle </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/gimble_up.png" width="600" alt/></span></p>
+      <img src="../images/gimble_up-en.png" width="370" alt/></span></p>
 </div></div>
    
 
-### 云台模式
-云台模式决定了云台跟随无人机运动时的转动方式：  
-* 自由模式：当无人机的姿态改变时，云台将不会转动。
-* FPV 模式：当无人机的姿态发生改变时，云台会转动航向轴与横滚轴，确保负载设备当前的视场角不会发生改变。
-* YAW 跟随模式：在该模式下，云台的航向轴会跟随无人机的航向轴转动。
+### Gimbal mode
+The gimbal mode determines how the gimbal rotates when following the drone:
 
-> **说明：** 在以上三种模式下，无人机系统中的其他模块（航线飞行时的云台控制指令）、遥控器和移动端APP，能够控制云台转动。  
+* Free: When the attitude of the drone changes, the gimbal would not rotate.
+* FPV: When the attitude of the drone changes, the gimbal would rotate the yaw and roll to ensure that the current field of view of the payload would not change.
+* YAW following: In this mode, the yaw axis of the gimbal will follow the drone.
 
-### 云台控制
+> **NOTE:** In the above three modes, other modules (which in the drone), controller and Mobile APP could control the gimbal.
 
-#### 控制方式
-云台转动的控制方式分为以下三种：    
-* 相对角度控制：使用PSDK 开发的云台根据用户**指定的**角度，在规定的时间内，转动**指定的角度**。
-* 绝对角度控制：使用PSDK 开发的云台根据用户的指令，在规定的时间内，从**当前的位置**转动到指定的位置。
-* 速度控制：用户可控制使用PSDK 开发的云台的转动速度。  
+### Gimbal control 
+#### Control method 
+There are three control methods:
+* Relative angle control: Users could control the gimbal which developed based on PSDK to rotate the specified angle within a specified time.
+* Absolute angle control: According to the user's command, the gimbal which developed based on PSDK will rotate from the current position to the specified position within a specified time.
+* Speed ​​control: Users could control the rotation speed of the gimbal which developed based on PSDK.
 
-> **说明** 
-> * 在角度控制模式下，云台转动的时间受云台最大旋转速度和最大加速度限制，实际的转动角度受云台限位角度的限制。
-> * 在速度控制模式下，云台根据用户指定的速度转动0.5s，当云台转动到限位角时，将会停止转动。
+> **NOTE** 
+> * Use the angle control mode, the rotation time of the gimbal is limited by the maximum rotation speed and acceleration of the gimbal. The actual rotation angle is limited by the limit angle of the gimbal.
+> * Use the speed control mode, the gimbal rotates for 0.5s according to the speed specified by the user. When the gimbal rotates to the limit angle, it will stop.
 
-#### 控制权限
-有关云台控制权限的详细说明请参见 表1.云台控制权限。
-* 控制规则：
-  * 优先级低的控制动作在优先级高的控制动作结束后才能控制云台；
-  * 高优先级的控制动作可抢占低优先级控制动作的控制权；
-  * 同等优先级的控制场景按照开始控制的时间先后顺序抢占控制权，开始控制时间较晚的控制场景不能夺取控制权。
-* 权限释放
-  * 控制模块完成对云台的控制后会释放控制权；
-  * 若控制模块完成对云台的控制后未释放控制权，使用PSDK 开发的云台将在云台转动结束后指定的时间内自动释放控制权。  
+#### Control permissions
+The details for the gimbal control permissions, please refer to Table 1.
+
+* Rules
+  * The control action with low priority could control the gimbal only after the control action with high priority ends.
+  * High-priority control actions can preempt control rights of low-priority control actions;
+  * Control scenes of equal priority are preempted in order of control start time, and control scenes with a later start control time cannot seize control rights.
+
+* Release
+  * The control module will release the control right after completing the control of the gimbal;
+  * If the control module does not release the control right after completing the control of the gimbal, the gimble which developed based on PSDK will automatically release the control right within the specified time after the end of the gimbal rotation. 
+
 <div><div>
 <p>
-表1.云台控制权限  </p></div>
+Table 1 The control permissions of the gimbal
+  </p></div>
 <div>
 <table id="01">
   <thead>
     <tr>
-      <th>权限角色</th>
-      <th>权限等级</th>
-      <th>云台运动持续时间</th>
-      <th>权限超时释放时间</th>
+      <th>Role</th>
+      <th>level</th>
+      <th>Duration</th>
+      <th>Timeout</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>遥控器云台摇杆</td>
+      <td>The gimbel rockers of the controller</td>
       <td>1</td>
       <td>0</td>
       <td>500 ms</td>
     </tr>
     <tr>
-      <td>MSDK 云台控制指令</td>
+      <td>Commands of the MSDK</td>
       <td>1</td>
-      <td>由控制命令指定</td>
+      <td>Specified by control commands</td>
       <td>2000 ms</td>
     </tr>
     <tr>
-      <td>DJI APP 云台控制指令</td>
+      <td>DJI APP gimbal control commands</td>
       <td>2</td>
       <td>0</td>
       <td>500 ms</td>
     </tr>
     <tr>
-      <td>负载协同指令</td>
+      <td>Payload coordination command</td>
       <td>2</td>
-      <td colspan="2" style="text-align: center">由控制命令指定</td>
+      <td colspan="2" style="text-align: center">Specified by control command</td>
     </tr>
     <tr>
-      <td>MSDK 云台速度指令</td>
+      <td>The gimbal speed ​​command of MSDK</td>
       <td>2</td>
       <td>0</td>
       <td>500 ms</td>
     </tr>
     <tr>
-      <td>航线飞行时的云台控制指令</td>
+      <td>The gimbal control commands of the mission</td>
       <td>2</td>
-<td colspan="2" style="text-align: center">由控制命令指定</td>
+      <td colspan="2" style="text-align: center">Specified by control command</td>
     </tr>
   </tbody>
 </table></div></div>
 
-#### 平滑度
-云台的平滑度是指云台响应动作的缓急，使用PSDK 开发的云台支持用户通过DJI Pilot和基于MSDK 开发的移动端APP 通过设置平滑控制系数，实现云台的缓启停。       
+#### Smoothness
+The smoothness of the gimbal refers to the urgency of the gimbal's response. The gimbal developed using the PSDK supports users to set the smooth control coefficients through DJI Pilot and Mobile APPs based on MSDK to realize the smooth start and stop of the gimbal.
 
-* 平滑控制系数：平滑控制系数决定云台转动的最大加速度。     
-* 云台转动的最大加速度= 10000 × (0.8 ^ (1 + X)) deg/s^2 (X 为平滑控制系数)  
+* Smooth control coefficient: The smooth control coefficient determines the maximum acceleration of the gimbal rotation.
+* Maximum acceleration of gimbal rotation = 10000 × (0.8 ^ (1 + X)) deg / s ^ 2 (X is the smoothing control coefficient)
 
-#### 最大速度百分比
-* 最大速度百分比：云台的最大速度百分比决定云台旋转的最大速度。
-* 云台实际最大的转动速度= 默认最大速度 × 最大速度百分比    
-  >**说明：** 开发者根据实际的使用需要，可设置云台默认的最大云台转动运动速度。
+#### Maximum speed percentage
+* Maximum speed percentage: The maximum speed percentage determines the maximum speed at which the gimbal rotates.
+* The actual maximum rotation speed of the gimbal = default maximum speed × maximum speed percentage
+  
+  >**NOTE:**  Users can set the default maximum gimbal rotation speed according to the needs.
 
-#### 角度微调
-使用PSDK 开发的云台支持用户通过DJI Pilot和基于MSDK 开发的移动端APP，精细化地调整云台关节角的角度，调整结果还可作为校准参数存储在负载设备中，用于降低云台的各类误差。
+#### Angle adjustment 
 
-#### 云台限位功能
-为避免云台在工作时，因结构干涉导致云台意外损坏或干扰无人机的执行飞行任务，请务必为云台设置机械限位和软件限位。
+The gimbal which developed based on the PSDK, supports users use DJI Pilot and Mobile APP which based on MSDK to adjust the angle of the joint angle finely. The adjustment results can also be stored in the payload as calibration parameters to reduce the Various errors.
 
-* 机械限位：机械限位由云台类负载设备的物理形态和设计结构决定，详情请参见[标准声明](../guide/payload-criterion.html)。
-* 软件限位：开发者可根据实际的使用需求设置软件限位：
-  * 设置云台俯仰轴、横滚轴和航向轴的欧拉角角度限制；
-  * 设置俯仰轴欧拉角扩展角角度限制；
-  * 设置云台关节角限制。
-  > **提示** 
-  > * 使用俯仰轴角度范围扩展功能后，可将云台俯仰轴的欧拉角角度限制设置为默认限制和扩展限制。
-  > * 当云台的关节角达到限位时，使用DJI Pilot 以及基于MSDK 开发的移动端APP 将接收到云台转动到限位角的提示信息。
+#### Limited
+To prevent the gimbal from being damaged or interfered with the drone's flight mission due to structural interference during the working, you must set the mechanical and software limit.
 
-#### 云台复位
-使用PSDK 开发的云台类负载设备支持用户通过DJI Pilot和基于MSDK 开发的移动端APP 复位云台，将云台的姿态复位为初始状态。
+* Mechanical: The mechanical limit is determined by the physical body, for details please refer to [Payload Criterion](../guide/payload-criterion.html).
+* Software: 
+  * Set the Euler angle limit of the gimbal's pitch、roll and yaw axis;
+  * Set the Euler angle extension angle limit of the pitch;
+  * Set the gimbal joint angle limit.
 
-* 航向轴复位：将云台航向轴的角度复位为无人机航向轴角度与云台航向轴微调角度的和。
-* 俯仰轴与航向轴复位：将云台俯仰轴的角度复位为微调的角度，将云台航向轴的角度复位为无人机航向轴角度与云台航向轴微调角度的和。
+  > **TIPS** 
+  > * After using the tilt range extension function, you can set the Euler angle limit of the gimbal's pitch axis to the default limit and the extended limit.
+  > * When the joint angle of the gimbal reaches the limit, the DJI Pilot and the Mobile APP developed based on MSDK will receive the prompt message that the gimbal is rotated to the limit angle.
 
-## 实现云台功能
-请开发者根据选用的**开发平台**以及行业应用实际的使用需求，按照PSDK 中的结构体`T_PsdkGimbalCommonHandler`构造实现云台类负载设备控制功能的函数，将云台控制功能的函数注册到PSDK 中指定的接口后，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP 能够控制基于PSDK 开发的云台类负载设备执行指定的动作。
+#### Reset
+The payload developed based on the PSDK supports user uses DJI Pilot and Mobile APP based on MSDK to reset the gimbal and reset the gimbal's attitude to the initial state.
+
+* Yaw: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of gimbal. 
+* Yaw and pitch axis of gimbal: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of gimbal, and reset pitch axis angle to the fine-tune angle. 
+
+## Develop gimbal control function
+According to the development platform and the requirements, developers need to develop the gimbal control function by themselves refer to the function struct `T_PsdkGimbalCommonHandler`, after register the functions to the interface in the PSDK, User use DJI Pilot or Mobile APP developed based on MSDK could control the payload, which has a gimbal.
 
 ```c 
-    // 获取云台的状态信息
+    // Obtain the information of the gimbal.
     s_commonHandler.GetSystemState = GetSystemState;
     s_commonHandler.GetAttitudeInformation = GetAttitudeInformation;
     s_commonHandler.GetCalibrationState = GetCalibrationState;
-    // 实现云台控制功能
+    // Developed the functions to control the gimbal.
     s_commonHandler.Rotate = PsdkTest_GimbalRotate;
     s_commonHandler.StartCalibrate = StartCalibrate;
     s_commonHandler.SetControllerSmoothFactor = SetControllerSmoothFactor;
@@ -164,14 +174,16 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
     s_commonHandler.FineTuneAngle = FineTuneAngle;
 ```
 
-## 使用云台控制功能
-使用云台控制功能，需要先实现云台控制功能，再实现云台限位功能，根据云台模式调整云台的姿态、目标角度和限位标志，最后实现云台校准功能校准云台。  
-> **说明：** 使用PSDK 开发负载设备的云台功能时，请使用**SkyPort 2.0** 或 **SkyPort 1.0** ，若您所用的开发工具为X-Port，请阅读[X-Port 控制](./X-Port.html)。
+## Develop with the Gimbal Control 
+Using the gimbal control function, developer needs to develop gimbal control function, then is the gimbal limit function, adjust the gimbal's attitude, target angle, and limit mark according to the gimbal mode, and finally develop the gimbal calibration function.
 
-### 使用云台基础控制功能
+### Develop the basic function 
 
-#### 1. 云台控制功能模块初始化
-使用“云台控制”功能前，需要先初始化云台控制功能模块，确保云台控制功能可正常运行。 
+> **NOTE:** 
+please use SkyPort 2.0 or SkyPort 1.0 to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
+
+#### 1. Initialization
+Before using the "Gimbal Control" to develop the payload, the developer needs to initialize the module of the gimbal control with the following code.
 
 ```c
 psdkStat = PsdkGimbal_Init();
@@ -180,8 +192,8 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-#### 2.注册云台控制功能
-使用PSDK 的云台控制功能控制云台类负载设备时，开发者需要将控制云台的函数注册到指定的接口中。
+#### 2. Register the gimbal control function
+Use the gimbal control function of the PSDK, the developer must register the functions of the gimbal to the specified interface.
 
 ```c
 psdkStat = PsdkGimbal_RegCommonHandler(&s_commonHandler);
@@ -190,8 +202,8 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-#### 3. 获取云台的状态信息
-为方便用户控制云台执行相应的动作，需调用`GetSystemState` 接口获取云台的状态。
+#### 3. Obtain the status of the gimbal
+call the interface `GetSystemStaobtain` to obtain the status of the gimbal.  
 
 ```c
 static T_PsdkReturnCode GetSystemState(T_PsdkGimbalSystemState *systemState)
@@ -201,9 +213,8 @@ static T_PsdkReturnCode GetSystemState(T_PsdkGimbalSystemState *systemState)
     return PSDK_RETURN_CODE_OK;
 }
 ```
-
-#### 4. 构造回调函数计算云台的转动速度
-构造回调函数计算云台的转动速度、调整云台的姿态并记录云台转动的目标角度和转动速度。
+#### 4. Register the function to calculate the rotation speed     
+Construct the callback function to calculate the rotation speed of the gimbal, adjust the attitude of the gimbal, and record the target angle and rotation speed of the gimbal rotation.      
 
 ```c
 T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
@@ -219,7 +230,7 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
                             rotationProperty.rotationValueInvalidFlag.pitch,
                             rotationProperty.rotationValueInvalidFlag.roll,
                             rotationProperty.rotationValueInvalidFlag.yaw);
-    // 设置线程锁
+    // Setting the lock for the thread.
     if (PsdkOsal_MutexLock(s_attitudeMutex) != PSDK_RETURN_CODE_OK) {
         PsdkLogger_UserLogError("mutex lock error");
         return PSDK_RETURN_CODE_ERR_UNKNOWN;
@@ -230,7 +241,7 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
         returnCode = PSDK_RETURN_CODE_ERR_UNKNOWN;
         goto out2;
     }
-    // 根据云台的模式调整云台转动的目标姿态
+    // Adjust the target attitude of the gimbal according to the gimbal mode.
         switch (rotationMode) {
         case PSDK_GIMBAL_ROTATION_MODE_RELATIVE_ANGLE:
             PsdkLogger_UserLogDebug("gimbal relative rotate angle: pitch %d, roll %d, yaw %d.", rotationValue.pitch,
@@ -346,8 +357,8 @@ out2:
 }
 ```
 
-#### 5. 控制云台转动
-负载设备根据云台的姿态和转动速度，将相对角度控制量、绝对角度控制量或速度控制量转换为控制云台转动的速度，根据该速度控制云台转动，如 图3.云台控制 所示。
+#### 5. Gimbal rotation control   
+Figure 3 shows that the payload uses the speed control to control the rotation of the gimbal, the speed is converted by three amounts, the relative angle、absolute angle or the speed of the gimbal according to the attitude and rotation speed.
 
 ```c
 nextAttitude.pitch = s_attitudeInformation.attitude.pitch + s_speed.pitch / PAYLOAD_GIMBAL_TASK_FREQ;
@@ -382,21 +393,22 @@ if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
 ```
 
 <div>
-<div style="text-align: center"><p>图3.云台控制  </p>
+<div style="text-align: center"><p> Figure 3 Gimbal control  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/gimbal_speed_control.png" width="500" alt/></span></p>
+      <img src="../images/gimbal_speed_control.png" width="500" alt/></span></p>
 </div></div>
 
-### 调整云台处于不同模式时的参数
-开发者能够根据**实际的使用需求**调整云台处于不同模式时的姿态、目标角度和到达限位标志。
-* 在FPV 模式下：
-    * 调整云台姿态：将无人机姿态的变化量叠加到云台的横滚轴和航向轴上；
-    * 调整云台转动的目标角度：云台旋转时，将无人机的姿态变化量叠加到云台的横滚轴和航向轴上。
-* 在YAW 模式下：
-    * 调整云台姿态：将无人机姿态的变化量叠加到云台的航向轴上；
-    * 调整云台转动的目标角度：云台旋转时，将无人机的姿态变化量叠加到云台的航向轴上。
-* 调整云台姿态与目标角度的转动范围，负载设备能够计算出云台的达到限位标志。
+### Adjust parameters in different modes
+The user could adjust the attitude、target angle and position limit in the different mode of the gimbal: 
+
+* FPV:
+    * Adjust the attitude of the gimbal: superimpose the amount of change in the attitude of the drone on the roll axis and heading axis of the gimbal;
+    * Adjust the target angle of the gimbal rotation: When the gimbal rotates, the attitude change of the UAV is superimposed on the roll axis and heading axis of the gimbal.
+* YAW:
+    * Adjust the attitude of the gimbal: superimpose the amount of change in the attitude of the drone on the heading axis of the gimbal;
+    * Adjust the target angle of the gimbal rotation: When the gimbal rotates, the attitude change of the UAV is superimposed on the heading axis of the gimbal.
+* According to the attitude and the rotation range of the target angle, the payload would calculate the limit of the gimbal. 
 
 ```c
 switch (s_systemState.gimbalMode) {
@@ -428,10 +440,12 @@ PsdkTest_GimbalAngleIegalization(&s_attitudeInformation.attitude, s_aircraftAtti
 PsdkTest_GimbalAngleIegalization(&s_targetAttitude, s_aircraftAttitude, NULL);
 ```
 
-### 使用云台校准功能
-为方便用户更加精准地控制云台，**建议**开发者在开发具有云台功能的负载设备时实现云台校准功能。  
-#### 1. 使用云台校准功能
-如需使用云台校准功能，请先实现云台校准功能，并将云台校准功能的函数，注册到指定的接口中，方便用户使用DJI Pilot 或基于MSDK 开发的移动端APP 校准具有云台功能的负载设备。
+### Gimbal Calibration
+It is recommended for the developer to develop the gimbal calibration function to help the user control the payload precisely.
+
+#### 1.Develope the gimbal calibration function
+Please implement the gimbal calibration function at first, register the gimbal calibration function to the specified interfaces, user could use the DJI Pilot or Mobile APP developed based on MSDK to calibrate the gimbal.
+
 ```c
 static T_PsdkReturnCode StartCalibrate(void)
 {
@@ -461,8 +475,8 @@ static T_PsdkReturnCode StartCalibrate(void)
     return PSDK_RETURN_CODE_OK;
 }
 ```
-#### 2. 云台校准状态更新
-负载设备执行云台校准功能后，将记录云台的校准状态，基于MSDK 开发的移动端APP 能够获取云台的校准状态。
+#### 2. Update the calibration status
+After calibrating the gimbal the payload will record the calibration status of the gimbal, also the Mobile APP, which developed based on MSDK could obtain relate information.
 
 ```c
 calibration:
@@ -492,17 +506,18 @@ calibration:
             continue;
         }
 ```
-在DJI Pilot 以及基于MSDK 开发的移动端APP 中使用“云台自动校准”功能后，使用PSDK 开发的负载设备将接收到云台校准命令并校准云台，如图4和图5 所示。  
+
+Figure 4 and Figure 5 are show that the DJI Pilot and the Mobile APP developed based on MSDK send the calibration command to the payload.  
 <div>
-<div style="text-align: center"><p>图4.云台校准（1） </p>
+<div style="text-align: center"><p>Figure 4 Gimbal calibration（1） </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/gimbal_start_calibration.png" width="500" alt/></span></p>
+      <img src="../images/gimbal_start_calibration.png" width="500" alt/></span></p>
 </div></div>
 
 <div>
-<div style="text-align: center"><p>图5.云台校准（2） </p>
+<div style="text-align: center"><p>Figure 5 Gimbal calibration（2） </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/gimbal_calibration_result.png" width="500" alt/></span></p>
+      <img src="../images/gimbal_calibration_result.png" width="500" alt/></span></p>
 </div></div>

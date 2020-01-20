@@ -82,7 +82,7 @@ keywords: [相机, 相机基础功能, 相机模式, 拍照, 录像]
 
 ## 使用SD 卡管理功能
 
->**说明** 
+>**说明**
 > * 使用X-Port 开发的相机类负载设备需要实现存储媒体文件的功能并将该功能注册到PSDK 指定的接口中。X-Port 上的存储卡仅支持存放X-Port 日志信息，无法存储负载设备产生的媒体文件;
 > * 本教程以**模拟**SD 卡管理功能为例，介绍使用PSDK SD 卡管理功能的使用方法，如需开发具有SD 卡管理功能的负载设备，请调用负载设备系统的接口实现SD 卡管理功能。
 
@@ -138,12 +138,12 @@ keywords: [相机, 相机基础功能, 相机模式, 拍照, 录像]
         return PSDK_RETURN_CODE_OK;
     }
 ```
-       
+
 <div>
 <div style="text-align: center"><p>图1. SD 卡管理功能  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_format_sdcard.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_format_sdcard.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用模式设置功能
@@ -175,7 +175,7 @@ keywords: [相机, 相机基础功能, 相机模式, 拍照, 录像]
 <div style="text-align: center"><p>图2. 设置相机类负载设备的模式 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_work_mode.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_work_mode.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用拍照功能
@@ -298,7 +298,7 @@ if (s_cameraState.shootingState != PSDK_CAMERA_SHOOTING_PHOTO_IDLE && photoCnt++
 相机类负载设备在执行完拍照后，使用PSDK 开发的相机类负载设备将相机拍摄的照片存储在**相机类负载设备上**的内存卡中。
 
 * 存储单拍模式下相机类负载设备拍摄的照片
- 
+
 ```c
   if (s_cameraShootPhotoMode == PSDK_CAMERA_SHOOT_PHOTO_MODE_SINGLE) {
             s_cameraSDCardState.remainSpaceInMB =
@@ -368,7 +368,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图3.拍照 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_rc_control.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_rc_control.gif" width="500" alt/></span></p>
 </div></div>
 
 在单拍模式下，可执行拍照动作，如 图4.单拍 所示。   
@@ -376,7 +376,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图4.单拍  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_single_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_single_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 在连拍模式下，设置相机类负载设备的连拍张数后，相机类负载设备即可执行连拍动作，如 图5.连拍 所示。  
@@ -384,7 +384,7 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图5.连拍  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_burst_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_burst_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 在定时拍照模式下，设置相机类负载设备拍照的间隔时间，相机类负载设备可执行定时拍照动作，如 图6.定时拍照 所示。  
@@ -392,12 +392,12 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图6.定时拍照 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_interval_shootphoto.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_interval_shootphoto.gif" width="500" alt/></span></p>
 </div></div>
 
 ## 使用录像功能
 
-> **说明** 
+> **说明**
 > * 相机类负载设备在录像的过程中无法拍照和测光；
 > * 开发者可根据用户的使用需要，设置相机类负载设备录像时如ISO、曝光以及对焦等参数的默认值；
 > * 使用相机类负载设备的录像功能前，用户需要在DJI Pilot 或基于MSDK 开发的移动端APP 上将相机类负载设备的模式设置为录像模式。   
@@ -456,5 +456,5 @@ if (s_cameraSDCardState.remainSpaceInMB > SDCARD_TOTAL_SPACE_IN_MB) {
 <div style="text-align: center"><p>图7.相机录像 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/camera_take_video.gif" width="500" alt/></span></p>
+      <img src="../../images/camera_take_video.gif" width="500" alt/></span></p>
 </div></div>

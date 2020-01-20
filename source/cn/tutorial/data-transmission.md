@@ -21,7 +21,7 @@ keywords: [Payload SDK, 数据传输]
 <div style="text-align: center"><p>图1.信号传输通道   </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data-transmission.png" width="400" alt/></span></p>
+      <img src="../../images/data-transmission.png" width="400" alt/></span></p>
 </div></div>
 
 ### 通道的带宽
@@ -93,7 +93,7 @@ PSDK 的流量控制过程如下所示：
 <div style="text-align: center"><p>图2.流量控制   </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/band-control.png" width="200" alt/></span></p>
+      <img src="../../images/band-control.png" width="200" alt/></span></p>
 </div></div>
 
 ### 通道状态
@@ -147,7 +147,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK)
 <div style="text-align: center"><p>图3.移动端APP 数据接收（1）</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data_transmission_command_channel_mobile_device.jpg" width="500" alt/></span></p>
+      <img src="../../images/data_transmission_command_channel_mobile_device.jpg" width="500" alt/></span></p>
 </div></div>
      
 * 向移动端APP 发送数据信息      
@@ -163,7 +163,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK)
 <div style="text-align: center"><p>图4. 移动端APP 数据接收（2）</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data_transmission_data_stream_mobile_device.png" width="500" alt/></span></p>
+      <img src="../../images/data_transmission_data_stream_mobile_device.png" width="500" alt/></span></p>
 </div></div>
 
 * 向机载计算机发送控制命令     
@@ -179,7 +179,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK)
 <div style="text-align: center"><p>图5. 机载计算机数据接收 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data_transmission_onboard_computer.png" width="500" alt/></span></p>
+      <img src="../../images/data_transmission_onboard_computer.png" width="500" alt/></span></p>
 </div></div>
 
 ### 4. 实现数据接收功能
@@ -235,7 +235,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图6.负载设备数据接收</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data_transmission_receive_data.png" width="500" alt/></span></p>
+      <img src="../../images/data_transmission_receive_data.png" width="500" alt/></span></p>
 </div></div>
 
 ### 5. 监控数据传输通道的状态
@@ -288,6 +288,6 @@ if (psdkStat == PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图7.数据传输 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/data_transmission_channel_state(command%20channel).png" width="500" alt/>
-      <img src="../../images/v2/data_transmission_channel_state(data%20stream).png" width="500" alt/></span></p>
+      <img src="../../images/data_transmission_channel_state(command%20channel).png" width="500" alt/>
+      <img src="../../images/data_transmission_channel_state(data%20stream).png" width="500" alt/></span></p>
 </div></div>

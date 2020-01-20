@@ -241,7 +241,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>   图1.X-Port 状态 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/xport_receive_system_state.png" width="500" alt/></span></p>
+      <img src="../../images/xport_receive_system_state.png" width="500" alt/></span></p>
 </div></div>
 
 2. 获取X-Port 姿态信息
@@ -271,7 +271,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图2.X-Port 姿态 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/xport_receive_attitude_information.png" width="500" alt/></span></p>
+      <img src="../../images/xport_receive_attitude_information.png" width="500" alt/></span></p>
 </div></div>
 
 
@@ -428,7 +428,7 @@ PsdkLogger_UserLogDebug("yaw joint angle limit angle of XPort: upper limit %d, l
 <div style="text-align: center"><p>   图3.X-Port 限位角 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/xport_get_limit_angle.png" width="500" alt/></span></p>
+      <img src="../../images/xport_get_limit_angle.png" width="500" alt/></span></p>
 </div></div>
 
 ### 4. 设置速度转换系数

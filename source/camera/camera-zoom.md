@@ -1,47 +1,49 @@
 ---
-title: 变焦控制功能
+title: Zoom Control 
 date: 2020-01-17
-keywords: [相机, 变焦, 光学变焦, 数码变焦, 连续变焦]
+keywords: [Camera, Zoom, Optical Zoom, Digital Zoom, Continuous Zoom]
 ---
-## 概述
-使用PSDK 提供的变焦控制功能，需要开发者**先实现**相机类负载设备的变焦功能，再将变焦功能的函数注册到指定的接口中，用户通过使用DJI Pilot 以及基于MSDK 开发的移动端APP，即可控制使用PSDK 开发的相机类负载设备在**拍照和录像**模式下，通过正确地变焦，获取所需的影像。
+> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
-## 基础概念
+## Overview
+Before developing the zoom control for the payload, the developer needs to develop the function by themselves, after registered the function in the specified interfaces of the PSDK, the user uses DJI Pilot and Mobile APP which developed based on MSDK could control the payload to zoom.
 
-#### 变焦模式
-* 光学变焦，通过改变光学镜头的结构实现变焦，光学变焦倍数越大，能拍摄的景物就越远，反之则近；
-* 数码变焦，处理器使用特定的算法，通过改变传感器上每个像素的面积，实现数码变焦；    
-* 连续变焦，相机类负载设备控制镜头以指定的速度沿指定的方向运动，相机类负载设备先控制镜头执行光学变焦，当光学变焦达到上限后，相机类负载设备再执行数码变焦，以此实现连续变焦的功能。当前变焦倍数=当前光学变焦倍数 × 当前数码变焦倍数；     
-* 指点变焦，用户指定某一目标点后，基于PSDK 开发的相机类负载设备能够控制云台转动，使指定的目标处于画面中心，控制相机类负载设备按照预设的变焦倍数放大图像。    
+## Concepts
+#### Zoom Mode
+* Optical zoom: the camera-type payload changes the structure of the lens. The larger factor makes the scene will be small.
+* Digital zoom: the camera-type payload use the specific algorithm to change the area of ​​each pixel on the sensor.
+* Continuous zoom: the camera-type payload control the payload's lens move to the specified direction at the specified speed. The first is optical zoom, then is digital zoom. Multiples = optical zoom multiple × digital zoom multiple;
+* Tap zoom: the camera-type payload control the gimble rotate to the specified position make the target is in the center of the screen, and then expend the camera according to the zoom factor that user preset. 
 
-#### 变焦方向
-* ZOOM_IN ：变焦倍数减小，图像由远到近
-* ZOOM_OUT ：变焦倍数增大，图像由近到远
+#### Zoom Direction
+* ZOOM_IN: The zoom factor decreases and the image moves from far to near.
+* ZOOM_OUT: The zoom factor increases and the image moves from near to far.
 
-#### 变焦速度
-* SLOWEST：以最慢的速度变焦
-* SLOW：以较慢的速度变焦
-* MODERATELY_SLOW：以比正常速度稍慢的速度变焦
-* NORMAL：镜头以正常的速度变焦
-* MODERATELY_FAST：以比正常速度稍快的速度变焦
-* FAST：以较快的速度变焦
-* FASTEST：以最快的速度变焦
+#### Zoom speed
 
-## 实现变焦功能
-请开发者根据选用的**开发平台**以及行业应用实际的使用需求，按照PSDK 中的结构体`s_tapZoomHandler`构造实现相机类负载设备变焦功能的函数，将变焦功能的函数注册到PSDK 中指定的接口后，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP 能够控制相机类负载设备变焦。
+* SLOWEST: Zoom at the slowest speed
+* SLOW: Zoom at a slower speed
+* MODERATELY_SLOW: Zoom at a slightly slower speed than normal
+* NORMAL: The lens is zoomed at normal speed
+* MODERATELY_FAST: Zoom slightly faster than normal
+* FAST: Zoom at a faster speed
+* FASTEST: Zoom at the fastest speed
+
+## Develop Zoom Control function
+According to the development platform and the requirements, developers need to develop the meter control function by themselves refer to the function struct `T_PsdkCameraDigitalZoomHandler`、`T_PsdkCameraOpticalZoomHandler` and `T_PsdkCameraTapZoomHandler`, after register the functions to the interface in the PSDK, User use DJI Pilot or Mobile APP developed based on MSDK could control the payload to zoom.
 
 ```c
-    // 实现控制负载设备执行数码变焦的功能
-    s_digitalZoomHandler.SetDigitalZoomFactor = SetDigitalZoomFactor;
-    s_digitalZoomHandler.GetDigitalZoomFactor = GetDigitalZoomFactor;
-    // 实现控制负载设备执行光学变焦的功能
-    s_opticalZoomHandler.SetOpticalZoomFocalLength = SetOpticalZoomFocalLength;
-    s_opticalZoomHandler.GetOpticalZoomFocalLength = GetOpticalZoomFocalLength;
-    s_opticalZoomHandler.GetOpticalZoomFactor = GetOpticalZoomFactor;
-    s_opticalZoomHandler.GetOpticalZoomSpec = GetOpticalZoomSpec;
-    s_opticalZoomHandler.StartContinuousOpticalZoom = StartContinuousOpticalZoom;
-    s_opticalZoomHandler.StopContinuousOpticalZoom = StopContinuousOpticalZoom;
-    // 实现控制负载设备执行指点变焦的功能
+    // Developed the fuction that control the camera-type payload to zoom(digital).
+    s_digitalZoomHandler.SetDigitalZoomFactor = SetDigitalZoomFactor; 
+    s_digitalZoomHandler.GetDigitalZoomFactor = GetDigitalZoomFactor; 
+    // Developed the fuction that control the camera-type payload to zoom(optical).
+    s_opticalZoomHandler.SetOpticalZoomFocalLength = SetOpticalZoomFocalLength; 
+    s_opticalZoomHandler.GetOpticalZoomFocalLength = GetOpticalZoomFocalLength; 
+    s_opticalZoomHandler.GetOpticalZoomFactor = GetOpticalZoomFactor; 
+    s_opticalZoomHandler.GetOpticalZoomSpec = GetOpticalZoomSpec; 
+    s_opticalZoomHandler.StartContinuousOpticalZoom = StartContinuousOpticalZoom; 
+    s_opticalZoomHandler.StopContinuousOpticalZoom = StopContinuousOpticalZoom; 
+    // Developed the fuction that control the camera-type payload to zoom(tap zoom).
     s_tapZoomHandler.GetTapZoomState = GetTapZoomState;
     s_tapZoomHandler.SetTapZoomEnabled = SetTapZoomEnabled;
     s_tapZoomHandler.GetTapZoomEnabled = GetTapZoomEnabled;
@@ -50,11 +52,11 @@ keywords: [相机, 变焦, 光学变焦, 数码变焦, 连续变焦]
     s_tapZoomHandler.TapZoomAtTarget = TapZoomAtTarget;
 ```
 
-## 使用变焦功能
-#### 1. 注册变焦功能
-开发者实现相机类负载设备的变焦功能后，需要通过注册接口**注册**各个变焦功能的函数；基于PSDK 开发的负载设备通过调用指定的接口，即可控制相机类负载设备执行变焦，方便用户通过使用DJI Pilot 以及基于MSDK 开发的移动端APP 控制相机类负载设备变焦。      
+## Develop with the Zoom Control
+#### 1. Register the Zoom Control function
+After develope the zoom control function of the camera-type payload, the developer needs to register the zoom control function in the specified interface, so that the user uses DJI Pilot and Mobile APP developed based on MSDK could control the camera-type payload to zoom.
 
-* 注册数码变焦功能
+* Registered the digital zoom function
 ```c
     returnCode = PsdkPayloadCamera_RegDigitalZoomHandler(&s_digitalZoomHandler);
     if (returnCode != PSDK_RETURN_CODE_OK) {
@@ -62,7 +64,7 @@ keywords: [相机, 变焦, 光学变焦, 数码变焦, 连续变焦]
         return returnCode;
 ```
 
-* 注册光学变焦功能
+* Registered the optical zoom function
 ```c
     returnCode = PsdkPayloadCamera_RegOpticalZoomHandler(&s_opticalZoomHandler);
     if (returnCode != PSDK_RETURN_CODE_OK) {
@@ -70,7 +72,8 @@ keywords: [相机, 变焦, 光学变焦, 数码变焦, 连续变焦]
         return returnCode;
 ```
 
-* 注册指点变焦功能
+* Registered the tap zoom function
+
 ```c
 returnCode = PsdkPayloadCamera_RegTapZoomHandler(&s_tapZoomHandler);
 if (returnCode != PSDK_RETURN_CODE_OK) {
@@ -79,8 +82,8 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-#### 2. 使用数码变焦功能
-基于PSDK 开发的负载设备控制程序调用`SetDigitalZoomFactor`和`GetDigitalZoomFactor`接口能够控制负载设备执行数码变焦，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够控制相机类负载设备的执行数码变焦，同时获取负载设备数码变焦的系数。
+#### 2. Develop with the Digital Zoom function
+The program of the payload which developed based on PSDK uses the interface `SetDigitalZoomFactor` and `GetDigitalZoomFactor` to set the zoom factor of the payload, and user use DJI Pilot or Mobile APP developed based on MSDK could get the zoom factor from the payload and control the payload zoom.
 
 ```c
     static T_PsdkReturnCode SetDigitalZoomFactor(psdk_f32_t factor)
@@ -100,10 +103,10 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-#### 3. 使用光学变焦功能
-基于PSDK 开发的负载设备控制程序调用`SetOpticalZoomFocalLength`和`GetOpticalZoomFocalLength`接口能够控制负载设备执行光学变焦，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够控制相机类负载设备执行光学变焦，同时获取负载设备光学变焦的系数。
+#### 3. Develop with the Optical Zoom function
+The program of the payload which developed based on PSDK uses the interface `SetOpticalZoomFocalLength` and `GetOpticalZoomFocalLength` to control the payload Optical the zoom, and the user uses DJI Pilot or Mobile APP developed based on MSDK could get the zoom factor from the payload and control the payload zoom.
 
-* 设置光学变焦相机的焦距       
+* Set the focal length of the camera-type payload       
 
 ```C
     static T_PsdkReturnCode SetOpticalZoomFocalLength(uint32_t focalLength)
@@ -123,8 +126,8 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-* 获取相机类负载设备的变焦系数         
-获取相机类负载设备当前的光学焦距后，根据变焦系数的计算公式，能够计算相机类负载设备当前的变焦系数（变焦系数 = 当前焦距 ÷ 最短焦距）。    
+* Get the focal factor of the camera-type payload           
+Zoom factor = zoom focal length ÷ shortest focal length
 
 ```c
     static T_PsdkReturnCode GetOpticalZoomFactor(psdk_f32_t *factor)
@@ -136,7 +139,7 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-* 获取光学变焦的范围      
+* Get the range of optical zoom     
 
 ```c
     static T_PsdkReturnCode GetOpticalZoomSpec(T_PsdkCameraOpticalZoomSpec *spec)
@@ -151,10 +154,11 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-#### 4. 使用连续变焦功能
-基于PSDK 开发的负载设备控制程序调用`StartContinuousOpticalZoom`和`StopContinuousOpticalZoom`接口能够控制负载设备开始或停止执行连续变焦，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够控制相机类负载设备执行连续变焦。
+#### 4. Develop with the Continue Zoom function
+The program of the payload which developed based on PSDK use the interface `StartContinuousOpticalZoom` and `StopContinuousOpticalZoom` to start and stop the payload to zoom continuously, and user use DJI Pilot or Mobile APP developed based on MSDK could control the payload start or stop the payload to zoom.
 
-* 控制相机类负载设备开始变焦     
+* Start the camera-type payload to zoom     
+
 ```c
     static T_PsdkReturnCode StartContinuousOpticalZoom(E_PsdkCameraZoomDirection direction, E_PsdkCameraZoomSpeed speed)
     {
@@ -167,7 +171,7 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-* 控制相机类负载设备停止变焦      
+* Stop the camera-type payload zoom   
 ```c
     static T_PsdkReturnCode StopContinuousOpticalZoom(void)
     {
@@ -180,7 +184,7 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-* 控制相机持续变焦
+* Control the camera to zoom continuously 
 
 ```c
     if (cnt % 10 == 0) {
@@ -204,25 +208,26 @@ if (returnCode != PSDK_RETURN_CODE_OK) {
     }
 ```
 
-持续按住变焦按钮可改变变焦倍数，如 图1.连续变焦 所示。
+Press and hold the zoom button to change the zoom factor, as shown in Figure 1. 
 
-* T : 放大焦距（放大变焦倍数）
-* W : 缩小焦距（缩小变焦倍数）
-* R : 还原相机的焦距
-    > **说明：** 根据实际的使用需要，可设置相机类负载设备默认的变焦倍数，当前为1.0。
+
+* T: zoom increases
+* W: zoom decreases
+* R: zoom resets
+    > **NOTE:** User could set the default zoom factor of the camera-type payload,the current is 1.0.
 <div>
-<div style="text-align: center"><p>图1.连续变焦 </p>
+<div style="text-align: center"><p>Figure 1 Zoom Continuously </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/camera_zoom_continous.gif" width="500" alt/></span></p>
+      <img src="../images/camera_zoom_continous.gif" width="500" alt/></span></p>
 </div></div>
 
-#### 5. 实现指点变焦功能
-当用户开始使用“指点变焦”功能后，使用PSDK 开发的相机类负载设备将根据用户指定的目标点位置以及当前的焦距，先控制云台旋转，将目标对象置于画面中心，再控制负载设备变焦。
+#### 5. Develop with the Tap Zoom 
+The tap zoom function control the gimble rotated to the target position and uses the current focal length to make the object in the center of the screen.
 
-##### 通过注册回调函数的方式实现指点变焦功能
+##### Developed in the callback function
 
-* 设置指点变焦的变焦系数     
+* Set the zoom factor      
 
 ```c
 static T_PsdkReturnCode SetTapZoomMultiplier(uint8_t multiplier)
@@ -239,8 +244,8 @@ static T_PsdkReturnCode GetTapZoomMultiplier(uint8_t *multiplier)
 }
 ```
 
-* 获取指点变焦的对象     
-使用PSDK 开发的相机类负载设备通过`TapZoomAtTarget`接口获取用户在移动端APP 中指定的变焦对象，在确认指点变焦功能开启后，根据目标点位置和混合焦距，计算云台转动角度，控制相机转动。
+* Get the object     
+The camera-type payload uses the `TapZoomAtTarget` to receive the object from the Mobile APP, and then calculate the rotation angle of the gimbal according to the target position and the hybrid focal length.
 
 ```c
 static T_PsdkReturnCode TapZoomAtTarget(T_PsdkCameraPointInScreen target)
@@ -258,17 +263,17 @@ static T_PsdkReturnCode TapZoomAtTarget(T_PsdkCameraPointInScreen target)
         PsdkLogger_UserLogWarn("tap zoom is not enabled.");
         return PSDK_RETURN_CODE_ERR_SYSTEM;
     }
-    //获取指点变焦功能开始的时间
+    // Get the start time.
     psdkStat = PsdkOsal_GetTimeMs(&s_tapZoomStartTime);
     if (psdkStat != PSDK_RETURN_CODE_OK) {
         PsdkLogger_UserLogError("get start time error: %lld.", psdkStat);
         errorCode = psdkStat;
         goto err;
     }
-    //设置云台相机指点变焦的模式
+    // set the gimbal mode.
     rotationMode = PSDK_GIMBAL_ROTATION_MODE_RELATIVE_ANGLE;
     rotationProperty.relativeAngleRotation.actionTime = TAP_ZOOM_DURATION / 10;
-    // 控制云台转动
+    // Ratate the gimbal.
     equivalentFocalLength = s_cameraOpticalZoomFocalLength * s_cameraDigitalZoomFactor;
     rotationValue.pitch = (int32_t) (
         atan2f((target.focusY - CENTER_POINT_IN_SCREEN_Y_VALUE) * IMAGE_SENSOR_Y_SIZE, equivalentFocalLength) * 1800 /
@@ -283,7 +288,7 @@ static T_PsdkReturnCode TapZoomAtTarget(T_PsdkCameraPointInScreen target)
         errorCode = psdkStat;
         goto err;
     }
-    // 设置相机类负载设备云台的转动角度和变焦焦距
+    // Set the angle and focal length.
     s_tapZoomNewestGimbalRotationArgument.rotationMode = rotationMode;
     s_tapZoomNewestGimbalRotationArgument.rotationProperty = rotationProperty;
     s_tapZoomNewestGimbalRotationArgument.rotationValue = rotationValue;
@@ -313,17 +318,17 @@ err:
 }
 ```
 
-##### 在线程中实现指点变焦功能
-为避免负载设备在旋转云台和控制变焦时，阻塞负载设备控制程序的主线程，请在线程中实现指点变焦功能。
+##### Developed in the thread
+To avoid blocking the main thread of the payload control program please develop the tap zoom function in the thread.
 
 ```c
 if (s_isTapZooming == true) {
-    // 获取指点变焦功能开始的时间
+    // Get the start time.
     psdkStat = PsdkOsal_GetTimeMs(&currentTime);
     if (psdkStat != PSDK_RETURN_CODE_OK) {
         PsdkLogger_UserLogError("get start time error: %lld.", psdkStat);
     }
-    // 检查执行指点变焦功能时相机变焦的状态和云台的状态
+    // Check the gimbal status
     if ((currentTime - s_tapZoomStartTime) >= TAP_ZOOM_DURATION) {
         s_cameraTapZoomState.zoomState = PSDK_CAMERA_TAP_ZOOM_STATE_IDLE;
         s_cameraTapZoomState.isGimbalMoving = false;
@@ -363,3 +368,4 @@ if (s_isTapZooming == true) {
     }
 }
 ```
+

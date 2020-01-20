@@ -108,6 +108,6 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 <div style="text-align: center"><p>图1. 关机信息 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/power_off_notification.png" width="500" alt/></span></p>
+      <img src="../../images/power_off_notification.png" width="500" alt/></span></p>
 </div></div>
  

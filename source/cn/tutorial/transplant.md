@@ -17,7 +17,7 @@ keywords: [移植, PSDK, Hal ,Osal]
 <div style="text-align: center"><p>图1.代码移植  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/transplant.png" width="300" alt/></span></p>
+      <img src="../../images/transplant.png" width="300" alt/></span></p>
 </div></div>
 
 ## 基础概念

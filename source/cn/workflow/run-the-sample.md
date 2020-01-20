@@ -18,7 +18,7 @@ keywords: [Payload SDK]
 <div style="text-align: center"><p>图1. 填写应用信息</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/APPinfo.png" width="240" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/APPinfo.png" width="240" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 > **注意：** 为提高您的开发效率，请在示例代码中**正确**填写*应用的名称*、*ID*、*Key*和*用户账号*，否则编译后的示例程序将无法正常运行。
@@ -96,7 +96,7 @@ keywords: [Payload SDK]
 <div style="text-align: center"><p>图2. 应用绑定</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/binding.png" width="600" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/binding.png" width="600" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 

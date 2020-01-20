@@ -10,7 +10,7 @@ keywords: [开发套件, Skyport, Skyport V2, Skyport, X-Port, 负载, 转接环
 <div style="text-align: center"><p>图1.设备连接</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/device-connection.png" width="650" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/device-connection.png" width="650" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 > **提示**
@@ -25,7 +25,7 @@ X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板�
 <div style="text-align: center"><p>图2. X-Port 标准云台引脚接口</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/Xportport-en.png" width="400"  style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Xportport-en.png" width="400"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 * 使用X-Port 的供电功能，请使用引脚：1～６；
@@ -49,7 +49,7 @@ Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
 <div style="text-align: center"><p>图3. Skyport V2 引脚接口</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/Skyport2Port.png" width="600"  style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Skyport2Port.png" width="600"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 ##### Port 1
@@ -74,7 +74,7 @@ Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
       <div style="text-align: center"><p>图4.接口拓展板接口  </p>
       </div>
       <div style="text-align: center"><p><span>
-      <img src="../../images/v2/Skyport2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Skyport2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
       </div>
     </div>
 <div style="text-align: center"><p>表1.接口拓展板接口说明</p></div>

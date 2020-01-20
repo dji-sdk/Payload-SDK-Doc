@@ -17,7 +17,7 @@ keywords: [时间同步]
 <div style="text-align: center"><p>图1.查看卫星通信状态 </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/v2/positioning_prerequisites.png" width="500" alt/></span></p>
+      <img src="../../images/positioning_prerequisites.png" width="500" alt/></span></p>
 </div></div>
  
 1. 将负载设备安装在无人机的云台上，在无人机上电后，使用PSDK 开发的负载设备将接收到无人机发送的PPS 硬件脉冲信号；

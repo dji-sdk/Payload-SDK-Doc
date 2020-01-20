@@ -1,84 +1,81 @@
 ---
-title: 回放下载
+title: Playback and Download
 date: 2020-01-17
-keywords: [媒体回放, 截屏图, 缩略图]
+keywords: [playback, Screenshot, Thumb nail]
 ---
-## 概述
-为方便开发者快速开发相机类负载设备的回放下载功能，开发者**需要先实现**相机类负载设备的回放下载功能，再将回放下载功能的函数注册到指定的接口中，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP，即可获取获取相机类负载设备中的媒体文件。   
+> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
-## 媒体文件管理
-使用PSDK 开发的相机类负载设备能够根据用户的指令，执行文件删除或下载等操作。
+## Overview
+Before developed the playback and download for the payload, the developer needs to develop the function by themselves, after registered the function in the specified interfaces of the PSDK, user use DJI Pilot and Mobile APP which developed based on MSDK could control the payload to playback or download the source files.  
 
-#### 媒体文件预览功能
-使用PSDK 开发的相机类负载设备支持用户使用DJI Pilot 或基于MSDK 开发的移动端APP 预览负载设备中的媒体文件。
-* 静态预览：预览单个文件或文件列表
-  * 缩略图，预览文件列表
-    - 图像：负载设备按照文件的原始比例生成缩略图，请将预览图的宽度设置为100 像素 
-    - 视频：截取视频某一帧的画面
-  * 截屏图，预览单个文件
-    - 图像：按原始比例，建议缩放图像成宽为600 像素的预览图 
-    - 视频：截取视频某一帧的画面
-  * 原始文件，如需获得相机类负载设备中原始的媒体文件，请使用下载功能获取指定的媒体文件。
-* 动态预览（视频预览)：播放、暂停、停止、跳转（快进、快退和进度拖动）
-    
-    > **说明：** 支持动态预览的文件格式：MP4、JPG、DNG 和MOV，编码格式请参见[“视频标准”](../guide/payload-criterion.html)。
+## Media File Management
+The camera-type payload developed based on PSDK could delete or download one or more files stored in the SD Card.
 
-## 实现回放下载功能
-请开发者根据选用的**开发平台**以及行业应用实际的使用需求，按照`T_PsdkCameraMediaDownloadPlaybackHandler`结构体构造实现**下载媒体文件原始数据**、**创建/销毁缩略图**、**创建/下载缩略图**等回访下载功能的函数，并将函数注册到PSDK 中指定的接口后，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP 能够从基于PSDK 开发的相机类负载设备上下载媒体文件或实现视频流回放功能。
+#### Preview
+The camera-type payload developed based on PSDK allows users to preview the media files in the payload on the DJI Pilot or Mobile APP which developed based on MSDK.
+* Static preview, preview single file or file list.
+    * Thumbnail, preview the file list
+        * Image: the width of the image is recommended to 100 pixels
+        * Video: Capture a frame of the video
+    * Screenshot, preview a single file 
+        * Image: the width of the image is recommended to 600 pixels.
+        * Video: Capture a frame of a video.
+    * Original files: Please use the download function to obtain the specified media files.
+* Dynamic preview (video preview): Play, pause, stop, seek (fast forward, rewind, and progress drag).
+    > **NOTE:** The formats that support dynamic preview are MP4, JPG, DNG, and MOV. For details, please refer to ["Video Criterion"](../guide/payload-criterion.html)。
+
+## Develop Playback and Download
+According to the development platform and the requirements, developers need to develop the playback and download function by themselves refer to the function struct `T_PsdkCameraMediaDownloadPlaybackHandler`, after register the functions to the interface in the PSDK, User use DJI Pilot or Mobile APP developed based on MSDK could playback and download the files which on the payload.
 
 ```c
-    // 实现获取媒体文件信息的功能
+    // Developed the fuction to get the information of the media file.
     s_psdkCameraMedia.GetMediaFileDir = GetMediaFileDir;
     s_psdkCameraMedia.GetMediaFileOriginInfo = GetMediaFileOriginInfo;
     s_psdkCameraMedia.GetMediaFileOriginData = GetMediaFileOriginData;
-    // 实现获取媒体文件缩略图的功能
+    // Developed the fuction to get the thumb nail of the media file.
     s_psdkCameraMedia.CreateMediaFileThumbNail = CreateMediaFileThumbNail;
     s_psdkCameraMedia.GetMediaFileThumbNailInfo = GetMediaFileThumbNailInfo;
     s_psdkCameraMedia.GetMediaFileThumbNailData = GetMediaFileThumbNailData;
     s_psdkCameraMedia.DestroyMediaFileThumbNail = DestroyMediaFileThumbNail;
-    // 实现获取媒体文件截屏图的功能
+    // Developed the fuction to get the screen nail of the media file.
     s_psdkCameraMedia.CreateMediaFileScreenNail = CreateMediaFileScreenNail;
     s_psdkCameraMedia.GetMediaFileScreenNailInfo = GetMediaFileScreenNailInfo;
     s_psdkCameraMedia.GetMediaFileScreenNailData = GetMediaFileScreenNailData;
     s_psdkCameraMedia.DestroyMediaFileScreenNail = DestroyMediaFileScreenNail;
-    // 实现删除媒体文件的功能
+    // Developed the fuction to delete the media file.
     s_psdkCameraMedia.DeleteMediaFile = DeleteMediaFile;
-    // 实现控制媒体文件回放的功能
+    // Developed the fuction to playback the media file.
     s_psdkCameraMedia.SetMediaPlaybackFile = SetMediaPlaybackFile;
     s_psdkCameraMedia.StartMediaPlayback = StartMediaPlayback;
     s_psdkCameraMedia.StopMediaPlayback = StopMediaPlayback;
     s_psdkCameraMedia.PauseMediaPlayback = PauseMediaPlayback;
     s_psdkCameraMedia.SeekMediaPlayback = SeekMediaPlayback;
     s_psdkCameraMedia.GetMediaPlaybackStatus = GetMediaPlaybackStatus;
-    // 实现下载媒体文件的功能
+    // Developed the fuction to download the media file
     s_psdkCameraMedia.StartDownloadNotification = StartDownloadNotification;
     s_psdkCameraMedia.StopDownloadNotification = StopDownloadNotification;
-
 ```
-## 使用回放下载功能
 
-> **注意**
-> 
-> * 请使用编解码工具[ffmpeg 2.8.15](https://trac.ffmpeg.org/) 操作相机类负载设备中的文件并执行相应的编解码功能。使用`ffmpeg -v`可查看当前ffmepg 的版本信息。
-> * 仅基于Linux 开发的负载设备支持使用回放下载功能。
+## Develop with the Playback and Download
 
-### 1. 配置网络参数
+> **NOTE**
+> * Please use the [ffmpeg 2.8.15](https://trac.ffmpeg.org/) to operate the media file which is in the payload.
+> * The function of the playback and download only support the payload which developed based on Linux.
 
-为确保用户能够处理在Linux 平台上开发的相机类负载设备中的媒体文件，请以**手动**的方式设置相机类负载设备的网络参数：
+### 1. Network Configuration
+To convenience the user to operate the media file in the payload which developed on Linux, please set the parameters of the network, after that please use the command `ping` and `ifconfig` check the network.
 
-* IP 地址：`192.168.5.3`
-* 网  关 ：`192.168.5.1`
-* 子网掩码：`255.255.255.0`
+* IP:`192.168.5.3`
+* Gate:`192.168.5.1`
+* Mask: `255.255.255.0`
 
-IP 地址设置完成后，使用`ping` 和`ifconfig` 命令查看相机类负载设备和无人机间的网络状态。
+> **NOTE:** Use the virtual machine to debug the camera-type payload, the developer should set the mode of the virtual machine's network is bridge mode and enable the function "Replicate physical network connection status".
 
-> **说明：** 若使用虚拟机调试相机类负载设备，请将虚拟机网络适配器的模式设置为桥接模式，同时启用“复制物理网络连接状态”。
-
-### 2. 注册回放下载中的功能
-> **说明：** 用户可根据实际的使用需要注册视频回放下载功能。
+### 2. Register the playback and download function
+> **NOTE:** This function is optional.
 
 ```c
-  // 注册开始执行回放媒体文件的功能
+  // Resign the function to start the playback.
  static T_PsdkReturnCode StartMediaPlayback(void)
 {
     T_PsdkReturnCode psdkStat;
@@ -91,7 +88,8 @@ IP 地址设置完成后，使用`ping` 和`ifconfig` 命令查看相机类负�
     }
 
     return psdkStat;}
-  // 注册停止回放媒体文件的功能
+
+  // Resign the function to stop the playback.
 static T_PsdkReturnCode StopMediaPlayback(void)
 {
     T_PsdkReturnCode psdkStat;
@@ -105,7 +103,7 @@ static T_PsdkReturnCode StopMediaPlayback(void)
 
     return psdkStat;
 }
-  // 注册控制类负载设备暂停回放中的媒体文件的功能
+  // Resign the function to pause the playback 
 static T_PsdkReturnCode PauseMediaPlayback(void)
 {
     T_PsdkReturnCode psdkStat;
@@ -119,7 +117,7 @@ static T_PsdkReturnCode PauseMediaPlayback(void)
 
     return psdkStat;
 }
-  // 注册控制相机类负载设备在指定的点位回放媒体文件的功能
+  // Resign the function to seek the media files on the  playback 
        static T_PsdkReturnCode SeekMediaPlayback(uint32_t playbackPosition)
        {
            T_PsdkReturnCode psdkStat;
@@ -135,11 +133,12 @@ static T_PsdkReturnCode PauseMediaPlayback(void)
 }
 ```
 
-### 获取文件列表
+### Get the list of the media file 
 
-#### 1. 获取媒体文件的路径
-使用PSDK 开发的相机类负载设备通过`GetMediaFileDir`接口获取用户指定的文件的地址，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够获取指定的媒体文件所在的路径。
->**说明：** 媒体文件的默认路径为`camera_media_emu/media_file`，用户可根据实际的使用需要，更改媒体文件所在的路径。
+#### 1. Get the path of the media file
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileDir` to get the media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could get the media file's path from the payload.
+
+>**NOTE:** The default media file is `camera_media_emu/media_file`, it can be changed.
 
 ```c
 static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
@@ -150,10 +149,10 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
 }
 ```
 
-#### 2. 获取媒体文件的列表
-指定媒体文件所在的路径后，基于MSDK 开发的移动端APP 将向相机类负载设备发送获取文件信息的命令。
-* 基于PSDK 开发的负载设备通过调用PSDK 中获取媒体文件信息的接口，能够获取负载设备中媒体文件的信息，如文件的名称、路径和大小等。
-* 相机类负载设备通过FFmpeg 命令，能够获取媒体文件的长度、帧率和分辨率。
+#### 2. Get the list of the media files
+After obtaine the path of the media files, the Mobile APP which developed based on MSDK could send the command to get the information of the media files.
+* the payload developed based on PSDK calling the interface to get the information about media files which in the payload, such as file name, path, and size.
+* Payload uses the FFmpeg command to get the length, frame rate, etc. 
    
 ```c
    static T_PsdkReturnCode GetMediaFileOriginInfo(const char *filePath, T_PsdkCameraMediaFileInfo *fileInfo)
@@ -195,8 +194,8 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        return psdkStat;
    }
 ```
-#### 3. 获取媒体文件的原始数据
-使用PSDK 开发的相机类负载设备通过`GetMediaFileOriginData`接口，获取负载设备上的媒体文件的原始数据，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够获取指定的媒体文件所在的路径。
+#### 3.Get the Origin data of the media files
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileOriginData` to get the origin media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could get the media file's origin data from the payload.
 
 ```c
    static T_PsdkReturnCode GetMediaFileOriginData(const char *filePath, uint32_t offset, uint32_t length, uint8_t *data)
@@ -226,14 +225,14 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        return PSDK_RETURN_CODE_OK;
    }
 ```
->**说明** 
-> * 获取媒体文件列表的功能只能获取到媒体文件的原始文件和缩略图；
-> * 实现获取媒体文件列表的功能后，用户能够获得指定文件的截屏图；
-> * 用户通过下载功能能够得到指定媒体文件的原始文件。 
+>**NOTE** 
+> * The function to get the media file list can only obtain the original files and thumbnail.
+> * In this function，use only could get the screenshot of media files.
+> * The user can get the original file only use the download function.
 
-### 创建缩略图
-#### 1. 获取指定对象的路径并创建缩略图
-使用PSDK 开发的相机类负载设备通过`CreateMediaFileThumbNail`接口，获取用户指定媒体文件的路径并创建缩略图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送创建指定媒体文件的缩略图的命令。
+### Create the Thumb nail 
+#### 1. Get the path of the object and create the thumbnail
+The program of the payload which developed based on PSDK uses the interface `CreateMediaFileThumbNail` to get the path of the specified media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to the payload to create the thumbnail.
 
 ```c
       static T_PsdkReturnCode CreateMediaFileThumbNail(const char *filePath)
@@ -249,8 +248,9 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-#### 2. 获取缩略图的信息
-使用PSDK 开发的相机类负载设备通过`GetMediaFileThumbNailInfo`接口，获取指定媒体文件的缩略图信息，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送获取指定媒体文件缩略图信息的命令。
+#### 2. Get the information of the thumbnail
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileThumbNailInfo` to get the information of the specified media file‘s thumbnail which on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to obtain the information of the thumbnail which the user specified in the payload.
+
 
 ```c
         static T_PsdkReturnCode GetMediaFileThumbNailInfo(const char *filePath, T_PsdkCameraMediaFileInfo *fileInfo)
@@ -281,8 +281,8 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-#### 3. 获取缩略图
-使用PSDK 开发的相机类负载设备通过`GetMediaFileThumbNailData`接口，获取指定媒体文件的缩略图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送获取指定媒体文件缩略图的命令，并获得指定的缩略图。
+#### 3. Get the thumbnail
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileThumbNailData` to get the specified media file's thumbnail which on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to obtain the thumbnail.
 
 ```c
     static T_PsdkReturnCode GetMediaFileThumbNailData(const char *filePath, uint32_t offset, uint32_t length, uint8_t *data)
@@ -302,9 +302,9 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-#### 4. 销毁缩略图
-使用PSDK 开发的相机类负载设备通过`DestroyMediaFileThumbNail`接口，销毁负载设备上生成的缩略图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送删除指定媒体文件缩略图的命令。
->**说明：** DJI Pilot 及基于MSDK 开发的移动端APP 接收到相机类负载设备上的缩略图后，将缓存在APP 本地。
+#### 4. Destroy the thumbnail
+The program of the payload which developed based on PSDK uses the interface `DestroyMediaFileThumbNail` to destroy the specified media file's thumbnail which on the payload. To use DJI Pilot or Mobile APP developed based on MSDK could send the command to destroy the thumbnail which was generated on the drone.
+>**NOTE:** The thumbnail which had created by the user would be stored in the APP such as DJI Pilot.
 
 ```c
     static T_PsdkReturnCode DestroyMediaFileThumbNail(const char *filePath)
@@ -329,9 +329,9 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-### 创建截屏图
-#### 1. 获取指定对象的路径并创建截屏图 
-使用PSDK 开发的相机类负载设备通过`CreateMediaFileScreenNail`接口，获取用户指定媒体文件的路径并创建截屏图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送创建指定媒体文件的截屏图的命令。
+### Create the Screen nail
+#### 1. Get the path of the object and create the screen nail
+The program of the payload which developed based on PSDK uses the interface `CreateMediaFileScreenNail` to get the path of the specified media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to the payload to create the screen nail.
 
 ```c
        static T_PsdkReturnCode CreateMediaFileScreenNail(const char *filePath)
@@ -354,8 +354,8 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-#### 2. 获取截屏图的信息
-使用PSDK 开发的相机类负载设备通过`GetMediaFileScreenNailInfo`接口，获取指定媒体文件的截屏图信息，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送获取指定媒体文件截屏图信息的命令。
+#### 2. Get the information of the screen nail
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileScreenNailInfo` to get the information of the specified media file‘s screen nail which on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to obtain the information of the screen nail which the user specified in the payload.
 
 ```c
   static T_PsdkReturnCode GetMediaFileScreenNailInfo(const char *filePath, T_PsdkCameraMediaFileInfo *fileInfo)
@@ -385,8 +385,8 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        }
 ```
 
-#### 3. 获取截屏图
-使用PSDK 开发的相机类负载设备通过`GetMediaFileScreenNailData`接口，获取指定媒体文件的截屏图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送获取指定媒体文件截屏图的命令，并获得指定的截屏图。
+#### 3. Get the screen nail
+The program of the payload which developed based on PSDK uses the interface `GetMediaFileScreenNailData` to get the specified media file's screen nail which on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to obtain the screen nail.
 
 ```c
 static T_PsdkReturnCode
@@ -427,18 +427,18 @@ static T_PsdkReturnCode DestroyMediaFileScreenNail(const char *filePath)
            return PSDK_RETURN_CODE_OK;
        }
 ```
-
-使用DJI Pilot 或基于MSDK 开发的移动端APP 能够自动拉取相机类负载设备中`/media_file`目录下的媒体文件，显示媒体文件的名称和截屏图，点击后即可显示媒体文件的截屏图，如 图1.查看截屏图 所示 。  
+Using DJI Pilot or a Mobile APP developed based on MSDK can pull the media files in the `/ media_file` directory of the payload and display the name and screen nail of the media file automatically, after clicked, it could display the screen nail of the media file, as shown in Figure 1.
+ 
 <div>
-<div style="text-align: center"><p>图1.查看截屏图  </p>
+<div style="text-align: center"><p>Figure 1 View the screen nail </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/camera_media_file_list.gif" width="500" alt/></span></p>
+      <img src="../images/camera_media_file_list.gif" width="500" alt/></span></p>
 </div></div>
   
 
-### 删除媒体文件
-使用PSDK 开发的相机类负载设备通过`DeleteMediaFile`接口，删除负载设备上的媒体文件，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送删除媒体文件的命令。
+### Delete the media files in the payload
+The program of the payload which developed based on PSDK uses the interface `DeleteMediaFile` to delete the specified media file's screen nail which on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could send the command to delete the screen nail.
 
 ```c
 static T_PsdkReturnCode DeleteMediaFile(char *filePath)
@@ -454,22 +454,21 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
         return PSDK_RETURN_CODE_OK;
     }
 ```
-
-在媒体列表界面，选中需要删除的文件，点击删除按钮，可删除相机类负载设备中的媒体文件，如 图2.删除媒体文件 所示。   
+Select the files and click the delete button to delete the media files in the camera-type payload, as shown in Figure 2.
   <div>
-<div style="text-align: center"><p>  图2.删除媒体文件 </p>
+<div style="text-align: center"><p> Figure 2 Delete the media files. </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/camera_media_file_delete.gif" width="500" alt/></span></p>
+      <img src="../images/camera_media_file_delete.gif" width="500" alt/></span></p>
 </div></div>
 
-### 实现媒体文件回放功能
->**说明** 
-> * 使用PSDK 开发相机类负载设备控制程序的回放功能前，需要先实现获取负载设备文件列表的功能。
-> * 使用PSDK 开发相机类负载设备的回放功能时，需要先获取媒体文件的路径，将指定的媒体文件转换为H.264 格式。
+### Playback and download
+>**NOTE** 
+> * Before using PSDK to develop the playback function of the payload, you need to develop the function of obtaining the file list of the payload.
+> * Develope the playback function of the payload, the developer must develop the function to obtain the path of the media file, and convert the media file to H.264.
 
-#### 1. 指定媒体文件的路径
-使用PSDK 开发的相机类负载设备通过`SetMediaPlaybackFile`接口，获取用户指定的媒体文件的路径，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送媒体文件所在的路径。
+#### 1. Specified the path of the media files
+The program of the payload which developed based on PSDK uses the interface `SetMediaPlaybackFile` to get the path of the specified media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could set the media file's path to the payload.
 
 ```c
   static T_PsdkReturnCode SetMediaPlaybackFile(const char *filePath)
@@ -496,8 +495,8 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
    }
    ```
 
-#### 2. 格式转换
-使用PSDK 开发的相机类负载设备通过`PsdkPlayback_VideoFileTranscode`接口，将用户指定的媒体文件转换为H，264 格式的文件，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送转换媒体文件格式的指令，将指定的文件转为H.264 格式，同时获取转换后媒体文件的帧率、帧信息、总帧数等信息。
+#### 2. Convert the format   
+The program of the payload which developed based on PSDK uses the interface `PsdkPlayback_VideoFileTranscode` convert the file which on the payload to H.264 and get the information of the H.264 file such as frame rate and frame, etc.
 
 ```c
       psdkStat = PsdkPlayback_VideoFileTranscode(videoFilePath, "h264", transcodedFilePath,
@@ -534,10 +533,9 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
              }
 ```
 
-#### 3. 发送媒体文件
-使用PSDK 开发的相机类负载设备通过`PsdkPayloadCamera_SendVideoStream`接口，将根据格式转换后的媒体文件的帧率、帧信息、总帧数等信息找到媒体文件的帧头，并按照指定的码率向DJI Pilot 或基于MSDK 开发的APP 发送媒体文件，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够接收到负载设备发送的媒体文件。
-
->**说明：** 有关实现视频流传输功能的详细说明和具体步骤请参见[“视频流传输”](./video-stream-transmission.html)。
+#### 3. Sent the H.264 files
+The program of the payload which developed based on PSDK uses the interface `PsdkPayloadCamera_SendVideoStream` to sent the H.264 files according to the information such as frame rate, etc.
+>**NOTE:** The step and the method of the video stream please refer to [Video Stream Transmission](./video-stream-transmission.html).
 
 ```c
     while (dataLength - lengthOfDataHaveBeenSent) {
@@ -553,8 +551,8 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
 }
 ```
 
-#### 4. 获取媒体文件的传输状态
-使用PSDK 开发的相机类负载设备通过`GetMediaPlaybackStatus`接口，能够获取当前媒体文件的传输状态，用户使用DJI Pilot 或基于MSDK 开发的移动端APP 能够获取到当前传输的媒体文件的状态信息。
+#### 4. Get the status of the video stream
+The program of the payload which developed based on PSDK uses the interface `GetMediaPlaybackStatus` to get the status of the video stream which is sending by the payload. To use DJI Pilot or Mobile APP developed based on MSDK could get the information of the video stream.
 
 ```c
    static T_PsdkReturnCode GetMediaPlaybackStatus(T_PsdkCameraPlaybackStatus *status)
@@ -576,18 +574,21 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
        return PSDK_RETURN_CODE_OK;
    }
 ```
-使用DJI Pilot 或基于MSDK 开发的移动端APP 在媒体列表界面，点击所需播放的视频文件，即可进入播放界面，通过按钮和进度条控件，播放视频或调整视频播放进度，如 图3.播放视频文件 所示；在媒体列表界面，选中指定的文件，点击下载按钮，即可下载相机类负载设备中的媒体文件，如 图4.媒体文件下载 所示。
-<div>
-<div style="text-align: center"><p> 图3.播放视频文件 </p>
+
+In the media list that on the DJI Pilot or Mobile APP based on MSDK, the user click the video file will playback the video. Use the buttons and progress bar could control the video or adjust the video playback progress, as shown in Figure 3, select the specified file and click the download button could download the media file which in the camera payload, as shown in Figure 4.
+
+ <div>
+<div style="text-align: center"><p> Figure 3 Play The video file </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/camera_media_file_playback.gif" width="500" alt/></span></p>
+      <img src="../images/camera_media_file_playback.gif" width="500" alt/></span></p>
 </div></div>
 <div>
-<div style="text-align: center"><p>图4.媒体文件下载 </p>
+<div style="text-align: center"><p>Figure 4 Download the media files.
+ </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/camera_media_file_download.gif" width="500" alt/></span></p>
+      <img src="../images/camera_media_file_download.gif" width="500" alt/></span></p>
 </div></div>
 
-> **说明：** 媒体文件的下载速度约为 300KB/s，受飞机工作环境影响实际下载速度可能会有差异。  
+> **NOTE:** The download speed of media files is about 300KB/s. The actual download speed is affected by the working environment.

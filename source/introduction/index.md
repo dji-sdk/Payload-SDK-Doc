@@ -5,27 +5,24 @@ keywords: [PSDK, quick start, standardization, guidance, DJI PSDK]
 ---
 > **NOTE** 
 > * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * This series of documentation introduces the functions of **PSDK V2.0.0**, as well as the steps and methods of developing payload devices using PSDK V2.0.0. If you are still using PSDK V 1.5.0, please download the documentation of [PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip)
+> * This series of documentation introduces the functions of **PSDK V2.0.0**, as well as the steps and methods of developing payload using PSDK V2.0.0. If you are still using PSDK V 1.5.0, please download the documentation of [PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip)
 
-To help developers to develop payload device which is mounted on DJI aircrafts , DJI provides Payload SDK (PSDK), [X-Port standard gimbal](../guide/hardware.html) and [Skyport Adapter Set](../guide/hardware.html). Payload SDK can help developers to obtain adundant **information** from DJI aircrafts, such as power source, communication link and status information.
+To help developers to develop the payload, DJI provides Payload SDK (PSDK), [X-Port](../guide/hardware.html) and [Skyport](../guide/hardware.html) to expedite developers to obtain the **resources** from DJI drones, such as power and status (GPS, attitude, time and date).
 
 <div style="text-align: center"> <p> <span><img src="../images/PSDK-features-en.png" width="500" style="vertical-align: middle" alt /> </span></p>
 </div>
 
 ## Advantages
+* **Perfect Function**     
+Using basic functions such as information acquisition, data transmission, and power management; advanced functions such as cameras, gimbals, payload coordination, and precise positioning, developers could design a **perfect function** payload.
 
-* **Rich and Complete Features**
-Using basic features such as information acquisition, data transmission, and power supply management, and advanced features such as camera, gimbal, payload coordination, and precise positioning, developers could design a **perfect function** payload.
+* **Customized and Scalable**     
+Besides the DJI Pilot is compatible with payload which developed using PSDK, DJI provides Mobile SDK to help developers to develop **Mobile APPs** to control the payload; provides Onboard SDK to support developers write the self-control programs; Windows SDK can help the developer to develop the Data analyzing software.
 
-Developers can design full-featured payload devices according to the requirements of  industrial applications.
+* **Support Services**     
+PSDK not only provides the API and hardware for developing the payload, but also provides standards, technical support, marketing, and ecological cooperation services, etc.
 
-* **Customized and Scalable**
-Besides the DJI Pilot is compatible with payload which is developed using PSDK, DJI provides Mobile SDK to help developers to develop **Mobile Applications** to control the payload; Onboard SDK can help developers to develop control programs to control aircrafts and payload devices to perform tasks automatically. Windows SDK can help developers to develop data processing software and integrate the developed software into a full-featured solution.
-
-* **Support Services**
-PSDK not only provides the API and hardware for developing payload devices, but also provides standards, technical support, marketing and cooperation services to help developers develop fully functional aircraft payload equipment and explore the unlimited potential of industrial applications.
-
-## Typical features
+## Typical Features
 
 * <a href="../camera/camera-initial.html"> <b> Camera Control </b> </a>
 * <a href="../tutorial/gimbal-contro.html"> <b> Gimbal Control </b> </a>
@@ -44,8 +41,8 @@ PSDK not only provides the API and hardware for developing payload devices, but 
       <td colspan="3">Security</td>
       <td colspan="2">Inspection</td>
       <td colspan="3">Survey</td>
-      <td colspan="2">Environment</td>
-      <td colspan="2">More Industries</td>
+      <td colspan="2">Environment</td> 
+      <td colspan="2">More Industries</td> 
     </tr>
     <tr>
       <td>Public Security</td>

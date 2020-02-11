@@ -1,6 +1,7 @@
 ---
 title: 选购硬件平台
 date: 2020-01-17
+version: 2.0.0
 keywords: [开发套件, SkyPort, Skyport V2, Skyport , X-Port, 负载, 拓展环]
 ---
 > **注意**  

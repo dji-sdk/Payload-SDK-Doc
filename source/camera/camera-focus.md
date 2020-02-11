@@ -1,6 +1,7 @@
 ---
 title: Focus Control
 date: 2020-01-17
+version: 2.0.0
 keywords: [camera, take photos, focus mode, focus area, focus ring, focus assist]
 ---
 > **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.

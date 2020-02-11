@@ -1,6 +1,7 @@
 ---
 title: 视频流传输
 date: 2020-01-17
+version: 2.0.0
 keywords: [视频流传输]
 ---
 ## 概述

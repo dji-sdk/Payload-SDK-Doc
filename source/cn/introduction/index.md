@@ -1,6 +1,7 @@
 ---
 title: 什么是PSDK ？
 date: 2020-01-17
+version: 2.0.0
 keywords: [PSDK, 快速开发, 标准化, 应用场景, 开发引导]
 ---
 

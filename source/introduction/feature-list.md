@@ -1,6 +1,7 @@
 ---
 title:  PSDK Feature List
 date: 2020-01-17
+version: 2.0.0
 keywords: [PSDK, feature overview]
 ---
 It is convenience for you to use the latest version of the PSDK, use that could help you to use the new features to develop the reliable payload, please pay attention to the release information of the DJI PSDK.

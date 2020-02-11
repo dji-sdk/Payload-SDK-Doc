@@ -1,6 +1,7 @@
 ---
 title: Positioning
 date: 2020-01-17
+version: 2.0.0
 keywords: [Pinpoint, RTK, time sync, PPS]
 ---
 > **NOTE** 

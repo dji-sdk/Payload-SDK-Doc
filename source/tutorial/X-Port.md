@@ -1,6 +1,7 @@
 ---
 title: X-Port Control
 date: 2020-01-17
+version: 2.0.0
 keywords: [gimble, X-Port control, camera]
 ---
 > **NOTE**

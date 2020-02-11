@@ -1,6 +1,7 @@
 ---
 title: 日志管理
 date: 2020-01-17
+version: 2.0.0
 keywords: [Payload SDK, 日志, 日志颜色, 日志标识]
 ---
 ## 概述

@@ -1,6 +1,7 @@
 ---
 title: 数据传输
 date: 2020-01-17
+version: 2.0.0
 keywords: [Payload SDK, 数据传输]
 ---
 >**提示** 

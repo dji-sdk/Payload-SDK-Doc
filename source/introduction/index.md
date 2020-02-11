@@ -1,6 +1,7 @@
 ---
 title: What is PSDK ?
 date: 2020-01-17
+version: 2.0.0
 keywords: [PSDK, quick start, standardization, guidance, DJI PSDK]
 ---
 > **NOTE** 

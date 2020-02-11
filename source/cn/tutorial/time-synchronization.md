@@ -1,6 +1,7 @@
 ---
 title: 时间同步
 date: 2020-01-17
+version: 2.0.0
 keywords: [时间同步]
 ---
 ## 概述

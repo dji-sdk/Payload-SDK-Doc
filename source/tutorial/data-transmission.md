@@ -1,6 +1,7 @@
 ---
 title: Data Transmission
 date: 2020-01-17
+version: 2.0.0
 keywords: [Payload SDK, Data Transmission]
 ---
 > **NOTE**

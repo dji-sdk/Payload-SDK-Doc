@@ -1,6 +1,7 @@
 ---
 title: Gimbal Control
 date: 2020-01-17
+version: 2.0.0
 keywords: [Gimbal Control]
 ---
 >**NOTE** 
@@ -180,7 +181,7 @@ Using the gimbal control function, developer needs to develop gimbal control fun
 ### Develop the basic function 
 
 > **NOTE:** 
-please use SkyPort 2.0 or SkyPort 1.0 to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
+please use SkyPort V2 or SkyPort to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
 
 #### 1. Initialization
 Before using the "Gimbal Control" to develop the payload, the developer needs to initialize the module of the gimbal control with the following code.

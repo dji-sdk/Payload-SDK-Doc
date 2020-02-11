@@ -1,6 +1,7 @@
 ---
 title: PSDK 功能概览
 date: 2020-01-17
+version: 2.0.0
 keywords: [PSDK, 功能概览]
 ---
 为方便您使用PSDK 提供的新功能开发出安全可靠的负载设备，请持续关注DJI PSDK 的版本发布信息，及时使用最新版本的PSDK 开发包开发负载设备。

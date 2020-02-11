@@ -1,6 +1,7 @@
 ---
 title: Hardware Platform
 date: 2020-01-17
+version: 2.0.0
 keywords: [development kit, SkyPort, Skyport V2, Skyport, X-Port, payload, ]
 ---
 > **NOTE** 
@@ -18,7 +19,7 @@ Using the expansion-board, developers can choose third-party development boards 
 <a href="https://store.dji.com/product/psdk-development-kit-v2">Skyport V2 </a>includes components is as follows:
 <div>
 <div style="text-align: left"><p><span>
-      <img src="../images/V2-en.png" width="800" alt/></span></p>
+      <img src="../images/V1-en.png" width="800" alt/></span></p>
 </div></div>
 
 > **NOTE:** The value meal for the mass production stage to purchase the <a href="https://store.dji.com/product/dji-skyport-adapter-set-v2">DJI SKYPORT Adapter Set</a>.
@@ -28,7 +29,7 @@ Using the payload development-board, developers do not need to purchase a third-
 <a href="https://store.dji.com/product/psdk-development-kit">Skyport</a> includes components is as follows:  
 <div>
 <div style="text-align: left"><p><span>
-      <img src="../images/V1-en.png" width="800" alt/></span></p>
+      <img src="../images/V2-en.png" width="800" alt/></span></p>
 </div></div>
 
 > **NOTE:** The value meal for the mass production stage to purchase the <a href="https://store.dji.com/product/psdk-ribbon-cable-set">PSDK Ribbon Cable Set

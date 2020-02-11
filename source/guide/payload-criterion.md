@@ -1,6 +1,7 @@
 ---
 title: Payload Criterion
 date: 2020-01-17
+version: 2.0.0
 keywords: [camera stream, standard, payload standard, equipment interference, hardware, PSDK structure, data transmission, video]
 ---
 > **NOTE** 

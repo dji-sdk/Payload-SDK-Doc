@@ -1,6 +1,7 @@
 ---
 title: 开发须知
 date: 2020-01-17
+version: 2.0.0
 keywords: [开发须知, 硬件选购, 软件版本, 固件版本]
 ---
 > **说明：** 本系列文档介绍PSDK V2.0.0 的功能，以及使用PSDK V2.0.0 开发负载设备的步骤和方法，若您仍使用PSDK V 1.5.0 开发负载设备，请下载[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档。

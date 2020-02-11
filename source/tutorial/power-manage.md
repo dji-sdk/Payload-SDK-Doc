@@ -1,18 +1,13 @@
 ---
 title: Power Management
 date: 2020-01-17
+version: 2.0.0
 keywords: [Power management, shut down information]
 ---
 > **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 After the payload which developed based on PSDK mounted on the drone, the payload could apply the higher power from the drone, therefore, the payload with the high power must also support the low power. The PSDK also provides the power off notification for the payload to avoid damage or lose the data.
-
-* When the drone obtains the power off command sent by the user, the drone will send a power-off notification to the payload which developed based on PSDK, and waiting for the feedback.
-* When the payload receives the power-off notification sent by the drone, the payload will complete the operations such as storing the information, and change the preparation status.
-* When the drone gets all the feedback from the payload and other components, the drone will shut down.
-
->**NOTE:** After receiving the power-off command for a period of time, the drone will be forced to shut down. The forced shutdown time for different models please refer to the <a href="https://www.dji.com/cn/products/enterprise?site=brandsite&from=nav#drones">User's Manual</a>.
 
 ## Develop with the Power Management
 ### 1. Initialization  
@@ -72,7 +67,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 ```
 
 ### 3.High Power Apply
-The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the SkyPort-2.0 and X-Port.
+The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the SkyPort V2 and X-Port.
 
 ```c
 psdkStat = PsdkPowerManagement_ApplyHighPowerSync();
@@ -83,6 +78,13 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 ```
 
 ## Develop with the Poweroff Notification
+
+The process of the Poweroff Notification is as follow:
+* When the drone obtains the power off command sent by the user, the drone will send a power-off notification to the payload which developed based on PSDK, and waiting for the feedback.
+* When the payload receives the power-off notification sent by the drone, the payload will complete the operations such as storing the information, and change the preparation status.
+* When the drone gets all the feedback from the payload and other components, the drone will shut down.
+
+>**NOTE:** After receiving the power-off command for a period of time, the drone will be forced to shut down. The forced shutdown time for different models please refer to the <a href="https://www.dji.com/cn/products/enterprise?site=brandsite&from=nav#drones">User's Manual</a>.
 
 #### 1.Develop and register the functions of power off  
 After develope the function to power off the payload, the developer must register this function in the specified interface.    

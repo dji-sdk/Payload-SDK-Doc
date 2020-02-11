@@ -1,6 +1,7 @@
 ---
 title: PSDK 初始化
 date: 2020-01-17
+version: 2.0.0
 keywords: [Payload SDK, PSDK, 初始化, RTOS, 移植, 别名]
 ---
 使用PSDK 开发负载设备时，**必须**先注册Platform 模块，再**初始化PSDK 模块**。

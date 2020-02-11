@@ -1,6 +1,7 @@
 ---
 title: 运行示例程序
 date: 2020-01-17
+version: 2.0.0
 keywords: [Payload SDK]
 ---
 在注册PSDK 企业账号后，请下载PSDK 提供的示例代码并在示例代码中补充应用信息，通过编译、调试和烧录等操作获得示例程序。在DJI Assistant 2 上绑定DJI 的硬件平台后，即可运行示例程序，借助示例程序了解使用PSDK 开发负载设备的方法。

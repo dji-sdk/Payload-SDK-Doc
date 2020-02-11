@@ -1,6 +1,7 @@
 ---
 title: Attention
 date: 2020-01-17
+version: 2.0.0
 keywords: [attention, hardware purchase, software version, firmware version]
 ---
 > **NOTE** 

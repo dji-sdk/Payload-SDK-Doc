@@ -1,6 +1,7 @@
 ---
 title: 设备连接
 date: 2020-01-17
+version: 2.0.0
 keywords: [开发套件, Skyport, Skyport V2, Skyport, X-Port, 负载, 转接环]
 ---
 使用X-Port 或Skyport V2 开发负载设备时，请按本文引导连接硬件平台、负载设备开发板、接口拓展板和DJI 的无人机，如 图1.设备连接 所示。

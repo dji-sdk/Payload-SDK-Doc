@@ -1,6 +1,7 @@
 ---
 title: X-Port控制
 date: 2020-01-17
+version: 2.0.0
 keywords: [云台, X-Port 控制, 相机云台]
 ---
 > **说明** 

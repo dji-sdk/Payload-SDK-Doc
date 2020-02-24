@@ -20,7 +20,7 @@
       title: "Hardware Platform"
       path: "/guide/hardware.html"
     -
-      title: "Develope Platform"
+      title: "Develop Platform"
       path: "/guide/platform.html"
 -
   title: "Workflow"
@@ -44,8 +44,8 @@
       title: "PSDK Initialization"
       path: "/tutorial/initial.html"
     -
-      title: "Transplant"
-      path: "/tutorial/transplant.html"
+      title: "Porting"
+      path: "/tutorial/Porting.html"
     -
       title: "Information Management"
       path: "/tutorial/information-manage.html"
@@ -98,8 +98,8 @@
       title: "Playback and Download"
       path: "/camera/playback-download.html"
 -
-  title: "Support"
+  title: "Appendix"
   list:
     -
-      title: "FAQ For Application Process"
+      title: "FAQs"
       path: "/faq/index.html"

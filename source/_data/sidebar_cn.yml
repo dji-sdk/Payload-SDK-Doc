@@ -45,7 +45,7 @@
       path: "/cn/tutorial/initial.html"
     -
       title: "跨平台移植"
-      path: "/cn/tutorial/transplant.html"
+      path: "/cn/tutorial/Porting.html"
     -
       title: "信息管理"
       path: "/cn/tutorial/information-manage.html"
@@ -98,8 +98,8 @@
       title: "回放下载"
       path: "/cn/camera/playback-download.html"
 -
-  title: "支持"
+  title: "附录"
   list:
     -
-      title: "关于PSDK申请流程的常见问题解答"
+      title: "PSDK 常见问题解答"
       path: "/cn/faq/index.html"

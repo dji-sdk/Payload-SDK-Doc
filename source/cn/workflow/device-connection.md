@@ -21,12 +21,12 @@ keywords: [开发套件, Skyport, Skyport V2, Skyport, X-Port, 负载, 转接环
 
 ## 使用X-Port
 #### X-Port 引脚说明
-X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板或第三方开发板。X-Port 标准云台的引脚如 图2. X-Port 标准云台引脚接口 所示。  
+X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板或第三方开发板。X-Port 标准云台的引脚如 图2. X-Port 标准云台引脚接口 所示。    
 <div>
 <div style="text-align: center"><p>图2. X-Port 标准云台引脚接口</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/Xportport-en.png" width="400"  style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Xportport.png" width="400"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 * 使用X-Port 的供电功能，请使用引脚：1～６；
@@ -44,8 +44,9 @@ X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板�
 
 ## 使用Skyport V2
 
-Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 接口可将Skyport V2 连接至接口拓展板或第三方开发板；使用同轴线通过Port 2 接口可将Skyport V2 连接至Skyport 负载设备开发板；Skyport V2 的引脚如 图3.Skyport V2 引脚接口 所示。  
+Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 接口可将Skyport V2 连接至接口拓展板或第三方开发板；使用同轴线通过Port 2 接口可将Skyport V2 连接至Skyport 负载设备开发板；Skyport V2 的引脚如 图3.Skyport V2 引脚接口 所示。    
 > **注意：** 请勿同时使用Port 1 和Port 2。
+
 <div>
 <div style="text-align: center"><p>图3. Skyport V2 引脚接口</p>
 </div>
@@ -61,7 +62,6 @@ Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
 * 使用网口高速数据传输功能，需连接引脚17～20。
 
 ##### Port 2
-
 * 使用Skyport V2 的供电功能，请使用引脚：1～17；
 * 为实现使用Skyport V2 开发的负载设备与DJI 的无人机通信，**必须**连接引脚：37和39；
 * 使用PSDK 提供的时间同步功能，需要连接PPS 引脚（19）与**具有RTK 功能的无人机**间同步时间；
@@ -140,11 +140,11 @@ Skyport 开发套件中的负载设备开发板 </td>
 </table>
 </div></div>
 
-## 连接开发板
-#### 运行RTOS 示例代码
+## 连接开发平台
+#### 连接至RTOS 开发平台
 按照RTOS 示例代码中的串口配置项，将STM32F407xG 连接至接口拓展板。
 
-> **说明：** 如需使用其他型号的开发板，请先在Hal 文件中修改配置参数，详细操作请参见[跨平台移植](../tutorial/transplant.html)。
+> **说明：** 如需使用其他型号的开发板，请先在Hal 文件中修改配置参数，详细操作请参见[跨平台移植](../tutorial/Porting.html)。
 
  * 与X-Port 或Skyport V2 通信：`PA2(TX)`和`PA3(RX)`
  * 与计算机通信：`PC10(TX)`和`PC11(RX)`
@@ -152,7 +152,7 @@ Skyport 开发套件中的负载设备开发板 </td>
  * 申请高功率：`PD1`
  * 波特率：921600
 
-#### 运行Linux 示例代码
+#### 连接至Linux 开发平台
 使用**USB 转串口模块**或**网线**将Manifold 2-C 连接至接口拓展板。
 
 * 使用USB 转串口模块：将USB 转串口模块连接至接口拓展板`UART_TX`和`UART_RX` 引脚上。

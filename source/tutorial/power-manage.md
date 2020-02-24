@@ -67,7 +67,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 ```
 
 ### 3.High Power Apply
-The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the SkyPort V2 and X-Port.
+The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the Skyport V2 and X-Port.
 
 ```c
 psdkStat = PsdkPowerManagement_ApplyHighPowerSync();

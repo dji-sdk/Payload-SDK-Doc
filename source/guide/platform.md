@@ -2,20 +2,21 @@
 title: Development Platform
 date: 2020-01-17
 version: 2.0.0
-keywords: [development kit, SkyPort, Skyport V2, Skyport, X-Port, payload, ]
+keywords: [development kit, Skyport V2, Skyport, X-Port, payload, ]
 ---
 > **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
-According to the features、resource usage and toolchain to choose the platform and chip for the payload.
+According to the features、resource usage and toolchain to choose the OS and the development platform for the payload.
 
-## Features
-The payload developed using PSDK on RTOS **doesn't** support:
+## OS
+#### Features
+The payload developed using PSDK on *RTOS* **doesn't** support:
 * Video streaming
 * Playback and download
 * High-speed data transmission
 
-## Resource Usage
-#### Linux
+#### Resource Usage
+###### Linux
 Using Linux on the Manifold 2-C, the resource usage of the payload is as follows:       
 * Stack: 12288 bytes
 * Heap: 40960 bytes
@@ -24,7 +25,7 @@ Using Linux on the Manifold 2-C, the resource usage of the payload is as follows
 * Bss: 52568 bytes
 * CPU: 7.2%
 
-#### RTOS 
+###### RTOS 
 Using RTOS on the STM32F407IGH6-EVAL, the resource usage of the payload is as follows:  
 * Text: 271896 bytes
 * Data: 1664 bytes

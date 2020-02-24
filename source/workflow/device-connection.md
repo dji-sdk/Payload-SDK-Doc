@@ -16,7 +16,7 @@ Figure 1 display the process of connection, that connected Hardware Platform、P
       <img src="../images/device-connection-en.png" width="650" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
-> **TIP：** Using [User's Manual](https://www.dji.com/cn/downloads) to know how to connect the drone and remote controller.
+> **TIP：** Using [User's Manual](https://www.dji.com/en/downloads) to know how to connect the drone and remote controller.
 
 ## NOTICE
 * The details of the Hardware Platform, please refer to [Hardware Platform](../guide/hardware.html).
@@ -238,10 +238,10 @@ Figure 4 shows the port of the expansion board. Use this board, developers could
 </div></div>
 
 ## Connect Development Board
-#### Run the Sample of RTOS
+#### Connect to the RTOS development board
 Connect the STM32F407xG to the expansion board the configuration of the serial port is as follows:
 
-> **NOTE:** If you need to use other development boards, please rewrite the configuration parameters in the Hal file, for details, please refer to [Transplant](../tutorial/transplant.html)。
+> **NOTE:** If you need to use other development boards, please rewrite the configuration parameters in the Hal file, for details, please refer to [Porting](../tutorial/Porting.html)。
 
 * Communicate with X-Port or Skyport V2: `PA2 (TX)` and `PA3 (RX)`
 * Communicate with computer: `PC10 (TX)` and `PC11 (RX)`
@@ -249,7 +249,7 @@ Connect the STM32F407xG to the expansion board the configuration of the serial p
 * High Power Apply: `PD1`
 * Baud rate: 921600
 
-#### Run the Sample of Linux
+#### Connect to Linux development board
 Connect the Manifold 2-C to the expansion board:
 
 * Use USB to Serial-port module: Connect the USB to serial port module to the `UART_TX` and` UART_RX` pins of the expansion board.

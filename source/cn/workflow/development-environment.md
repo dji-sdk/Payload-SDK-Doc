@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
 ---
-## 安装基础软件
+## 获取基础软件
 
 * [DJI Assistant 2](https://www.dji.com/cn/downloads)
 * [DJI Pilot](https://www.dji.com/cn/downloads)
@@ -12,7 +12,7 @@ keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
 * [Mobile SDK 软件开发工具包](https://developer.dji.com/user)  （可选）
 
 ## 配置RTOS 开发环境
-* 下载[Keil MDK](http://www2.keil.com/mdk5/)和相关开发工具
+* 安装[Keil MDK](http://www2.keil.com/mdk5/)和相关开发工具
     * C Compiler:  Armcc.exe V5.06 update 6 (build 750)
     * Assembler:              Armasm.exe V5.06 update 6 (build 750)
     * Linker/Locator:         ArmLink.exe V5.06 update 6 (build 750)
@@ -30,6 +30,8 @@ keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
 
 
 ## 配置Linux 开发环境
+使用Linux 开发环境时，请安装如下开发工具：
+
 * C编译器： GCC 5.4.0/5.5.0 版本
 * CMake：2.8 及以上版本
 * ffmpeg：4.1.3 及以上版本  （可选）

@@ -8,10 +8,10 @@ keywords: [environment, configuration development environment, PSDK development 
 
 This article describes the process of setting up the software environment. After connecting the hardware and setting up the software environment, the developer could create the project and run the sample code.
 
-## Install Basic Software
+## Obtion Basic Software
 
-* [DJI Assistant 2](https://www.dji.com/cn/downloads)
-* [DJI Pilot](https://www.dji.com/cn/downloads)
+* [DJI Assistant 2](https://www.dji.com/en/downloads)
+* [DJI Pilot](https://www.dji.com/en/downloads)
 * [Payload SDK](https://developer.dji.com/user)
 * [Mobile SDK](https://developer.dji.com/user)  （Optional）     
 

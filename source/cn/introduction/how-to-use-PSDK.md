@@ -43,7 +43,7 @@ keywords: [注册, 选购, 入门, 学习, 进阶, 高级]
 * [连接](../workflow/device-connection.html)无人机、硬件平台、第三方开发板和计算机；
 * [安装](../workflow/development-environment.html)开发PSDK 的软件，准备相关工具链和库；
 * [编译](../workflow/run-the-sample.html)示例代码，通过运行示例程序，了解实现PSDK 各项功能的方法；
-* 通过[跨平台移植](../tutorial/transplant.html)，将基于PSDK 开发的负载设备控制程序移植到不同的软硬件平台上。
+* 通过[跨平台移植](../tutorial/Porting.html)，将基于PSDK 开发的负载设备控制程序移植到不同的软硬件平台上。
 
 #### 开发功能完善的负载设备
 * 根据[实践教程](../tutorial/initial.html)和PSDK API 文档，开发负载设备。

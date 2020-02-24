@@ -1,84 +1,47 @@
 ---
-title: 关于PSDK申请流程的常见问题解答
+title: 常见问题
 date: 2020-01-17
-keywords: [FAQ, Application process]
+keywords: [FAQ, 常见问题]
 ---
+为方便您快速解决所遇到的问题，建议您先在<a href="https://djisdksupport.zendesk.com/hc/zh-cn/community/topics">DJI 技术支持社区</a>中寻找解决问题的方法；若您的问题无法解决或有其他咨询事项，请使用<a herf="https://formcrafts.com/a/dji-developer-feedback-cn">问题反馈</a>表单反馈问题，或向DJI SDK 团队发送<a href="mailto:dev@dji.com">邮件</a>，DJI 感谢您的支持和关注。
 
-* [Payload SDK 支持哪些飞行平台？](#2)
-* [Payload SDK 开发者有什么资质要求？](#3)
-* [如何成为 Payload SDK 开发者？](#4)
-* [负载提案应该提交哪些内容？](#5)
-* [Payload SDK 开发是否收费？包含哪些内容？](#6)
-* [什么是开发模式？什么是量产模式？如何从开发模式往量产模式切换?](#7)
-* [Payload开发及量产流程是什么？](#8)
-* [是否一定要购买开发套件才能进行PSDK项目开发？](#9)
-* [不购买SDK开发包，是否可以直接购买DJI SKYPORT转接环进行开发？](#10)
-* [我的负载量产了，是否就等于得到DJI的认证了？](#11)
-* [我可以只购买一次PSDK开发包，开发多个负载吗？](#12)
-* [我能够开发什么样的负载？](#13)
+## 基础问题
+##### 1. Payload SDK 支持哪些飞行平台？
+Payload SDK 目前仅支持Matrice 200 系列与Matrice 200 V2 系列的无人机，有关无人机参数的详细说明请参见[参数对比页面](https://www.dji.com/cn/products/compare-m200-series?site=brandsite&from=nav)。     
+DJI 提供了X-Port、Skyport V2 和Skyport 适配Matrice 200 系列与Matrice 200 V2 系列的无人机，请在开发负载设备和购买无人机前，认真阅读[负载开发标准](https://developer.dji.com/cn/payload-sdk/documentation/guide/payload-criterion.html)中的内容，正确选购所需使用的硬件平台。
 
-如果您有其他问题, 请邮件至 [dev@dji.com]()
-点击[链接](https://developer.dji.com/payload-sdk/apply)申请
-## 关于PSDK申请流程的常见问题解答
+##### 2. 什么是开发模式？
+* <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">注册</a>成为PSDK 的企业用户后，开发者所处的模式为开发模式。 
+* 在开发模式下，每个开发者的账号总共可绑定9个负载设备。 
 
-<h3 id="2">Payload SDK 支持哪些飞行平台？</h3>
-Payload SDK 和 DJI SKYPORT 目前仅支持M200 系列与M200 V2系列。
+##### 3. 什么是量产模式？
+* 获取DJI SDK 的量产授权后，开发者所处的模式为量产模式。 
+* 在量产模式下，开发者可绑定负载设备的数量不限。    
+* 如需获取PSDK 的量产授权，进入量产模式，请将如下资料发送给 <a href="mailto:dev@dji.com">DJI </a> 审核：
+  * 营业执照（扫描件）
+  * 负载提案：如负载设备的应用场景、使用方法以及关键功能等；
+  * 负载设备的详细信息：如负载设备的参数、草图、样机照片等。
 
-<h3 id="3">Payload SDK 开发者有什么资质要求？</h3>
-除个人开发者外，公司、政府部门、教育机构和等注册组织均可申请Payload SDK 开发许可。
+>**注意：** 获取量产授权后负载设备**并未得到DJI 的认证**。
 
-<h3 id="4">如何成为 Payload SDK 开发者？</h3>
--	点击[链接](https://account.dji.com/login)这里，根据指引进行开发者注册;
--	提交PSDK负载开发方案，描述您要开发的负载;
--	提案经审核后，DJI 将通过邮件与您联络，同时开通PSDK开发模式权限；您可在“用户中心”访问app并下载开发文档;
--	购买Payload SDK开发套件后，即可进行开发！
--	点击[链接](https://account.dji.com/login)这里，根据指引进行开发者注册；
--	提交PSDK负载开发方案，描述您要开发的负载；
--	提案经审核后，DJI将通过邮件与您联络，并发送SDK开发包的付款链接；
--	付款成功后，DJI将向您发送PSDK开发包并开通权限。您可在“用户中心“访问app并下载开发文档；
--	开始开发!
+##### 4. PSDK 支持开发何种负载设备？
+**在当地法律允许的范围内**，DJI 支持开发者使用PSDK 开发满足使用需求的负载设备，提升无人机在行业应用中的价值。
+DJI **不支持**开发者使用PSDK 开发带有大规模杀伤性质的**武器**，或用于**伤害**和**破坏** 用途的设备；**DJI 不承担一切因使用PSDK 而导致的任何法律风险和责任**。
 
-<h3 id="5">负载提案应该提交哪些内容？</h3>
-提交所有负载相关内容，包括以下几点:
--	负载应用的行业领域
--	负载的作用和应用场景
--	负载的关键功能
--	其他信息例如设计参数、草图、样机照片等
+## 费用问题
+##### 1. 使用PSDK 开发负载设备是否需要付费？
+* 在开发模式下，开发者在购买开发负载设备的[硬件平台](../guide/hardware.html)后，即可在[用户中心](https://developer.dji.com/user/apps/#all)免费下载并使用PSDK 开发负载设备；
+* 从开发模式切换为量产模式时，开发者需要获取量产授权：
+  * 首款负载（如开发者开发的第一款负载设备为探照灯）的终身授权费用为32000元（人民币）；
+  * 之后每款负载（如开发者开发的第二款负载设备为喊话器）的终身授权费用为16000 元（人民币）。
 
-<h3 id="6">Payload SDK 开发是否收费？包含哪些内容？</h3>
-- 开发模式无需缴纳PSDK开发包授权费；
-- 您研发的负载从开发模式往量产模式切换时，您需要交纳PSDK开发包的授权费用，费用为5000美元（3.2万元人民币）。该费用只包含PSDK开发包的授权费用；
-您需要交纳PSDK开发包的费用，费用为每个负载5000美元。
-PSDK开发包包括:
-- payload SDK开发者资料包
+##### 2. 开发负载设备是否必须购买硬件平台？
+PSDK 硬件平台是使用PSDK 开发负载设备的必要工具，开发者可以根据实际的需要购买如下硬件平台，有关硬件平台的详细说明请参见[硬件平台](../guide/hardware.html)。
+* X-Port 标准云台
+* [Payload SDK 开发套件 2.0](https://store.dji.com/cn/product/psdk-development-kit-v2)
+* [Payload SDK 开发板套装](https://store.dji.com/cn/product/psdk-development-kit)
+>**提示：** 当负载设备进入量产阶段后，开发者可购买硬件平台套装，如[DJI SKYPORT 转接环套装 V2](https://store.dji.com/cn/product/dji-skyport-adapter-set-v2) 或[DJI SKYPORT 转接环套装](https://store.dji.com/cn/product/dji-skyport-adapter-set) 降低负载设备批量生产的成本。
 
-<h3 id="7">什么是开发模式？什么是量产模式？如何从开发模式往量产模式切换? </h3>
-- 开发模式skyport绑定数量 < 10个; 
-  成为PSDK开发者后，默认为开发模式;  
-- 量产模式skyport绑定数量 >= 10个；
-  从开发模式转为量产模式需要进行PSDK开发包授权；您需要将您公司的营业执照盖章扫描件以及项目信息发邮件到dev@dji.com进行申请，缴纳PSDK授权费用后，即可从开发模式转为量产模式；
-
-<h3 id="8">Payload开发及量产流程是什么？</h3>
-- 开发者注册成功PSDK项目；
-- 开发者注册成功并购买PSDK开发包;
-- 开发者完成payload的开发;
-- 开发者邮件告知DJI开发已完成，即将从开发模式转入到量产模式，并同步负载的最终量产信息。DJI将对信息进行留底；
-- 开发者可以在DJI商城购买DJI SKYPORT转接环，对负载进行量产及自行销售;
-- 开发者邮件告知DJI开发已完成，并同步负载的相关信息。DJI将对信息进行留底;
-- 开发者可以在DJI商城购买DJI SKYPORT转接环，对负载进行量产及销售;
-- DJI会主动与优秀的开发者联系，洽谈DJI品牌授权及渠道推广合作事宜; 
-
-<h3 id="9">是否一定要购买开发套件才能进行PSDK项目开发？</h3>
-是的，虽然注册PSDK项目成功后，即可开通PSDK软件包授权，但是PSDK开发硬件相关，需要自行购买开发套件进行开发；PSDK开发套件购买链接：<https://store.dji.com/cn/product/psdk-development-kit>。
-
-<h3 id="10">不购买SDK开发包，是否可以直接购买DJI SKYPORT转接环进行开发？</h3>
-不可以。您需要首先购买SDK开发包，获取开发必须的payload SDK开发版套装及资料包，才能启动开发。当您的开发完成后，您可以购买DJI SKYPORT转接环用于量产。
-
-<h3 id="11">我的负载量产了，是否就等于得到DJI的认证了？</h3>
-不是。基于DJI Payload SDK开发的负载属于您自主研发的设备，与DJI无关。DJI仅会与量产后市场反馈良好，综合能力优秀的开发者联系讨论品牌授权及认证事宜。
-
-<h3 id="12">我可以只购买一次PSDK开发包，开发多个负载吗？</h3>
-不可以。负载与payload SDK开发版套装存在绑定关系，如需开发新的负载必须重新购买SDK开发包。
-
-<h3 id="13">我能够开发什么样的负载？</h3>
-DJI允许您开发增加无人机附加功能的负载，但不包括任何武器或用于伤害及破坏用途的设备。一切因负载导致的法律风险及责任将由您自行承担。
+##### 3. 一个硬件平台是否可以开发多款负载设备？
+* 为防止您因违规操作损毁负载设备或无人机，DJI **不建议**您使用同一个硬件平台开发多款负载设备。
+* 若您仍使用同一个硬件平台开发多款负载设备，请先在[用户中心](https://developer.dji.com/user/apps/#all)重新注册负载设备，再使用DJI Assistant 2 将新的负载应用和PSDK 硬件平台重新绑定。

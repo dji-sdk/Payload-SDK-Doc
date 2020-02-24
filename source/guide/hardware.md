@@ -2,7 +2,7 @@
 title: Hardware Platform
 date: 2020-01-17
 version: 2.0.0
-keywords: [development kit, SkyPort, Skyport V2, Skyport, X-Port, payload, ]
+keywords: [development kit, Skyport, Skyport V2, X-Port, payload, ]
 ---
 > **NOTE** 
 > * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
@@ -10,7 +10,7 @@ keywords: [development kit, SkyPort, Skyport V2, Skyport, X-Port, payload, ]
 > * Skyport only supports **PSDK V1.x.x**.
 > * DJI recommended developers use **PSDK V2.xx** with **X-Port** or **Skyport V2** to develop payload.
 
-Developers use the X-Port or SkyPort could obtain the resources from DJI‘s drone to develop the payload such as cameras, searchlights, and radar, etc.
+Developers use the X-Port or Skyport could obtain the resources from DJI‘s drone to develop the payload such as cameras, searchlights, and radar, etc.
 
 ## Development Kit
 

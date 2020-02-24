@@ -1,12 +1,12 @@
 ---
-title: Transplant
+title: Porting
 date: 2020-01-17
 version: 2.0.0
-keywords: [transplant, PSDK, Hal, Osal]
+keywords: [Porting, PSDK, Hal, Osal]
 ---
 > **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
-Transplant the payload control program developed based on PSDK to a different OS and Platforms, developer need to initialize the Hal and Osal layer, and register key configuration information firstly; loading the static library, resource file, and declaring a structure to set the basic information; at last, use the specified interface to register the Platform module in the control program to obtain hardware resources and operating system resources.
+Port the payload control program developed based on PSDK to a different OS and Platforms, developer need to initialize the Hal and Osal layer, and register key configuration information firstly; loading the static library, resource file, and declaring a structure to set the basic information; at last, use the specified interface to register the Platform module in the control program to obtain hardware resources and operating system resources.
 
 >**Sample**
 > * Linux ： `sample/maniflod2/Applicaiton/platform`
@@ -15,12 +15,12 @@ Transplant the payload control program developed based on PSDK to a different OS
 >**NOTE:** The interface of the PSDK Platform module is in the fellow directory``psdk_lib/api_headers/psdk_platform.h`.
 
 ## Overview
-Transplant the payload control program developed based on PSDK to a different OS and Platforms, developer need to adapted the Hal (Hardware Abstraction Layer, hardware interface layer), and the Osal (Operating System Abstraction Layer) ), as shown in Figure 1.   
+Port the payload control program developed based on PSDK to a different OS and Platforms, developer need to adapted the Hal (Hardware Abstraction Layer, hardware interface layer), and the Osal (Operating System Abstraction Layer) ), as shown in Figure 1.   
 <div>
-<div style="text-align: center"><p>Figure 1 Transplant  </p>
+<div style="text-align: center"><p>Figure 1 Porting  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/transplant-en.png" width="300" alt/></span></p>
+      <img src="../images/Porting-en.png" width="300" alt/></span></p>
 </div></div>
 
 ### Hal
@@ -86,7 +86,7 @@ Get the time of the system (ms):`T_PsdkReturnCode (*GetTimeMs)(uint32_t *ms)`
 * Apply:`void *(*Malloc)(uint32_t size)`
 * Release:`void (*Free)(void *ptr)`
 
-## Develop with the Transplant  
+## Develop with the Porting  
 ### 1. Initialization
 After creating the project file, please call the following interface, and register the functions of the hardware platform and operating system to the payload control program which developed based on PSDK, otherwise the payloads couldn't execute on the other hardware platforms and operating systems.
 
@@ -163,7 +163,7 @@ T_PsdkOsalHandler osalHandler = {
 };
 ```
 
-### 3. Register the transplant module
+### 3. Register the port module
 Call the interface `PsdkPlatform_RegHalUartHandler `and `PsdkPlatform_RegOsalHandler` to register the 
 Hal and Osal. 
 

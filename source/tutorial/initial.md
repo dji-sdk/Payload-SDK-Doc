@@ -2,19 +2,19 @@
 title:  PSDK Initialization
 date: 2020-01-17
 version: 2.0.0
-keywords: [Payload SDK, PSDK, initialization, RTOS, transplant]
+keywords: [Payload SDK, PSDK, initialization, RTOS, Porting]
 ---
 > **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 The first step to develop the payload which based on PSDK is Platform module initial and PSDK initial.
 
 ## 1. Register the Platform module
-After register the Hal and Osal, the program of the payload developed based on PSDK could be transplanted to other platforms.
+After register the Hal and Osal, the program of the payload developed based on PSDK could be ported to other platforms.
 
 > **NOTICE：** If you developed the payload on RTOS, you must register the Hal and Osal in the RTOS operating system thread and ensure that the thread can be called normally when the scheduler works.
 
 * Hal Register   
-Register the Hal could help the payload transplant to other hardware platforms.
+Register the Hal could help the payload port to other hardware platforms.
 
 ```c
 if (PsdkPlatform_RegHalUartHandler(&halUartHandler) != PSDK_RETURN_CODE_OK) {
@@ -24,7 +24,7 @@ if (PsdkPlatform_RegHalUartHandler(&halUartHandler) != PSDK_RETURN_CODE_OK) {
 ```
 
 * Osal Register   
-Register the Osal could help the payload transplant to other development platforms.
+Register the Osal could help the payload port to other development platforms.
 
 ```c
 if (PsdkPlatform_RegOsalHandler(&osalHandler) != PSDK_RETURN_CODE_OK) {
@@ -33,7 +33,7 @@ if (PsdkPlatform_RegOsalHandler(&osalHandler) != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-> Reference: [transplant](./transplant.html)
+> Reference: [Port](./Porting.html)
 
 ## 2. PSDK Initialization
 To develop the payload based on the PSDK, you must initialize the PSDK with the following code.please ensure that the operating system scheduler is running, otherwise, the main thread of the PSDK couldn't work.
@@ -47,8 +47,8 @@ if (PsdkCore_Init(&userInfo) != PSDK_RETURN_CODE_OK) {
 ```
 
 >**NOTE** 
-> * After initialize the PSDK, developer could initialize the function which developed.
-> * After initialized all the functions,developer must call the `PsdkCore_ApplicationStart()` to start the function, otherwise, the Mobile APP cannot control the payload.
+> * After initialized the PSDK, developer could initialize the function which developed.
+> * After initialized all the functions, developer must call the `PsdkCore_ApplicationStart()` to start the function, otherwise, the Mobile APP cannot control the payload.
 > * If the initialization is failed, please check the initialization sequence of the payload and the configuration of the corresponding interface according to the return code.
 
 ## Set The Nickname

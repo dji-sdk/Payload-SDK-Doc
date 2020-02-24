@@ -65,7 +65,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 ```
 
 ### 3.申请高功率
-负载设备调用`PsdkPowerManagement_ApplyHighPowerSync()`接口后，负载设备能够向无人机申请高功率，高功率申请完成后，可使用电压表等仪器测量SkyPort v2 和X-Port 指定接口的电压。
+负载设备调用`PsdkPowerManagement_ApplyHighPowerSync()`接口后，负载设备能够向无人机申请高功率，高功率申请完成后，可使用电压表等仪器测量Skyport v2 和X-Port 指定接口的电压。
 
 ```c
 psdkStat = PsdkPowerManagement_ApplyHighPowerSync();

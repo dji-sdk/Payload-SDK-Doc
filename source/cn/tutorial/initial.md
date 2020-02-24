@@ -31,7 +31,7 @@ if (PsdkPlatform_RegOsalHandler(&osalHandler) != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-> 相关参考：[跨平台移植](./transplant.html)
+> 相关参考：[跨平台移植](./Porting.html)
 
 ## 2. PSDK 初始化
 使用PSDK 开发负载设备时，必须调用`PsdkCore_Init`接口实现PSDK 的初始化，同时请确保操作系统调度器已经运行，否则PSDK 的主线程将无法正常工作。   

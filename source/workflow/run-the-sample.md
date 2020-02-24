@@ -8,14 +8,11 @@ keywords: [Payload SDK]
 
 After registering the account, please download the sample code and supplement the application information, after compiling, debugging, and burning and binding the DJI Hardware Platform to the drone on the DJI Assistant 2, you can run the program, With the help of those samples, you would know how to develop a payload.
 
-> **NOTE:**  If you need to develope the program on the other systems or development board, please refer to [Transplant](../tutorial/transplant.html).  
+> **NOTE:**  If you need to develope the program on the other systems or development board, please refer to [Porting](../tutorial/Porting.html).  
 
 ## 1. Download the Sample
-With the help of sample code, you can learn how to use PSDK to develop the payload. 
+After <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank"> registered </a> as a DJI PSDK enterprise user, you can download the DJI PSDK and find the sample code in the package . With the help of sample code, you can learn how to use PSDK and developed the payload quickly.       
 
-After <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank"> registered </a> as a DJI PSDK enterprise user, you can download the DJI PSDK and find the sample code in the package.
-
-## 2. Add the user’s information
 Figure 1 shows how to add the user's information. First of all, you should obtain the [permissions](https://developer.dji.com/payload-sdk/apply) and create the application on the [User Center](https://developer.dji.com/user/apps/#all).
 
 <div>
@@ -25,17 +22,15 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
       <img src="../images/APPinfo.png" width="200" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
+## 2. Add the user’s information
+
 #### RTOS 
-
-* Use Keil IDE to compile the project    
-Project directory:`sample/stm32f4_eval/Projects/mdk_release/psdk_demo.uvprojx` 
-
 >**NOTE:** The payload development board is **STM32F407IGH6-EVAL**.
 
-* Add the information      
-File directory: `sample/stm32f4_eval/Application/app_info.h` 
+* Use Keil IDE open the project `psdk_demo.uvprojx` which in the `sample/stm32f4_eval/Projects/mdk_release/` 
 
-```
+* Add the information in the file : `sample/stm32f4_eval/Application/app_info.h`       
+```c
 #define USER_APP_NAME               "your_app_name"
 #define USER_APP_ID                 "your_app_id"
 #define USER_APP_KEY                "your_app_key"
@@ -45,8 +40,7 @@ File directory: `sample/stm32f4_eval/Application/app_info.h`
 #### Linux 
 >**NOTE:** The payload development board is **Manifold 2-C**.
 
-* Add the information 
-File directory: `sample/manifold2/Application/app_info.h` 
+* Add the information in the file : `sample/manifold2/Application/app_info.h` 
 
 ```
 #define USER_APP_NAME               "your_app_name"
@@ -55,27 +49,23 @@ File directory: `sample/manifold2/Application/app_info.h`
 #define USER_DEVELOPER_ACCOUNT      "your_developer_account"
 ```
 
-* Add the serial-port's name    
-File directory: `sample/manifold2/Application/platform/hal_uart.c`
+* Add the serial-port's name: `sample/manifold2/Application/platform/hal_uart.c`
 
-```
+```c
 #define LINUX_UART_DEV   "dev/your_com"
 ```
 
-## 3. Compile and debug
+## 3. Compile and Burn
 
-#### RTOS：
+#### RTOS
 * Software: Keil MDK
 * Baud Rate: `921600`
 > **NOET：** After compiling the sample code, please burn the compiled program to the payload(such as STM32F407IGH6-EVAL).
 
-
 #### Linux
-* Get the permission     
-Use the command to gain the access permission:`sudo chmod 777 /dev/your serial-port's name`
+* Use the command to gain the access permission:`sudo chmod 777 /dev/your serial-port's name`
 
-* Compile      
-Project directory: `sample/manifold2`
+* Compile the project: `sample/manifold2/project/`
 the command of compile is as follows:   
   1. `mkdir build`
   2. `cd build`
@@ -83,7 +73,7 @@ the command of compile is as follows:
 	4. `make`
 
 * Execute the sample       
-  * Project directory: `sample/manifold2/build/demo_linux_ubuntu`
+  * Project directory: `sample/manifold2/project/build`
   * Execute command `./demo_linux_ubuntu`  
 
 ## 4. Binding

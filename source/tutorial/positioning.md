@@ -20,7 +20,7 @@ To meet the centimeter-level accuracy positioning requirements of the payload de
 
 ## Concepts  
 
-* Target Point: The position where the positioning information is obtained, such as the center point of the gimble.
+* Target Point: The position where the positioning information is obtained, such as the center point of the gimbal.
    > **NOTE:** The target point of the M210 RTK V2 is the center point on the upper surface of the adapter ring of the payload. The payload needs to be mounted on the Gimbal I.
 * Interest Point: The position of a device on the payload specified by the user arbitrarily, such as the center point of a camera image sensor. The target point can also be a point of interest.
 * Task: A set of multiple continuous flight actions is called a task, such as performing a mapping task on a certain area.

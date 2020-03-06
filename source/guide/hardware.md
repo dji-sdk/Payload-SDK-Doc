@@ -71,10 +71,6 @@ Using the payload development-board, developers do not need to purchase a third-
       <td style="border-right: none;">29g</td>
       <td style="border-right: none;">24g</td>
     </tr>
-    <tr style="text-align:center">
-      <td style="border-left: none;text-align:left;border-right: none;"><b>Payload Dimension</b></td>
-      <td style="border-right: none;text-align:left;border-left: none;">Restrict the payload within the sphere, which the center is the centroid of X-Port, the diameter is 145mm.</td>
-      <td colspan="2" style="border-right: none;">Not crash the drone.</td>
     </tr>
     <tr style="text-align:center">
       <td style="text-align:left;border-right: none;border-left: none"><b>Payload Weight</b></td>
@@ -137,32 +133,3 @@ Using the payload development-board, developers do not need to purchase a third-
 > * X-Port Ingress Protection: IP44
 > * X-Port Temperature: -20°C～50°C
 > * The rated-current of X-Port may be affected by the working environment.
-
-## X-Port 
-The steps of X-Port, please refer to [Using Hardware Platform](../guide/hardware.html)。	
-#### Dimension
-Figure 1 display the dimension of X-Port.    
-<div>
-<div style="text-align: center"><p>Figure 1 The dimension of X-Port（unit：mm）</p>
-</div>
-<div style="text-align: center"><p><span>
-      <img src="../images/XPort-structure.png" width="450" style="vertical-align:middle" alt/></span></p>
-</div></div>
-
-#### Constraint
-* The width of the pitch on the X-Port is 80mm. The width of the payload couldn't exceed the wheelbase.
-
-* The weight of the payload must lighter than 450g otherwise the payload may damage the gimbal or stand.
-
-* The centroid of the payload must on the axis line of X-Port.
-
-* The payload must within the sphere, which the center is the centroid of X-Port, the diameter is 145mm.
-
-* The payload couldn't strike the X-Port when the payload raised to 45°.
-  > **NOTE:** The centroid of the payload must on the axis line when the payload’s zoom is in the maximum factor.
-
-* If the payload touches the ground，please use the increased stander.
-
-* Be sure that the port of the payload is completely flat, ensure that the waterproof could be sealed completely.
-
-* The shell of payload could be aluminum alloy. A plastic or carbon case is not recommended.

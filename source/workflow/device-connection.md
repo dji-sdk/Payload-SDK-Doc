@@ -16,7 +16,7 @@ Figure 1 display the process of connection, that connected Hardware Platform、P
       <img src="../images/device-connection-en.png" width="650" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
-> **TIP：** Using [User's Manual](https://www.dji.com/en/downloads) to know how to connect the drone and remote controller.
+> **NOTE：** Using [User's Manual](https://www.dji.com/en/downloads) to know how to connect the drone and remote controller.
 
 ## NOTICE
 * The details of the Hardware Platform, please refer to [Hardware Platform](../guide/hardware.html).
@@ -25,6 +25,8 @@ Figure 1 display the process of connection, that connected Hardware Platform、P
 ## Use X-Port
 #### X-Port Pin 
 Figure 2 shows the pin of X-Port. Use the cable to connect the X-Port to an expansion board or a third-party development board.
+
+>**NOTICE:** Please use the specified cable connect the X-Port and the Expansion Board, confirmed that the red cable is aligned with the dot mark, otherwise the payload may burned.
 
 <div>
 <div style="text-align: center"><p>Figure 2 X-Port Pin</p>
@@ -77,9 +79,11 @@ Figure 2 shows the pin of X-Port. Use the cable to connect the X-Port to an expa
     * For a zoom camera with a variable center of the centroid, the payload must on the vertical line of the pitch axis when the lens is at the maximum magnification.
 
 ## Use Skyport V2
-Figure 3 shows the pin of Skyport V2. Use the cable to connect the Skyport V2 to an expansion board or a third-party development board on the Port1; use coaxial cable to connect Skyport V2 to payload development board on the Port2.
+Figure 3 shows the pin of Skyport V2. Use the cable to connect the Skyport V2 to an expansion board or a third-party development board on the Port1; use coaxial cable to connect Skyport V2 to the payload development board on the Port2.
 
-> **NOTE:** Developer only could choose Port1 or Port2, both of them cannot be used at the same time.
+> **NOTICE** 
+> * Developer only could choose Port1 or Port2, both of them cannot be used at the same time.
+> * Please use the specified cable connect the Port1 and the Expansion Board, confirmed that the red cable is aligned with the dot mark, otherwise the payload may burned.
 
 <div>
 <div style="text-align: center"><p>Figure 3 Skyport V2 pin</p>
@@ -167,6 +171,8 @@ Figure 3 shows the pin of Skyport V2. Use the cable to connect the Skyport V2 to
 
 ## Use Expansion Board
 Figure 4 shows the port of the expansion board. Use this board, developers could connect the third-party development board and a variety of payloads.
+
+> **NOTICE:** Please use the specified cable connect the Third Development Board and the Expansion Board, confirmed that the red cable is aligned with the dot mark, otherwise the payload may burned.
 
 <div>
    <div>

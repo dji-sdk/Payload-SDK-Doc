@@ -32,7 +32,7 @@ Figure 2 shows the attitude of the payload, according to the control command, th
 <div style="text-align: center"><p>Figure 2 Attitude angle </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/gimble_up-en.png" width="370" alt/></span></p>
+      <img src="../images/gimbal_up-en.png" width="370" alt/></span></p>
 </div></div>
    
 
@@ -66,7 +66,7 @@ The details for the gimbal control permissions, please refer to Table 1.
 
 * Release
   * The control module will release the control right after completing the control of the gimbal;
-  * If the control module does not release the control right after completing the control of the gimbal, the gimble which developed based on PSDK will automatically release the control right within the specified time after the end of the gimbal rotation. 
+  * If the control module does not release the control right after completing the control of the gimbal, the gimbal which developed based on PSDK will automatically release the control right within the specified time after the end of the gimbal rotation. 
 
 <div><div>
 <p>

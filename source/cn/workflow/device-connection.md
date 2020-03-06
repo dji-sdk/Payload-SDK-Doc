@@ -5,6 +5,7 @@ version: 2.0.0
 keywords: [开发套件, Skyport, Skyport V2, Skyport, X-Port, 负载, 转接环]
 ---
 使用X-Port 或Skyport V2 开发负载设备时，请按本文引导连接硬件平台、负载设备开发板、接口拓展板和DJI 的无人机，如 图1.设备连接 所示。
+
 > **说明：** 本文档**未描述的硬件接口**将逐步开放，敬请关注。
 
 <div>
@@ -22,6 +23,9 @@ keywords: [开发套件, Skyport, Skyport V2, Skyport, X-Port, 负载, 转接环
 ## 使用X-Port
 #### X-Port 引脚说明
 X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板或第三方开发板。X-Port 标准云台的引脚如 图2. X-Port 标准云台引脚接口 所示。    
+
+> **注意：** 使用排线连接接口拓展板和X-Port 接口时，请务必使红色线缆与圆点标记位对齐插入，避免接反线缆烧毁负载设备。
+
 <div>
 <div style="text-align: center"><p>图2. X-Port 标准云台引脚接口</p>
 </div>
@@ -45,7 +49,10 @@ X-Port提供了排线接口，使用排线可将X-Port 连接至接口拓展板�
 ## 使用Skyport V2
 
 Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 接口可将Skyport V2 连接至接口拓展板或第三方开发板；使用同轴线通过Port 2 接口可将Skyport V2 连接至Skyport 负载设备开发板；Skyport V2 的引脚如 图3.Skyport V2 引脚接口 所示。    
-> **注意：** 请勿同时使用Port 1 和Port 2。
+
+> **注意**
+> * 请勿同时使用Port 1 和Port 2。
+> * 使用排线连接接口拓展板和Skyport V2 上的Port 1 接口时，请务必使红色线缆与圆点标记位对齐插入，避免接反线缆烧毁负载设备。
 
 <div>
 <div style="text-align: center"><p>图3. Skyport V2 引脚接口</p>
@@ -70,6 +77,9 @@ Skyport V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
 
 ## 使用接口拓展板
 开发者使用接口拓展板，能够接入第三方开发板，开发出类型丰富的负载设备，接口拓展板的接口如 图4.接口拓展板接口 所示，有关接口拓展板接口的详细说明请参见 表1.接口拓展板接口说明。  
+
+> **注意：** 使用排线连接接口拓展板上的J2 接口时，请务必使红色线缆与圆点标记位对齐插入，避免接反线缆烧毁负载设备。
+
 <div>
    <div>
       <div style="text-align: center"><p>图4.接口拓展板接口  </p>

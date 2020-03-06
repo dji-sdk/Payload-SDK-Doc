@@ -2,7 +2,7 @@
 title: X-Port Control
 date: 2020-01-17
 version: 2.0.0
-keywords: [gimble, X-Port control, camera]
+keywords: [gimbal, X-Port control, camera]
 ---
 > **NOTE**
 > * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
@@ -316,8 +316,8 @@ Table 3 The limit angle for the X-Port </p></div>
     </tr>
     <tr>
       <td>The joint angle of the yaw	</td>
-      <td>Gimble I: 30 (upper limit), -150 (lower limit)
-Gimble II: 150 (upper limit), -30 (lower limit)</td>
+      <td>gimbal I: 30 (upper limit), -150 (lower limit)
+gimbal II: 150 (upper limit), -30 (lower limit)</td>
     </tr>
   </tbody>
 </table></div></div>

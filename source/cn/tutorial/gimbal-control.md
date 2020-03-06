@@ -29,7 +29,7 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 <div style="text-align: center"><p>图2.云台姿态  </p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/gimble_up.png" width="600" alt/></span></p>
+      <img src="../../images/gimbal_up.png" width="600" alt/></span></p>
 </div></div>
    
 

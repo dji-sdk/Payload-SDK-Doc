@@ -14,7 +14,7 @@ Before developing the zoom control for the payload, the developer needs to devel
 * Optical zoom: the camera-type payload changes the structure of the lens. The larger factor makes the scene will be small.
 * Digital zoom: the camera-type payload use the specific algorithm to change the area of ​​each pixel on the sensor.
 * Continuous zoom: the camera-type payload control the payload's lens move to the specified direction at the specified speed. The first is optical zoom, then is digital zoom. Multiples = optical zoom multiple × digital zoom multiple;
-* Tap zoom: the camera-type payload control the gimble rotate to the specified position make the target is in the center of the screen, and then expend the camera according to the zoom factor that user preset. 
+* Tap zoom: the camera-type payload control the gimbal rotate to the specified position make the target is in the center of the screen, and then expend the camera according to the zoom factor that user preset. 
 
 #### Zoom Direction
 * ZOOM_IN: The zoom factor decreases and the image moves from far to near.
@@ -224,7 +224,7 @@ Press and hold the zoom button to change the zoom factor, as shown in Figure 1.
 </div></div>
 
 #### 5. Develop with the Tap Zoom 
-The tap zoom function control the gimble rotated to the target position and uses the current focal length to make the object in the center of the screen.
+The tap zoom function control the gimbal rotated to the target position and uses the current focal length to make the object in the center of the screen.
 
 ##### Developed in the callback function
 

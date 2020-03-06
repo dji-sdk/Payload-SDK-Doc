@@ -150,6 +150,8 @@ keywords: [camera stream, standard, payload standard, equipment interference, ha
 > * To prevent the payload carried on the drone from being affected by the inertia of the drone, impact the battery and the blades, please design the size of the load equipment reasonably;
 > * When the weight of the payload is over 600g, please submit the payload to DJI for evaluation.
 
+#### Generic
+
 <table id="PSDK technical integration NOTEs">
   <thead>
     <tr>
@@ -184,6 +186,80 @@ keywords: [camera stream, standard, payload standard, equipment interference, ha
     </tr>
    </tbody>
 </table>
+
+#### Structural for X-Port
+##### X-Port‘s structural
+Figure 1 display the dimension of X-Port.    
+<div>
+<div style="text-align: center"><p>Figure 1 The dimension of X-Port（unit：mm）</p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../images/XPort-structure.png" width="450" style="vertical-align:middle" alt/></span></p>
+</div></div>
+
+##### Payload‘s structural
+Before designing the structure of the payload, please choose a tripod, if the size of the payload is limited by the tripod.
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th> Gimbal Type</th>
+        <th> Pitch axis rotation limit (Idle speed) </th>
+        <th> Landing Gear Type </th>
+        <th> X-Port payload structure limitation </th>
+      </tr>
+</thead>
+<tbody>
+<tr>
+     <td rowspan=4> Single cloud platform </td>
+     <td rowspan=2> Restricted </td>
+     <td> Original </td>
+     <td> The distance between the lower surface of the payload and the pitch axis is not more than 54mm. </td>
+ </tr>
+<tr>
+    <td> Long </td>
+    <td> The distance between the lower surface of the payload and the pitch axis is not more than 72mm. </td>
+ </tr>
+<tr>
+    <td rowspan=2> None </td>
+    <td> Original </td>
+    <td> The payload must in the mass center, which the diameter of the ball is 118mm.</td>
+ </tr>
+<tr>
+   <td> Long </td>
+   <td> The payload must in the mass center, which the diameter of the ball is 154mm. </td>
+</tr>
+<tr>
+<td rowspan=4>Double Gimbal </td>
+<td rowspan=2> Restricted </td>
+<td> Original </td>
+<td> The distance between the lower surface of the payload and the pitch axis is not more than 45mm. </td>
+</tr>
+<tr>
+<td> Long </td>
+<td> The distance between the lower surface of the payload and the pitch axis is not more than 63mm. </td>
+</tr>
+<tr>
+<td rowspan=2> None </td>
+<td> Original </td>
+<td> The payload must in the mass center, which the diameter of the ball is 100mm. </td>
+</tr>
+<tr>
+<td> Long </td>
+<td> The payload must in the mass center, which the diameter of the ball is 136mm. </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+The requirements of the payload which is mounted on the X-Port is as follows:    
+* The width of the pitch on the X-Port is 80mm. The width of the payload couldn't exceed the wheelbase.     
+* The weight of the payload must lighter than 450g otherwise the payload may damage the gimbal or the pressure-reducing-ball.     
+* The centroid of the normal payload must on the axis line of X-Port，and the payload couldn't strike the X-Port when the payload raised to 45°. The centroid of the payload must on the axis line when the payload’s zoom is in the maximum factor.   
+* If the payload touches the ground，please use the Long Landing Gear.    
+* Be sure that the port of the payload is completely flat, ensure that the waterproof could be sealed completely.      
+* The shell of payload could be aluminum alloy. A plastic or carbon case is not recommended.     
 
 ## Data Transmission
 ##### Use M200 V2 Series

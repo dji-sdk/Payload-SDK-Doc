@@ -67,11 +67,6 @@ Skyport 包含如下配件：
       <td style="border-right: none;">24g</td>
     </tr>
     <tr style="text-align:center">
-      <td style="border-left: none;text-align:left;border-right: none;"><b>负载尺寸</b></td>
-      <td style="border-right: none;text-align:left;border-left: none;">负载设备需要在以X-Port 质心为</br>圆心，直径为145mm 的球内</td>
-      <td colspan="2" style="border-right: none;">负载设备不可撞击或干涉无人机的正常运行</td>
-    </tr>
-    <tr style="text-align:center">
       <td style="text-align:left;border-right: none;border-left: none"><b>负载重量</b></td>
       <td style="border-right: none;text-align:left;border-left: none;">450g</td>
       <td colspan="2" 1style="border-right: none;">单个负载设备的重量不超过600g</br><div style="background:#F2F2F2"> <b>说明：</b>有关负载设备重量的详细说明，请参见<a href=../guide/payload-criterion.html>结构标准</a>。</div></td>
@@ -131,27 +126,3 @@ Skyport 包含如下配件：
 > **说明** 
 > * X-Port 的防护等级：IP44，工作温度范围：-20°C～50°C。
 > * 受实际工作环境的影响，X-Port 实际的工作电流可能会和额定电流有一定的差异。
-
-## X-Port 
-有关使用X-Port 的操作步骤，请参见 [“使用硬件平台”](../guide/hardware.html)。	
-#### 云台结构
-X-Port 标准云台的结构如 图1. X-Port 标准云台 所示：
-<div>
-<div style="text-align: center"><p>图1. X-Port 标准云台（单位：mm）</p>
-</div>
-<div style="text-align: center"><p><span>
-      <img src="../../images/XPort-structure.png" width="450" style="vertical-align:middle" alt/></span></p>
-</div></div>
-
-#### 负载设备设计约束
-
-使用X-Port 开发的负载设备需符合如下要求：
-
-* X-Port 轴臂的宽度为**80mm**，为确保负载设备能够正常转动，负载设备的宽度**不可**超出该轴距；    
-* 负载设备的重量**不可**超过 **450g**，超出该质量的负载设备可能会损坏云台支架或减震球；    
-* 负载设备的质心需要在安装结构的轴心线上；确保负载设备在**以质心为球心**，直径为145mm 的球内，防止负载设备上扬45° 时，影响X-Port 的正常转动；    
-  >**说明：** 请确保可变焦的负载设备在最大变焦倍数时，负载设备的质心在安装轴的**轴线**上。  
-
-* 无人机在静置状态下，若负载设备可能会触碰到地面，建议使用**加长起落架**；    
-* 请确保安装负载设备的接口与X-Port 主轴臂的防水垫圈**完全贴合**；   
-* 推荐负载设备使用铝合金材质的外壳，不建议使用**塑料材质**的外壳或**碳纤维材质**的外壳。    

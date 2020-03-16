@@ -8,7 +8,7 @@
       title: "如何使用PSDK ?"
       path: "/cn/introduction/how-to-use-PSDK.html"
     -
-      title: "PSDK 功能概览"
+      title: "PSDK 提供了哪些功能 ？"
       path: "/cn/introduction/feature-list.html"
 -
   title: "选型指南"
@@ -26,7 +26,7 @@
   title: "开发引导"
   list:
     -
-      title: "开发须知"
+      title: "开发前须知"
       path: "/cn/workflow/attention.html"
     -
       title: "设备连接"

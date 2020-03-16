@@ -10,9 +10,10 @@ After registering the account, please download the sample code and supplement th
 
 > **NOTE:**  If you need to develope the program on the other systems or development board, please refer to [Porting](../tutorial/Porting.html).  
 
-## 1. Download the Sample
+## Download the Sample
 After <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank"> registered </a> as a DJI PSDK enterprise user, you can download the DJI PSDK and find the sample code in the package . With the help of sample code, you can learn how to use PSDK and developed the payload quickly.       
 
+## Create the Payload
 Figure 1 shows how to add the user's information. First of all, you should obtain the [permissions](https://developer.dji.com/payload-sdk/apply) and create the application on the [User Center](https://developer.dji.com/user/apps/#all).
 
 <div>
@@ -22,9 +23,9 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
       <img src="../images/APPinfo.png" width="200" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
-## 2. Add the user’s information
-
-#### RTOS 
+## Run the sample on the RTOS
+#### Add the user’s information
+ 
 >**NOTE:** The payload development board is **STM32F407IGH6-EVAL**.
 
 * Use Keil IDE open the project `psdk_demo.uvprojx` which in the `sample/stm32f4_eval/Projects/mdk_release/` 
@@ -37,7 +38,15 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
 #define USER_DEVELOPER_ACCOUNT      "your_developer_account"
 ```
 
-#### Linux 
+#### Compile and Burn
+
+* Software: Keil MDK
+* Baud Rate: `921600`
+> **NOET：** After compiling the sample code, please burn the compiled program to the payload(such as STM32F407IGH6-EVAL).
+
+
+## Run the sample on the Linux
+#### Add the user’s information
 >**NOTE:** The payload development board is **Manifold 2-C**.
 
 * Add the information in the file : `sample/manifold2/Application/app_info.h` 
@@ -55,14 +64,8 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
 #define LINUX_UART_DEV   "dev/your_com"
 ```
 
-## 3. Compile and Burn
+#### Compile and Burn
 
-#### RTOS
-* Software: Keil MDK
-* Baud Rate: `921600`
-> **NOET：** After compiling the sample code, please burn the compiled program to the payload(such as STM32F407IGH6-EVAL).
-
-#### Linux
 * Use the command to gain the access permission:`sudo chmod 777 /dev/your serial-port's name`
 
 * Compile the project: `sample/manifold2/project/`
@@ -76,7 +79,7 @@ the command of compile is as follows:
   * Project directory: `sample/manifold2/project/build`
   * Execute command `./demo_linux_ubuntu`  
 
-## 4. Binding
+## Binding
 Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload will run the sample.
 
 > **NOTE:** Please turn on the Data Authorization in the DJI Assistant 2 before debugging the payload.

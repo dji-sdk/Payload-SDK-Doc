@@ -8,9 +8,11 @@ keywords: [Payload SDK]
 
 > **提示：** 如需将RTOS 或Linux 的示例代码运行在其他开发板或操作系统中，请参考 [跨平台移植](../tutorial/Porting.html)。  
 
-## 1. 获取示例代码
+## 获取示例代码
 在 <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">注册</a>成为DJI PSDK 的企业用户后，即可下载DJI PSDK 开发包，在PSDK 开发包中获取DJI 提供的示例代码，借助示例代码了解使用PSDK 开发负载设备的方法，使用示例代码快速开发出功能完善的出负载设备。     
-获取使用PSDK 开发负载产品的[权限](https://developer.dji.com/payload-sdk/apply) 后，请在[用户中心](https://developer.dji.com/user/apps/#all) 创建应用程序，获取应用ID 和应用秘钥，如 图1.填写应用信息 所示。
+
+## 创建负载应用
+获取使用PSDK 开发负载产品的[权限](https://developer.dji.com/payload-sdk/apply) 后，请在[用户中心](https://developer.dji.com/user/apps/#all) 创建负载应用，获取应用ID 和应用秘钥，如 图1.填写应用信息 所示。
 <div>
 <div style="text-align: center"><p>图1. 填写应用信息</p>
 </div>
@@ -20,9 +22,8 @@ keywords: [Payload SDK]
 
 > **注意：** 为提高您的开发效率，请在示例代码中**正确**填写*应用的名称*、*ID*、*Key*和*用户账号*，否则编译后的示例程序将无法正常运行。
 
-## 2. 补充应用信息
-
-#### 在RTOS 示例代码中补充应用信息
+## 运行RTOS 示例代码
+#### 补充应用信息
 >**说明：** RTOS 的示例代码以**STM32F407IGH6-EVAL** 开发板为负载设备。
 
 * 使用Keil IDE 打开位于`sample/stm32f4_eval/Projects/mdk_release`目录下的工程文件`psdk_demo.uvprojx`。
@@ -36,7 +37,14 @@ keywords: [Payload SDK]
 #define USER_DEVELOPER_ACCOUNT      "your_developer_account"
 ```
 
-#### 在Linux 示例代码中补充应用信息
+#### 编译示例代码
+* 使用Keil MDK 编译示例代码为示例程序
+* 编译示例代码后，将编译后的程序**烧录**到负载设备中（如STM32F407IGH6-EVAL）。
+* 如需调试示例程序，请将串口调试工具的波特率设置为：`921600`
+
+
+## 运行Linux 示例代码
+#### 补充应用信息
 >**说明：** Linux 的示例代码以Manifold 2-C 为负载设备，该示例代码也可直接运行在Manifold 2-G 上。
 
 * 在 `sample/manifold2/Application/app_info.h` 文件中替换应用的名称、ID、Key和开发者账号：
@@ -53,14 +61,7 @@ keywords: [Payload SDK]
 #define LINUX_UART_DEV   "dev/your_com"
 ```
 
-## 3. 编译与烧录
-
-#### RTOS
-* 使用Keil MDK 编译示例代码为示例程序
-* 编译示例代码后，将编译后的程序**烧录**到负载设备中（如STM32F407IGH6-EVAL）。
-* 如需调试示例程序，请将串口调试工具的波特率设置为：`921600`
-
-#### Linux
+#### 编译示例程序
 * **获取串口访问权限**     
 在终端中使用 `sudo chmod 777 /dev/xxx`命令获取串口设备访问权限。
 >**说明：** xxx为串口的名称。
@@ -76,7 +77,7 @@ keywords: [Payload SDK]
   * 进入示例程序的目录： `sample/manifold2/project/build`
   * 使用`./demo_linux_ubuntu`命令运行示例程序  
 
-## 4. 应用绑定
+## 应用绑定
 通过DJI Assistant 2 将负载设备绑定到DJI 的无人机后，负载设备将运行示例程序。
 
 > **注意：** 使用DJI Assistant 2 调试负载设备时，请先在软件右上角的“配置”标签中打开 **“数据授权”** 开关，否则DJI Assistant 2 将无法正常调试负载设备。

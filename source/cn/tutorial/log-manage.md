@@ -114,11 +114,11 @@ PsdkLogger_UserLogDebug("psdk log console test.");
 
 >**说明：** 日志的等级为Info，因此负载设备中类型为Info、Warn 及Error 的日志将被输出在终端上，类型为Debug 的日志将不会被打印出来。
 
-## 日志过滤
+## 日志查看
 
 * Linux：
-  * 在Clion IDE 上使用 [Grep Console](https://plugins.jetbrains.com/plugin/7125-grep-console/)
-  * 使用grep命令：在终端中执行`./demo_linux_ubuntu | grep 'Info'`获取负载设备的日志，更多使用方法请使用`man grep`查询
+  * 在Clion IDE 上使用 [Grep Console](https://plugins.jetbrains.com/plugin/7125-grep-console/)可过滤负载设备的日志文档
+  * 使用grep命令：在终端中执行`./demo_linux_ubuntu | grep 'Info'`过滤所需的日志信息，更多使用方法请使用`man grep`查询
 
-* RTOS：使用串口查看工具如SecureCRT、XShell、Putty等
+* RTOS：使用串口查看工具如SecureCRT、XShell或Putty 等工具查看日志信息
 

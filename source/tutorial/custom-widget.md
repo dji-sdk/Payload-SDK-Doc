@@ -34,8 +34,9 @@ The user can operate the controls in the configuration interface, such as button
 </div></div>
 
 > **NOTE** 
-> * The configuration interface only supports display only one "text input boxes".
+> * The configuration interface only supports display only one "text input boxes", whcih could receive almost 128 letters.
 > * Use the `PsdkDataTransmission_RegReceiveDataFromMobileCallback (ReceiveDataFromMobile)` to obtain the information that the user sends to the payload in the DJI Pilot **text input boxes** (using UTF-8).
+> * Restricted by the length of the log, the characters entered by the user could not be displayed completly.
 
 ### Configuration File
 >**NOTE**
@@ -208,7 +209,7 @@ To improve the compatibility of user-defined controls with DJI Pilot, please des
 The RTOS system does not support the file system, please convert the configuration file as follows:
 
 * use`file2c`which under the `tools/file2c`,to conversed all the profiles to the `.h` file, for details, please refer to the `Readme.txt`;
-* The `.h` files are in the `sample/widget/widget_file_c`;
+* The `.h` files are in the `sample/api_sample/widget/widget_file_c`;
 * Call interface `PsdkWidget_SetDefaultUiConfigByBinaryArray` and `PsdkWidget_RegUiConfigByBinaryArray`could install the configuration files.
 
 > Reference
@@ -347,7 +348,7 @@ Table 1 The relationship of the widget and reserved button.
     </tr>
      <tr>
       <td>Slider</td>
-      <td>Left and right levers: LD / RD </td>
+      <td>Left and right levers: LS / RS </td>
       <td>Toggle: Toggle the lever to trigger the slider control, which can modify the slider value.</td>
     </tr>
        <tr>

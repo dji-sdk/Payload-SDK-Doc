@@ -80,9 +80,11 @@ the command of compile is as follows:
   * Execute command `./demo_linux_ubuntu`  
 
 ## Binding
-Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload will run the sample.
+After binding Skyport V2 with the sample on the DJI Assistant 2, when the payload mounted on the drone, the payload will run the sample automatically.
 
-> **NOTE:** Please turn on the Data Authorization in the DJI Assistant 2 before debugging the payload.
+> **NOTE** 
+> * Please turn on the Data Authorization in the DJI Assistant 2 before debugging the payload.
+> * After binding Skyport V2, if you need using the same Skyport V2 on different drones, you didn't need to re-bind the sample.
 
 1. Mount the payload or development board(such as STM32F407IGH6-EVAL) on the drone and connect the drone to computer.
 2. Use your account to login the DJI Assistant 2 ，click the “Payload SDK ”tab,enter the PSDK Hardware Platform interface.
@@ -90,8 +92,8 @@ Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload
 4. The status of PSDK Hardware Platform is `Bound`.
 5. The payload will run the sample program automatically.
 
-### Troubleshooting
-#### Skyport Troubleshooting
+## Binding Troubleshooting
+#### 1. Skyport Troubleshooting
 <table id="3">
   <thead>
     <tr>
@@ -135,7 +137,7 @@ Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload
     </tbody>
 </table>
 
-#### Services Troubleshooting
+#### 2. Services Troubleshooting
 <table id="3">
   <thead>
     <tr>
@@ -174,7 +176,7 @@ Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload
      </tbody>
 </table>
 
-#### DJI Assistant 2 Troubleshooting
+#### 3. DJI Assistant 2 Troubleshooting
 <table id="3">
   <thead>
     <tr>
@@ -200,3 +202,8 @@ Use DJI Assistant 2 to bind the payload to the DJI drone, after that the payload
     </tr>
     </tbody>
 </table>
+
+## Compile Troubleshooting
+#### When using Keil MDK to compile the sample code, an error is reported: "error: L6050U"
+* Cause: Keil MDK is not activated.
+* Solution: Please activate Keil MDK before compiling the sample code with Keil MDK.

@@ -50,7 +50,7 @@ if (PsdkCore_Init(&userInfo) != PSDK_RETURN_CODE_OK) {
 > * 若PSDK 初始化失败，请根据初始化失败的返回码检查负载设备初始化的顺序和对应接口的配置信息。
 
 ## 设置负载设备别称
-使用PSDK 开发的负载设备支持开发者设置负载设备的别称，若未设置负载设备的名称，DJI Pilot 或基于MSDK 开发的移动端APP 将显示注册PSDK 应用时设置的名称。
+使用PSDK 开发的负载设备支持开发者设置负载设备的别称，设置别称后DJI Pilot 或基于MSDK 开发的移动端APP 将显示负载设备的别称。若未设置负载设备的别称，DJI Pilot 或基于MSDK 开发的移动端APP 将显示注册PSDK 应用时设置的名称。
 
 ```c
 if (PsdkProductInfo_SetAlias("PSDK_APPALIAS") != PSDK_RETURN_CODE_OK) {

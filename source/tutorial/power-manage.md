@@ -30,6 +30,7 @@ static T_PsdkReturnCode PsdkTest_HighPowerApplyPinInit(void)
     return PSDK_RETURN_CODE_OK;
 }
 ```
+> **NOTE：** Please refer to the library of the development platform to init the pins to apply for the high power。
 
 ### 2. Develop and register functions to change the state of the payload pins
 1.Develop and register the function to change the status of the payload pins     

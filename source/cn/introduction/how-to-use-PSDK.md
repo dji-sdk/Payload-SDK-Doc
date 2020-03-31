@@ -24,7 +24,7 @@ keywords: [注册, 选购, 入门, 学习, 进阶, 高级]
 > **注意**
 > * X-Port 和Skyport V2 仅支持使用**PSDK V2.x.x**；
 > * Skyport 仅支持使用**PSDK V1.x.x** ；
-> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和Skyport 的维护，建议使用**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
+> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和Skyport 的开发，建议使用**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
 
 ## DJI PSDK 开发引导
 
@@ -64,5 +64,5 @@ DJI 秉承**开放共赢**的合作理念，为开发者提供技术支持、负
 * 在<a href="https://djisdksupport.zendesk.com/hc/zh-cn/community/topics">DJI 技术支持社区</a>中寻求帮助  
 
 * 获取技术支持服务  
-	* 使用<a herf="https://formcrafts.com/a/dji-developer-feedback-cn">问题反馈</a>表单  
-	* 向DJI SDK 团队，发送<a href="mailto:dev@dji.com">邮件</a>
+    * 使用<a herf="https://formcrafts.com/a/dji-developer-feedback-cn">问题反馈</a>表单  
+    * 向DJI SDK 团队发送<a href="mailto:dev@dji.com">邮件</a>

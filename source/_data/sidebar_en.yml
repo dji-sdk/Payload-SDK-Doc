@@ -103,3 +103,6 @@
     -
       title: "FAQs"
       path: "/faq/index.html"
+    -
+      title: "FAQs(For PSDK 1.5.0)"
+      path: "/faq/faq-PSDK-1.5.0-en.html"

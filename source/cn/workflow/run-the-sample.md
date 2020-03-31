@@ -78,13 +78,15 @@ keywords: [Payload SDK]
   * 使用`./demo_linux_ubuntu`命令运行示例程序  
 
 ## 应用绑定
-通过DJI Assistant 2 将负载设备绑定到DJI 的无人机后，负载设备将运行示例程序。
+通过DJI Assistant 2 将Skyport V2 与示例程序绑定后，当负载设备挂载在无人机上时，负载设备将自动运行开发者编译或烧录的示例程序。
 
-> **注意：** 使用DJI Assistant 2 调试负载设备时，请先在软件右上角的“配置”标签中打开 **“数据授权”** 开关，否则DJI Assistant 2 将无法正常调试负载设备。
+> **说明** 
+> * 使用DJI Assistant 2 绑定或调试负载设备时，请先在软件右上角的“配置”标签中打开 **“数据授权”** 开关，否则DJI Assistant 2 将无法正常绑定或调试负载设备。
+> * 初次绑定Skyport V2 后，在不同的无人机上使用同一个Skyport V2 时，无需重新绑定示例程序。
 
 1. 将负载设备（如Manifold 2-C）或开发板（如STM32F407IGH6-EVAL）挂载在DJI 的无人机上，同时将DJI 的无人机连接到计算机；
 2. 使用**应用信息**中的**账号**登陆DJI Assistant 2 ，单击“Payload SDK ”选项卡，进入PSDK 硬件平台界面；
-3. 在PSDK 硬件平台界面，单击“绑定”按钮，实现硬件平台、示例程序和DJI 无人机的绑定；
+3. 在PSDK 硬件平台界面，单击“绑定”按钮，绑定硬件平台、示例程序和DJI 无人机；
 4. 绑定成功后，PSDK 硬件平台界面中的绑定状态将显示为`已绑定`，如 图2. 应用绑定 所示；
 5. 应用绑定成功后，负载设备将自动运行示例程序。
 
@@ -95,9 +97,8 @@ keywords: [Payload SDK]
       <img src="../../images/binding.png" width="600" style="vertical-align:middle" alt/></span></p>
 </div></div>
 
-
-### 绑定故障排查
-#### Skyport 故障排查
+## 绑定故障排查
+#### 1. Skyport V2 故障排查
 <table id="3">
   <thead>
     <tr>
@@ -115,7 +116,7 @@ keywords: [Payload SDK]
     <tr>
       <td>2</td>
       <td>开发者账号非法</td>
-      <td>请确认应用程序中的用户信息与绑定转接环的用户信息相同</td>
+      <td>请确认负载设备控制程序中的用户信息与所绑定的转接环的用户信息相同</td>
     </tr>
     <tr>
       <td>3</td>
@@ -141,7 +142,7 @@ keywords: [Payload SDK]
     </tbody>
 </table>
 
-#### 应用服务故障排查
+#### 2. 应用服务故障排查
 <table id="3">
   <thead>
     <tr>
@@ -180,7 +181,7 @@ keywords: [Payload SDK]
     </tbody>
 </table>
 
-#### 调参软件故障排查
+#### 3. 调参软件故障排查
 <table id="3">
   <thead>
     <tr>
@@ -206,3 +207,10 @@ keywords: [Payload SDK]
     </tr>
     </tbody>
 </table>
+
+
+## 编译故障排查
+#### 使用Keil MDK 编译示例代码时报错：“error：L6050U”
+* 故障原因：Keil MDK 未激活。
+* 解决方法：使用Keil MDK编译示例代码前请先激活Keil MDK。
+

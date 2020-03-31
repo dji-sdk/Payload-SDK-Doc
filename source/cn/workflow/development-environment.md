@@ -20,7 +20,7 @@ keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
     * Hex Converter:          FromElf.exe V5.06 update 6 (build 750)
 
 * 使用Keil软件    
-激活Keil MDK 软件后，使用Keil Pack Installer 或<a href="http://www.keil.com/dd2/Pack/" target="_blank">手动下载</a>最新的STM32F4xx_DFP.2.x.x 驱动包，如 图1.安装Pack 包 所示。
+**激活Keil MDK 软件**后，使用Keil Pack Installer 或<a href="http://www.keil.com/dd2/Pack/" target="_blank">手动下载</a>最新的STM32F4xx_DFP.2.x.x 驱动包，如 图1.安装Pack 包 所示。
 <div>
 <div style="text-align: center"><p>图1.安装Pack 包</p>
 </div>
@@ -35,4 +35,3 @@ keywords: [环境搭建, 配置开发环境, PSDK 开发环境]
 * C编译器： GCC 5.4.0/5.5.0 版本
 * CMake：2.8 及以上版本
 * ffmpeg：4.1.3 及以上版本  （可选）
-

@@ -51,8 +51,8 @@ if (PsdkCore_Init(&userInfo) != PSDK_RETURN_CODE_OK) {
 > * After initialized all the functions, developer must call the `PsdkCore_ApplicationStart()` to start the function, otherwise, the Mobile APP cannot control the payload.
 > * If the initialization is failed, please check the initialization sequence of the payload and the configuration of the corresponding interface according to the return code.
 
-## Set The Nickname
-The payload developed based on PSDK supports developer to set the nickname name for the payload, if not, DJI Pilot or Mobile APP developed based on MSDK will display the name which was registered in the [User Center](https://developer.dji.com/user/apps/#all).
+## Set The Alias
+The payload developed based on PSDK supports developer to set the alias for the payload, and the DJI Pilot or the Mobile APP developed based on MSDK will display the alias of the payload. If not, DJI Pilot or Mobile APP developed based on MSDK will display the name which was registered in the [User Center](https://developer.dji.com/user/apps/#all).
 
 ```c
 if (PsdkProductInfo_SetAlias("PSDK_APPALIAS") != PSDK_RETURN_CODE_OK) {

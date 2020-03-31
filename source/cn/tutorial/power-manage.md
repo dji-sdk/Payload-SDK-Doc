@@ -28,6 +28,7 @@ static T_PsdkReturnCode PsdkTest_HighPowerApplyPinInit(void)
     return PSDK_RETURN_CODE_OK;
 }
 ```
+> **说明：** 请根据所选用的开发平台支持的库，实现初始化申请高功率引脚的功能。
 
 ### 2. 开发并注册改变负载设备引脚电平状态的函数
 1.开发改变负载设备引脚电平状态的函数      

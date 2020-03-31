@@ -128,7 +128,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 
 >**说明** 
 > * 仅Linux 系统支持使用“设置高速数据传输通道带宽占用比例”的功能；
-> * 视频流、数据流和下载流所占高速数据传输通道带宽的默认比例分别为33％，33％和34％。
+> * 未使用流量控制功能时，视频、数据和媒体下载类型的数据占高速数据传输通道带宽的默认比例分别为33％，33％和34％。
 
 
 ### 3. 实现数据发送功能
@@ -288,7 +288,9 @@ if (psdkStat == PSDK_RETURN_CODE_OK) {
 <div>
 <div style="text-align: center"><p>图7.数据传输 </p>
 </div>
-<div style="text-align: center"><p><span>
-      <img src="../../images/data_transmission_channel_state(command%20channel).png" width="500" alt/>
-      <img src="../../images/data_transmission_channel_state(data%20stream).png" width="500" alt/></span></p>
+<div style="text-align: center"><p>
+      <img src="../../images/data_transmission_channel_state(command channel).png" width="500" alt/></p>
+</div>
+<div style="text-align: center"><p>
+      <img src="../../images/data_transmission_channel_state(data stream).png" width="500" alt/></p>
 </div></div>

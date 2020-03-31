@@ -26,7 +26,7 @@ Download and install the software:
     * Hex Converter:          FromElf.exe V5.06 update 6 (build 750)
 
 * Use Keil    
-After activation of the Keil MDK, use Keil Pack Installer or <a href="http://www.keil.com/dd2/Pack/" target="_blank">download</a> the newest driver of STM32F4xx_DFP.2.x.x.
+After **activated** the Keil MDK , please use Keil Pack Installer or <a href="http://www.keil.com/dd2/Pack/" target="_blank">download</a> the newest driver of STM32F4xx_DFP.2.x.x.
 <div>
 <div style="text-align: center"><p>Figure 1 Install the Pack</p>
 </div>

@@ -117,11 +117,10 @@ PsdkLogger_UserLogDebug("psdk log console test.");
 
 >**NOTE:** The level of the log is Info, so that the log which level is Info、Warn and Error printed on the terminal, the Debug is not.
 
-## Filter
-
+## Debug
 * Linux:
-  * Clion IDE:[Grep Console](https://plugins.jetbrains.com/plugin/7125-grep-console/)
-  * Command:Execute`./demo_linux_ubuntu | grep 'Info'`to obtain the log which on the payload, for details please use `man grep`
+  * Clion IDE:Use [Grep Console](https://plugins.jetbrains.com/plugin/7125-grep-console/) to filter the log
+  * Command:Execute`./demo_linux_ubuntu | grep 'Info'`to filter the log, for details please use `man grep`
 
-* RTOS:SecureCRT、XShell or Putty
+* RTOS:SecureCRT、XShell or Putty 
 

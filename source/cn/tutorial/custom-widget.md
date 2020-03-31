@@ -30,8 +30,9 @@ keywords: [控件, 自定义, 自定义控件]
 </div></div>
 
 > **说明** 
-> * 配置界面仅支持显示一个“文本输入框”控件。
+> * 配置界面仅支持显示一个“文本输入框”控件，该文本框最多支持输入128个字节的字符。
 > * 使用PSDK 开发的负载设备通过`PsdkDataTransmission_RegReceiveDataFromMobileCallback(ReceiveDataFromMobile)`函数能够获取用户在DJI Pilot **文本输入框控件**中向负载设备发送的信息（编码格式为UTF-8）。
+> * 受日志长度的影响，用户所输入的字符可能不会被全部显示出来。
 
 ### 控件配置文件
 >**说明**
@@ -207,7 +208,7 @@ keywords: [控件, 自定义, 自定义控件]
 RTOS 系统不支持文件系统，请按如下步骤将配置文件转换为`.h`类型的文件：
 
 * 使用`tools/file2c`目录下的工具`file2c`，将**所有的**自定义控件配置文件生成 `.h` 头文件，详细说明请参见目录下 `Readme.txt` 文件；
-* `.h `头文件在`sample/widget/widget_file_c`目录下；
+* `.h `头文件在`sample/api_sample/widget/widget_file_c`目录下；
 * 调用接口`PsdkWidget_SetDefaultUiConfigByBinaryArray`和`PsdkWidget_RegUiConfigByBinaryArray`调用控件配置文件。
 
 > 配置参考文件
@@ -345,7 +346,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
     </tr>
      <tr>
       <td>滑块</td>
-      <td>左右拨杆：LD/RD </td>
+      <td>左右拨杆：LS/RS </td>
       <td>拨动触发：拨动拨杆触发滑块控件，可修改滑块数值</td>
     </tr>
        <tr>

@@ -178,7 +178,9 @@ static T_PsdkReturnCode GetMode(E_PsdkCameraMode *mode)
 
 ## Develop with the Shoot Photos
 
-> **NOTE:** Before using the shoot photos, the user needs to set the camera mode on the DJI Pilot or Mobile APP developed based on MSDK.
+> **NOTE** 
+> * Before using this function, the user needs to set the camera mode on the DJI Pilot or Mobile APP which developed based on MSDK.
+> * When using the payload developed by PSDK to shoot photos, the shooting status will be returned to the DJI Pilot or mobile APP based on MSDK (to triggering mobile app shooting sounds).
 
 #### 1. Set the camera mode
 The program of the payload which developed based on PSDK uses the interface`SetShootPhotoMode` and `GetShootPhotoMode` to set and get the camera's mode. User use Mobile APP developed based on MSDK could set or get the mode of the payload.

@@ -17,5 +17,5 @@ keywords: [开发须知, 硬件选购, 软件版本, 固件版本]
 >**注意**
 > * X-Port 和Skyport V2 仅支持使用**PSDK V2.x.x**；
 > * Skyport 仅支持使用**PSDK V1.x.x** ；
-> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和**Skyport** 的维护，建议使**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备；
+> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和**Skyport** 的开发，建议使**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备；
 > * 若您仍使用**PSDK V1.x.x** 和**Skyport** 开发负载设备，请使用[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档。

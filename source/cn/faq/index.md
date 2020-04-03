@@ -37,7 +37,7 @@ DJI **不支持**开发者使用PSDK 开发带有大规模杀伤性质的**武�
 
 ##### 2. 开发负载设备是否必须购买硬件平台？
 PSDK 硬件平台是使用PSDK 开发负载设备的必要工具，开发者可以根据实际的需要购买如下硬件平台，有关硬件平台的详细说明请参见[硬件平台](../guide/hardware.html)。
-* X-Port 标准云台
+* [X-Port](https://store.dji.com/cn/product/dji-x-port)标准云台
 * [Payload SDK 开发套件 2.0](https://store.dji.com/cn/product/psdk-development-kit-v2)
 * [Payload SDK 开发板套装](https://store.dji.com/cn/product/psdk-development-kit)
 >**提示：** 当负载设备进入量产阶段后，开发者可购买硬件平台套装，如[DJI SKYPORT 转接环套装 V2](https://store.dji.com/cn/product/dji-skyport-adapter-set-v2) 或[DJI SKYPORT 转接环套装](https://store.dji.com/cn/product/dji-skyport-adapter-set) 降低负载设备批量生产的成本。

@@ -11,6 +11,14 @@ keywords: [开发套件, SkyPort, Skyport V2, Skyport , X-Port, 负载, 拓展�
 
 ## 购买开发套件
 
+#### X-Port
+借助<a href="https://store.dji.com/cn/product/dji-x-port">X-Port</a> 开发者能够快速开发出可挂载在DJI 无人机上具有云台功能的负载设备，降低开发负载设备的成本。    
+X-Port 包含如下配件：    
+<div>
+<div><p><span>
+      <img src="../../images/XPort.png" width="800" alt/></span></p>
+</div></div>
+
 #### Skyport V2
 借助<a href="https://store.dji.com/cn/product/psdk-development-kit-v2">Skyport V2</a> 开发套件中的接口拓展板，开发者能够使用第三方开发板开发负载设备。    
 Skyport V2 包含如下配件：    

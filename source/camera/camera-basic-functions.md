@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Camera, basic functions, camera mode, photo, video]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 PSDK provides the function to control the camera-type payload to take photo、video、zoom and focus, after developed the function by themselves, developer should register the function in the specified interfaces of the PSDK, and then, user use DJI Pilot and Mobile APP which developed based on MSDK not only could control the payload but also obtain the information and files from the payload.

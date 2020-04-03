@@ -2,9 +2,9 @@
 title: Development Platform
 date: 2020-01-17
 version: 2.0.0
-keywords: [development kit, Skyport V2, Skyport, X-Port, payload, ]
+keywords: [development kit, SkyPort V2, SkyPort, X-Port, payload, ]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 According to the features、resource usage and toolchain to choose the OS and the development platform for the payload.
 

@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Power management, shut down information]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 After the payload which developed based on PSDK mounted on the drone, the payload could apply the higher power from the drone, therefore, the payload with the high power must also support the low power. The PSDK also provides the power off notification for the payload to avoid damage or lose the data.
@@ -68,7 +68,7 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 ```
 
 ### 3.High Power Apply
-The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the Skyport V2 and X-Port.
+The payload calls the interface `PsdkPowerManagement_ApplyHighPowerSync()` to apply the high power from the drone. After that use the voltmeters could measure the voltage of the output interfaces which on the SkyPort V2 and X-Port.
 
 ```c
 psdkStat = PsdkPowerManagement_ApplyHighPowerSync();

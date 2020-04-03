@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Time synchronization]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Time Synchronization is a function that synchronizes the time in the payload with the time in the drone, PSDK uses the PPS signal (periodic pulse) to synchronize the time between the payload and the drone, which the drone has RTK, the payload with the "Time Synchronization" function is convenient for the user to use the log、analyze the data and Get the accurate positioning information, etc.

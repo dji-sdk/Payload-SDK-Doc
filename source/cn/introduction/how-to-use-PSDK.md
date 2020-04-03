@@ -22,9 +22,9 @@ keywords: [注册, 选购, 入门, 学习, 进阶, 高级]
 * 选择[开发平台](../guide/platform.html)
 
 > **注意**
-> * X-Port 和Skyport V2 仅支持使用**PSDK V2.x.x**；
-> * Skyport 仅支持使用**PSDK V1.x.x** ；
-> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和Skyport 的开发，建议使用**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
+> * X-Port 和SkyPort V2 仅支持使用**PSDK V2.x.x**；
+> * SkyPort 仅支持使用**PSDK V1.x.x** ；
+> * DJI 已于 **2020年 2月 1日**停止对**PSDK V1.x.x** 和SkyPort 的开发，建议使用**X-Port** 或**SkyPort V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
 
 ## DJI PSDK 开发引导
 

@@ -7,9 +7,9 @@ keywords: [相机码流, 标准, 负载标准, 设备干扰, 硬件标准, 结�
 为确保无人机在搭载负载设备执行飞行任务时的安全，请在使用PSDK 开发负载设备时，遵循DJI 的负载设备开发标准。
 
 > **注意** 
-> * X-Port 和Skyport V2 仅支持使用**PSDK V2.x.x**；
-> * Skyport 仅支持使用**PSDK V1.x.x** ；
-> * DJI 将在 **2020年 2月 1日**停止对**PSDK V1.x.x** 和Skyport 的开发，建议使用**X-Port** 或**Skyport V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
+> * X-Port 和SkyPort V2 仅支持使用**PSDK V2.x.x**；
+> * SkyPort 仅支持使用**PSDK V1.x.x** ；
+> * DJI 已于 **2020年 2月 1日**停止对**PSDK V1.x.x** 和SkyPort 的开发，建议使用**X-Port** 或**SkyPort V2** 在**PSDK V2.x.x** 的基础上开发负载设备。
 
 >**本文所指** 
 > * “移动端APP” 为使用MSDK 开发的移动端APP 或DJI Pilot。
@@ -39,11 +39,11 @@ keywords: [相机码流, 标准, 负载标准, 设备干扰, 硬件标准, 结�
   <td>13.6V / 2A</td>
  </tr>
  <tr>
-  <td>Skyport V2</td>
+  <td>SkyPort V2</td>
   <td>13.6V / 4A</td>
  </tr>
  <tr>
-  <td>Skyport</td>
+  <td>SkyPort</td>
   <td>13.6V / 4A</td>
  </tr>
  <tr>
@@ -52,14 +52,14 @@ keywords: [相机码流, 标准, 负载标准, 设备干扰, 硬件标准, 结�
   <td>17V / 2.5A</td>
  </tr>
  <tr>
-  <td>Skyport V2</td>
+  <td>SkyPort V2</td>
   <td>17V / 4A</td>
  </tr>
  <tr>
   <td>PPS 引脚电压</td>
   <td rowspan="3">X-Port</br>
-    Skyport V2</br>
-    Skyport</td>
+    SkyPort V2</br>
+    SkyPort</td>
   <td>≤3.3V</td>
  </tr>
  <tr>
@@ -72,14 +72,14 @@ keywords: [相机码流, 标准, 负载标准, 设备干扰, 硬件标准, 结�
  </tr>
  <tr>
   <td>CAN接口引脚</td>
-  <td>Skyport</td>
+  <td>SkyPort</td>
   <td>须遵循CAN 协议</td>
  </tr>
 </tbody>
 </table>
 
 ##### 使用 M200 Series
-> **说明：** DJI M200 Series 仅支持挂载使用<b>Skyport</b> 开发的负载设备。
+> **说明：** DJI M200 Series 仅支持挂载使用<b>SkyPort</b> 开发的负载设备。
 <table>
 <thead>
 <tr>
@@ -297,7 +297,7 @@ X-Port 标准云台的结构如 图1. X-Port 标准云台 所示：
 
 ##### 使用M200 Series
 
-> **说明：** DJI M200 Series 仅支持使用<b>Skyport</b> 开发的负载设备与移动端APP 间传输数据信息。
+> **说明：** DJI M200 Series 仅支持使用<b>SkyPort</b> 开发的负载设备与移动端APP 间传输数据信息。
 <table>
 <thead>
     <tr>

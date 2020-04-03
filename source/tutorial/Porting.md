@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Porting, PSDK, Hal, Osal]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 Port the payload control program developed based on PSDK to a different OS and Platforms, developer need to initialize the Hal and Osal layer, and register key configuration information firstly; loading the static library, resource file, and declaring a structure to set the basic information; at last, use the specified interface to register the Platform module in the control program to obtain hardware resources and operating system resources.
 

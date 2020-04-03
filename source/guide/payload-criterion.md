@@ -5,10 +5,10 @@ version: 2.0.0
 keywords: [camera stream, standard, payload standard, equipment interference, hardware, PSDK structure, data transmission, video]
 ---
 > **NOTE** 
-> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * It is recommended to use **PSDK V2.xx** with the **X-Port** or **Skyport V2** to develop the payload.
-> * X-Port and Skyport V2 only support the **PSDK V2.xx**
-> * Skyport only supports the **PSDK V1.xx**
+> * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * It is recommended to use **PSDK V2.xx** with the **X-Port** or **SkyPort V2** to develop the payload.
+> * X-Port and SkyPort V2 only support the **PSDK V2.xx**
+> * SkyPort only supports the **PSDK V1.xx**
 > * The Mobile APP is DJI Pilot or a Mobile APP developed by MSDK.
 > * The Payload is a device developed by PSDK.
 > * The onboard computer is a computing device, such as Manifold, running a drone control program based on OSDK.
@@ -37,11 +37,11 @@ keywords: [camera stream, standard, payload standard, equipment interference, ha
   <td>13.6V / 2A</td>
  </tr>
  <tr>
-  <td>Skyport V2</td>
+  <td>SkyPort V2</td>
   <td>13.6V / 4A</td>
  </tr>
  <tr>
-  <td>Skyport</td>
+  <td>SkyPort</td>
   <td>13.6V / 4A</td>
  </tr>
  <tr>
@@ -50,14 +50,14 @@ keywords: [camera stream, standard, payload standard, equipment interference, ha
   <td>17V / 2.5A</td>
  </tr>
  <tr>
-  <td>Skyport V2</td>
+  <td>SkyPort V2</td>
   <td>17V / 4A</td>
  </tr>
  <tr>
   <td>PPS</td>
   <td rowspan="3">X-Port</br>
-    Skyport V2</br>
-    Skyport</td>
+    SkyPort V2</br>
+    SkyPort</td>
   <td>≤3.3V</td>
  </tr>
  <tr>
@@ -70,14 +70,14 @@ keywords: [camera stream, standard, payload standard, equipment interference, ha
  </tr>
  <tr>
   <td>CAN</td>
-  <td>Skyport</td>
+  <td>SkyPort</td>
   <td>CAN Protocol</td>
  </tr>
 </tbody>
 </table>
 
 ##### Use M200 Series
-> **NOTE:** DJI M200 Series only support <b>Skyport</b>。
+> **NOTE:** DJI M200 Series only support <b>SkyPort</b>。
 <table>
 <thead>
 <tr>
@@ -297,7 +297,7 @@ The requirements of the payload which is mounted on the X-Port is as follows:
 
 ##### use M200 Series
 
-> **NOTE:** DJI M200 Series only supports <b>Skyport</b> to transfer the data to Mobile APP, which developed based on MSDK.
+> **NOTE:** DJI M200 Series only supports <b>SkyPort</b> to transfer the data to Mobile APP, which developed based on MSDK.
 
 <table>
 <thead>

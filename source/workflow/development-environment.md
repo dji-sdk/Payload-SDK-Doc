@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [environment, configuration development environment, PSDK development environment]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.s's
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.s's
 
 This article describes the process of setting up the software environment. After connecting the hardware and setting up the software environment, the developer could create the project and run the sample code.
 

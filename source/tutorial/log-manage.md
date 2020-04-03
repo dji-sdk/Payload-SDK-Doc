@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Payload SDK, log]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 The log management of PSDK supports four types of the log: Debug, Info, Warn, and Error by eight methods such as serial port, terminal, or USB. The terminal tools such as Putty could display the colors of the log.    

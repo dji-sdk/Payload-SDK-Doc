@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [information subscription, information collection, information, information acquisition]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Information management includes information acquisition and message subscription. The payload developed based on PSDK have information acquisition function, and could obtain information such as drone's model、mounted position, and some information about the Mobile APP. The message subscription could record data that subscribed by user, it is convenient for the user to use this function.   

@@ -9,7 +9,7 @@ Use the <a href="https://djisdksupport.zendesk.com/hc/en-us/community/topics">DJ
 
 ##### 1. Which drone is Payload SDK compatible with?
 Payload SDK currently only supports the Matrice 200 series and Matrice 200 V2 series. For details, please refer to the [Parameter Comparison Page](https://www.dji.com/en/products/compare-m200-series?site=brandsite&from=nav).     
-DJI provides X-Port, Skyport V2 and Skyport that are compatible with Matrice 200 series and Matrice 200 V2 series. Please read the [Payload Criterion](https://developer.dji.com/payload-sdk/documentation/guide/payload-criterion.html) carefully before developing the payload and purchasing the drone.     
+DJI provides X-Port, SkyPort V2 and SkyPort that are compatible with Matrice 200 series and Matrice 200 V2 series. Please read the [Payload Criterion](https://developer.dji.com/payload-sdk/documentation/guide/payload-criterion.html) carefully before developing the payload and purchasing the drone.     
 
 ##### 2. What is Development Mode? 
 * <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">Resigned</a> as an user of the PSDK, the developer's mode is the Development Mode.

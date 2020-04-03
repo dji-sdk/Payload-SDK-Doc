@@ -2,34 +2,34 @@
 title: Hardware Platform
 date: 2020-01-17
 version: 2.0.0
-keywords: [development kit, Skyport, Skyport V2, X-Port, payload, ]
+keywords: [development kit, SkyPort, SkyPort V2, X-Port, payload, ]
 ---
 > **NOTE** 
-> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * X-Port and Skyport V2 only support **PSDK V2.x.x**.
-> * Skyport only supports **PSDK V1.x.x**.
-> * DJI recommended developers use **PSDK V2.xx** with **X-Port** or **Skyport V2** to develop payload.
+> * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * X-Port and SkyPort V2 only support **PSDK V2.x.x**.
+> * SkyPort only supports **PSDK V1.x.x**.
+> * DJI recommended developers use **PSDK V2.xx** with **X-Port** or **SkyPort V2** to develop payload.
 
-Developers use the X-Port or Skyport could obtain the resources from DJI‘s drone to develop the payload such as cameras, searchlights, and radar, etc.
+Developers use the X-Port or SkyPort could obtain the resources from DJI‘s drone to develop the payload such as cameras, searchlights, and radar, etc.
 
 ## Development Kit
 
-#### Skyport V2
+#### SkyPort V2
 Using the expansion-board, developers can choose third-party development boards to develop payload.     
-<a href="https://store.dji.com/product/psdk-development-kit-v2">Skyport V2 </a>includes components is as follows:
+<a href="https://store.dji.com/product/psdk-development-kit-v2">SkyPort V2 </a>includes components is as follows:
 <div>
 <div style="text-align: left"><p><span>
-      <img src="../images/V1-en.png" width="800" alt/></span></p>
+      <img src="../images/V2-en.png" width="800" alt/></span></p>
 </div></div>
 
 > **NOTE:** The value meal for the mass production stage to purchase the <a href="https://store.dji.com/product/dji-skyport-adapter-set-v2">DJI SKYPORT Adapter Set</a>.
 
-#### Skyport
+#### SkyPort
 Using the payload development-board, developers do not need to purchase a third-party development board.     
-<a href="https://store.dji.com/product/psdk-development-kit">Skyport</a> includes components is as follows:  
+<a href="https://store.dji.com/product/psdk-development-kit">SkyPort</a> includes components is as follows:  
 <div>
 <div style="text-align: left"><p><span>
-      <img src="../images/V2-en.png" width="800" alt/></span></p>
+      <img src="../images/V1-en.png" width="800" alt/></span></p>
 </div></div>
 
 > **NOTE:** The value meal for the mass production stage to purchase the <a href="https://store.dji.com/product/psdk-ribbon-cable-set">PSDK Ribbon Cable Set
@@ -42,8 +42,8 @@ Using the payload development-board, developers do not need to purchase a third-
     <tr>
       <th style="border:none">   </th>
       <th style="border:none;text-align:center">X-Port</th>
-      <th style="border:none;text-align:center">Skyport V2</th>
-      <th style="border:none;text-align:center">Skyport </th>
+      <th style="border:none;text-align:center">SkyPort V2</th>
+      <th style="border:none;text-align:center">SkyPort </th>
     </tr>
   </thead>
   <tbody>
@@ -124,7 +124,7 @@ Using the payload development-board, developers do not need to purchase a third-
       <td style="border-right: none;text-align:left;border-left: none;"><b>Drone</b></td>
       <td colspan="2" style="border-right: none;border-left: none;">Matrice 200 V2</br>Matrice 210 V2 </br> Matrice 210 RTK V2    
      </td>
-      <td style="border-right: none;">Matrice 200、Matrice 200 V2</br>Matrice 210、Matrice 210 RTK</br>Matrice 210 V2 、Matrice 210 RTK V2</td>
+      <td style="border-right: none;"> • Matrice 200 Series V1: Matrice 200、Matrice 210、Matrice 210 RTK</br> • Matrice 200 Series V2: Matrice 200 V2、Matrice 210 V2 、Matrice 210 RTK V2</td>
     </tr>
   </tbody>
 </table>

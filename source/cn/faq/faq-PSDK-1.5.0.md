@@ -5,20 +5,20 @@ keywords: [FAQ, 常见问题]
 ---
 为方便您快速解决所遇到的问题，建议您先在<a href="https://djisdksupport.zendesk.com/hc/zh-cn/community/topics">DJI 技术支持社区</a>中寻找解决问题的方法；若您的问题无法解决或有其他咨询事项，请使用<a herf="https://formcrafts.com/a/dji-developer-feedback-cn">问题反馈</a>表单反馈问题，或向DJI SDK 团队发送<a href="mailto:dev@dji.com">邮件</a>，DJI 感谢您的支持和关注。
 
-> **注意：** DJI 将在 2020年 2月 1日停止对PSDK V1.x.x 和Skyport 的开发，建议使[X-Port](https://store.dji.com/cn/product/dji-x-port) 或Skyport V2 在PSDK V2.x.x 的基础上开发负载设备。
+> **注意：** DJI 已于 2020年 2月 1日停止对PSDK V1.x.x 和SkyPort 的开发，建议使[X-Port](https://store.dji.com/cn/product/dji-x-port) 或SkyPort V2 在PSDK V2.x.x 的基础上开发负载设备。
 
-## Skyport 常见问题
-#### Skyport 同轴线端口接插座型号的什么
+## SkyPort 常见问题
+#### SkyPort 同轴线端口接插座型号的什么
 DF56C-40S-0.3V
 
-#### Skyport绑定应用程序时提示“固件异常”
+#### SkyPort绑定应用程序时提示“固件异常”
 请检查DJI Assistant 2 的版本（2.0.8 及以上），否则请将DJI Assistant 2 升级到最新版本。
 
-#### 如何更改Skyport 的固件 ？
-如需更改Skyport 的固件版本，请修改PSDK 示例代码`app_infor.h`文件中的版本号。
-指定版本号后，用户将无法使用Skyport 最新的固件。
+#### 如何更改SkyPort 的固件 ？
+如需更改SkyPort 的固件版本，请修改PSDK 示例代码`app_infor.h`文件中的版本号。
+指定版本号后，用户将无法使用SkyPort 最新的固件。
 
-#### Skyport绑定应用程序时，提示“开发者账号非法”
+#### SkyPort绑定应用程序时，提示“开发者账号非法”
 * 请确认登录DJI Assistant 2 、申请负载设备APP 和负载设备控制程序（app_info.h文件）中的账号为同一开发者账号。
 * 请确认已正确地将APP名称、APP ID及APP KEY 等信息填写到 app_info.h文件中。
 

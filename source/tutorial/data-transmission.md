@@ -5,7 +5,7 @@ version: 2.0.0
 keywords: [Payload SDK, Data Transmission]
 ---
 > **NOTE**
-> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 > * The Mobile APP is DJI Pilot or a Mobile APP developed by MSDK.
 > * The Payload is a device developed by PSDK.
 > * The onboard computer is a computing device, such as Manifold, running a drone control program based on OSDK.

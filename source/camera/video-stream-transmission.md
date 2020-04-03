@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Video Stream Transmission]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Before developed the video stream transmission for the payload, the developer needs to develop the function to get the video stream by themselves, according to the [H.264 Format](../guide/payload-criterion.html), after registered the function in the specified interfaces of the PSDK, user use DJI Pilot and Mobile APP which developed based on MSDK could control the payload to transfer the video stream to DJI Pilot or Mobile APP developed based on MSDK.  

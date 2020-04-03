@@ -8,7 +8,7 @@ keywords: [FAQ, 常见问题]
 ## 基础问题
 ##### 1. Payload SDK 支持哪些飞行平台？
 Payload SDK 目前仅支持Matrice 200 系列与Matrice 200 V2 系列的无人机，有关无人机参数的详细说明请参见[参数对比页面](https://www.dji.com/cn/products/compare-m200-series?site=brandsite&from=nav)。     
-DJI 提供了X-Port、Skyport V2 和Skyport 适配Matrice 200 系列与Matrice 200 V2 系列的无人机，请在开发负载设备和购买无人机前，认真阅读[负载开发标准](https://developer.dji.com/cn/payload-sdk/documentation/guide/payload-criterion.html)中的内容，正确选购所需使用的硬件平台。
+DJI 提供了X-Port、SkyPort V2 和SkyPort 适配Matrice 200 系列与Matrice 200 V2 系列的无人机，请在开发负载设备和购买无人机前，认真阅读[负载开发标准](https://developer.dji.com/cn/payload-sdk/documentation/guide/payload-criterion.html)中的内容，正确选购所需使用的硬件平台。
 
 ##### 2. 什么是开发模式？
 * <a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">注册</a>成为PSDK 的企业用户后，开发者所处的模式为开发模式。 

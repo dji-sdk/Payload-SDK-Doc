@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Payload SDK]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 After registering the account, please download the sample code and supplement the application information, after compiling, debugging, and burning and binding the DJI Hardware Platform to the drone on the DJI Assistant 2, you can run the program, With the help of those samples, you would know how to develop a payload.
 
@@ -80,11 +80,11 @@ the command of compile is as follows:
   * Execute command `./demo_linux_ubuntu`  
 
 ## Binding
-After binding Skyport V2 with the sample on the DJI Assistant 2, when the payload mounted on the drone, the payload will run the sample automatically.
+After binding SkyPort V2 with the sample on the DJI Assistant 2, when the payload mounted on the drone, the payload will run the sample automatically.
 
 > **NOTE** 
 > * Please turn on the Data Authorization in the DJI Assistant 2 before debugging the payload.
-> * After binding Skyport V2, if you need using the same Skyport V2 on different drones, you didn't need to re-bind the sample.
+> * After binding SkyPort V2, if you need using the same SkyPort V2 on different drones, you didn't need to re-bind the sample.
 
 1. Mount the payload or development board(such as STM32F407IGH6-EVAL) on the drone and connect the drone to computer.
 2. Use your account to login the DJI Assistant 2 ，click the “Payload SDK ”tab,enter the PSDK Hardware Platform interface.
@@ -93,7 +93,7 @@ After binding Skyport V2 with the sample on the DJI Assistant 2, when the payloa
 5. The payload will run the sample program automatically.
 
 ## Binding Troubleshooting
-#### 1. Skyport Troubleshooting
+#### 1. SkyPort Troubleshooting
 <table id="3">
   <thead>
     <tr>
@@ -120,7 +120,7 @@ After binding Skyport V2 with the sample on the DJI Assistant 2, when the payloa
     </tr>
     <tr>
       <td>4</td>
-      <td>Skyport verification failed.</td>
+      <td>SkyPort verification failed.</td>
     </tr>
     <tr>   
       <td>5</td>

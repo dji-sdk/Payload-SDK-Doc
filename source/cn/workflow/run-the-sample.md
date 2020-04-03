@@ -78,11 +78,11 @@ keywords: [Payload SDK]
   * 使用`./demo_linux_ubuntu`命令运行示例程序  
 
 ## 应用绑定
-通过DJI Assistant 2 将Skyport V2 与示例程序绑定后，当负载设备挂载在无人机上时，负载设备将自动运行开发者编译或烧录的示例程序。
+通过DJI Assistant 2 将SkyPort V2 与示例程序绑定后，当负载设备挂载在无人机上时，负载设备将自动运行开发者编译或烧录的示例程序。
 
 > **说明** 
 > * 使用DJI Assistant 2 绑定或调试负载设备时，请先在软件右上角的“配置”标签中打开 **“数据授权”** 开关，否则DJI Assistant 2 将无法正常绑定或调试负载设备。
-> * 初次绑定Skyport V2 后，在不同的无人机上使用同一个Skyport V2 时，无需重新绑定示例程序。
+> * 初次绑定SkyPort V2 后，在不同的无人机上使用同一个SkyPort V2 时，无需重新绑定示例程序。
 
 1. 将负载设备（如Manifold 2-C）或开发板（如STM32F407IGH6-EVAL）挂载在DJI 的无人机上，同时将DJI 的无人机连接到计算机；
 2. 使用**应用信息**中的**账号**登陆DJI Assistant 2 ，单击“Payload SDK ”选项卡，进入PSDK 硬件平台界面；
@@ -98,7 +98,7 @@ keywords: [Payload SDK]
 </div></div>
 
 ## 绑定故障排查
-#### 1. Skyport V2 故障排查
+#### 1. SkyPort V2 故障排查
 <table id="3">
   <thead>
     <tr>
@@ -125,7 +125,7 @@ keywords: [Payload SDK]
     </tr>
     <tr>
       <td>4</td>
-      <td>Skyport 校验失败</td>
+      <td>SkyPort 校验失败</td>
     </tr>
     <tr>   
       <td>5</td>

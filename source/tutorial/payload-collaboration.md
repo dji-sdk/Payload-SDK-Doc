@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Payload Coordination]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Payload coordination is a mode of controlling multiple payloads to work, searchlights and cameras in coordination could meet the needs of nighttime search; supplementary lights and zoom cameras in coordination could meet the needs of inspection tasks; the visible light camera and the spectrum camera in coordination could meet the needs of the detection task.

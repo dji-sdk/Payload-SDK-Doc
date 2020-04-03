@@ -5,8 +5,8 @@ version: 2.0.0
 keywords: [Gimbal Control]
 ---
 >**NOTE** 
-> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * The payload only developed by Skyport support to use the gimbal control.
+> * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * The payload only developed by SkyPort support to use the gimbal control.
 
 ## Overview 
 Using the "Gimbal Control" function of the PSDK, developers need to design the gimbal of the payload and develop the program to control the gimbal. After registering the gimbal control function to the interface specified by PSDK, the user can use the Mobile APP which developed by MSDK and controller could control the payload with gimbal function based on PSDK, and obtain relevant information such as attitude.
@@ -181,7 +181,7 @@ Using the gimbal control function, developer needs to develop gimbal control fun
 ### Develop the basic function 
 
 > **NOTE:** 
-please use Skyport V2 or Skyport to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
+please use SkyPort V2 or SkyPort to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
 
 #### 1. Initialization
 Before using the "Gimbal Control" to develop the payload, the developer needs to initialize the module of the gimbal control with the following code.

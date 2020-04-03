@@ -2,9 +2,9 @@
 title: Device Connection
 date: 2020-01-17
 version: 2.0.0
-keywords: [development kit, Skyport, Skyport V2, Skyport, X-Port, load, adapter ring]
+keywords: [development kit, SkyPort, SkyPort V2, SkyPort, X-Port, load, adapter ring]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 Figure 1 display the process of connection, that connected Hardware Platform、Payload Development Board、Expansion board and DJI drone.
 > **NOTE:** Some hardware interfaces that **were not described in this document** are temporarily unavailable.
@@ -20,7 +20,7 @@ Figure 1 display the process of connection, that connected Hardware Platform、P
 
 ## NOTICE
 * The details of the Hardware Platform, please refer to [Hardware Platform](../guide/hardware.html).
-* If you still use **PSDK V1.xx** and **Skyport** to develop payload, please find the "PSDK 1.0.0" document on the package.
+* If you still use **PSDK V1.xx** and **SkyPort** to develop payload, please find the "PSDK 1.0.0" document on the package.
 
 ## Use X-Port
 #### X-Port Pin 
@@ -78,25 +78,25 @@ Figure 2 shows the pin of X-Port. Use the cable to connect the X-Port to an expa
     * For a payload with a constant centroid, the payload must on the vertical line of the pitch axis;
     * For a zoom camera with a variable center of the centroid, the payload must on the vertical line of the pitch axis when the lens is at the maximum magnification.
 
-## Use Skyport V2
-Figure 3 shows the pin of Skyport V2. Use the cable to connect the Skyport V2 to an expansion board or a third-party development board on the Port1; use coaxial cable to connect Skyport V2 to the payload development board on the Port2.
+## Use SkyPort V2
+Figure 3 shows the pin of SkyPort V2. Use the cable to connect the SkyPort V2 to an expansion board or a third-party development board on the Port1; use coaxial cable to connect SkyPort V2 to the payload development board on the Port2.
 
 > **NOTICE** 
 > * Developer only could choose Port1 or Port2, both of them cannot be used at the same time.
 > * Please use the specified cable connect the Port1 and the Expansion Board, confirmed that the red cable is aligned with the dot mark, otherwise the payload may burned.
 
 <div>
-<div style="text-align: center"><p>Figure 3 Skyport V2 pin</p>
+<div style="text-align: center"><p>Figure 3 SkyPort V2 pin</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/Skyport2Port-en.png" width="600"  style="vertical-align:middle" alt/></span></p>
+      <img src="../images/SkyPort2Port-en.png" width="600"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 ##### Port1 
 
 <div>
 <div>
-<div style="text-align: center"><p>Table 2 Skyport V2 Pin</p>
+<div style="text-align: center"><p>Table 2 SkyPort V2 Pin</p>
 </div>
 <table id="interface parameters">
   <thead>
@@ -134,7 +134,7 @@ Figure 3 shows the pin of Skyport V2. Use the cable to connect the Skyport V2 to
 
 <div>
 <div>
-<div style="text-align: center"><p>Table 3 Skyport V2 Pin</p>
+<div style="text-align: center"><p>Table 3 SkyPort V2 Pin</p>
 </div>
 <table id="interface parameters">
   <thead>
@@ -179,7 +179,7 @@ Figure 4 shows the port of the expansion board. Use this board, developers could
       <div style="text-align: center"><p>Figure 4 The port of expansion board</p>
       </div>
       <div style="text-align: center"><p><span>
-      <img src="../images/Skyport2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
+      <img src="../images/SkyPort2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
       </div>
     </div>
 <div style="text-align: center"><p>Table 4 The port of expansion board</p></div>
@@ -198,12 +198,12 @@ Figure 4 shows the port of the expansion board. Use this board, developers could
       <td>J2</td>
       <td>Cable interface</td>
       <td rowspan=2>-</td>
-      <td>Connect the expansion board with Skyport V2 or X-Port.</td>
+      <td>Connect the expansion board with SkyPort V2 or X-Port.</td>
     </tr> 
     <tr>
       <td>J3</td>
       <td>Coaxial interface</td>
-      <td>Connect the expansion board with Skyport V2 or </br>payload development board. </td>
+      <td>Connect the expansion board with SkyPort V2 or </br>payload development board. </td>
     </tr>  
     <tr>
       <td rowspan=3 >J10</td>
@@ -249,7 +249,7 @@ Connect the STM32F407xG to the expansion board the configuration of the serial p
 
 > **NOTE:** If you need to use other development boards, please rewrite the configuration parameters in the Hal file, for details, please refer to [Porting](../tutorial/Porting.html)。
 
-* Communicate with X-Port or Skyport V2: `PA2 (TX)` and `PA3 (RX)`
+* Communicate with X-Port or SkyPort V2: `PA2 (TX)` and `PA3 (RX)`
 * Communicate with computer: `PC10 (TX)` and `PC11 (RX)`
 * Time Synchronization: `PD2`
 * High Power Apply: `PD1`

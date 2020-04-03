@@ -6,18 +6,18 @@ keywords: [FAQ, Frequently Asked Questions]
 
 In order to help you solve the problems quickly, we recommend that you could go to <a href="https://djisdksupport.zendesk.com/hc/en-us/community/topics"> DJI Technical Support Community </a> to find the solution; if you have other questions, please use <a herf="https://formcrafts.com/a/dji-developer-feedback-cn"> Issue Form </a> to feedback the question, or send an <a href="mailto:dev@dji.com"> E-mail </a> to DJI SDK team. DJI appreciates your support and attention.
 
-> **Note:** DJI won't develope the PSDK V1.x.x and Skyport on February 1st, 2020. It is recommended to use X-Port or Skyport V2 and PSDK V2.x.x to develop the payload.
+> **Note:** DJI won't develope the PSDK V1.x.x and SkyPort on February 1st, 2020. It is recommended to use X-Port or SkyPort V2 and PSDK V2.x.x to develop the payload.
 
-## Skyport
-#### What is the model of the Skyport coaxial port connector?
+## SkyPort
+#### What is the model of the SkyPort coaxial port connector?
 DF56C-40S-0.3V
 
 #### How to handle the error "Firmware Exception" 
 Please check the version of DJI Assistant 2 (2.0.8 and above), and upgrade the DJI Assistant 2 to the latest version.
 
-#### How to change the Skyport's firmware?
+#### How to change the SkyPort's firmware?
 Please modify the version number in the PSDK sample code `app_infor.h` file.
-After specifying the version number, users can not to use the Skyport's latest firmware.
+After specifying the version number, users can not to use the SkyPort's latest firmware.
 
 #### How to handle "The developer account is illegal"
 * Please confirm that the account in DJI Assistant 2, the application and the payload program (`app_info.h file`) are the same developer account.

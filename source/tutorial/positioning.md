@@ -5,7 +5,7 @@ version: 2.0.0
 keywords: [Pinpoint, RTK, time sync, PPS]
 ---
 > **NOTE** 
-> * This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 > * Before running the "Positioning" sample code, please check the communication status of the drone and the RTK satellite from the DJI Pilot or Mobile APP which developed based on PSDK as shown in Figure 1. 
 
 <div>

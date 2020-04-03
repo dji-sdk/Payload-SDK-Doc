@@ -4,7 +4,7 @@ date: 2020-01-17
 version: 2.0.0
 keywords: [Widget, Custom, customize]
 ---
-> **NOTE:** This article is **machine-translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 "Custom Widget" is a function that encapsulates the function of the payload into controls such as buttons, switches, and sliders; using DJI Pilot or a Mobile APP based on MSDK can identify the configuration information of the control in the payload and generate a UI Controls that allow users to set the parameters of the payload and control the payload to. At the same time, the DJI Pilot or Mobile APP based on MSDK can also display the status information of the payload in the form of floating windows; The user can also map the functions of the payload to the reserved buttons on the remote control according to the user needs, and use the reserved buttons on the remote control to control the payload more conveniently.

@@ -58,7 +58,7 @@ SkyPort V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
 <div style="text-align: center"><p>图3. SkyPort V2 引脚接口</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../../images/SkyPort2Port.png" width="600"  style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Skyport2Port.png" width="600"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 ##### Port 1
@@ -85,7 +85,7 @@ SkyPort V2 提供了排线接口和同轴线接口，使用排线通过Port 1 �
       <div style="text-align: center"><p>图4.接口拓展板接口  </p>
       </div>
       <div style="text-align: center"><p><span>
-      <img src="../../images/SkyPort2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
+      <img src="../../images/Skyport2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
       </div>
     </div>
 <div style="text-align: center"><p>表1.接口拓展板接口说明</p></div>

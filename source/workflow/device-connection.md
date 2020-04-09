@@ -89,7 +89,7 @@ Figure 3 shows the pin of SkyPort V2. Use the cable to connect the SkyPort V2 to
 <div style="text-align: center"><p>Figure 3 SkyPort V2 pin</p>
 </div>
 <div style="text-align: center"><p><span>
-      <img src="../images/SkyPort2Port-en.png" width="600"  style="vertical-align:middle" alt/></span></p>
+      <img src="../images/Skyport2Port-en.png" width="600"  style="vertical-align:middle" alt/></span></p>
 </div></div>
 
 ##### Port1 
@@ -179,7 +179,7 @@ Figure 4 shows the port of the expansion board. Use this board, developers could
       <div style="text-align: center"><p>Figure 4 The port of expansion board</p>
       </div>
       <div style="text-align: center"><p><span>
-      <img src="../images/SkyPort2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
+      <img src="../images/Skyport2BOARD.png" width="280" style="vertical-align:middle" alt/></span></p>
       </div>
     </div>
 <div style="text-align: center"><p>Table 4 The port of expansion board</p></div>

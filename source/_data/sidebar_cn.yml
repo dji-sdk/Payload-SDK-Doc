@@ -10,6 +10,9 @@
     -
       title: "PSDK 提供了哪些功能 ？"
       path: "/cn/introduction/feature-list.html"
+    -
+      title: "什么是X-Port 标准云台 ？"
+      path: "/cn/introduction/what-is-XPort.html"
 -
   title: "选型指南"
   list:

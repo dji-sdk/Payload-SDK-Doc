@@ -146,7 +146,7 @@ To prevent the gimbal from being damaged or interfered with the drone's flight m
   * Set the gimbal joint angle limit.
 
   > **TIPS** 
-  > * After using the tilt range extension function, you can set the Euler angle limit of the gimbal's pitch axis to the default limit and the extended limit.
+  > * After using the tilt range extension function, you can set the Euler angle limit of the gimbal's pitch axis to the default limit or the extended limit.
   > * When the joint angle of the gimbal reaches the limit, the DJI Pilot and the Mobile APP developed based on MSDK will receive the prompt message that the gimbal is rotated to the limit angle.
 
 #### Reset

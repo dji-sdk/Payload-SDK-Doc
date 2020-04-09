@@ -20,6 +20,8 @@ X-Port 包含如下配件：
       <img src="../../images/XPort.png" width="800" alt/></span></p>
 </div></div>
 
+> **说明：** 使用[X-Port 标准云台](https://store.dji.com/cn/product/dji-x-port)开发具有云台功能的负载设备时，可借助[Payload SDK 开发套件 2.0](https://store.dji.com/cn/product/psdk-development-kit-v2)中的配件适配第三方开发平台。
+
 #### SkyPort V2
 借助<a href="https://store.dji.com/cn/product/psdk-development-kit-v2">SkyPort V2</a> 开发套件中的接口拓展板，开发者能够使用第三方开发板开发负载设备。    
 SkyPort V2 包含如下配件：    

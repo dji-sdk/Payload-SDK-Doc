@@ -6,7 +6,7 @@ keywords: [PSDK, X-Port]
 ---
 
 > **说明** 
->* X-Port 仅支持开发者使用PSDK V2.0.0 ，若您仍使用PSDK V 1.5.0 开发负载设备，请下载[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档并使用[SkyPort](https://store.dji.com/cn/product/psdk-development-kit)。
+> * X-Port 仅支持开发者使用PSDK V2.0.0 ，若您仍使用PSDK V 1.5.0 开发负载设备，请下载[PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) 的文档并使用[SkyPort](https://store.dji.com/cn/product/psdk-development-kit)。
 > * 有关X-Port 的使用说明和参数调校的详细步骤，请参见[PSDK V2.0.0](https://developer.dji.com/payload-sdk/downloads/)开发包中的使用说明书。
 
 [X-Port 标准云台](https://store.dji.com/cn/product/dji-x-port)是一个具有云台功能的负载设备开发工具，开发者使用X-Port 并借助[Payload SDK 开发套件 2.0](https://store.dji.com/cn/product/psdk-development-kit-v2)中的配件，能够快速开发出可挂载在DJI 无人机上具有云台功能的负载设备，在使用PSDK 开放的API 接口实现高度定制化的同时，还能有效降低负载设备的开发成本，大幅度提升负载设备的可靠性与兼容性。
@@ -36,7 +36,7 @@ keywords: [PSDK, X-Port]
 
 ## X-Port 云台结构
 <div>
-<div style="text-align: center"><p>图1. X-Port  </p>
+<div style="text-align: center"><p>图3. X-Port 云台结构</p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../../images/XPort-structure.png" width="500" style="vertical-align:middle" alt/></span></p>

@@ -86,7 +86,7 @@ Figure 3 shows the pin of SkyPort V2. Use the cable to connect the SkyPort V2 to
 > * Please use the specified cable connect the Port1 and the Expansion Board, confirmed that the red cable is aligned with the dot mark, otherwise the payload may burned.
 
 <div>
-<div style="text-align: center"><p>Figure 3 SkyPort V2 pin</p>
+<div style="text-align: center"><p>Figure 3 SkyPort V2 Pin</p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../images/Skyport2Port-en.png" width="600"  style="vertical-align:middle" alt/></span></p>

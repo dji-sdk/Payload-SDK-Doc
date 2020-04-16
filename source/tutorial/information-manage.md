@@ -129,6 +129,8 @@ Table 1 shows the topic, which the user could subscribe in the drone.
 * The subscription function supports subscripted **5 types of frequencies**, such as 1Hz, 10Hz, 20Hz, 50Hz, 100Hz, each subscription can be subscribed only once.
 * The subscription frequency of any parameter cannot be less than or equal to 0, and the total data length of topics with the same subscription frequency must be less than or equal to 242.
 
+>**NOTE:** To simulate the payload in the DJI Assistant 2 couldn't obtain the GPS information and RTK information, but developers could subscribe the fusion data such as fusion location, fusion altitude, and relative altitude.
+
 ## Develop with the Information Subscription 
 Here have two methods to subscribe the information:
 

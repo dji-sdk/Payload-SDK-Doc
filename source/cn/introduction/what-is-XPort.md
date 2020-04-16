@@ -36,14 +36,14 @@ keywords: [PSDK, X-Port]
 
 ## X-Port 云台结构
 <div>
-<div style="text-align: center"><p>图3. X-Port 云台结构</p>
+<div style="text-align: center"><p>图3. X-Port 云台结构(单位：mm)</p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../../images/XPort-structure.png" width="500" style="vertical-align:middle" alt/></span></p>
 </div>
 </div>
 
-* 重量：345g
+* 重量：340g
 * 荷载重量：450g
 * X-Port 的防护等级：IP44 
 * 工作温度范围：-20°C～50°C
@@ -62,7 +62,7 @@ keywords: [PSDK, X-Port]
 
 ## 使用MSDK 和OSDK
 * MSDK：使用MSDK 开发的移动端APP 能够控制X-Port 以及X-Port 上的负载设备执行指定的动作和任务。
-* OSDK：使用OSDK 开发的无人机自动控制程序，借助机载计算机（如Manifold 2-C）的强大算力，控制无人机、X-Port和负载设备执行指定的动作和相应的任务。
+* OSDK：使用OSDK 开发的应用程序，借助机载计算机（如Manifold 2-C）的强大算力，控制无人机、X-Port和负载设备执行指定的动作和相应的任务。
 
 -------
 <div style="text-align: center"><p>

@@ -14,8 +14,16 @@ Developers use the X-Port or SkyPort could obtain the resources from DJI‘s dro
 
 ## Development Kit
 
+#### X-Port <font color=#1fA3f6><a href="https://store.dji.com/product/dji-x-port">（Purchase）</a></font>
+To use the X-Port, parts in [Payload SDK Development Kit 2.0](https://store.dji.com/product/psdk-development-kit-v2) and API could help developers develop the payload which has gimbal's functions more easily.
+
+<div>
+<div><p><span>
+      <img src="../images/XPort-en.png" width="800" alt/></span></p>
+</div></div>
+
 #### SkyPort V2
-Using the expansion-board, developers can choose third-party development boards to develop payload.     
+Using the Expansion-Board, developers can choose third-party development boards to develop payload.     
 <a href="https://store.dji.com/product/psdk-development-kit-v2">SkyPort V2 </a>includes components is as follows:
 <div>
 <div style="text-align: left"><p><span>
@@ -67,7 +75,7 @@ Using the payload development-board, developers do not need to purchase a third-
     </tr>
     <tr style="text-align:center">
       <td style="border-left: none;text-align:left;border-right: none;"><b>Weight</b></td>
-      <td style="border-right: none;border-left: none;text-align:left">345g</td>
+      <td style="border-right: none;border-left: none;text-align:left">340g</td>
       <td style="border-right: none;">29g</td>
       <td style="border-right: none;">24g</td>
     </tr>

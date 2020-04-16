@@ -37,7 +37,7 @@ DJI encourages developers to develop the payload which has add-on functionalitie
 
 ##### 2. Do I must have to purchase a Hardware Platform to develop payload?
 The Hardware Platform is an essential tool to develop the payload based on PSDK. Developers can purchase following Hardware Platforms according to needs:
-* X-Port 
+* [X-Port](https://store.dji.com/product/dji-x-port) 
 * [Payload SDK Development Kit 2.0](https://store.dji.com/en/product/psdk-development-kit-v2)
 * [Payload SDK Development Kit](https://store.dji.com/en/product/psdk-development-kit)
 >**NOTE：** After enters the production Mode , developers can purchase Hardware Platform packages, such as [DJI SKYPORT Adapter Ring Package V2](https://store.dji.com/en/product/dji-skyport-adapter-set-v2) or [DJI SKYPORT Adapter Ring SET](https://store.dji.com/en/product/dji-skyport-adapter-set), to reduce the cost.

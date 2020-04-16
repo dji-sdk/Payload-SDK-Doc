@@ -6,7 +6,7 @@ keywords: [FAQ, Frequently Asked Questions]
 
 In order to help you solve the problems quickly, we recommend that you could go to <a href="https://djisdksupport.zendesk.com/hc/en-us/community/topics"> DJI Technical Support Community </a> to find the solution; if you have other questions, please use <a herf="https://formcrafts.com/a/dji-developer-feedback-cn"> Issue Form </a> to feedback the question, or send an <a href="mailto:dev@dji.com"> E-mail </a> to DJI SDK team. DJI appreciates your support and attention.
 
-> **Note:** DJI won't develope the PSDK V1.x.x and SkyPort on February 1st, 2020. It is recommended to use X-Port or SkyPort V2 and PSDK V2.x.x to develop the payload.
+> **Note:** DJI won't develope the PSDK V1.x.x and SkyPort on February 1st, 2020. It is recommended to use [X-Port](https://store.dji.com/product/dji-x-port) or [SkyPort V2](https://store.dji.com/product/psdk-development-kit-v2) and PSDK V2.x.x to develop the payload.
 
 ## SkyPort
 #### What is the model of the SkyPort coaxial port connector?

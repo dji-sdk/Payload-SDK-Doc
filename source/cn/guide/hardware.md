@@ -73,7 +73,7 @@ SkyPort 包含如下配件：
     </tr>
     <tr style="text-align:center">
       <td style="border-left: none;text-align:left;border-right: none;"><b>重量</b></td>
-      <td style="border-right: none;border-left: none;text-align:left">345g</td>
+      <td style="border-right: none;border-left: none;text-align:left">340g</td>
       <td style="border-right: none;">29g</td>
       <td style="border-right: none;">24g</td>
     </tr>

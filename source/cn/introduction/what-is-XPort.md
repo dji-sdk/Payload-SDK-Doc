@@ -64,6 +64,8 @@ keywords: [PSDK, X-Port]
 * MSDK：使用MSDK 开发的移动端APP 能够控制X-Port 以及X-Port 上的负载设备执行指定的动作和任务。
 * OSDK：使用OSDK 开发的应用程序，借助机载计算机（如Manifold 2-C）的强大算力，控制无人机、X-Port和负载设备执行指定的动作和相应的任务。
 
+> **说明：** X-Port 支持开发者使用DJI Assistant 2 (2.0.11 及以上版本）调整配置参数。
+
 -------
 <div style="text-align: center"><p>
 <font color=#1fA3f6><a href="https://store.dji.com/cn/product/dji-x-port">购买X-Port 标准云台</a></font></p>

@@ -8,7 +8,7 @@ keywords: [gimbal, X-Port control, camera]
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 > * Before using X-Port to develop the payload, please read the [Gimbal Control](./gimbal-contro.html) to learn the basic concepts of the gimbal.
 > * If the X-Port is powered off abnormally, X-Port would lose the parameter.
-
+> * f you want to config the parameters of the X-Port, please use the DJI Assistant 2 (2.0.11 or above).
 ## Overview 
 X-Port is a Hardware Platform for the developer to develop the payload, use X-Port Control and [Custom Widget](./custom-widget.html), the user could display or control the payload, using DJI Pilot or the APP which developed based on MSDK.
 

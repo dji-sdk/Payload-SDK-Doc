@@ -73,6 +73,8 @@ Matrice 200 Series V2:
 * MSDK: The Mobile App which developed based on MSDK could control X-Port and the custom sensors based on X-Port.
 * OSDK: The Application which developed based on OSDK could control the dorne, X-Port and the custom sensors based on X-Port.
 
+> **NOTE：** If you want to config the parameters of the X-Port, please use the DJI Assistant 2 (2.0.11 or above).
+
 -------
 <div style="text-align: center"><p>
 <font color=#1fA3f6><a href="https://store.dji.com/cn/product/dji-x-port">Purchase X-Port </a></font></p>

@@ -1,4 +1,10 @@
 -
+  title: " "
+  list:
+    -
+      title: "Announcement"
+      path: "/introduction/announcement.html"
+-
   title: "Introduction"
   list:
     -

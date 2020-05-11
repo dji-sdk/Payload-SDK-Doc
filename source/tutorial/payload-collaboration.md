@@ -1,20 +1,20 @@
 ---
 title: Payload Coordination
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [Payload Coordination]
 ---
-> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Payload coordination is a mode of controlling multiple payloads to work, searchlights and cameras in coordination could meet the needs of nighttime search; supplementary lights and zoom cameras in coordination could meet the needs of inspection tasks; the visible light camera and the spectrum camera in coordination could meet the needs of the detection task.
 
->**NOTE:** Using DJI Pilot could control the payload in coordination,for details please refer to the <a href="https://www.dji.com/cn/matrice-200-series-v2/info#downloads" target="_blank" rel="external">User's Manual</a> or DJI Pilot.
+> **NOTE** Using DJI Pilot could control the payload in coordination,for details please refer to the <a href="https://www.dji.com/cn/matrice-200-series-v2/info#downloads" target="_blank" rel="external">User's Manual</a> or DJI Pilot.
 
 ## Develop with the Payload Coordination
-The payload on the Gambal Ⅱ could obtain the information of the Gimbal I，such as camera type、focal length and zoom data, etc.
+The payload on the Gambal could obtain the information of others，such as camera type、focal length and zoom data, etc.
 
->**Notoice** 
+> **NOTE** 
 > * Please mount the payload which developed based on PSDK on the Gimbal Ⅱ, and the Gimbal I only support mount the specified <a href="#t01">payload</a>.
 > * If the payload which developed based on PSDK already has the functions of taking pictures, recording and Gambal control, the payload has the coordination function.
 > * This tutorial introduces how to develop the payload coordination (coordinated zoom) by using the camera's type.
@@ -29,65 +29,47 @@ if (PsdkPayloadCollaboration_Init() != PSDK_RETURN_CODE_OK) {
 }
 ```
 
-#### 2. Obtain the position of the payload
-The payload developed based on PSDK must be mounted on the Gimbal I, otherwise the payload coordination couldn't work.
+#### 2. Obtain the information of the payload
 
-```c
-psdkStat = PsdkAircraftInfo_GetBaseInfo(&aircraftBaseInfo);
-if (psdkStat != PSDK_RETURN_CODE_OK) {
-    PsdkLogger_UserLogError("get aircraft information error: %lld.", psdkStat);
-    return psdkStat;
-}
+* Obtain the type of the payload
 
-if (aircraftBaseInfo.payloadMountPosition == PSDK_AIRCRAFT_INFO_PAYLOAD_MOUNT_POSITION_NO1) {
-    PsdkLogger_UserLogError("do not meet conditions of payload collaboration.");
-    return PSDK_RETURN_CODE_ERR_SYSTEM;
-}
 ```
-
-#### 3. Obtain information from the Gimbal I
-The payload mounted on the Gimbal Ⅱ could obtain the information of the payload which mounted on Gimbal I, as shown in Figure 1.
-
-* Obtain the type of the payload which mounted on the Gimbal I
-
-```c
-psdkStat = PsdkPayloadCollaboration_GetCameraTypeOfPayload(PSDK_AIRCRAFT_INFO_PAYLOAD_MOUNT_POSITION_NO1,
-                                                           &no1CameraType);
-
+psdkStat = PsdkPayloadCollaboration_GetCameraTypeOfPayload(requestedPayloadMountPosition, &cameraType);
 if (psdkStat != PSDK_RETURN_CODE_OK) {
-    PsdkLogger_UserLogError("get camera type of payload mounted on NO.1 Gimbal connector error.");
     continue;
 }
-PsdkLogger_UserLogDebug("camera type of payload mounted on NO.1 Gimbal connector is %d.", no1CameraType);
+PsdkLogger_UserLogDebug("camera type of payload mounted on NO.%d gimbal connector is %d.",
+                        requestedPayloadMountPosition, cameraType);
 ```
-* Obtain the zoom parameter of the payload which mounted on the Gimbal I
+
+* Obtain the zoom of the camera's payload
 
 ```c
-psdkStat = PsdkPayloadCollaboration_GetCameraOpticalZoomSpecOfPayload(
-    PSDK_AIRCRAFT_INFO_PAYLOAD_MOUNT_POSITION_NO1, &no1CameraOpticalZoomSpec);
+psdkStat = PsdkPayloadCollaboration_GetCameraOpticalZoomSpecOfPayload(requestedPayloadMountPosition,
+                                                                      &cameraOpticalZoomSpec);
 if (psdkStat != PSDK_RETURN_CODE_OK) {
-    PsdkLogger_UserLogError(
-        "get camera optical zoom specification of payload mounted on NO.1 Gimbal connector error.");
     continue;
 }
 PsdkLogger_UserLogDebug(
-    "camera optical zoom spec, maxFocalLength: %d, minFocalLength: %d, focalLengthStep: %d.",
-    no1CameraOpticalZoomSpec.maxFocalLength, no1CameraOpticalZoomSpec.minFocalLength,
-    no1CameraOpticalZoomSpec.focalLengthStep);
+    "camera optical zoom specification of payload mounted on NO.%d gimbal connector, maxFocalLength: %d, minFocalLength: %d, focalLengthStep: %d.",
+    requestedPayloadMountPosition, cameraOpticalZoomSpec.maxFocalLength,
+    cameraOpticalZoomSpec.minFocalLength, cameraOpticalZoomSpec.focalLengthStep);
 ```
 
-* Obtain the focal length of the payload which mounted on the Gimbal I
+* Obtain the focal length of the camera's payload
 
 ```c
-psdkStat = PsdkPayloadCollaboration_GetCameraHybridZoomFocalLengthOfPayload(
-PSDK_AIRCRAFT_INFO_PAYLOAD_MOUNT_POSITION_NO1, &no1CameraHybridZoomFocalLength);
+psdkStat = PsdkPayloadCollaboration_GetCameraHybridZoomFocalLengthOfPayload(requestedPayloadMountPosition,
+                                                                            &cameraHybridZoomFocalLength);
 if (psdkStat != PSDK_RETURN_CODE_OK) {
-PsdkLogger_UserLogError(
-"get camera hybrid zoom focal length of payload mounted on NO.1 Gimbal connector error.");
-continue;
+    continue;
 }
-PsdkLogger_UserLogDebug("camera hybrid zoom focal length, focalLength: %d.", no1CameraHybridZoomFocalLength);
+PsdkLogger_UserLogDebug(
+    "camera hybrid zoom focal length of payload mounted on NO.%d gimbal connector, focalLength: %d.",
+    requestedPayloadMountPosition, cameraHybridZoomFocalLength);
 ```
+
+
 <div>
 <div style="text-align: center"><p> Figure 1 The parameters of the payload </p>
 </div>
@@ -107,13 +89,15 @@ PsdkLogger_UserLogDebug("camera hybrid zoom focal length, focalLength: %d.", no1
   <tbody>
     <tr>
       <th>Products </th>
-      <td>M210 V2、M210 RTK V2</td>
-      <td>M210、M210 RTK、M210 V2、M210 RTK V2</td>
+      <td>M210 V2、M210 RTK V2、M300 RTK</td>
+      <td>M210、M210 RTK、M210 V2、M210 RTK V2、M300 RTK</td>
     </tr>
     <tr>
-      <th>Gimbal I</th>
-      <td>ZENMUSE XT、ZENMUSE XT2；</br>ZENMUSE X7、ZENMUSE Z30；</br>ZENMUSE X4S、ZENMUSE X5S</td>
-      <td>ZENMUSE XT2、ZENMUSE X4S；</br>ZENMUSE X5S、ZENMUSE X7；</br>ZENMUSE Z30</td>
+      <th>DJI‘s Payload</th>
+      <td>ZENMUSE XT、ZENMUSE XT2;</br>ZENMUSE X7、ZENMUSE Z30;</br>ZENMUSE X4S、ZENMUSE X5S、ZENMUSE XT S;</br>ZENMUSE H20、ZENMUSE H20T</td>
+      <td>ZENMUSE XT2、ZENMUSE X4S;</br>ZENMUSE X5S、ZENMUSE X7ZENMUSE Z30;</br>ZENMUSE H20、ZENMUSE H20T</td>
     </tr>
   </tbody>
 </table>
+
+> **NOTE** Only Matrice 300 RTK supports ZENMUSE H20 and ZENMUSE H20T.

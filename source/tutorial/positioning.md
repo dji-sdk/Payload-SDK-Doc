@@ -1,7 +1,7 @@
 ---
 title: Positioning
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [Pinpoint, RTK, time sync, PPS]
 ---
 > **NOTE** 
@@ -21,19 +21,19 @@ To meet the centimeter-level accuracy positioning requirements of the payload de
 ## Concepts  
 
 * Target Point: The position where the positioning information is obtained, such as the center point of the gimbal.
-   > **NOTE:** The target point of the M210 RTK V2 is the center point on the upper surface of the adapter ring of the payload. The payload needs to be mounted on the Gimbal I.
+   > **NOTE** The target point of the M210 RTK V2 and M300 RTK is the center point on the upper surface of the adapter ring of the payload. The payload needs to be mounted on the Gimbal I.
 * Interest Point: The position of a device on the payload specified by the user arbitrarily, such as the center point of a camera image sensor. The target point can also be a point of interest.
 * Task: A set of multiple continuous flight actions is called a task, such as performing a mapping task on a certain area.
 * Positioning Event: An event that triggers a positioning request. If a positioning request is triggered when a camera is exposed, "camera exposure" is a positioning event; a collection of multiple events is an event collection. Payload developed based on PSDK can request multiple position information at the same time, such as camera co-exposure.
 
 ## Workflow
-> **NOTE:** Obtaining the precise positioning, the developer needs to use the time synchronization function to synchronize the time of the payload and the drone. For details please refer to [Time Synchronization](./time-synchronization.html)。   
+> **NOTE** Obtaining the precise positioning, the developer needs to use the time synchronization function to synchronize the time of the payload and the drone. For details please refer to [Time Synchronization](../basicfunction/time-synchronization.html)。   
 
 * When a positioning event occurs, the payload would record the local time (this time is on the payload).
 * The payload converts the time which on the payload to the time which on the drone, 
 * The payload uses the drone time (time of the drone system) to request the location when the positioning event occurs.
 
->**NOTE:** The drone time (time of the drone system) at the time of the positioning event should be earlier than the latest rising edge time of the PPS signal, and the time interval must be less than 2s, as shown in Figure 2. 
+> **NOTE** The drone time (time of the drone system) at the time of the positioning event should be earlier than the latest rising edge time of the PPS signal, and the time interval must be less than 2s, as shown in Figure 2. 
  
 <div>
 <div style="text-align: center"><p>Figure 2 Obtaining the positioning  </p>
@@ -140,5 +140,8 @@ s_eventIndex++;
 ### Query
 Query the positioning information in `cam_mark_file`.For details of the Mark file, please refer to the [Mark file](https://djisdksupport.zendesk.com/hc/en-us/articles/360024019493-Introduction-to-Mark-File).
 
+> **NOTE** M300 RTK don't support query the positioning informationo in Mark file。
+
 ## Products
-M210 RTK V2
+* M210 RTK V2
+* M300 RTK

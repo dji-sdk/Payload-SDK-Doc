@@ -1,7 +1,7 @@
 ---
 title: 回放下载
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [媒体回放, 截屏图, 缩略图]
 ---
 ## 概述
@@ -22,7 +22,7 @@ keywords: [媒体回放, 截屏图, 缩略图]
   * 原始文件，如需获得相机类负载设备中原始的媒体文件，请使用下载功能获取指定的媒体文件。
 * 动态预览（视频预览)：播放、暂停、停止、跳转（快进、快退和进度拖动）
     
-    > **说明：** 支持动态预览的文件格式：MP4、JPG、DNG 和MOV，编码格式请参见[“视频标准”](../guide/payload-criterion.html)。
+    > **说明：** 支持动态预览的文件格式：MP4、JPG、DNG 和MOV，编码格式请参见[“视频标准”](../payloadguide/payload-criterion.html)。
 
 ## 实现回放下载功能
 请开发者根据选用的**开发平台**以及行业应用实际的使用需求，按照`T_PsdkCameraMediaDownloadPlaybackHandler`结构体构造实现**下载媒体文件原始数据**、**创建/销毁缩略图**、**创建/下载缩略图**等回访下载功能的函数，并将函数注册到PSDK 中指定的接口后，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP 能够从基于PSDK 开发的相机类负载设备上下载媒体文件或实现视频流回放功能。
@@ -140,7 +140,7 @@ static T_PsdkReturnCode PauseMediaPlayback(void)
 
 #### 1. 获取媒体文件的路径
 使用PSDK 开发的相机类负载设备通过`GetMediaFileDir`接口获取用户指定的文件的地址，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够获取指定的媒体文件所在的路径。
->**说明：** 媒体文件的默认路径为`camera_media_emu/media_file`，用户可根据实际的使用需要，更改媒体文件所在的路径。
+> **说明：** 媒体文件的默认路径为`camera_media_emu/media_file`，用户可根据实际的使用需要，更改媒体文件所在的路径。
 
 ```c
 static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
@@ -227,7 +227,7 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
        return PSDK_RETURN_CODE_OK;
    }
 ```
->**说明** 
+> **说明** 
 > * 获取媒体文件列表的功能只能获取到媒体文件的原始文件和缩略图；
 > * 实现获取媒体文件列表的功能后，用户能够获得指定文件的截屏图；
 > * 用户通过下载功能能够得到指定媒体文件的原始文件。 
@@ -305,7 +305,7 @@ static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
 
 #### 4. 销毁缩略图
 使用PSDK 开发的相机类负载设备通过`DestroyMediaFileThumbNail`接口，销毁负载设备上生成的缩略图，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够向负载设备发送删除指定媒体文件缩略图的命令。
->**说明：** DJI Pilot 及基于MSDK 开发的移动端APP 接收到相机类负载设备上的缩略图后，将缓存在APP 本地。
+> **说明：** DJI Pilot 及基于MSDK 开发的移动端APP 接收到相机类负载设备上的缩略图后，将缓存在APP 本地。
 
 ```c
     static T_PsdkReturnCode DestroyMediaFileThumbNail(const char *filePath)
@@ -465,7 +465,7 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
 </div></div>
 
 ### 实现媒体文件回放功能
->**说明** 
+> **说明** 
 > * 使用PSDK 开发相机类负载设备控制程序的回放功能前，需要先实现获取负载设备文件列表的功能。
 > * 使用PSDK 开发相机类负载设备的回放功能时，需要先获取媒体文件的路径，将指定的媒体文件转换为H.264 格式。
 
@@ -538,7 +538,7 @@ static T_PsdkReturnCode DeleteMediaFile(char *filePath)
 #### 3. 发送媒体文件
 使用PSDK 开发的相机类负载设备通过`PsdkPayloadCamera_SendVideoStream`接口，将根据格式转换后的媒体文件的帧率、帧信息、总帧数等信息找到媒体文件的帧头，并按照指定的码率向DJI Pilot 或基于MSDK 开发的APP 发送媒体文件，用户使用DJI Pilot 以及基于MSDK 开发的移动端APP 能够接收到负载设备发送的媒体文件。
 
->**说明：** 有关实现视频流传输功能的详细说明和具体步骤请参见[“视频流传输”](./video-stream-transmission.html)。
+> **说明：** 有关实现视频流传输功能的详细说明和具体步骤请参见[“视频流传输”](./video-stream-transmission.html)。
 
 ```c
     while (dataLength - lengthOfDataHaveBeenSent) {

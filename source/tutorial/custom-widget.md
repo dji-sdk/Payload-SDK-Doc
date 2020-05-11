@@ -1,10 +1,10 @@
 ---
 title: Custom Widget
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [Widget, Custom, customize]
 ---
-> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 "Custom Widget" is a function that encapsulates the function of the payload into controls such as buttons, switches, and sliders; using DJI Pilot or a Mobile APP based on MSDK can identify the configuration information of the control in the payload and generate a UI Controls that allow users to set the parameters of the payload and control the payload to. At the same time, the DJI Pilot or Mobile APP based on MSDK can also display the status information of the payload in the form of floating windows; The user can also map the functions of the payload to the reserved buttons on the remote control according to the user needs, and use the reserved buttons on the remote control to control the payload more conveniently.
@@ -39,7 +39,7 @@ The user can operate the controls in the configuration interface, such as button
 > * Restricted by the length of the log, the characters entered by the user could not be displayed completly.
 
 ### Configuration File
->**NOTE**
+> **NOTE**
 > * Configuration file path: `sample/api_sample/widget/widget_file`
 > * When the DJI Pilot system language is Chinese, the control configuration file is `cn_big_screen`
 > * When the DJI Pilot system language is English, the control configuration file is `en_big_screen`
@@ -50,12 +50,12 @@ The user can operate the controls in the configuration interface, such as button
 #### Properties Configure 
 `widget_config.json` is a file used to configure the static properties of the control. When modifying the` widget_config.json` file, please strictly follow the syntax rules of [JSON](https://www.json.org/), otherwise, the configure file is unusable.
 
->**TIPS**
+> **TIPS**
 > * The configuration items in the JSON file are wrapped in a {}, and the data is expressed by key-value;
 > * The JSON Key must be wrapped in double-quotes. Please do not lose the double quotes of the Key value;
 > * The value of JSON only support numbers (including floats and integers), strings, Bool (true and false), arrays (need to be wrapped in []) and objects (need to be wrapped in {}).
 
->**NOTE:** The content after the "//" in the following code is a code comment. Do not add this content in the actual JSON configuration file.
+> **NOTE** The content after the "//" in the following code is a code comment. Do not add this content in the actual JSON configuration file.
 
 ```c
 {
@@ -181,7 +181,7 @@ The user can operate the controls in the configuration interface, such as button
 
 #### Icon design
 To improve the compatibility of user-defined controls with DJI Pilot, please design the control icons according to the following specifications.
-> **TIP:** Use the [Sketch File](https://developer.dji.com/payload-sdk/downloads/) could design the control icon would more efficiency.
+> **TIP** Use the [Sketch File](https://developer.dji.com/payload-sdk/downloads/) could design the control icon would more efficiency.
 * icon size
     * normal size: 96px
     * frame: 80px (color value: # 000000; transparency: 0.6 Alapha; Blur = 4)
@@ -232,7 +232,7 @@ psdkStat = PsdkWidget_Init();
 ### 2. Config the configuration file
 When developing payload on Linux and RTOS systems, developer needs to set control configuration information, such as the control's default configuration file and control configuration files corresponding to different system languages. Make sure the DJI Pilot can get the configuration information of the control and display it on the DJI Pilot correctly.
 
->**NOTE:** The configuration items of the widgets which in the different system languages, such as control number, control number, and control type, need to be same.
+> **NOTE** The configuration items of the widgets which in the different system languages, such as control number, control number, and control type, need to be same.
 
 #### Set parameters for payload(Linux)
 
@@ -366,8 +366,35 @@ Table 1 The relationship of the widget and reserved button.
       <img src="../images/custom_widget_map_rc.png" width="500" alt/></span></p>
 </div></div>
 
->**TIP** DJI Pilot supports creating multiple correspondence tables to adapt to different payloads.
+> **TIP** DJI Pilot supports creating multiple correspondence tables to adapt to different payloads.
+
+## Waypoint 
+DJI's drone supports users to add the widget control to the waypoint when using the payload, it makes the drone control the widget automatically in the specified point.
+The waypoint allows developers to add the following widget:
+* Button
+* Switch
+* Slider
+
+The steps to add widgets in waypoint is as follows:
+1. Enter the DJI Pilot flight interface
+2. Add waypoints on the map
+3. Add widget in the waypoint
+4. Save waypoint task
+5. Perform the waypoint flight task      
+When the drone flight to the specific point, the widget will trigger the widget automatically, as shown in Figure 6.
+
+<div>
+<div style = "text-align: center"> <p> Figure 6. Trigger a custom control </p>
+</div>
+<div style = "text-align: center"> <p> <span>
+      <img src = "../images/widget-trigger-in-waypoint.png" width ="400" alt /></span> </p>
+</div> </div>
+
+> **NOTE** 
+> * DJI Pilot supports creating multiple waypoint tasks for different payload and in different gimbal.
+> * Only Matrice 300 RTK supports this feature. 
+
 
 > Reference
 > * [Mobile SDK](https://developer.dji.com/mobile-sdk/documentation/introduction/index.html)
-> * [Data Transmission](data-transmission.html)
+> * [Data Transmission](../basicfunction/data-transmission.html)

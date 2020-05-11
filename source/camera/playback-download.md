@@ -1,10 +1,10 @@
 ---
 title: Playback and Download
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [playback, Screenshot, Thumb nail]
 ---
-> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Before developed the playback and download for the payload, the developer needs to develop the function by themselves, after registered the function in the specified interfaces of the PSDK, user use DJI Pilot and Mobile APP which developed based on MSDK could control the payload to playback or download the source files.  
@@ -23,7 +23,7 @@ The camera-type payload developed based on PSDK allows users to preview the medi
         * Video: Capture a frame of a video.
     * Original files: Please use the download function to obtain the specified media files.
 * Dynamic preview (video preview): Play, pause, stop, seek (fast forward, rewind, and progress drag).
-    > **NOTE:** The formats that support dynamic preview are MP4, JPG, DNG, and MOV. For details, please refer to ["Video Criterion"](../guide/payload-criterion.html)。
+    > **NOTE** The formats that support dynamic preview are MP4, JPG, DNG, and MOV. For details, please refer to ["Video Criterion"](../payloadguide/payload-criterion.html)。
 
 ## Develop Playback and Download
 According to the development platform and the requirements, developers need to develop the playback and download function by themselves refer to the function struct `T_PsdkCameraMediaDownloadPlaybackHandler`, after register the functions to the interface in the PSDK, User use DJI Pilot or Mobile APP developed based on MSDK could playback and download the files which on the payload.
@@ -70,10 +70,10 @@ To convenience the user to operate the media file in the payload which developed
 * Gate:`192.168.5.1`
 * Mask: `255.255.255.0`
 
-> **NOTE:** Use the virtual machine to debug the camera-type payload, the developer should set the mode of the virtual machine's network is bridge mode and enable the function "Replicate physical network connection status".
+> **NOTE** Use the virtual machine to debug the camera-type payload, the developer should set the mode of the virtual machine's network is bridge mode and enable the function "Replicate physical network connection status".
 
 ### 2. Register the playback and download function
-> **NOTE:** This function is optional.
+> **NOTE** This function is optional.
 
 ```c
   // Resign the function to start the playback.
@@ -139,7 +139,7 @@ static T_PsdkReturnCode PauseMediaPlayback(void)
 #### 1. Get the path of the media file
 The program of the payload which developed based on PSDK uses the interface `GetMediaFileDir` to get the media files on the payload. User use DJI Pilot or Mobile APP developed based on MSDK could get the media file's path from the payload.
 
->**NOTE:** The default media file is `camera_media_emu/media_file`, it can be changed.
+> **NOTE** The default media file is `camera_media_emu/media_file`, it can be changed.
 
 ```c
 static T_PsdkReturnCode GetMediaFileDir(char *dirPath)
@@ -226,7 +226,7 @@ The program of the payload which developed based on PSDK uses the interface `Get
        return PSDK_RETURN_CODE_OK;
    }
 ```
->**NOTE** 
+> **NOTE** 
 > * The function to get the media file list can only obtain the original files and thumbnail.
 > * In this function，use only could get the screenshot of media files.
 > * The user can get the original file only use the download function.
@@ -305,7 +305,7 @@ The program of the payload which developed based on PSDK uses the interface `Get
 
 #### 4. Destroy the thumbnail
 The program of the payload which developed based on PSDK uses the interface `DestroyMediaFileThumbNail` to destroy the specified media file's thumbnail which on the payload. To use DJI Pilot or Mobile APP developed based on MSDK could send the command to destroy the thumbnail which was generated on the drone.
->**NOTE:** The thumbnail which had created by the user would be stored in the APP such as DJI Pilot.
+> **NOTE** The thumbnail which had created by the user would be stored in the APP such as DJI Pilot.
 
 ```c
     static T_PsdkReturnCode DestroyMediaFileThumbNail(const char *filePath)
@@ -464,7 +464,7 @@ Select the files and click the delete button to delete the media files in the ca
 </div></div>
 
 ### Playback and download
->**NOTE** 
+> **NOTE** 
 > * Before using PSDK to develop the playback function of the payload, you need to develop the function of obtaining the file list of the payload.
 > * Develope the playback function of the payload, the developer must develop the function to obtain the path of the media file, and convert the media file to H.264.
 
@@ -536,7 +536,7 @@ The program of the payload which developed based on PSDK uses the interface `Psd
 
 #### 3. Sent the H.264 files
 The program of the payload which developed based on PSDK uses the interface `PsdkPayloadCamera_SendVideoStream` to sent the H.264 files according to the information such as frame rate, etc.
->**NOTE:** The step and the method of the video stream please refer to [Video Stream Transmission](./video-stream-transmission.html).
+> **NOTE** The step and the method of the video stream please refer to [Video Stream Transmission](./video-stream-transmission.html).
 
 ```c
     while (dataLength - lengthOfDataHaveBeenSent) {
@@ -592,4 +592,4 @@ In the media list that on the DJI Pilot or Mobile APP based on MSDK, the user cl
       <img src="../images/camera_media_file_download.gif" width="500" alt/></span></p>
 </div></div>
 
-> **NOTE:** The download speed of media files is about 300KB/s. The actual download speed is affected by the working environment.
+> **NOTE** The download speed of media files is about 300KB/s. The actual download speed is affected by the working environment.

@@ -20,65 +20,74 @@
       title: "What is X-Port ?"
       path: "/introduction/what-is-XPort.html"
 -
-  title: "Develope Guide"
+  title: "Payload Guide"
   list:
     -
       title: "Payload Criterion"
-      path: "/guide/payload-criterion.html"
+      path: "/payloadguide/payload-criterion.html"
     -
       title: "Hardware Platform"
-      path: "/guide/hardware.html"
+      path: "/payloadguide/hardware.html"
     -
-      title: "Develop Platform"
-      path: "/guide/platform.html"
+      title: "Development Platform"
+      path: "/payloadguide/platform.html"
 -
-  title: "Workflow"
+  title: "Quick Start"
   list:
     -
       title: "Attention"
-      path: "/workflow/attention.html"
-    -
-      title: "Device Connection"
-      path: "/workflow/device-connection.html"
+      path: "/quickstart/attention.html"
     -
       title: "Development Environment"
-      path: "/workflow/development-environment.html"
+      path: "/quickstart/development-environment.html"
+    -
+      title: "Device Connection"
+      path: "/quickstart/device-connection.html"
     -
       title: "Run The Sample"
-      path: "/workflow/run-the-sample.html"
+      path: "/quickstart/run-the-sample.html"
+    -
+      title: "Integrate PSDK"
+      path: /quickstart/integratePSDK.html
+    -
+      title: "porting"
+      path: /quickstart/porting.html
+-
+  title: "Basic Function"
+  list:
+    -
+      title: "Information Management"
+      path: "/basicfunction/information-manage.html"
+    -
+      title: "Log Management"
+      path: "/basicfunction/log-manage.html"
+    -
+      title: "Power Management"
+      path: "/basicfunction/power-manage.html"
+    -
+      title: "Data Transmission"
+      path: "/basicfunction/data-transmission.html"
+    -
+      title: SDK Interconnection 
+      path: /cn/basicfunction/SDK-mop.html
+    -
+      title: "Time Synchronization"
+      path: "/basicfunction/time-synchronization.html"
+    -
+      title: "Upgrade"
+      path: "/basicfunction/upgrade.html"
 -
   title: "Tutorial"
   list:
     -
-      title: "PSDK Initialization"
-      path: "/tutorial/initial.html"
-    -
-      title: "Porting"
-      path: "/tutorial/Porting.html"
-    -
-      title: "Information Management"
-      path: "/tutorial/information-manage.html"
-    -
-      title: "Time Synchronization"
-      path: "/tutorial/time-synchronization.html"
-    -
-      title: "Data Transmission"
-      path: "/tutorial/data-transmission.html"
-    -
-      title: "Power Management"
-      path: "/tutorial/power-manage.html"
-    -
-      title: "Log Management"
-      path: "/tutorial/log-manage.html"
-    -
-      title: "Payload Coordination"
-      path: "/tutorial/payload-collaboration.html"
+      title: "Custom Widget"
+      path: "/tutorial/custom-widget.html"
     -
       title: "Positioning"
       path: "/tutorial/positioning.html"
     -
-      title: "Custom Widget"
-      path: "/tutorial/custom-widget.html"
+      title: "Payload Coordination"
+      path: "/tutorial/payload-collaboration.html"
     -
       title: "Gimbal Control"
       path: "/tutorial/gimbal-control.html"
@@ -89,8 +98,8 @@
   title: "Camera"
   list:
     -
-      title: "Basic Function"
-      path: "/camera/camera-basic-functions.html"
+      title: "Basic Features"
+      path: "/camera/camera-basic-features.html"
     -
       title: "Focus Control"
       path: "/camera/camera-focus.html"
@@ -111,7 +120,7 @@
   list:
     -
       title: "FAQs"
-      path: "/faq/index.html"
+      path: "/appendix/index.html"
     -
-      title: "FAQs(For PSDK 1.5.0)"
-      path: "/faq/faq-PSDK-1.5.0-en.html"
+      title: "FAQs(For PSDK 1.5.X)"
+      path: "/appendix/faq-PSDK-1.5.0-en.html"

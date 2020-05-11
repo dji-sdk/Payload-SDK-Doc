@@ -1,15 +1,15 @@
 ---
 title: What is X-Port ？
 date: 2020-04-08
-version: 2.0.0
+version: 2.1.0
 keywords: [PSDK, X-Port]
 ---
 
 > **NOTE**
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention. 
-> * This series of documentation introduces the functions of **PSDK V2.0.0**, as well as the steps and methods of developing payload using PSDK V2.0.0. If you are still using PSDK V 1.5.0, please download the documentation of [PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip).
-> * X-Port only support developers use PSDK V2.0.0 ，if you still use PSDK V 1.5.0, please use [PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) and use [SkyPort](https://store.dji.com/product/psdk-development-kit).
-> * The details of the X-Port, please refer to the User's Manual in [PSDK V2.0.0](https://developer.dji.com/payload-sdk/downloads/).
+> * This series of documentation introduces the functions of **PSDK V2.x.x**, as well as the steps and methods of developing payload using PSDK V2.x.x. If you are still using PSDK V 1.5.x, please download the documentation of [PSDK V1.5.x](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip).
+> * X-Port only support developers use PSDK V2.x.x ，if you still use PSDK V 1.5.x, please use [PSDK V1.5.x](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) and use [SkyPort](https://store.dji.com/product/psdk-development-kit).
+> * The details of the X-Port, please refer to the User's Manual in [PSDK V2.x.x](https://developer.dji.com/payload-sdk/downloads/).
 
 DJI [X-Port](https://store.dji.com/product/dji-x-port) is a standard gimbal that allows drone hardware developers to quickly integrate their own custom sensors on DJI Matrice 200 Series V2. DJI X-Port includes a built-in communication API, DJI SkyPort V2 integration, and a gimbal debugging interface. Worked with [Payload SDK Development Kit 2.0](https://store.dji.com/product/psdk-development-kit-v2), X-Port is estimated to reduce start to finish development time for new payloads by up to 40 percent. 
 
@@ -40,6 +40,7 @@ Matrice 200 Series V2:
 * Matrice 200 V2
 * Matrice 210 V2
 * Matrice 210 RTK V2
+* Matrice 300 RTK
 
 ## Structure
 <div>
@@ -58,13 +59,13 @@ Matrice 200 Series V2:
 
 > **NOTE** 
 > * Effected by work environment, the electric current of the X-Port would be different.
-> * For supported load dimensions on X-Port, please refer to [Payload Criterion](../guide/payload-criterion.html)；
+> * For supported load dimensions on X-Port, please refer to [Payload Criterion](../payloadguide/payload-criterion.html)；
 > * For the details of X-Port interface, please refer to [Device Connection
-](../workflow/device-connection.html)。
+](../quickstart/device-connection.html)。
 
 ## Support Features
 * <a href="../tutorial/X-Port.html"><b> X-Port Control</b></a>
-* <a href="../camera/camera-basic-functions.html"><b>Camera </b></a>
+* <a href="../camera/camera-basic-features.html"><b>Camera </b></a>
 * <a href="../tutorial/payload-collaboration.html"><b>Payload Coordination</b></a>
 * <a href="../tutorial/custom-widget.html"><b>Custom Widget</b></a>
 * <a href="../tutorial/positioning.html"><b>Positioning</b></a>

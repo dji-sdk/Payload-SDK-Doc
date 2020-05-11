@@ -1,10 +1,10 @@
 ---
 title: Gimbal Control
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [Gimbal Control]
 ---
->**NOTE** 
+> **NOTE** 
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 > * The payload only developed by SkyPort support to use the gimbal control.
 
@@ -26,7 +26,7 @@ Figure 1 shows the joints of the gimbal. The joint of the gimbal is the motor to
 </div></div>
   
 #### Attitude and attitude angle
-Figure 2 shows the attitude of the payload, according to the control command, the gimbal could spin the payload to a different position. This tutorial uses the geodetic coordinate system (NED, North East Coordinate System) to describe the attitude angle of the payload, this angle is also called Euler-angle.
+Figure 2 shows the attitude of the payload, according to the control command, the gimbal could spin the payload to a different position. This tutorial uses the geodetic coordinate system (NED, North East Coordinate System) to describe the attitude angle of the payload, this angle is also called Euler-Angle.
 
 <div>
 <div style="text-align: center"><p>Figure 2 Attitude angle </p>
@@ -36,17 +36,17 @@ Figure 2 shows the attitude of the payload, according to the control command, th
 </div></div>
    
 
-### Gimbal mode
+### Gimbal Mode
 The gimbal mode determines how the gimbal rotates when following the drone:
 
 * Free: When the attitude of the drone changes, the gimbal would not rotate.
 * FPV: When the attitude of the drone changes, the gimbal would rotate the yaw and roll to ensure that the current field of view of the payload would not change.
 * YAW following: In this mode, the yaw axis of the gimbal will follow the drone.
 
-> **NOTE:** In the above three modes, other modules (which in the drone), controller and Mobile APP could control the gimbal.
+> **NOTE** In the above three modes, other modules (which in the drone), controller and Mobile APP could control the gimbal.
 
-### Gimbal control 
-#### Control method 
+### Gimbal Control 
+#### Control Method 
 There are three control methods:
 * Relative angle control: Users could control the gimbal which developed based on PSDK to rotate the specified angle within a specified time.
 * Absolute angle control: According to the user's command, the gimbal which developed based on PSDK will rotate from the current position to the specified position within a specified time.
@@ -56,7 +56,7 @@ There are three control methods:
 > * Use the angle control mode, the rotation time of the gimbal is limited by the maximum rotation speed and acceleration of the gimbal. The actual rotation angle is limited by the limit angle of the gimbal.
 > * Use the speed control mode, the gimbal rotates for 0.5s according to the speed specified by the user. When the gimbal rotates to the limit angle, it will stop.
 
-#### Control permissions
+#### Control Permissions
 The details for the gimbal control permissions, please refer to Table 1.
 
 * Rules
@@ -130,7 +130,7 @@ The smoothness of the gimbal refers to the urgency of the gimbal's response. The
 * Maximum speed percentage: The maximum speed percentage determines the maximum speed at which the gimbal rotates.
 * The actual maximum rotation speed of the gimbal = default maximum speed × maximum speed percentage
   
-  >**NOTE:**  Users can set the default maximum gimbal rotation speed according to the needs.
+  > **NOTE**  Users can set the default maximum gimbal rotation speed according to the needs.
 
 #### Angle adjustment 
 
@@ -139,7 +139,7 @@ The gimbal which developed based on the PSDK, supports users use DJI Pilot and M
 #### Limited
 To prevent the gimbal from being damaged or interfered with the drone's flight mission due to structural interference during the working, you must set the mechanical and software limit.
 
-* Mechanical: The mechanical limit is determined by the physical body, for details please refer to [Payload Criterion](../guide/payload-criterion.html).
+* Mechanical: The mechanical limit is determined by the physical body, for details please refer to [Payload Criterion](../payloadguide/payload-criterion.html).
 * Software: 
   * Set the Euler angle limit of the gimbal's pitch、roll and yaw axis;
   * Set the Euler angle extension angle limit of the pitch;
@@ -154,15 +154,19 @@ The payload developed based on the PSDK supports user uses DJI Pilot and Mobile 
 
 * Yaw: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of gimbal. 
 * Yaw and pitch axis of gimbal: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of gimbal, and reset pitch axis angle to the fine-tune angle. 
+* Yaw axis and pitch: reset the yaw axis to the sum of the drone yaw axis and the gimbal fine-tuning angle. Reset the pitch axis to the sum of -90° and the fine-tuning angle of the gimbal (under), and the sum of the 90° and the fine-tuning angle of the gimbal (upper).
+* Reset the yaw axis to the sum of -90° and the fine-tuning angle of the gimbal (under), the sum of the 90° and the fine-tuning angle of the gimbal (upper).   
 
 ## Develop gimbal control function
 According to the development platform and the requirements, developers need to develop the gimbal control function by themselves refer to the function struct `T_PsdkGimbalCommonHandler`, after register the functions to the interface in the PSDK, User use DJI Pilot or Mobile APP developed based on MSDK could control the payload, which has a gimbal.
 
-```c 
+```c
     // Obtain the information of the gimbal.
     s_commonHandler.GetSystemState = GetSystemState;
     s_commonHandler.GetAttitudeInformation = GetAttitudeInformation;
     s_commonHandler.GetCalibrationState = GetCalibrationState;
+    s_commonHandler.GetRotationSpeed = GetRotationSpeed;
+    s_commonHandler.GetJointAngle = GetJointAngle;
     // Developed the functions to control the gimbal.
     s_commonHandler.Rotate = PsdkTest_GimbalRotate;
     s_commonHandler.StartCalibrate = StartCalibrate;
@@ -180,7 +184,7 @@ Using the gimbal control function, developer needs to develop gimbal control fun
 
 ### Develop the basic function 
 
-> **NOTE:** 
+> **NOTE** 
 please use SkyPort V2 or SkyPort to develop the gimbal of the payload. If your Hardware Platform is X-Port, please refer to [X-Port Control](./X-Port.html).
 
 #### 1. Initialization
@@ -214,6 +218,7 @@ static T_PsdkReturnCode GetSystemState(T_PsdkGimbalSystemState *systemState)
     return PSDK_RETURN_CODE_OK;
 }
 ```
+
 #### 4. Register the function to calculate the rotation speed     
 Construct the callback function to calculate the rotation speed of the gimbal, adjust the attitude of the gimbal, and record the target angle and rotation speed of the gimbal rotation.      
 
@@ -224,14 +229,15 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
 {
     T_PsdkReturnCode psdkStat;
     T_PsdkReturnCode returnCode = PSDK_RETURN_CODE_OK;
-    T_PsdkAttitude3d attitudeTemp = {0};
+    T_PsdkAttitude3d targetAttitudeDTemp = {0};
+    T_PsdkAttitude3f targetAttitudeFTemp = {0};
     T_PsdkAttitude3d speedTemp = {0};
 
     PsdkLogger_UserLogDebug("gimbal rotation value invalid flag: pitch %d, roll %d, yaw %d.",
                             rotationProperty.rotationValueInvalidFlag.pitch,
                             rotationProperty.rotationValueInvalidFlag.roll,
                             rotationProperty.rotationValueInvalidFlag.yaw);
-    // Setting the lock for the thread.
+
     if (PsdkOsal_MutexLock(s_attitudeMutex) != PSDK_RETURN_CODE_OK) {
         PsdkLogger_UserLogError("mutex lock error");
         return PSDK_RETURN_CODE_ERR_UNKNOWN;
@@ -242,8 +248,8 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
         returnCode = PSDK_RETURN_CODE_ERR_UNKNOWN;
         goto out2;
     }
-    // Adjust the target attitude of the gimbal according to the gimbal mode.
-        switch (rotationMode) {
+
+    switch (rotationMode) {
         case PSDK_GIMBAL_ROTATION_MODE_RELATIVE_ANGLE:
             PsdkLogger_UserLogDebug("gimbal relative rotate angle: pitch %d, roll %d, yaw %d.", rotationValue.pitch,
                                     rotationValue.roll, rotationValue.yaw);
@@ -255,18 +261,25 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
                 goto out1;
             }
 
-            attitudeTemp.pitch =
+            targetAttitudeDTemp.pitch =
                 rotationProperty.rotationValueInvalidFlag.pitch == true ? s_attitudeInformation.attitude.pitch : (
                     s_attitudeInformation.attitude.pitch + rotationValue.pitch);
-            attitudeTemp.roll =
+            targetAttitudeDTemp.roll =
                 rotationProperty.rotationValueInvalidFlag.roll == true ? s_attitudeInformation.attitude.roll : (
                     s_attitudeInformation.attitude.roll + rotationValue.roll);
-            attitudeTemp.yaw =
+            targetAttitudeDTemp.yaw =
                 rotationProperty.rotationValueInvalidFlag.yaw == true ? s_attitudeInformation.attitude.yaw : (
                     s_attitudeInformation.attitude.yaw + rotationValue.yaw);
 
-            PsdkTest_GimbalAngleIegalization(&attitudeTemp, s_aircraftAttitude, NULL);
-            s_targetAttitude = attitudeTemp;
+            targetAttitudeFTemp.pitch = targetAttitudeDTemp.pitch;
+            targetAttitudeFTemp.roll = targetAttitudeDTemp.roll;
+            targetAttitudeFTemp.yaw = targetAttitudeDTemp.yaw;
+            PsdkTest_GimbalAngleLegalization(&targetAttitudeFTemp, s_aircraftAttitude, NULL);
+            targetAttitudeDTemp.pitch = targetAttitudeFTemp.pitch;
+            targetAttitudeDTemp.roll = targetAttitudeFTemp.roll;
+            targetAttitudeDTemp.yaw = targetAttitudeFTemp.yaw;
+
+            s_targetAttitude = targetAttitudeDTemp;
             s_rotatingFlag = true;
             s_controlType = TEST_GIMBAL_CONTROL_TYPE_ANGLE;
 
@@ -290,18 +303,25 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
                 goto out1;
             }
 
-            attitudeTemp.pitch =
+            targetAttitudeDTemp.pitch =
                 rotationProperty.rotationValueInvalidFlag.pitch == true ? s_attitudeInformation.attitude.pitch
                                                                         : rotationValue.pitch;
-            attitudeTemp.roll =
+            targetAttitudeDTemp.roll =
                 rotationProperty.rotationValueInvalidFlag.roll == true ? s_attitudeInformation.attitude.roll
                                                                        : rotationValue.roll;
-            attitudeTemp.yaw =
+            targetAttitudeDTemp.yaw =
                 rotationProperty.rotationValueInvalidFlag.yaw == true ? s_attitudeInformation.attitude.yaw
                                                                       : rotationValue.yaw;
 
-            PsdkTest_GimbalAngleIegalization(&attitudeTemp, s_aircraftAttitude, NULL);
-            s_targetAttitude = attitudeTemp;
+            targetAttitudeFTemp.pitch = targetAttitudeDTemp.pitch;
+            targetAttitudeFTemp.roll = targetAttitudeDTemp.roll;
+            targetAttitudeFTemp.yaw = targetAttitudeDTemp.yaw;
+            PsdkTest_GimbalAngleLegalization(&targetAttitudeFTemp, s_aircraftAttitude, NULL);
+            targetAttitudeDTemp.pitch = targetAttitudeFTemp.pitch;
+            targetAttitudeDTemp.roll = targetAttitudeFTemp.roll;
+            targetAttitudeDTemp.yaw = targetAttitudeFTemp.yaw;
+
+            s_targetAttitude = targetAttitudeDTemp;
             s_rotatingFlag = true;
             s_controlType = TEST_GIMBAL_CONTROL_TYPE_ANGLE;
 
@@ -324,7 +344,7 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
             }
 
             memcpy(&speedTemp, &rotationValue, sizeof(T_PsdkAttitude3d));
-            PsdkTest_GimbalSpeedIegalization(&speedTemp);
+            PsdkTest_GimbalSpeedLegalization(&speedTemp);
             s_speed = speedTemp;
 
             if (rotationValue.pitch != 0 || rotationValue.roll != 0 || rotationValue.yaw != 0) {
@@ -362,9 +382,11 @@ out2:
 Figure 3 shows that the payload uses the speed control to control the rotation of the gimbal, the speed is converted by three amounts, the relative angle、absolute angle or the speed of the gimbal according to the attitude and rotation speed.
 
 ```c
-nextAttitude.pitch = s_attitudeInformation.attitude.pitch + s_speed.pitch / PAYLOAD_GIMBAL_TASK_FREQ;
-nextAttitude.roll = s_attitudeInformation.attitude.roll + s_speed.roll / PAYLOAD_GIMBAL_TASK_FREQ;
-nextAttitude.yaw = s_attitudeInformation.attitude.yaw + s_speed.yaw / PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.pitch =
+    (float) s_attitudeHighPrecision.pitch + (float) s_speed.pitch / (float) PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.roll =
+    (float) s_attitudeHighPrecision.roll + (float) s_speed.roll / (float) PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.yaw = (float) s_attitudeHighPrecision.yaw + (float) s_speed.yaw / (float) PAYLOAD_GIMBAL_TASK_FREQ;
 
 if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
     nextAttitude.pitch =
@@ -376,12 +398,17 @@ if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
         (nextAttitude.yaw - s_targetAttitude.yaw) * s_speed.yaw >= 0 ? s_targetAttitude.yaw : nextAttitude.yaw;
 }
 
-s_attitudeInformation.attitude = nextAttitude;
-PsdkTest_GimbalAngleIegalization(&s_attitudeInformation.attitude, s_aircraftAttitude,
-                                 &s_attitudeInformation.reachLimitFlag);
+PsdkTest_GimbalAngleLegalization(&nextAttitude, s_aircraftAttitude, &s_attitudeInformation.reachLimitFlag);
+s_attitudeInformation.attitude.pitch = nextAttitude.pitch;
+s_attitudeInformation.attitude.roll = nextAttitude.roll;
+s_attitudeInformation.attitude.yaw = nextAttitude.yaw;
+
+s_attitudeHighPrecision.pitch = nextAttitude.pitch;
+s_attitudeHighPrecision.roll = nextAttitude.roll;
+s_attitudeHighPrecision.yaw = nextAttitude.yaw;
 
 if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
-    if (memcmp(&nextAttitude, &s_targetAttitude, sizeof(T_PsdkAttitude3d)) == 0) {
+    if (memcmp(&s_attitudeInformation.attitude, &s_targetAttitude, sizeof(T_PsdkAttitude3d)) == 0) {
         s_rotatingFlag = false;
     }
 } else if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_SPEED) {
@@ -419,6 +446,9 @@ switch (s_systemState.gimbalMode) {
         s_attitudeInformation.attitude.roll += (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
         s_attitudeInformation.attitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
 
+        s_attitudeHighPrecision.roll += (float) (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
+        s_attitudeHighPrecision.yaw += (float) (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
+
         if (s_rotatingFlag == true && s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
             s_targetAttitude.roll += (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
             s_targetAttitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
@@ -426,6 +456,8 @@ switch (s_systemState.gimbalMode) {
         break;
     case PSDK_GIMBAL_MODE_YAW_FOLLOW:
         s_attitudeInformation.attitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
+
+        s_attitudeHighPrecision.yaw += (float) (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
 
         if (s_rotatingFlag == true && s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
             s_targetAttitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
@@ -436,9 +468,23 @@ switch (s_systemState.gimbalMode) {
 }
 s_lastAircraftAttitude = s_aircraftAttitude;
 
-PsdkTest_GimbalAngleIegalization(&s_attitudeInformation.attitude, s_aircraftAttitude,
-                                 &s_attitudeInformation.reachLimitFlag);
-PsdkTest_GimbalAngleIegalization(&s_targetAttitude, s_aircraftAttitude, NULL);
+attitudeFTemp.pitch = s_attitudeInformation.attitude.pitch;
+attitudeFTemp.roll = s_attitudeInformation.attitude.roll;
+attitudeFTemp.yaw = s_attitudeInformation.attitude.yaw;
+PsdkTest_GimbalAngleLegalization(&attitudeFTemp, s_aircraftAttitude, &s_attitudeInformation.reachLimitFlag);
+s_attitudeInformation.attitude.pitch = attitudeFTemp.pitch;
+s_attitudeInformation.attitude.roll = attitudeFTemp.roll;
+s_attitudeInformation.attitude.yaw = attitudeFTemp.yaw;
+
+PsdkTest_GimbalAngleLegalization(&s_attitudeHighPrecision, s_aircraftAttitude, NULL);
+
+attitudeFTemp.pitch = s_targetAttitude.pitch;
+attitudeFTemp.roll = s_targetAttitude.roll;
+attitudeFTemp.yaw = s_targetAttitude.yaw;
+PsdkTest_GimbalAngleLegalization(&attitudeFTemp, s_aircraftAttitude, NULL);
+s_targetAttitude.pitch = attitudeFTemp.pitch;
+s_targetAttitude.roll = attitudeFTemp.roll;
+s_targetAttitude.yaw = attitudeFTemp.yaw;
 ```
 
 ### Gimbal Calibration
@@ -480,28 +526,18 @@ static T_PsdkReturnCode StartCalibrate(void)
 After calibrating the gimbal the payload will record the calibration status of the gimbal, also the Mobile APP, which developed based on MSDK could obtain relate information.
 
 ```c
-calibration:
+ // calibration
         if (s_calibrationState.calibratingFlag != true)
-            continue;
-
-        psdkStat = PsdkOsal_GetTimeMs(&currentTime);
-        if (psdkStat != PSDK_RETURN_CODE_OK) {
-            PsdkLogger_UserLogError("get current time error: %lld.", psdkStat);
-            continue;
-        }
-
-        if (PsdkOsal_MutexLock(s_calibrationMutex) != PSDK_RETURN_CODE_OK) {
-            PsdkLogger_UserLogError("mutex lock error");
-            continue;
-        }
+            goto unlockCalibrationMutex;
 
         progressTemp = (currentTime - s_calibrationStartTime) * 100 / PAYLOAD_GIMBAL_CALIBRATION_TIME_MS;
         if (progressTemp >= 100) {
             s_calibrationState.calibratingFlag = false;
-            s_calibrationState.progress = 100;
-            s_calibrationState.stage = PSDK_GIMBAL_CALIBRATION_STAGE_COMPLETE;
+            s_calibrationState.currentCalibrationProgress = 100;
+            s_calibrationState.currentCalibrationStage = PSDK_GIMBAL_CALIBRATION_STAGE_COMPLETE;
         }
 
+unlockCalibrationMutex:
         if (PsdkOsal_MutexUnlock(s_calibrationMutex) != PSDK_RETURN_CODE_OK) {
             PsdkLogger_UserLogError("mutex unlock error");
             continue;

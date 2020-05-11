@@ -1,7 +1,7 @@
 ---
 title:  PSDK Feature List
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [PSDK, feature overview]
 ---
 It is convenience for you to use the latest version of the PSDK, use that could help you to use the new features to develop the reliable payload, please pay attention to the release information of the DJI PSDK.
@@ -32,6 +32,9 @@ It is convenience for you to use the latest version of the PSDK, use that could 
     * Status acquisition: Obtain the status of the data transmission channel, which between the payload, Mobile APP and the onboard computer.
     * Bandwidth control: Set the proportion of different types of data occupying high-speed data transmission channel bandwidth.
 
+* SDK interconnection
+The application developed based on DJI OSDK can communicate with the Mobile APP developed based on MSDK and the payload developed based on PSDK. Developers use the SDK Interconnection to communicate with different products using different SDK seamlessly.
+
 * Custom Widget
     * Payload control: According to the configuration items in the config file, DJI Pilot can display the widget designed by the developer for the payload. Using the widget, users can control the payload.
     * Floating window: DJI Pilot can display the information pushed by payloads on the floating window.
@@ -53,6 +56,9 @@ PSDK power management could provide higher power and send the shutdown notificat
 
 * Log Management    
 PSDK log management supports users using serial port or USB to print the log from the payload use terminal like Putty could display different types of the log which in different colors.
+
+* Upgrade    
+Upgrade is the function for upgrading the firmware of the payload. Developers use the upgrade function could help users select the firmware and update the payload by DJI Assistant 2.
 
 ## NOTICE
 The payload developed using PSDK on RTOS **doesn't** support:

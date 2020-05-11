@@ -1,11 +1,11 @@
 ---
 title: 自定义控件
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [控件, 自定义, 自定义控件]
 ---
 ## 概述
-“自定义控件”是一个将“负载设备的功能”封装为按钮、开关以及滑块等控件的功能；使用DJI Pilot 或基于MSDK 开发的移动端APP 能够识别负载设备中控件的配置信息并生成UI 控件，方便用户快速设置负载设备的参数并控制负载设备执行指定的动作；同时，DJI Pilot 或基于MSDK 开发的移动端APP 还能以浮窗的形式显示负载设备的状态信息；此外，用户还能根据使用需求，将负载设备的功能映射到遥控器上的预留按键上，通过使用遥控器上的预留按键，以更便捷的方式控制负载设备。
+“自定义控件”是一个将“负载设备的功能”封装为按钮、开关以及范围条等控件的功能；使用DJI Pilot 或基于MSDK 开发的移动端APP 能够识别负载设备中控件的配置信息并生成UI 控件，方便用户快速设置负载设备的参数并控制负载设备执行指定的动作；同时，DJI Pilot 或基于MSDK 开发的移动端APP 还能以浮窗的形式显示负载设备的状态信息；此外，用户还能根据使用需求，将负载设备的功能映射到遥控器上的预留按键上，通过使用遥控器上的预留按键，以更便捷的方式控制负载设备。
 
 ## 基础概念
 ### 控件
@@ -345,9 +345,9 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
       <td>单击触发：按键按下后释放，触发选择下一个项目的命令</td>
     </tr>
      <tr>
-      <td>滑块</td>
+      <td>范围条</td>
       <td>左右拨杆：LS/RS </td>
-      <td>拨动触发：拨动拨杆触发滑块控件，可修改滑块数值</td>
+      <td>拨动触发：拨动拨杆触发范围条控件，可修改范围条数值</td>
     </tr>
        <tr>
     <td>输入框</td>
@@ -364,8 +364,43 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
       <img src="../../images/custom_widget_map_rc.png" width="500" alt/></span></p>
 </div></div>
 
->**提示：** DJI Pilot 支持创建多个映射表适配不同的负载设备。
+>**说明** 
+> * DJI Pilot 支持创建多个映射表适配不同的负载设备。
+> * 仅M200 V2系列以及GL900A遥控器支持控件映射。
+
+## 航点任务
+DJI 的无人机支持用户在使用具有自定义控件功能的负载设备时，将自定义控件的操作添加至航点任务中，使无人机在执行航点任务时，在指定的航点自动控制负载设备的控件如控制负载的开关控件、按钮控件和范围条控件，实现自动化巡检等任务。     
+自定义控件功能支持开发者在航点任务中添加下控件：
+* 按钮
+* 开关
+* 范围条
+
+在无人机执行航点任务时添加控件的步骤如下所示：
+1. 进入DJI Pilot 航线飞行页面
+2. 在地图上添加航点
+3. 在添加航点时，添加自定义控件动作，如打开开关与关闭开关作，如 图6.添加自定义控件动作 所示。
+4. 保存航线
+
+<div>
+<div style="text-align: center"><p>图6. 添加自定义控件动作  </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../../images/widget-add-waypoint-actions.jpg" width="400" alt/></span></p>
+</div></div>
+
+5. 执行航点飞行任务，当无人机飞达特定航点时，将自动触发自定义控件指定的动作，如图7. 触发自定义控件 所示。
+
+<div>
+<div style="text-align: center"><p>图7. 触发自定义控件  </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../../images/widget-trigger-in-waypoint.png" width="400" alt/></span></p>
+</div></div>
+
+>**说明**
+> * DJI Pilot 支持为不同的负载设备以及负载设备挂载的不同位置，创建多个航线任务。
+> * 仅Matrice 300 RTK 支持开发者在使用航点任务时，添加控制自定义控件为动作的功能。
 
 > 相关参考
 > * [Mobile SDK](https://developer.dji.com/mobile-sdk/documentation/introduction/index.html)
-> * [Payload SDK数据传输功能](data-transmission.html)
+> * [Payload SDK 数据传输功能](../basicfunction/data-transmission.html)

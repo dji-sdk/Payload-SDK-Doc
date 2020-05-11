@@ -1,10 +1,10 @@
 ---
 title: 云台控制
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云台模式, 限位, 最大速度百分比, 角度控制, 速度控制]
 ---
->**说明** 
+> **说明** 
 > * 仅使用SkyPort 开发的负载设备支持使用PSDK 的云台功能。
 > * X-Port 支持开发者使用DJI Assistant 2 (2.0.11 及以上版本）调整配置参数。
 ## 概述
@@ -124,7 +124,7 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 #### 最大速度百分比
 * 最大速度百分比：云台的最大速度百分比决定云台旋转的最大速度。
 * 云台实际最大的转动速度= 默认最大速度 × 最大速度百分比    
-  >**说明：** 开发者根据实际的使用需要，可设置云台默认的最大云台转动运动速度。
+  > **说明：** 开发者根据实际的使用需要，可设置云台默认的最大云台转动运动速度。
 
 #### 角度微调
 使用PSDK 开发的云台支持用户通过DJI Pilot和基于MSDK 开发的移动端APP，精细化地调整云台关节角的角度，调整结果还可作为校准参数存储在负载设备中，用于降低云台的各类误差。
@@ -132,7 +132,7 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 #### 云台限位功能
 为避免云台在工作时，因结构干涉导致云台意外损坏或干扰无人机的执行飞行任务，请务必为云台设置机械限位和软件限位。
 
-* 机械限位：机械限位由云台类负载设备的物理形态和设计结构决定，详情请参见[标准声明](../guide/payload-criterion.html)。
+* 机械限位：机械限位由云台类负载设备的物理形态和设计结构决定，详情请参见[标准声明](../payloadguide/payload-criterion.html)。
 * 软件限位：开发者可根据实际的使用需求设置软件限位：
   * 设置云台俯仰轴、横滚轴和航向轴的欧拉角角度限制；
   * 设置俯仰轴欧拉角扩展角角度限制；
@@ -146,6 +146,8 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
 
 * 航向轴复位：将云台航向轴的角度复位为无人机航向轴角度与云台航向轴微调角度的和。
 * 俯仰轴与航向轴复位：将云台俯仰轴的角度复位为微调的角度，将云台航向轴的角度复位为无人机航向轴角度与云台航向轴微调角度的和。
+* 重置云台的偏航轴和俯仰轴：将云台偏航轴的角度重置为无人机偏航轴和云台微调角度的和。重置云台俯仰轴为-90°与云台微调角度的和（云台下置），90°与云台微调角度的和（云台上置）。
+* 重置云台的偏航轴为-90°与云台微调角度的和（云台下置），90°与云台微调角度的和（云台上置）。
 
 ## 实现云台功能
 请开发者根据选用的**开发平台**以及行业应用实际的使用需求，按照PSDK 中的结构体`T_PsdkGimbalCommonHandler`构造实现云台类负载设备控制功能的函数，将云台控制功能的函数注册到PSDK 中指定的接口后，用户通过使用DJI Pilot 或基于MSDK 开发的移动端APP 能够控制基于PSDK 开发的云台类负载设备执行指定的动作。
@@ -155,6 +157,8 @@ keywords: [云台控制, 欧拉角, 关节角, 云台状态, 云台姿态, 云�
     s_commonHandler.GetSystemState = GetSystemState;
     s_commonHandler.GetAttitudeInformation = GetAttitudeInformation;
     s_commonHandler.GetCalibrationState = GetCalibrationState;
+    s_commonHandler.GetRotationSpeed = GetRotationSpeed;
+    s_commonHandler.GetJointAngle = GetJointAngle;
     // 实现云台控制功能
     s_commonHandler.Rotate = PsdkTest_GimbalRotate;
     s_commonHandler.StartCalibrate = StartCalibrate;
@@ -215,14 +219,15 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
 {
     T_PsdkReturnCode psdkStat;
     T_PsdkReturnCode returnCode = PSDK_RETURN_CODE_OK;
-    T_PsdkAttitude3d attitudeTemp = {0};
+    T_PsdkAttitude3d targetAttitudeDTemp = {0};
+    T_PsdkAttitude3f targetAttitudeFTemp = {0};
     T_PsdkAttitude3d speedTemp = {0};
 
     PsdkLogger_UserLogDebug("gimbal rotation value invalid flag: pitch %d, roll %d, yaw %d.",
                             rotationProperty.rotationValueInvalidFlag.pitch,
                             rotationProperty.rotationValueInvalidFlag.roll,
                             rotationProperty.rotationValueInvalidFlag.yaw);
-    // 设置线程锁
+
     if (PsdkOsal_MutexLock(s_attitudeMutex) != PSDK_RETURN_CODE_OK) {
         PsdkLogger_UserLogError("mutex lock error");
         return PSDK_RETURN_CODE_ERR_UNKNOWN;
@@ -233,8 +238,8 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
         returnCode = PSDK_RETURN_CODE_ERR_UNKNOWN;
         goto out2;
     }
-    // 根据云台的模式调整云台转动的目标姿态
-        switch (rotationMode) {
+
+    switch (rotationMode) {
         case PSDK_GIMBAL_ROTATION_MODE_RELATIVE_ANGLE:
             PsdkLogger_UserLogDebug("gimbal relative rotate angle: pitch %d, roll %d, yaw %d.", rotationValue.pitch,
                                     rotationValue.roll, rotationValue.yaw);
@@ -246,18 +251,25 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
                 goto out1;
             }
 
-            attitudeTemp.pitch =
+            targetAttitudeDTemp.pitch =
                 rotationProperty.rotationValueInvalidFlag.pitch == true ? s_attitudeInformation.attitude.pitch : (
                     s_attitudeInformation.attitude.pitch + rotationValue.pitch);
-            attitudeTemp.roll =
+            targetAttitudeDTemp.roll =
                 rotationProperty.rotationValueInvalidFlag.roll == true ? s_attitudeInformation.attitude.roll : (
                     s_attitudeInformation.attitude.roll + rotationValue.roll);
-            attitudeTemp.yaw =
+            targetAttitudeDTemp.yaw =
                 rotationProperty.rotationValueInvalidFlag.yaw == true ? s_attitudeInformation.attitude.yaw : (
                     s_attitudeInformation.attitude.yaw + rotationValue.yaw);
 
-            PsdkTest_GimbalAngleIegalization(&attitudeTemp, s_aircraftAttitude, NULL);
-            s_targetAttitude = attitudeTemp;
+            targetAttitudeFTemp.pitch = targetAttitudeDTemp.pitch;
+            targetAttitudeFTemp.roll = targetAttitudeDTemp.roll;
+            targetAttitudeFTemp.yaw = targetAttitudeDTemp.yaw;
+            PsdkTest_GimbalAngleLegalization(&targetAttitudeFTemp, s_aircraftAttitude, NULL);
+            targetAttitudeDTemp.pitch = targetAttitudeFTemp.pitch;
+            targetAttitudeDTemp.roll = targetAttitudeFTemp.roll;
+            targetAttitudeDTemp.yaw = targetAttitudeFTemp.yaw;
+
+            s_targetAttitude = targetAttitudeDTemp;
             s_rotatingFlag = true;
             s_controlType = TEST_GIMBAL_CONTROL_TYPE_ANGLE;
 
@@ -281,18 +293,25 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
                 goto out1;
             }
 
-            attitudeTemp.pitch =
+            targetAttitudeDTemp.pitch =
                 rotationProperty.rotationValueInvalidFlag.pitch == true ? s_attitudeInformation.attitude.pitch
                                                                         : rotationValue.pitch;
-            attitudeTemp.roll =
+            targetAttitudeDTemp.roll =
                 rotationProperty.rotationValueInvalidFlag.roll == true ? s_attitudeInformation.attitude.roll
                                                                        : rotationValue.roll;
-            attitudeTemp.yaw =
+            targetAttitudeDTemp.yaw =
                 rotationProperty.rotationValueInvalidFlag.yaw == true ? s_attitudeInformation.attitude.yaw
                                                                       : rotationValue.yaw;
 
-            PsdkTest_GimbalAngleIegalization(&attitudeTemp, s_aircraftAttitude, NULL);
-            s_targetAttitude = attitudeTemp;
+            targetAttitudeFTemp.pitch = targetAttitudeDTemp.pitch;
+            targetAttitudeFTemp.roll = targetAttitudeDTemp.roll;
+            targetAttitudeFTemp.yaw = targetAttitudeDTemp.yaw;
+            PsdkTest_GimbalAngleLegalization(&targetAttitudeFTemp, s_aircraftAttitude, NULL);
+            targetAttitudeDTemp.pitch = targetAttitudeFTemp.pitch;
+            targetAttitudeDTemp.roll = targetAttitudeFTemp.roll;
+            targetAttitudeDTemp.yaw = targetAttitudeFTemp.yaw;
+
+            s_targetAttitude = targetAttitudeDTemp;
             s_rotatingFlag = true;
             s_controlType = TEST_GIMBAL_CONTROL_TYPE_ANGLE;
 
@@ -315,7 +334,7 @@ T_PsdkReturnCode PsdkTest_GimbalRotate(E_PsdkGimbalRotationMode rotationMode,
             }
 
             memcpy(&speedTemp, &rotationValue, sizeof(T_PsdkAttitude3d));
-            PsdkTest_GimbalSpeedIegalization(&speedTemp);
+            PsdkTest_GimbalSpeedLegalization(&speedTemp);
             s_speed = speedTemp;
 
             if (rotationValue.pitch != 0 || rotationValue.roll != 0 || rotationValue.yaw != 0) {
@@ -353,9 +372,11 @@ out2:
 负载设备根据云台的姿态和转动速度，将相对角度控制量、绝对角度控制量或速度控制量转换为控制云台转动的速度，根据该速度控制云台转动，如 图3.云台控制 所示。
 
 ```c
-nextAttitude.pitch = s_attitudeInformation.attitude.pitch + s_speed.pitch / PAYLOAD_GIMBAL_TASK_FREQ;
-nextAttitude.roll = s_attitudeInformation.attitude.roll + s_speed.roll / PAYLOAD_GIMBAL_TASK_FREQ;
-nextAttitude.yaw = s_attitudeInformation.attitude.yaw + s_speed.yaw / PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.pitch =
+    (float) s_attitudeHighPrecision.pitch + (float) s_speed.pitch / (float) PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.roll =
+    (float) s_attitudeHighPrecision.roll + (float) s_speed.roll / (float) PAYLOAD_GIMBAL_TASK_FREQ;
+nextAttitude.yaw = (float) s_attitudeHighPrecision.yaw + (float) s_speed.yaw / (float) PAYLOAD_GIMBAL_TASK_FREQ;
 
 if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
     nextAttitude.pitch =
@@ -367,12 +388,17 @@ if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
         (nextAttitude.yaw - s_targetAttitude.yaw) * s_speed.yaw >= 0 ? s_targetAttitude.yaw : nextAttitude.yaw;
 }
 
-s_attitudeInformation.attitude = nextAttitude;
-PsdkTest_GimbalAngleIegalization(&s_attitudeInformation.attitude, s_aircraftAttitude,
-                                 &s_attitudeInformation.reachLimitFlag);
+PsdkTest_GimbalAngleLegalization(&nextAttitude, s_aircraftAttitude, &s_attitudeInformation.reachLimitFlag);
+s_attitudeInformation.attitude.pitch = nextAttitude.pitch;
+s_attitudeInformation.attitude.roll = nextAttitude.roll;
+s_attitudeInformation.attitude.yaw = nextAttitude.yaw;
+
+s_attitudeHighPrecision.pitch = nextAttitude.pitch;
+s_attitudeHighPrecision.roll = nextAttitude.roll;
+s_attitudeHighPrecision.yaw = nextAttitude.yaw;
 
 if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
-    if (memcmp(&nextAttitude, &s_targetAttitude, sizeof(T_PsdkAttitude3d)) == 0) {
+    if (memcmp(&s_attitudeInformation.attitude, &s_targetAttitude, sizeof(T_PsdkAttitude3d)) == 0) {
         s_rotatingFlag = false;
     }
 } else if (s_controlType == TEST_GIMBAL_CONTROL_TYPE_SPEED) {
@@ -409,6 +435,9 @@ switch (s_systemState.gimbalMode) {
         s_attitudeInformation.attitude.roll += (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
         s_attitudeInformation.attitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
 
+        s_attitudeHighPrecision.roll += (float) (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
+        s_attitudeHighPrecision.yaw += (float) (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
+
         if (s_rotatingFlag == true && s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
             s_targetAttitude.roll += (s_aircraftAttitude.roll - s_lastAircraftAttitude.roll);
             s_targetAttitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
@@ -416,6 +445,8 @@ switch (s_systemState.gimbalMode) {
         break;
     case PSDK_GIMBAL_MODE_YAW_FOLLOW:
         s_attitudeInformation.attitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
+
+        s_attitudeHighPrecision.yaw += (float) (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
 
         if (s_rotatingFlag == true && s_controlType == TEST_GIMBAL_CONTROL_TYPE_ANGLE) {
             s_targetAttitude.yaw += (s_aircraftAttitude.yaw - s_lastAircraftAttitude.yaw);
@@ -426,9 +457,23 @@ switch (s_systemState.gimbalMode) {
 }
 s_lastAircraftAttitude = s_aircraftAttitude;
 
-PsdkTest_GimbalAngleIegalization(&s_attitudeInformation.attitude, s_aircraftAttitude,
-                                 &s_attitudeInformation.reachLimitFlag);
-PsdkTest_GimbalAngleIegalization(&s_targetAttitude, s_aircraftAttitude, NULL);
+attitudeFTemp.pitch = s_attitudeInformation.attitude.pitch;
+attitudeFTemp.roll = s_attitudeInformation.attitude.roll;
+attitudeFTemp.yaw = s_attitudeInformation.attitude.yaw;
+PsdkTest_GimbalAngleLegalization(&attitudeFTemp, s_aircraftAttitude, &s_attitudeInformation.reachLimitFlag);
+s_attitudeInformation.attitude.pitch = attitudeFTemp.pitch;
+s_attitudeInformation.attitude.roll = attitudeFTemp.roll;
+s_attitudeInformation.attitude.yaw = attitudeFTemp.yaw;
+
+PsdkTest_GimbalAngleLegalization(&s_attitudeHighPrecision, s_aircraftAttitude, NULL);
+
+attitudeFTemp.pitch = s_targetAttitude.pitch;
+attitudeFTemp.roll = s_targetAttitude.roll;
+attitudeFTemp.yaw = s_targetAttitude.yaw;
+PsdkTest_GimbalAngleLegalization(&attitudeFTemp, s_aircraftAttitude, NULL);
+s_targetAttitude.pitch = attitudeFTemp.pitch;
+s_targetAttitude.roll = attitudeFTemp.roll;
+s_targetAttitude.yaw = attitudeFTemp.yaw;
 ```
 
 ### 使用云台校准功能
@@ -468,33 +513,24 @@ static T_PsdkReturnCode StartCalibrate(void)
 负载设备执行云台校准功能后，将记录云台的校准状态，基于MSDK 开发的移动端APP 能够获取云台的校准状态。
 
 ```c
-calibration:
+ // calibration
         if (s_calibrationState.calibratingFlag != true)
-            continue;
-
-        psdkStat = PsdkOsal_GetTimeMs(&currentTime);
-        if (psdkStat != PSDK_RETURN_CODE_OK) {
-            PsdkLogger_UserLogError("get current time error: %lld.", psdkStat);
-            continue;
-        }
-
-        if (PsdkOsal_MutexLock(s_calibrationMutex) != PSDK_RETURN_CODE_OK) {
-            PsdkLogger_UserLogError("mutex lock error");
-            continue;
-        }
+            goto unlockCalibrationMutex;
 
         progressTemp = (currentTime - s_calibrationStartTime) * 100 / PAYLOAD_GIMBAL_CALIBRATION_TIME_MS;
         if (progressTemp >= 100) {
             s_calibrationState.calibratingFlag = false;
-            s_calibrationState.progress = 100;
-            s_calibrationState.stage = PSDK_GIMBAL_CALIBRATION_STAGE_COMPLETE;
+            s_calibrationState.currentCalibrationProgress = 100;
+            s_calibrationState.currentCalibrationStage = PSDK_GIMBAL_CALIBRATION_STAGE_COMPLETE;
         }
 
+unlockCalibrationMutex:
         if (PsdkOsal_MutexUnlock(s_calibrationMutex) != PSDK_RETURN_CODE_OK) {
             PsdkLogger_UserLogError("mutex unlock error");
             continue;
         }
 ```
+
 在DJI Pilot 以及基于MSDK 开发的移动端APP 中使用“云台自动校准”功能后，使用PSDK 开发的负载设备将接收到云台校准命令并校准云台，如 图4和图5 所示。  
 <div>
 <div style="text-align: center"><p>图4.云台校准（1） </p>

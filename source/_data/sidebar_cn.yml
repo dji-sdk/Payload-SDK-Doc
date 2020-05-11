@@ -24,61 +24,70 @@
   list:
     -
       title: "负载开发标准"
-      path: "/cn/guide/payload-criterion.html"
+      path: "/cn/payloadguide/payload-criterion.html"
     -
       title: "选购硬件平台"
-      path: "/cn/guide/hardware.html"
+      path: "/cn/payloadguide/hardware.html"
     -
       title: "选择开发平台"
-      path: "/cn/guide/platform.html"
+      path: "/cn/payloadguide/platform.html"
 -
-  title: "开发引导"
+  title: "快速入门"
   list:
     -
       title: "开发前须知"
-      path: "/cn/workflow/attention.html"
-    -
-      title: "设备连接"
-      path: "/cn/workflow/device-connection.html"
+      path: "/cn/quickstart/attention.html"
     -
       title: "配置开发环境"
-      path: "/cn/workflow/development-environment.html"
+      path: "/cn/quickstart/development-environment.html"
+    -
+      title: "设备连接"
+      path: "/cn/quickstart/device-connection.html"
     -
       title: "运行示例程序"
-      path: "/cn/workflow/run-the-sample.html"
--
-  title: "实践教程"
-  list:
+      path: "/cn/quickstart/run-the-sample.html"
     -
-      title: "PSDK 初始化"
-      path: "/cn/tutorial/initial.html"
+      title: "开始使用PSDK"
+      path: /cn/quickstart/integratePSDK.html
     -
       title: "跨平台移植"
-      path: "/cn/tutorial/Porting.html"
+      path: /cn/quickstart/porting.html
+-
+  title: "基础功能"
+  list:
     -
       title: "信息管理"
-      path: "/cn/tutorial/information-manage.html"
-    -
-      title: "时间同步"
-      path: "/cn/tutorial/time-synchronization.html"
-    -
-      title: "数据传输"
-      path: "/cn/tutorial/data-transmission.html"
-    -
-      title: "电源管理"
-      path: "/cn/tutorial/power-manage.html"
+      path: /cn/basicfunction/information-manage.html
     -
       title: "日志管理"
-      path: "/cn/tutorial/log-manage.html"
+      path: "/cn/basicfunction/log-manage.html"
     -
-      title: "负载协同"
-      path: "/cn/tutorial/payload-collaboration.html"
+      title: "电源管理"
+      path: "/cn/basicfunction/power-manage.html"
+    -
+      title: "数据传输"
+      path: "/cn/basicfunction/data-transmission.html"
+    -
+      title: SDK 互联互通
+      path: /cn/basicfunction/SDK-mop.html
+    -
+      title: "时间同步"
+      path: "/cn/basicfunction/time-synchronization.html"
+    -
+      title: "本地升级"
+      path: "/cn/basicfunction/upgrade.html"
+-
+  title: "应用实践"
+  list:
+    -
+      title: "自定义控件"
+      path: "/cn/tutorial/custom-widget.html"
     -
       title: "精准定位"
       path: "/cn/tutorial/positioning.html"
     -
-      title: "自定义控件"
-      path: "/cn/tutorial/custom-widget.html"
+      title: "负载协同"
+      path: "/cn/tutorial/payload-collaboration.html"
     -
       title: "云台控制"
       path: "/cn/tutorial/gimbal-control.html"
@@ -90,7 +99,7 @@
   list:
     -
       title: "相机类基础功能"
-      path: "/cn/camera/camera-basic-functions.html"
+      path: "/cn/camera/camera-basic-features.html"
     -
       title: "对焦控制功能"
       path: "/cn/camera/camera-focus.html"
@@ -110,8 +119,11 @@
   title: "附录"
   list:
     -
-      title: "PSDK 常见问题解答"
-      path: "/cn/faq/index.html"
+      title: "版本声明"
+      path: "/cn/appendix/firmware.html"
     -
-      title: "PSDK 常见问题解答（1.5.0）"
-      path: "/cn/faq/faq-PSDK-1.5.0.html"
+      title: "PSDK 常见问题解答"
+      path: "/cn/appendix/index.html"
+    -
+      title: "PSDK 常见问题解答（1.5.X）"
+      path: "/cn/appendix/faq-PSDK-1.5.X.html"

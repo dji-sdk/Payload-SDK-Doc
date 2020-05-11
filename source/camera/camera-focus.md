@@ -1,10 +1,10 @@
 ---
 title: Focus Control
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [camera, take photos, focus mode, focus area, focus ring, focus assist]
 ---
-> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Before develope the focus control for the payload, the developer needs to develop the function by themselves, after registered the function in the specified interfaces of the PSDK, the user uses DJI Pilot and Mobile APP which developed based on MSDK could control the payload to focus and use the focus assistant.
@@ -15,7 +15,7 @@ Before develope the focus control for the payload, the developer needs to develo
 * Manual focus(MF): In the manual-focus mode, the user could obtain a clear image by adjusting the focus ring.
 
 #### Focus Target
-  > **NOTE:** In default, the focus point of the camera-type payload is the center of the sensor.
+  > **NOTE** In default, the focus point of the camera-type payload is the center of the sensor.
 
 The value of the focus point is the aspect ratio coefficient of the camera screen, as shown in Figure 1.
 * Auto Focus: In this mode, developers need to formulate the camera focusing strategy and set the focus point (this point is also called the "target point").
@@ -163,7 +163,7 @@ static T_PsdkReturnCode SetFocusAssistantSettings(T_PsdkCameraFocusAssistantSett
 
 After develope the focus function of the camera-type payload, the user uses the DJI Pilot or Mobile APP developed based on MSDK could control the camera-type payload to focus.
 
->**NOTE:** If the button is yellow, it means the work mode of the camera-type payload is meter, after clicked, the function will switch to the focus.
+> **NOTE** If the button is yellow, it means the work mode of the camera-type payload is meter, after clicked, the function will switch to the focus.
 
 <div>
 <div style="text-align: center"><p>Figure 2  Auto Focus  </p>

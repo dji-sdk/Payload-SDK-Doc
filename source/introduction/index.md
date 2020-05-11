@@ -1,14 +1,14 @@
 ---
 title: What is PSDK ?
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [PSDK, quick start, standardization, guidance, DJI PSDK]
 ---
 > **NOTE** 
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * This series of documentation introduces the functions of **PSDK V2.0.0**, as well as the steps and methods of developing payload using PSDK V2.0.0. If you are still using PSDK V 1.5.0, please download the documentation of [PSDK V1.5.0](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip).
+> * This series of documentation introduces the functions of **PSDK V2.x.x**, as well as the steps and methods of developing payload using PSDK V2.x.x. If you are still using PSDK V 1.5.x, please download the documentation of [PSDK V1.5.x](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip).
 
-To help developers to develop the payload, DJI provides Payload SDK (PSDK), [X-Port](../guide/hardware.html) and [SkyPort](../guide/hardware.html) to expedite developers to obtain the **resources** from DJI drones, such as power and status (GPS, attitude, time and date).
+To help developers to develop the payload, DJI provides Payload SDK (PSDK), [X-Port](../payloadguide/hardware.html) and [SkyPort](../payloadguide/hardware.html) to expedite developers to obtain the **resources** from DJI drones, such as power and status (GPS, attitude, time and date).
 
 <div style="text-align: center"> <p> <span><img src="../images/PSDK-features-en.png" width="500" style="vertical-align: middle" alt /> </span></p>
 </div>
@@ -25,13 +25,13 @@ PSDK not only provides the API and hardware for developing the payload, but also
 
 ## Typical Features
 
-* <a href="../camera/camera-initial.html"> <b> Camera Control </b> </a>
-* <a href="../tutorial/gimbal-contro.html"> <b> Gimbal Control </b> </a>
+* <a href="../camera/camera-basic-features.html"> <b> Camera Control </b> </a>
+* <a href="../tutorial/gimbal-control.html"> <b> Gimbal Control </b> </a>
 * <a href="../tutorial/payload-collaboration.html"> <b> Payoad Collaboration </b> </a>
 * <a href="../tutorial/custom-widget.html"> <b> Custom Widget </b> </a>
 * <a href="../tutorial/positioning.html"> <b> Positioning </b> </a>
-* <a href="../tutorial/data-transmission.html"> <b> Data Communication </b> </a>
-* <a href="../tutorial/information-manage.html"> <b> Information Management </b> </a>
+* <a href="../basicfunction/data-transmission.html"> <b> Data Communication </b> </a>
+* <a href="../basicfunction/information-manage.html"> <b> Information Management </b> </a>
 
 ## Usage Scenarios
 

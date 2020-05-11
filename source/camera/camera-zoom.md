@@ -1,10 +1,10 @@
 ---
 title: Zoom Control 
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [Camera, Zoom, Optical Zoom, Digital Zoom, Continuous Zoom]
 ---
-> **NOTE:** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> **NOTE** This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
 
 ## Overview
 Before developing the zoom control for the payload, the developer needs to develop the function by themselves, after registered the function in the specified interfaces of the PSDK, the user uses DJI Pilot and Mobile APP which developed based on MSDK could control the payload to zoom.
@@ -215,7 +215,7 @@ Press and hold the zoom button to change the zoom factor, as shown in Figure 1.
 * T: zoom increases
 * W: zoom decreases
 * R: zoom resets
-    > **NOTE:** User could set the default zoom factor of the camera-type payload,the current is 1.0.
+    > **NOTE** User could set the default zoom factor of the camera-type payload,the current is 1.0.
 <div>
 <div style="text-align: center"><p>Figure 1 Zoom Continuously </p>
 </div>

@@ -1,10 +1,10 @@
 ---
 title: 精准定位
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [精准定位, RTK ,时间同步, PPS]
 ---
->**提示：** 在运行“精准定位”示例代码前，请使用DJI Pilot 或MSDK开发的APP 查看无人机与RTK 卫星间保持良好的通信状态，确保负载设备可获取精准的定位结果，如 图1. RTK信号状态 所示。  
+> **提示：** 在运行“精准定位”示例代码前，请使用DJI Pilot 或MSDK开发的APP 查看无人机与RTK 卫星间保持良好的通信状态，确保负载设备可获取精准的定位结果，如 图1. RTK信号状态 所示。  
 <div>
 <div style="text-align: center"><p>图1. RTK信号状态 </p>
 </div>
@@ -18,18 +18,18 @@ keywords: [精准定位, RTK ,时间同步, PPS]
 ## 基础概念  
 #### 术语解释
 * 目标点：实际获取到定位信息的位置，如云台口中心点。
-  > **说明** ：M210 RTK V2的目标点为负载设备转接环上表面的中心点，该负载设备需要挂载在无人机I 号云台上。
+  > **说明** ：M210 RTK V2和M300 RTK的目标点为负载设备转接环上表面的中心点，该负载设备需要挂载在无人机I 号云台上。
 * 兴趣点：由用户任意指定的负载设备上某一器件的位置，如相机图像传感器的中心点，该目标点也可以为兴趣点。
 * 任务：多个连续的飞行动作集合称为一个任务，如对某个区域执行一次测绘任务。根据实际使用需要，用户可创建多个任务。
 * 定位事件：触发定位请求的事件，如相机曝光时触发定位请求，则"相机曝光"是一个定位事件；多个事件的集合为事件集合，使用PSDK 开发的负载设备可同时请求多个定位事件发生时的位置信息，如相机协同曝光。
 
 #### 获取精准定位
-> **说明：** 获取精准定位时，需使用时间同步功能将负载设备的本地时间同步为无人机时间，有关使用时间同步功能的详细说明请参见[时间同步](./time-synchronization.html)。   
+> **说明：** 获取精准定位时，需使用时间同步功能将负载设备的本地时间同步为无人机时间，有关使用时间同步功能的详细说明请参见[时间同步](../basicfunction/time-synchronization.html)。   
 
 1. 定位事件发生时，负载设备需要会记录本地时间（该时间为负载设备上的时间）；
 2. 负载设备通过时间转换功能，将负载设备上的时间转换为无人机上的时间；
 3. 负载设备使用定位事件发生时的无人机时间（无人机系统的时间）请求位置。
->**说明:** 定位事件发生时的无人机时间（无人机系统的时间）应早于最新的PPS 信号上升沿时间，且时间间隔须小于2s，如 图2.获取精准定位 所示。  
+> **说明:** 定位事件发生时的无人机时间（无人机系统的时间）应早于最新的PPS 信号上升沿时间，且时间间隔须小于2s，如 图2.获取精准定位 所示。  
  
 <div>
 <div style="text-align: center"><p>图2.获取精准定位 </p>
@@ -114,16 +114,17 @@ for (i = 0; i < TEST_EVENT_COUNT; ++i) {
                             positionInfo[i].offsetBetweenMainAntennaAndTargetPoint.x,
                             positionInfo[i].offsetBetweenMainAntennaAndTargetPoint.y,
                             positionInfo[i].offsetBetweenMainAntennaAndTargetPoint.z);
-    PsdkLogger_UserLogDebug("longitude: %f\tlatitude: %f\theight: %f",
+    PsdkLogger_UserLogDebug("longitude: %.8f\tlatitude: %.8f\theight: %.8f",
                             positionInfo[i].targetPointPosition.longitude,
                             positionInfo[i].targetPointPosition.latitude,
                             positionInfo[i].targetPointPosition.height);
-    PsdkLogger_UserLogDebug("longStandardDeviation: %f\tlatStandardDeviation: %f\thgtStandardDeviation: %f",
-                            positionInfo[i].targetPointPositionStandardDeviation.longitude,
-                            positionInfo[i].targetPointPositionStandardDeviation.latitude,
-                            positionInfo[i].targetPointPositionStandardDeviation.height);
+    PsdkLogger_UserLogDebug(
+        "longStandardDeviation: %.8f\tlatStandardDeviation: %.8f\thgtStandardDeviation: %.8f",
+        positionInfo[i].targetPointPositionStandardDeviation.longitude,
+        positionInfo[i].targetPointPositionStandardDeviation.latitude,
+        positionInfo[i].targetPointPositionStandardDeviation.height);
 }
-
+ 
 s_eventIndex++;
 ```
 <div>
@@ -136,5 +137,8 @@ s_eventIndex++;
 ### 查询定位记录
 请在无人机内的`cam_mark_file`文件中查看Mark 文件获取准确的定位信息，有关Mark 文件的详细说明请参见[Mark 文件简介](https://djisdksupport.zendesk.com/hc/zh-cn/articles/360024019493-Mark文件简介)。
 
+> **说明：** M300 RTK 不支持在Mark 文件中查看定位记录信息。
+
 ## 适配产品
 M210 RTK V2
+M300 RTK

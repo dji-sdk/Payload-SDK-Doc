@@ -1,12 +1,12 @@
 ---
 title: X-Port Control
-date: 2020-01-17
-version: 2.0.0
+date: 2020-05-08
+version: 2.1.0
 keywords: [gimbal, X-Port control, camera]
 ---
 > **NOTE**
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
-> * Before using X-Port to develop the payload, please read the [Gimbal Control](./gimbal-contro.html) to learn the basic concepts of the gimbal.
+> * Before using X-Port to develop the payload, please read the [Gimbal Control](./gimbal-control.html) to learn the basic concepts of the gimbal.
 > * If the X-Port is powered off abnormally, X-Port would lose the parameter.
 > * f you want to config the parameters of the X-Port, please use the DJI Assistant 2 (2.0.11 or above).
 ## Overview 
@@ -20,7 +20,7 @@ The payload developed based on PSDK can obtain the mode、attitude and calibrati
 * Parameters: Speed ​​conversion factor
 
 ## X-Port Control
-> **NOTE:** X-Port integrates the basic functions of the gimbal. For details please refer to [Gimbal Control](./gimbal-contro.html).
+> **NOTE** X-Port integrates the basic functions of the gimbal. For details please refer to [Gimbal Control](./gimbal-control.html).
 
 #### Control Method
 * Relative angle control: Users could control the X-Port rotate the specified angle within a specified time.       
@@ -31,12 +31,12 @@ After receive the command from the user, X-Port could calculate the amount of th
 * Absolute angle control: According to the user's command, X-Port will rotate from the current position to the specified position within a specified time.
 * Speed ​​control: Users could control the rotation speed of the X-Port.
 
->**NOTE**   
+> **NOTE**   
 > * In the angle control method, the range of the yaw which on the X-Port is [-180,180], the rotation time of the X-Port is limited by the maximum acceleration and maximum speed.   
 > * The roll which on the X-Port is used to eliminate drone jitter, this axis couldn't control by the payload.   
 > * The reachable position of the X-Port is restricted by the X-Port position limit.   
 
-#### Control permissions
+#### Control Permission
 The details for the X-Port control permissions, please refer to Table 1.
 
 * Rules
@@ -96,18 +96,20 @@ Table 1 The control permissions of the X-Port
   </tbody>
 </table></div></div>
 
-#### Speed ​​conversion factor
+#### Speed ​​Conversion Factor
 If the zoom factor of the camera is large, when the speed of the X-Port rotates faster, the picture recorded by the payload will very blurry, but PSDK provides the "Speed Conversion Factor" of the control command and the rotation speed to help user recognizes a stable picture, when the payload has a large zoom factor.
   * Factor: Users can set the speed conversion factor of X-Port it is recommended to set the speed conversion factor is the inverse of the zoom factor. 
   * Max_speed (the maximum speed of X-Port) = Default maximum speed × Maximum speed percentage
   * X-Port Speed = Max_speed * Factor (Factor≤ 1)
 
 
-> **NOTE:** Only DJI Pilot and PSDK could set the speed conversion coefficient of the X-Port.
+> **NOTE** Only DJI Pilot and PSDK could set the speed conversion coefficient of the X-Port.
 
 ### Reset
 * Yaw: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of X-Port. 
 * Yaw and pitch axis of X-Port: Reset angle of yaw axis to the sum of yaw axis angle of aircraft and the fine-tune angle of yaw axis of X-Port, and reset pitch axis angle to the fine-tune angle. 
+* Yaw axis and pitch: reset the yaw axis to the sum of the drone yaw axis and the gimbal fine-tuning angle. Reset the pitch axis to the sum of -90° and the fine-tuning angle of the gimbal (under), and the sum of the 90° and the fine-tuning angle of the gimbal (upper).
+* Reset the yaw axis to the sum of -90° and the fine-tuning angle of the gimbal (under), the sum of the 90° and the fine-tuning angle of the gimbal (upper).   
 
 ### X-Port Limitation
 #### Limit Angle
@@ -175,11 +177,11 @@ Table 2 The Limit Angle of the X-Port </p></div>
   
 After setting the X-Port limit angle, the X-Port will rotate within the limit range. If the X-Port rotation angle exceeds the range of the limited, the X-Port will automatically adjust the attitude but a little jitter. To reduce the jitter of the X-Port, X-Port has a limit buffer.
 
-> **NOTE:** Only the range that of the Euler-angle of the roll could not be changed.
+> **NOTE** Only the range that of the Euler-angle of the roll could not be changed.
 
 #### The buffer of the limitation 
 X-Port uses the buffer to reduce the jitter when the user adjusts the attitude beyond the limit angle.
-  >**NOTE** 
+  > **NOTE** 
   > * X-Port couldn't move ahead when X-Port in the buffer.
   > * The width of the buffer for the pitch and roll is 5°,15° is for the yaw.
 
@@ -200,7 +202,7 @@ X-Port uses the buffer to reduce the jitter when the user adjusts the attitude b
   * Unabled the extension:[-pitchEulerAngleUpperLimit, -pitchEulerAngleLowerLimit] 
   * Enabled the extension:[-pitchEulerAngleExtensionUpperLimit, -pitchEulerAngleExtensionLowerLimit]
 
----------
+------------
 
 ## Use the X-Port to develop payload
 
@@ -283,8 +285,8 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 
 
 ### 3. Set the limit angle for the X-Port
-* Please refer to [“Payload Criterion”](../guide/payload-criterion.html) to Set the limit angle for the X-Port, prevent the X-Port from accidentally damaging. The limit angle for the X-Port is as shown in Table 3.
->**说明：** The unit of the angle in the following code is 0.1°.
+* Please refer to [“Payload Criterion”](../payloadguide/payload-criterion.html) to Set the limit angle for the X-Port, prevent the X-Port from accidentally damaging. The limit angle for the X-Port is as shown in Table 3.
+> **说明：** The unit of the angle in the following code is 0.1°.
 
 <div><div>
 <p>

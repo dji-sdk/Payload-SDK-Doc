@@ -141,3 +141,6 @@ Using the payload development-board, developers do not need to purchase a third-
 > * X-Port Ingress Protection: IP44
 > * X-Port Temperature: -20°C～50°C
 > * The rated-current of X-Port may be affected by the working environment.
+
+## Purchase Development Board
+DJI PSDK uses the STM3241G-EVAL (STM32F417IG) to develop and debug samples. PSDK suggest developer refer to the [STM3241G-EVAL (STM32F417IG) ](https://www.st.com/en/evaluation-tools/stm3241g-eval.html) and purchase the development board they need.

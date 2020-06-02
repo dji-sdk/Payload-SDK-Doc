@@ -30,14 +30,14 @@ keywords: [注册, 选购, 入门, 学习, 进阶, 高级]
       <img src="../../images/how-to-use/8.png" height="50" width="70" style="vertical-align:middle" alt/></span></p></div></td></td>
   </tr>
   <tr>
-   <td style="text-align:center"><a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">注册账号</a></td>
-   <td style="text-align:center"><a href="https://www.dji.com/cn/products/compare-m200-series?site=brandsite&from=nav" target="_blank" >选购无人机</a></td>
-   <td style="text-align:center"><a href="../payloadguide/hardware.html">选购硬件平台</a></td>
-   <td style="text-align:center"><a href="https://developer.dji.com/user/apps/#allhtml">应用注册</a></td>
+   <td style="text-align:center"><a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">1.注册企业账号</a></td>
+   <td style="text-align:center"><a href="https://www.dji.com/cn/products/compare-m200-series?site=brandsite&from=nav" target="_blank" >2.选购无人机</a></td>
+   <td style="text-align:center"><a href="../payloadguide/hardware.html">3.选购硬件平台</a></td>
+   <td style="text-align:center"><a href="https://developer.dji.com/user/apps/#allhtml">4.应用注册</a></td>
    <td style="text-align:center"><a href="../quickstart/run-the-sample.html">运行示例程序</a></td>
-   <td style="text-align:center"><a href="https://www.dji.com/cn/downloads/softwares/assistant-dji-2-for-matrice">模拟与调试</a></td>
-   <td style="text-align:center"><a href="mailto:dev@dji.com">量产申请</a></td>
-   <td style="text-align:center"><a href="mailto:dev@dji.com">加入DJI 行业生态</a></td>
+   <td style="text-align:center"><a href="https://www.dji.com/cn/downloads/softwares/assistant-dji-2-for-matrice">5.模拟与调试</a></td>
+   <td style="text-align:center"><a href="mailto:dev@dji.com">6.量产申请</a></td>
+   <td style="text-align:center"><a href="mailto:dev@dji.com">7.加入DJI 行业生态</a></td>
   </tr>
 </tbody>
 </table>

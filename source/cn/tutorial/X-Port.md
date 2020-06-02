@@ -1,12 +1,14 @@
 ---
-title: X-Port控制
+title: X-Port 控制
 date: 2020-05-08
 version: 2.1.0
 keywords: [云台, X-Port 控制, 相机云台]
 ---
 > **说明** 
-> * 使用X-Port 开发负载设备前，请先阅读[云台控制](./gimbal-control.html)教程，学习有关控制云台转动的基本概念。
+> * 在使用X-Port 控制功能前，请根据 <a href="https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/DJI ENTERPRISE X-Port 用户手册.pdf">使用指南</a>、根据[负载标准](../payloadguide/payload-criterion.html)和[接口说明](../quickstart/device-connection.html)中的要求和说明，合理地设计负载设备，正确地使用X-Port；
+> * 使用X-Port 开发负载设备前，请先阅读[云台控制](./gimbal-control.html)教程，学习有关控制云台转动的基本概念；
 > * 当X-Port 被异常下电时，如直接从云台接口断开连接，X-Port 工作过程中设置的参数信息可能无法被正常存储。  
+
 ## 概述
 DJI X-Port 标准云台是一个用于开发负载设备的硬件平台，用户使用X-Port，能够快速开发具有云台功能的负载设备；结合[自定义控件](./custom-widget.html)功能，使用DJI Pilot 以及基于MSDK 开发的APP 还可以显示开发者设计的控件，方便用户通过控件控制使用X-Port 标准云台和PSDK 开发的负载设备。
 
@@ -479,3 +481,75 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
     return psdkStat;
 }
 ```
+
+## X-Port 调试
+把负载设备安装在X-Port 上，并将无人机接入DJI Assistant 2后，开发者可使用[DJI Assistant 2](http://www.dji.com/matrice-200-series-v2/info#downloads) 调试X-Port。
+
+> **说明** 
+> * 有关在X-Port 上安装负载设备的详细步骤和DJI Assistant 2 界面的介绍请参见DJI X-Port <a href="https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/DJI ENTERPRISE X-Port 用户手册.pdf">使用指南</a>；
+> * 将负载设备安装在X-Port 上时，请确保X-Port 上的负载设备在俯仰轴、偏航轴和横滚轴的各个位置上**均能停留**，且在**各个位置上保持平衡**。
+
+#### 手动调平
+**1. 调整俯仰轴**
+将负载设备安装在X-Port 上时，绕P 轴中心轴线转动负载设备，确保负载设备在俯仰轴的各个位置上均能停留。
+
+**2.横滚轴调平**
+1. 使用 L 型内六角螺丝刀拧松Row 轴轴臂上的4 颗螺丝(无需取下螺丝)；
+2. 左右调节R 轴轴臂的位置，使R 轴轴臂在转动时，在任意位置上均能保持平衡；
+3. 重新锁紧 4 颗螺丝(扭力 批大小为 2.0±0.1 kgf.cm)。
+
+<div>
+<div style="text-align: center"><p>图4.X-Port 横滚轴调平 </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../../images/xport-row.png" width="280" alt/></span></p>
+</div></div>
+
+**3. 偏航轴调平**
+1. 使用L 型内六角螺丝刀拧松偏航轴轴臂上的4 颗螺丝(无需取下螺丝)；
+2. 前后调节偏航轴臂位置，使得偏航轴基座轴线在不垂直于地面时，负载设备在任意位置均能停留，而不会绕着偏航轴基座转动；
+3. 重新锁紧4 颗螺丝(扭力批大小为 2.0±0.1 kgf.cm
+)。
+<div>
+<div style="text-align: center"><p>图5.X-Port 偏航轴调平 </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../../images/xport-yaw.png" width="280" alt/></span></p>
+</div></div>
+
+#### 软件调试
+使用[DJI Assistant 2](http://www.dji.com/matrice-200-series-v2/info#downloads) ，开发者可对负载设备执行平衡度检测、同轴度检测及力度调整等调试操作。
+
+> **说明** 
+> * 使用DJI Assistant 2 调试云台的同时，请勿控制云台，如控制云台角度、速度和云台回中等。
+> * 使用DJI Assistant 2 调试DJI X-Port 时，请按照平衡度检测、同轴度检测、控制参数自整定、自动校准的顺序调试云台。
+
+##### 1. 平衡度检测（X-Port 为关节角模式）
+1. 在“云台设置”页面，点击“云台平衡度检测”，根据指导准备无人机和X-Port 云台；
+2. 根据DJI Assistant 2 的指引检测并调整X-Port；
+3. 检测时，一旦X-Port 没有配平，开发者需根据检测进度和检测结果重新调整云台：
+  1. 请向前(向后)、向上(向下)移动负载，再重新执行平衡度检测；
+  2. 请向左(向右)调整云台横滚轴轴臂的位置，再重新执行平衡度检测；
+  3. 请向前(向后)调整云台偏航轴轴臂的位置，再重新执行平衡度检测。
+
+##### 2. 同轴度检测（X-Port 为关节角模式）
+> **说明：** 在执行同轴度检测功能前，请先执行平衡度检测，并保证X-Port 的平衡度良好。   
+
+1. 在“云台设置”页面，点击“云台同轴度检测”，根据指导准备无人机和X-Port 云台；
+2. 根据DJI Assistant 2 的指引检测并调整X-Port；
+3. 检测时，一旦X-Port 的同轴度检测结果较差，开发者需根据检测进度和检测结果重新调整负载设备和X-Port 辅轴轴臂的安装方式：请向前(向后)、向上(向下)调节负载辅轴臂的螺丝并重新执行同轴度检测。
+
+##### 3. 控制参数自整定
+> **说明** 
+> * 在执行控制参数自整定功能前，请先执行平衡度检测和同轴度检测，并保证X-Port 的平衡度检测和同轴度检测的结果为良好； 
+> * 在执行“控制参数自整定”的操作时，请水平放置无人机，确保无人机横滚轴和俯仰轴的角度在±5° 内。
+
+1. 在“云台设置”页面，点击“云台参数自整定”，DJI Assistant 2 将根据负载设备的状态，自动调整X-Port 的控制参数；
+2. 关闭无人机电机，使负载设备处于静止的状态；
+3. DJI Assistant 2 或DJI Pilot 向X-Port 发送云台控制指令，执行控制参数自整定的功能。
+
+##### 4. 自动校准
+若X-Port 上负载设备的初始位置未水平居中，请使用自动校准功能校准X-Port.
+
+
+

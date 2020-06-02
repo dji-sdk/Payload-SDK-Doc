@@ -9,7 +9,6 @@ keywords: [PSDK, X-Port]
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention. 
 > * This series of documentation introduces the functions of **PSDK V2.x.x**, as well as the steps and methods of developing payload using PSDK V2.x.x. If you are still using PSDK V 1.5.x, please download the documentation of [PSDK V1.5.x](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip).
 > * X-Port only support developers use PSDK V2.x.x ，if you still use PSDK V 1.5.x, please use [PSDK V1.5.x](https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/payload-sdk-doc-1.0.zip) and use [SkyPort](https://store.dji.com/product/psdk-development-kit).
-> * The details of the X-Port, please refer to the User's Manual in [PSDK V2.x.x](https://developer.dji.com/payload-sdk/downloads/).
 
 DJI [X-Port](https://store.dji.com/product/dji-x-port) is a standard gimbal that allows drone hardware developers to quickly integrate their own custom sensors on DJI Matrice 200 Series V2. DJI X-Port includes a built-in communication API, DJI SkyPort V2 integration, and a gimbal debugging interface. Worked with [Payload SDK Development Kit 2.0](https://store.dji.com/product/psdk-development-kit-v2), X-Port is estimated to reduce start to finish development time for new payloads by up to 40 percent. 
 
@@ -22,7 +21,7 @@ DJI [X-Port](https://store.dji.com/product/dji-x-port) is a standard gimbal that
 <div style="text-align: center">
 <p>Figure 2 Material Bill </p>
 <div><p><span>
-      <img src="../../images/XPort-en.png" width="880" alt/></span></p>
+      <img src="../images/XPort-en.png" width="880" alt/></span></p>
 </div></div>
 </div>
 
@@ -57,11 +56,7 @@ Matrice 200 Series V2:
 * Operating temperature: -20°C～50°C (-4°F to 122°F)
 * Power output: 13.6V / 2A or 17V / 2.5A (High Power Apply)
 
-> **NOTE** 
-> * Effected by work environment, the electric current of the X-Port would be different.
-> * For supported load dimensions on X-Port, please refer to [Payload Criterion](../payloadguide/payload-criterion.html)；
-> * For the details of X-Port interface, please refer to [Device Connection
-](../quickstart/device-connection.html)。
+> **NOTE**  Effected by work environment, the electric current of the X-Port would be different.
 
 ## Support Features
 * <a href="../tutorial/X-Port.html"><b> X-Port Control</b></a>
@@ -75,6 +70,13 @@ Matrice 200 Series V2:
 * OSDK: The Application which developed based on OSDK could control the dorne, X-Port and the custom sensors based on X-Port.
 
 > **NOTE：** If you want to config the parameters of the X-Port, please use the DJI Assistant 2 (2.0.11 or above).
+
+
+## Reference
+* For dimensions, please refer to [Payload Criterion](../payloadguide/payload-criterion.html);
+* The details of X-Port interface, please refer to [Device Connection](../quickstart/device-connection.html).
+* The details for using X-Port please refer to DJI X-Port <a href="https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/DJI ENTERPRISE X-Port user manual.pdf">User's Manual</a>or [X-Port Control](../tutorial/X-Port.html).
+
 
 -------
 <div style="text-align: center"><p>

@@ -154,6 +154,8 @@ SkyPort 开发套件中的负载设备开发板 </td>
 </div></div>
 
 ## 连接开发平台
+> **说明：** DJI PSDK 使用STM3241G-EVAL(STM32F417IG) 开发板开发并调试示例程序，建议开发者参考[STM3241G-EVAL(STM32F417IG)](https://www.st.com/en/evaluation-tools/stm3241g-eval.html) 的参数信息选购所需使用的开发平台。  
+
 #### 连接至RTOS 开发平台
 按照RTOS 示例代码中的串口配置项，将STM32F407xG 连接至接口拓展板。
 

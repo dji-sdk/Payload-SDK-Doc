@@ -6,9 +6,10 @@ keywords: [gimbal, X-Port control, camera]
 ---
 > **NOTE**
 > * This article is **Machine-Translated**. If you have any questions about this article, please send an <a href="mailto:dev@dji.com">E-mail </a>to DJI, we will correct it in time. DJI appreciates your support and attention.
+> * Before using X-Port Control, please read the <a href="https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/DJI ENTERPRISE X-Port user manual.pdf"> User’s Manual </a>, [Payload Criterion](../payloadguide/payload-criterion.html) and [Interface Description](../quickstart/device-connection.html) in Device Connection.
 > * Before using X-Port to develop the payload, please read the [Gimbal Control](./gimbal-control.html) to learn the basic concepts of the gimbal.
-> * If the X-Port is powered off abnormally, X-Port would lose the parameter.
-> * f you want to config the parameters of the X-Port, please use the DJI Assistant 2 (2.0.11 or above).
+> * If the X-Port is powered off abnormally, X-Port would lose the parameter which user set during the working process.
+
 ## Overview 
 X-Port is a Hardware Platform for the developer to develop the payload, use X-Port Control and [Custom Widget](./custom-widget.html), the user could display or control the payload, using DJI Pilot or the APP which developed based on MSDK.
 
@@ -485,3 +486,72 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
     return psdkStat;
 }
 ```
+
+## Adjust and text
+After instal the payload in the X-Port and connect to the JI Assistant 2, developer could use [DJI Assistant 2](http://www.dji.com/matrice-200-series-v2/info#downloads) test and debug the X-Port。
+
+> **NOTE** 
+> * The details for install the payload in the X-Port and the interface of the JI Assistant please refer to the DJI X-Port <a href="https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/psdk/DJI ENTERPRISE X-Port user manual.pdf">User's Manual</a>；
+> * After install the payload in the X-Port,please make sure that the payload which in the X-Port could remain stationary at all positions, also balanced at each axis.
+
+#### Manual
+**1. Adjust Pitch**
+Rotate the payload around the Pitch axis centerline and ensure that the payload can remain stationary at all positions.
+
+**2.Adjust Row**
+1. Use an L-shaped hexagonal screwdriver to loosen the 4 screws on the Roll arm (no need to remove the screws);
+2. Hold the yaw arm with one hand, and adjust the position of the roll arm to ensure that the roll arm can keep balance while rotating,
+3. Re-tighten the 4 screws (Torsion is 2.0±0.1 kgf.cm).
+
+<div>
+<div style="text-align: center"><p>Figure 4.Adjust X-Port‘s Row  </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../images/xport-row.png" width="280" alt/></span></p>
+</div></div>
+
+**3. Adjust X-Port‘s Yaw**
+1. Use an L-shaped hexagonal screwdriver to loosen the 4 screws on the yaw arm (no need to remove the screws);
+2. Hold the yaw base with one hand, and adjust the position of the yaw arm to ensure that the gimbal can remain stationary (not rotate around the yaw base) at any position when the yaw base centerline is not perpendicular to the ground;
+3. Re-tighten the 4 screws (Torsion is 2.0±0.1 kgf.cm).
+
+<div>
+<div style="text-align: center"><p>Figure 5.Adjust X-Port‘s Yaw </p>
+</div>
+<div style="text-align: center"><p><span>
+      <img src="../images/xport-yaw.png" width="280" alt/></span></p>
+</div></div>
+
+#### Software Text 
+Use [DJI Assistant 2](http://www.dji.com/matrice-200-series-v2/info#downloads), developer could execute the Gimbal Balance Test, Gimbal Coaxiality Test, and Gimbal Force Adjustment.
+
+> **NOTE** 
+> * When using DJI Assistant 2 debugging the X-Port DON'T control the X-Port such as angle adjustment, speed adjustment and gimbal re-center.
+> * When using DJI Assistant 2 debugging the DJI X-Port, please debug the X-Port in order of Gimbal Balance Test, Gimbal Coaxiality Test, Gimbal Parameter Auto-tuning and  Auto Calibration.
+
+##### 1. Gimbal Balance Test（X-Port is in Joint Angle mode）  
+1. Tap “Gimbal Balance Test” on “Gimbal Settings” page, and prepare the aircraft and gimbal according to app instructions.
+2. Run the test according to the instructions.
+3. Gimbal Balance Test needs to be rerun if the gimbal is found to be out of balance based on test progress and results. These adjustments maybe required:
+   1. Move the payload forward (backward) and upward (downward) and perform the balance test again.
+   2. Adjust the position of the gimbal Roll arm to the left (to the right) and perform the balance test again.
+   3. Adjust the position of the gimbal Yaw arm forward (backward) and perform the balance test again.
+
+##### 2. Gimbal Coaxiality Test（X-Port is in Joint Angle mode）    
+
+> **NOTE** It is important to make sure the Gimbal Balance Test is finished and the gimbal is balanced before performing the Gimbal Coaxiality Test.   
+1. Tap “Gimbal Coaxiality Test” on “Gimbal Settings” page, and prepare the aircraft and gimbal according to app instructions.
+2. Run the test according to app instructions.
+3. During Gimbal Coaxiality Test, you can adjust the mounting of the payload and the pitch secondary arm according to the coaxiality test progress and results. If the gimbal coaxiality is poor, please adjust the pitch secondary arm end screw hole forward or backward, upward or downward, and then perform the Gimbal Coaxiality Test again.
+
+##### 3. Gimbal Parameter Auto-tuning
+> **NOTE** 
+> * Mount the payload in the gimbal, and make sure the Gimbal Balance Test and Gimbal Coaxiality Test are both ok.
+> * In Gimbal Parameter Auto-tuning, please make sure that the drone was placed horizontally and the roll and pitch angle are within ±5°.
+
+1. Tap “Gimbal Parameter Auto-tuning” on “Gimbal Settings” page, then it will automatically adjust the gimbal control parameters according to the payload.     
+2. Turn off the aircraft’s motors and keep the gimbal stationary.  
+3. The DJI Assistant 2 or DJI Pilot will start the Gimbal Parameter Auto-tuning.
+
+##### 4. Gimbal Auto Calibration
+If the gimbal is still not balanced, tap Gimbal Auto Calibration to adjust it.

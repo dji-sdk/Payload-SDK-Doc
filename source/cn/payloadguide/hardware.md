@@ -137,3 +137,6 @@ SkyPort 包含如下配件：
 > **说明** 
 > * X-Port 的防护等级：IP44，工作温度范围：-20°C～50°C。
 > * 受实际工作环境的影响，X-Port 实际的工作电流可能会和额定电流有一定的差异。
+
+## 选购第三方开发平台
+DJI PSDK 使用STM3241G-EVAL(STM32F417IG) 开发板开发并调试示例程序，建议开发者参考[STM3241G-EVAL(STM32F417IG)](https://www.st.com/en/evaluation-tools/stm3241g-eval.html) 的参数信息选购所需使用的开发平台。  

@@ -32,14 +32,14 @@ Before using PSDK to develop the payload, you should register an Enterprise Acco
       <img src="../images/how-to-use/8.png" height="50" width="70" style="vertical-align:middle" alt/></span></p></div></td></td>
   </tr>
   <tr>
-   <td style="text-align:center"><a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">Enterprise Account</a></td>
-   <td style="text-align:center"><a href="https://www.dji.com/products/compare-m200-series?site=brandsite&from=nav" target="_blank" >Purchase Drone</a></td>
-   <td style="text-align:center"><a href="../payloadguide/hardware.html">Hardware Platform</a></td>
-   <td style="text-align:center"><a href="https://developer.dji.com/user/apps/#allhtml">Apply Application</a></td>
-   <td style="text-align:center"><a href="../quickstart/run-the-sample.html">Using Sample</a></td>
+   <td style="text-align:center"><a href="https://developer.dji.com/payload-sdk/apply/" target="_blank">1.Enterprise Account</a></td>
+   <td style="text-align:center"><a href="https://www.dji.com/products/compare-m200-series?site=brandsite&from=nav" target="_blank" >2.Purchase Drone</a></td>
+   <td style="text-align:center"><a href="../payloadguide/hardware.html">3.Hardware Platform</a></td>
+   <td style="text-align:center"><a href="https://developer.dji.com/user/apps/#allhtml">4.Apply Application</a></td>
+   <td style="text-align:center"><a href="../quickstart/run-the-sample.html">5.Using Sample</a></td>
    <td style="text-align:center"><a href="https://www.dji.com/downloads/softwares/assistant-dji-2-for-matrice">Simulate</a></td>
-   <td style="text-align:center"><a href="mailto:dev@dji.com">Produce</a></td>
-   <td style="text-align:center"><a href="mailto:dev@dji.com">Join Ecology</a></td>
+   <td style="text-align:center"><a href="mailto:dev@dji.com">6.Produce</a></td>
+   <td style="text-align:center"><a href="mailto:dev@dji.com">7.Join Ecology</a></td>
   </tr>
 </tbody>
 </table>

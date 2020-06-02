@@ -32,7 +32,7 @@ It is convenience for you to use the latest version of the PSDK, use that could 
     * Status acquisition: Obtain the status of the data transmission channel, which between the payload, Mobile APP and the onboard computer.
     * Bandwidth control: Set the proportion of different types of data occupying high-speed data transmission channel bandwidth.
 
-* SDK interconnection
+* **SDK Interconnection**      
 The application developed based on DJI OSDK can communicate with the Mobile APP developed based on MSDK and the payload developed based on PSDK. Developers use the SDK Interconnection to communicate with different products using different SDK seamlessly.
 
 * Custom Widget

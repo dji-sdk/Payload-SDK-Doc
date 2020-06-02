@@ -4,6 +4,9 @@ date: 2020-05-08
 version: 2.1.0
 keywords: [attention, hardware purchase, software version, firmware version]
 ---
+
+When developing the payload with PSDK, please use the firmware specified or higher.
+
 ## PSDK 2.1.0
 
 * DJI X-Port: V01.01.0100        

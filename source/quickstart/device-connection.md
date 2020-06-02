@@ -244,6 +244,9 @@ Figure 4 shows the port of the expansion board. Use this board, developers could
 </div></div>
 
 ## Connect Development Board
+
+> **NOTE** DJI PSDK uses the STM3241G-EVAL (STM32F417IG) to develop and debug samples. PSDK suggest developer refer to the [STM3241G-EVAL (STM32F417IG) ](https://www.st.com/en/evaluation-tools/stm3241g-eval.html) and purchase the development board they need.
+
 #### Connect to the RTOS development board
 Connect the STM32F407xG to the expansion board the configuration of the serial port is as follows:
 

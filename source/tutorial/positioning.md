@@ -33,7 +33,7 @@ To meet the centimeter-level accuracy positioning requirements of the payload de
 * The payload converts the time which on the payload to the time which on the drone, 
 * The payload uses the drone time (time of the drone system) to request the location when the positioning event occurs.
 
-> **NOTE** The drone time (time of the drone system) at the time of the positioning event should be earlier than the latest rising edge time of the PPS signal, and the time interval must be less than 2s, as shown in Figure 2. 
+> **NOTE** The drone time (time of the drone system) at the time of the positioning event should be earlier than the latest rising edge time of the PPS signal, and the time interval must in 1～2s, as shown in Figure 2. 
  
 <div>
 <div style="text-align: center"><p>Figure 2 Obtaining the positioning  </p>

@@ -10,7 +10,7 @@ keywords: [PSDK, X-Port]
 [X-Port 标准云台](https://store.dji.com/cn/product/dji-x-port)是一个具有云台功能的负载设备开发工具，开发者使用X-Port 并借助[Payload SDK 开发套件 2.0](https://store.dji.com/cn/product/psdk-development-kit-v2)中的配件，能够快速开发出可挂载在DJI 无人机上具有云台功能的负载设备，在使用PSDK 开放的API 接口实现高度定制化的同时，还能有效降低负载设备的开发成本，大幅度提升负载设备的可靠性与兼容性。
 
 <div>
-<div style="text-align: center"><p>图1. X-Port  </p>
+<div style="text-align: center"><p>图1. X-Port</p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../../images/X-Port.png" width="300" style="vertical-align:middle" alt/></span></p>

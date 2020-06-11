@@ -61,7 +61,7 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
 
 #### Add the user’s information
 
-* Add the information in the file : ``sample/platform/linux/manifold2/application/app_info.h` 
+* Add the information in the file : `sample/platform/linux/manifold2/application/app_info.h` 
 
 ```c
 #define USER_APP_NAME               "your_app_name"

@@ -19,7 +19,7 @@ The payload mounts on the drone which developed based on PSDK will initialize th
 > **NOTE** Before using the time synchronization function, please keep the communication status between the drone and the RTK satellite in the good condition from DJI Pilot or a Mobile APP developed based on MSDK APP, as shown in Figure 1.
 
 <div>
-<div style="text-align: center"><p>Figure 1 Communication Status </p>
+<div style="text-align: center"><p>Figure 1 The status of RTK </p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../images/positioning_prerequisites.png" width="500" alt/></span></p>

@@ -2,7 +2,7 @@
 title: Start to use PSDK 
 date: 2020-05-08
 version: 2.1.0
-keywords: [write apps, developemt, SDK, integrate, DJI]
+keywords: [write apps, developemt, SDK, integrate]
 ---
 
 Using PSDK to develop the payload please include the header files, static libraries and compiled define  of the corresponding functions of PSDK.

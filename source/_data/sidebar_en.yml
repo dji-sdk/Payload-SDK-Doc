@@ -50,7 +50,7 @@
       title: "Integrate PSDK"
       path: /quickstart/integratePSDK.html
     -
-      title: "porting"
+      title: "Porting"
       path: /quickstart/porting.html
 -
   title: "Basic Function"
@@ -68,8 +68,8 @@
       title: "Data Transmission"
       path: "/basicfunction/data-transmission.html"
     -
-      title: SDK Interconnection 
-      path: /basicfunction/SDK-mop.html
+      title: "SDK Interconnection" 
+      path: "/basicfunction/SDK-mop.html"
     -
       title: "Time Synchronization"
       path: "/basicfunction/time-synchronization.html"
@@ -119,8 +119,11 @@
   title: "Appendix"
   list:
     -
+      title: "Firmware"
+      path: "/appendix/firmware.html"
+    -
       title: "FAQs"
       path: "/appendix/index.html"
     -
-      title: "FAQs(For PSDK 1.5.X)"
+      title: "FAQs(PSDK 1.5.X)"
       path: "/appendix/faq-PSDK-1.5.0-en.html"

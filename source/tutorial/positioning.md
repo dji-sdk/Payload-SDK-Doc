@@ -9,7 +9,7 @@ keywords: [Pinpoint, RTK, time sync, PPS]
 > * Before running the "Positioning" sample code, please check the communication status of the drone and the RTK satellite from the DJI Pilot or Mobile APP which developed based on PSDK as shown in Figure 1. 
 
 <div>
-<div style="text-align: center"><p>Figure 1 The status of the RTK </p>
+<div style="text-align: center"><p>Figure 1 The status of RTK </p>
 </div>
 <div style="text-align: center"><p><span>
       <img src="../images/positioning_prerequisites.png" width="500" alt/></span></p>

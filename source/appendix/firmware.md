@@ -13,7 +13,7 @@ When developing the payload with PSDK, please use the firmware specified or high
 * DJI Skyport V2: V01.01.0100        
 * Matrice 300 RTK: V01.00.0107        
 * DJI Industry Screen Remote Controller: V01.00.0107       
-* Matrice 200 V2 Series: V01.00.0670        
+* Matrice 200 V2 Series: V01.00.0690        
 * GL900A Model Remote Controller: V01.00.0670        
 * iOS MSDK: V4.12        
 * Android MSDK: V4.12        
@@ -25,7 +25,7 @@ When developing the payload with PSDK, please use the firmware specified or high
 ## PSDK 2.0.0
 * DJI X-Port: V01.00.0000        
 * DJI SkyPort V2 : V01.00.0000        
-* Matrice 200 V2 Series: V01.00.0650        
+* Matrice 200 V2 Series: V01.00.0690        
 * L900A Model Remote Controller: V01.00.0650        
 * iOS MSDK: V4.12_m300rtk.b1        
 * Android MSDK: V4.12_m300rtk.b1        

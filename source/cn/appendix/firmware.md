@@ -12,7 +12,7 @@ keywords: [开发须知, 版本声明, 软件版本, 固件版本]
 * DJI Skyport V2：V01.01.0100       
 * Matrice 300 RTK：V01.00.0107       
 * DJI带屏遥控器行业版：V01.00.0107       
-* Matrice 200 V2系列：V01.00.0670       
+* Matrice 200 V2系列：V01.00.0690       
 * GL900A型号遥控器：V01.00.0670       
 * iOS MSDK：V4.12       
 * Android MSDK：V4.12       
@@ -24,7 +24,7 @@ keywords: [开发须知, 版本声明, 软件版本, 固件版本]
 ## PSDK 2.0.0 固件版本声明
 * DJI X-Port：V01.00.0000       
 * DJI SkyPort V2 Adapter：V01.00.0000       
-* Matrice 200 V2系列：V01.00.0650       
+* Matrice 200 V2系列：V01.00.0690       
 * GL900A型号遥控器：V01.00.0650       
 * iOS MSDK：V4.12_m300rtk.b1       
 * Android MSDK：V4.12_m300rtk.b1       

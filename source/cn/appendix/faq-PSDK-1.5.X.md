@@ -68,6 +68,6 @@ void LOG_Init(void)
 请在test_app_func.c 文件中将`textInputBoxDisplayControlFlag` 的值为`PSDK_APPFUNC_TEXT_INPUT_BOX_DISPLAY` .
 
 #### 如何获取负载设备的状态？
-请使用`T_UavStateMsg`中的`E_Constants_Psdk_Motor_State`和`E_Constants_Psdk_Land_State`获取无人机电机和降落的状态
+请使用`T_UavStateMsg`中的`E_Constants_Psdk_Motor_State`和`E_Constants_Psdk_Land_State`获取无人机电机和降落的状态。
 
 

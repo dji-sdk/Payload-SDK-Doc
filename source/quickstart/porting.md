@@ -15,7 +15,7 @@ Port the payload control program developed based on PSDK to the different OS and
    * Hal:`sample/platform/rtos_freertos/psdk_development_board_1.0/hal`
    * Osal:`sample/platform/rtos_freertos/common/osal/`
 
-> **NOTE** The interface of the PSDK Platform module is in the fellow directory``psdk_lib/api_headers/psdk_platform.h`.
+> **NOTE** The interface of the PSDK Platform module is in the fellow directory`psdk_lib/api_headers/psdk_platform.h`.
 
 ## Overview
 Port the payload control program developed based on PSDK to a different OS and Platforms, developer need to adapted the Hal (Hardware Abstraction Layer, hardware interface layer), and the Osal (Operating System Abstraction Layer) ), as shown in Figure 1.   

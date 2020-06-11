@@ -47,7 +47,7 @@ DJI X-Port 标准云台是一个用于开发负载设备的硬件平台，用户
 * 权限释放 
   * 使用PSDK 开发的负载设备完成对X-Port 的控制后释放控制权。
   * 若使用PSDK 开发的负载设备完成对X-Port 的控制后未释放控制权，X-Port将在转动结束后的2s 内自动释放控制权。
-<div><div>
+<div><div style="text-align: center">
 <p>
 表1.X-Port 控制权限  </p></div>
 <div>
@@ -549,7 +549,4 @@ if (psdkStat != PSDK_RETURN_CODE_OK) {
 3. DJI Assistant 2 或DJI Pilot 向X-Port 发送云台控制指令，执行控制参数自整定的功能。
 
 ##### 4. 自动校准
-若X-Port 上负载设备的初始位置未水平居中，请使用自动校准功能校准X-Port.
-
-
-
+若X-Port 上负载设备的初始位置未水平居中，请使用自动校准功能校准X-Port。

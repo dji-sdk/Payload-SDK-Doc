@@ -37,7 +37,6 @@ Before using PSDK to develop the payload, you should register an Enterprise Acco
    <td style="text-align:center"><a href="../payloadguide/hardware.html">3.Hardware Platform</a></td>
    <td style="text-align:center"><a href="https://developer.dji.com/user/apps/#allhtml">4.Apply Application</a></td>
    <td style="text-align:center"><a href="../quickstart/run-the-sample.html">5.Using Sample</a></td>
-   <td style="text-align:center"><a href="https://www.dji.com/downloads/softwares/assistant-dji-2-for-matrice">Simulate</a></td>
    <td style="text-align:center"><a href="mailto:dev@dji.com">6.Produce</a></td>
    <td style="text-align:center"><a href="mailto:dev@dji.com">7.Join Ecology</a></td>
   </tr>

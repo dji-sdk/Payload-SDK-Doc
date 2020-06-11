@@ -188,7 +188,7 @@ To improve the compatibility of user-defined controls with DJI Pilot, please des
     * round: 4px
 * colour
 <div>
-<div style="text-align: center"><p>Figure 3. the color of the control
+<div style="text-align: center"><p>Figure 3. The color of the widget
 </p>
 </div>
 <div style="text-align: center"><p><span>

@@ -49,7 +49,7 @@ The details for the X-Port control permissions, please refer to Table 1.
   * The control module will release the control right after completing the control of the X-Port;
   * If the control module does not release the control right after completing the control of the X-Port, x-Port will release the control right within the 2s after the end of the X-Port rotation. 
 
-<div><div>
+<div><div style="text-align: center">
 <p>
 Table 1 The control permissions of the X-Port
   </p></div>

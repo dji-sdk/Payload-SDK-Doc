@@ -11,7 +11,6 @@ keywords: [Gimbal Control]
 ## Overview 
 Using the "Gimbal Control" function of the PSDK, developers need to design the gimbal of the payload and develop the program to control the gimbal. After registering the gimbal control function to the interface specified by PSDK, the user can use the Mobile APP which developed by MSDK and controller could control the payload with gimbal function based on PSDK, and obtain relevant information such as attitude.
 
-
 ## The state of the gimbal
 The payload developed based on PSDK needs to report the status of the gimbal, attitude, and calibration information, which is convenient for the user's Mobile APP or onboard computer control the payload precisely.
 

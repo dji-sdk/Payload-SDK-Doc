@@ -25,8 +25,6 @@ Before using PSDK to develop the payload, you should register an Enterprise Acco
          <td style="border-right: none;border-left: none;"><div><p><span>
       <img src="../images/how-to-use/5.png" height="70" width="90" style="vertical-align:middle" alt/></span></p></div></td></td>
          <td style="border-right: none;border-left: none;"><div><p><span>
-      <img src="../images/how-to-use/6.png" height="90" width="90" style="vertical-align:middle" alt/></span></p></div></td></td>
-         <td style="border-right: none;border-left: none;"><div><p><span>
       <img src="../images/how-to-use/7.png" height="50" width="100" style="vertical-align:middle" alt/></span></p></div></td></td>
          <td style="border-right: none;border-left: none;"><div><p><span>
       <img src="../images/how-to-use/8.png" height="50" width="70" style="vertical-align:middle" alt/></span></p></div></td></td>

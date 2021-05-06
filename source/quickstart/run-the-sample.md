@@ -75,11 +75,20 @@ Figure 1 shows how to add the user's information. First of all, you should obtai
 ```c
 #define LINUX_UART_DEV   "dev/your_com"
 ```
+
+* In the same file, change the baudrate to match your port's baudrate (`B115200` for the X-Port, `B921600` for the Skyport V2). For example for the Skyport V2:
+
+```c
+cfsetispeed(&options, B921600); //B11500 if you are using the X-Port
+cfsetospeed(&options, B921600); //B11500 if you are using the X-Port
+```
+
 * Use command `ifconfig`, look for the name of the network's interface, and fill in the `LINUX_NETWORK_DEV`which in the `sample/platform/linux/manifold2/hal/hal_network.c`.
 
   ```c
   #define LINUX_NETWORK_DEV    "your_network_name"
   ```
+
 
 #### Compile and Burn
 
